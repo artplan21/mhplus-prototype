@@ -15,7 +15,7 @@ A graphical website-relaunch.
   - Javascript build stuff, like grunt.js or the like …
 - [Resources](./Resources)
   - [Public](./Resources/Public)
-    - [Prototype](./Resources/Public/Pototype)
+    - [Prototype](./Resources/Public/Prototype)
       place prototype-markup files (*.html) here
     - [Scripts](./Resources/Public/Scripts)
       • place (public, minified) javascript here
