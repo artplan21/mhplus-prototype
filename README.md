@@ -46,3 +46,17 @@ A graphical website-relaunch.
     - [Partials](./Resources/Private/Partials)
       • Fluid-partials, as soon as those are relevant
 
+# entwicklungs-umgebung von Olaf
+- ruby 2.1.6-p336
+- bigdecimal (1.2.4)
+- cssminify (1.0.2)
+- io-console (0.4.3)
+- json (1.8.1)
+- minitest (4.7.5)
+- psych (2.0.5)
+- rake (10.1.0)
+- rdoc (4.1.0)
+- sass (3.4.18)
+- test-unit (2.1.6.0)
+
+
