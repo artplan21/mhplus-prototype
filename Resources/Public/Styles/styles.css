@@ -1,0 +1,145 @@
+html {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  position: relative;
+  min-height: 100%;
+  font: 13px Helmet, Freesans, sans-serif; }
+
+.hidden {
+  position: absolute;
+  left: -3000px;
+  top: -3000px; }
+
+/* We like off-black for text. */
+body, select, input, textarea {
+  color: #000; }
+
+a {
+  color: #03f; }
+
+a:hover {
+  color: #69f; }
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+/*
+	causes error in http://jigsaw.w3.org/css-validator!
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+*/
+/*	j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #fcd700; }
+
+ins {
+  background-color: #fcd700;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #fcd700;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Mozilla dosen't style placeholders by default */
+input:-moz-placeholder {
+  color: #a9a9a9; }
+
+textarea:-moz-placeholder {
+  color: #a9a9a9; }
+
+#navi {
+  display: none; }
+
+#mainnavi ul ul {
+  display: none; }
+
+#contentwrapper {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  min-height: 95.9%;
+  margin-left: -1px;
+  -moz-transform: translateX(0px);
+  /* Firefox 3.6 Firefox 4 */
+  -webkit-transform: translateX(0px);
+  /* Safari */
+  -o-transform: translateX(0px);
+  /* Opera */
+  -ms-transform: translateX(0px);
+  /* IE9 */
+  transform: translateX(0px);
+  /* W3C */
+  transition: transform 0.3s linear 0s;
+  background: #FFF; }
+
+#contentwrapper:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+article {
+  width: 75%;
+  float: left; }
+
+aside {
+  float: right;
+  width: 20%; }
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden; }
+
+  #navi {
+    display: block;
+    margin: 10px 0px 10px 0px; }
+
+  #mainnavi {
+    position: absolute;
+    overflow: visible;
+    z-index: 1;
+    left: 0px;
+    width: 0px; }
+
+  body.naviopen #mainnavi {
+    width: 200px; }
+
+  #navhelper {
+    position: relative;
+    width: 200px;
+    background: #EEEEEE; }
+
+  #mainnavi ul, #mainnavi ul ul, #mainnavi ul ul ul, #mainnavi ul ul ul ul, #mainnavi ul ul ul ul ul {
+    position: absolute;
+    display: block;
+    width: 200px;
+    overflow: visible; }
+
+  #mainnavi ul ul {
+    left: 200px;
+    top: 0px; }
+
+  #contentwrapper {
+    border-left: 1px solid #000;
+    padding: 10px; }
+
+  body.naviopen #contentwrapper {
+    -moz-transform: translateX(200px);
+    /* Firefox 3.6 Firefox 4 */
+    -webkit-transform: translateX(200px);
+    /* Safari */
+    -o-transform: translateX(200px);
+    /* Opera */
+    -ms-transform: translateX(200px);
+    /* IE9 */
+    transform: translateX(200px);
+    /* W3C */
+    transition: transform 0.3s linear 0s; } }
+/* Print styles
+-------------------------------------------------------------------------------*/
+
+/*# sourceMappingURL=styles.css.map */
