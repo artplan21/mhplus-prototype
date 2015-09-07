@@ -13,31 +13,30 @@ A graphical website-relaunch.
   For example:
   - SASS/Less related frameworks and scripts (excluding the actual *.sass, *,scss or *.less files)
   - Javascript build stuff, like grunt.js or the like …
-- Resources
-  - Public
-    - Prototype
-    - Scripts
-    - Styles
+- [Resources](./Resources)
+  - [Public](./Resources/Public)
+    - [Prototype](./Resources/Public/Pototype)
+    - [Scripts](./Resources/Public/Scripts)
+    - [Styles](./Resources/Public/Styles)
       stylesheets (css)
       use subfolders if needed
-      - Images
+      - [Images](./Resources/Public/Styles/Images)
         - images which are referenced via stylesheet
         - sprites
-    - Images
+    - [Images](./Resources/Public/Images)
       - images which are part of the layout and/or not (only) referenced via stylesheet
-    - Icons
+    - [Icons](./Resources/Public/Icons)
       - iconic files which are not part of any sprite
-  - Private
-    - SourceStyles
+  - [Private](./Resources/Private)
+    - [Sources](./Resources/Private/Sources)
       stylesheet sources *.sass, *,scss or *.less, if needed
-    - SourceScripts
       uncompiled javascripts sources, if needed
-    - Prototype
+    - [Prototype](./Resources/Private/Prototype)
       the prototype will be moved here as soon as this is released (published)
-    - Templates
+    - [Templates](./Resources/Private/Templates)
       Fluid-templates, as soon as those are relevant
-    - Layouts
+    - [Layouts](./Resources/Private/Layouts)
       Fluid-layouts, as soon as those are relevant
-    - Partials
+    - [Partials](./Resources/Private/Partials)
       Fluid-partials, as soon as those are relevant
 
