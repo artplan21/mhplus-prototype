@@ -1,0 +1,21 @@
+{
+  "name": "mhplus-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artplan21/mhplus-prototype.git"
+  },
+  "author": "",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/artplan21/mhplus-prototype/issues"
+  },
+  "homepage": "https://github.com/artplan21/mhplus-prototype#readme",
+  "dependencies": {
+    "bower": "*"
+  }
+}

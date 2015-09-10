@@ -1,6 +1,9 @@
 # Ignore sass cache
 .sass-cache
 styles.css.map
-# Ignore bundler cache
+# Ignore bundler's stuff
 .bundle
 Build/bin
+# Ignore node.js' stuff
+Build/node_modules
+

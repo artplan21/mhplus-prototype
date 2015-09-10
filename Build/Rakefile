@@ -1,5 +1,10 @@
 # encoding: utf-8
 
+def which(binary)
+   possibles = ENV["PATH"].split(File::PATH_SEPARATOR)
+   possibles.map {|p| File.join( p, binary ) }.find {|p| File.exists?(p) && File.executable?(p) }
+end
+
 desc 'Install the build environment dependencies.'
 task :install_deps do
 
@@ -32,11 +37,23 @@ task :install_deps do
   if BUNDLE
     sh "#{BUNDLE} install --binstubs"
     sh "#{BUNDLE} update"
-    puts 'Build environment has been installed.'
+    puts 'Ruby build environment has been installed.'
   else
-    puts 'Could not install build environment.'
+    puts 'Could not install ruby build environment.'
+    exit
   end
 
+  NPM=which('npm')
+  if NPM
+    sh "#{NPM} install"
+    sh "#{NPM} update"
+    puts 'Node.js build environment has been installed.'
+  else
+    puts 'Could not install node.js build environment.'
+    exit
+  end
+
+  puts 'Finished build environment installation.'
 end
 
 
