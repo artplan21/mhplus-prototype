@@ -1,12 +1,24 @@
+
 $(document).ready(function() {
 
+	$(document).foundation({
+	  offcanvas : {
+		// Sets method in which offcanvas opens.
+		// [ move | overlap_single | overlap ]
+		open_method: 'overlap_single', 
+		// Should the menu close when a menu link is clicked?
+		// [ true | false ]
+		close_on_click : false
+	  }
+	});
+	
 	var isMobile = function() {
 		if ($('#navi:visible').length > 0) return true;
 		return false;
 	}
 	
 	$('body').addClass('js');
-	
+	/*
 	$('#navi').click(function() {
 		$('body').toggleClass('naviopen');
 		return false;
@@ -16,13 +28,6 @@ $(document).ready(function() {
 			}, 200, function() {
 				// Animation complete.
 			});
-			/*
-			$('#contentwrapper').animate({
-				marginLeft: "200",
-			}, 500, function() {
-			});
-			$('body').css('width', $(window).width()).css('overflow-x', 'hidden');
-			*/
 		}
 		else {
 			$( "#mainnavi" ).animate({
@@ -81,6 +86,6 @@ $(document).ready(function() {
 		$.aniNavi('-='+navwidth, time);
 		
 		return false;
-	
 	});
+	*/
 });

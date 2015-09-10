@@ -9,6 +9,8 @@
 
 <head>
 
+	<meta name="robots" content="noindex, nofollow">
+	
 	<meta charset="utf-8">
 
 	<!-- Always force latest IE rendering engine (even in intranet) -->
@@ -40,92 +42,104 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="../../../Resources/Public/Styles/reset.css" />
-	<link rel="stylesheet" href="../../../Resources/Public/Styles/grid.css" />
 	<link rel="stylesheet" href="../../../Resources/Public/Styles/styles.css" />
 	
+	<script src="../../../Resources/Public/Scripts/libs/modernizr.js"></script>
 
 </head>
 
 <body>
+	
+	<header>
 
-<header>
-
-	<ul><li id="logo"><a href="" accesskey="0">mhplus - Home</a></li><li class="hidden"><a href="#content" accesskey="2">Zum Inhalt</a></li><li class="hidden"><a href="#navi" accesskey="3">Zur Level 1igation</a></li></ul>
+	<ul><li id="logo"><a href="" accesskey="0">mhplus - Home</a></li><li class="hidden"><a href="#content" accesskey="2">Zum Inhalt</a></li><li class="hidden"><a href="#navi" accesskey="3">Zur Navigation</a></li></ul>
 	<hr class="hidden" />
 	
-	<a id="navi">Menu</a>
-	<nav id="mainnavi">
-		<div id="navhelper">
-			<ul>
-				<li><a href="index.html">Level 1 Link 1</a></li>
-				<li><a href="index.html">Level 1 Link 2</a></li>
-				<li><a href="index.html">Level 1 Link 3</a>
-					<ul>
-						<li><a href="index.html">Level 2 Link 1</a></li>
-						<li><a href="index.html">Level 2 Link 2</a></li>
-						<li><a href="index.html">Level 2 Link 3</a>
-							<ul>
-								<li><a href="index.html">Level3 Link 1</a></li>
-								<li><a href="index.html">Level3 Link 2</a></li>
-								<li><a href="index.html">Level3 Link 3</a>
-									<ul>
-										<li><a href="index.html">Level4 Link 1</a></li>
-										<li><a href="index.html">Level4 Link 2</a></li>
-										<li><a href="index.html">Level4 Link 3</a>
-											<ul>
-												<li><a href="index.html">Level5 Link 1</a></li>
-												<li><a href="index.html">Level5 Link 2</a></li>
-												<li><a href="index.html">Level5 Link 3</a>
-													<ul>
-														<li><a href="index.html">Level6 Link 1</a></li>
-														<li><a href="index.html">Level6 Link 2</a></li>
-														<li><a href="index.html">Level6 Link 3</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="index.html">Level 2 Link 4</a></li>
-					</ul>
-				</li>
-				<li><a href="index.html">Level 1 Link 4</a></li>
-				<li><a href="index.html">Level 1 Link 5</a></li>
-			</ul>
-		</div>
-	</nav>
+	</header>
 	
-</header>
+	<div class="off-canvas-wrap" data-offcanvas>
+	 <div class="inner-wrap">
+	 
+			<a id="navi" class="left-off-canvas-toggle">Menu</a>
+	
+			<nav class="left-off-canvas-menu">
+		
+				<form action="index.php" method="get">
+				<select name="id">
+					<option value="1">Privatkunden</option>
+					<option value="2">Firmenkunden</option>
+				</select>
+				<input type="submit">
+				</form>	
+			
+				<ul>
+					<li><a href="index.html">Level 1 Link 1</a></li>
+					<li><a href="index.html">Level 1 Link 2</a></li>
+					<li><a href="index.html"  data-dropdown="drop1" aria-controls="drop1" aria-expanded="false">Level 1 Link 3</a>
+						<ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+							<li><a href="index.html">Level 2 Link 1</a></li>
+							<li><a href="index.html">Level 2 Link 2</a></li>
+							<li><a href="index.html">Level 2 Link 3</a>
+								<ul>
+									<li><a href="index.html">Level3 Link 1</a></li>
+									<li><a href="index.html">Level3 Link 2</a></li>
+									<li><a href="index.html">Level3 Link 3</a>
+										<ul>
+											<li><a href="index.html">Level4 Link 1</a></li>
+											<li><a href="index.html">Level4 Link 2</a></li>
+											<li><a href="index.html">Level4 Link 3</a>
+												<ul>
+													<li><a href="index.html">Level5 Link 1</a></li>
+													<li><a href="index.html">Level5 Link 2</a></li>
+													<li><a href="index.html">Level5 Link 3</a>
+														<ul>
+															<li><a href="index.html">Level6 Link 1</a></li>
+															<li><a href="index.html">Level6 Link 2</a></li>
+															<li><a href="index.html">Level6 Link 3</a></li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="index.html">Level 2 Link 4</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html">Level 1 Link 4</a></li>
+					<li><a href="index.html">Level 1 Link 5</a></li>
+				</ul>
+			</nav>
+			
+			<article id="content">
 
-<div id="contentwrapper">
-	<article id="content">
+				<h1>Article Header</h1>
 
-		<h1>Article Header</h1>
+				<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
 
-		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
+				<h2>Article Subhead</h2>
 
-		<h2>Article Subhead</h2>
+				<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
 
-		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
-
-	</article>
+			</article>
 
 
-	<aside>
-		<h2>Sidebar Content</h2>
-	</aside>
+			<aside>
+				<h2>Sidebar Content</h2>
+			</aside>
 
-	<footer>
-		Footer inhalt
-	</footer>
+			<footer>
+				Footer inhalt
+			</footer>
+	
+		 <a class="exit-off-canvas"></a>
+	   </div>
+	  </div>
 
-</div>
-
-<script src="../../../Resources/Public/Scripts/libs/jquery-1.11.3.min.js"></script>
 <!-- don't forget to concatenate and minify for production -->
+<script src="../../../Resources/Public/Scripts/libs/jquery.min.js"></script>
+<script src="../../../Resources/Public/Scripts/libs/foundation.min.js"></script>
 <script async src="../../../Resources/Public/Scripts/scripts.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
