@@ -37,7 +37,7 @@ task :install_deps do
   if BUNDLE
     sh "#{BUNDLE} install --binstubs"
     sh "#{BUNDLE} update"
-    puts 'Ruby build environment has been installed.'
+    puts 'Ruby build environment has been installed and updated.'
   else
     puts 'Could not install ruby build environment.'
     exit
@@ -47,7 +47,7 @@ task :install_deps do
   if NPM
     sh "#{NPM} install"
     sh "#{NPM} update"
-    puts 'Node.js build environment has been installed.'
+    puts 'Node.js build environment has been installed and updated.'
   else
     puts 'Could not install node.js build environment.'
     exit
