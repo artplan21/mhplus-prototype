@@ -25,12 +25,18 @@ task :install_deps do
   rescue Gem::SystemExitException => e
     puts "Update exit code: #{e.exit_code}"
   end
-  #Gem.clear_paths
+  Gem.clear_paths
 
-  system 'bundle install --binstubs'
-  system 'bundle update'
+  BUNDLE=Gem.bin_path('bundler', 'bundle')
 
-  puts 'Build environment has been installed.'
+  if BUNDLE
+    sh "#{BUNDLE} install --binstubs"
+    sh "#{BUNDLE} update"
+    puts 'Build environment has been installed.'
+  else
+    puts 'Could not install build environment.'
+  end
+
 end
 
 
