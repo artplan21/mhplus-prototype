@@ -7,7 +7,7 @@ task :install_deps do
     puts 'Installing “bundler” gem'
     require 'rubygems/commands/install_command'
     cmd = Gem::Commands::InstallCommand.new
-    cmd.handle_options ['bundler']
+    cmd.handle_options ['--user-install', 'bundler']
     begin 
       cmd.execute
     rescue Gem::SystemExitException => e
