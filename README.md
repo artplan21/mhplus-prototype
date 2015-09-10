@@ -14,7 +14,9 @@ A graphical website-relaunch.
   - SASS/Less related frameworks and scripts (excluding the actual *.sass, *,scss or *.less files)
   - Javascript build stuff, like grunt.js or the like …
 - [Resources](./Resources)
+  • All resource files belong here - private and public
   - [Public](./Resources/Public)
+    • All public resource files belong here
     - [Prototype](./Resources/Public/Prototype)
       place prototype-markup files (*.html) here
     - [Scripts](./Resources/Public/Scripts)
@@ -32,6 +34,7 @@ A graphical website-relaunch.
     - [Icons](./Resources/Public/Icons)
       • iconic files which are not part of any sprite
   - [Private](./Resources/Private)
+    • All private resource files belong here
     - [Sources](./Resources/Private/Sources)
       • stylesheet sources *.sass, *,scss or *.less, if needed
       • uncompiled javascripts sources, if needed
