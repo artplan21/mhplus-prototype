@@ -1,0 +1,37 @@
+
+
+desc 'Install the build environment dependencies.'
+task :install_deps do
+
+  unless Gem::Specification::find_all_by_name('bundler').any?
+    puts 'Installing “bundler” gem'
+    require 'rubygems/commands/install_command'
+    cmd = Gem::Commands::InstallCommand.new
+    cmd.handle_options ['bundler']
+    begin 
+      cmd.execute
+    rescue Gem::SystemExitException => e
+      puts "Installation exit code: #{e.exit_code}"
+    end
+    #Gem.clear_paths
+  end
+
+  puts 'Updating “bundler” gem to latest version'
+  require 'rubygems/commands/update_command'
+  cmd = Gem::Commands::UpdateCommand.new
+  cmd.handle_options ['bundler']
+  begin 
+    cmd.execute
+  rescue Gem::SystemExitException => e
+    puts "Update exit code: #{e.exit_code}"
+  end
+  #Gem.clear_paths
+
+  system 'bundle install --binstubs'
+  system 'bundle update'
+
+  puts 'Build environment has been installed.'
+end
+
+
+task :default => :install_deps
