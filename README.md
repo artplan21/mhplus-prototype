@@ -93,4 +93,4 @@ see [Build/package.json](./Build/package.json)
 
 ## Framework and toolchain
 
-[Foundation](http://foundation.zurb.com)
+- [Foundation 5.x](http://foundation.zurb.com)
