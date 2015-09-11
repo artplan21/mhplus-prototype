@@ -20,6 +20,10 @@ task :install_deps do
       cmd.execute
     rescue Gem::SystemExitException => e
       puts "Installation exit code: #{e.exit_code}"
+      unless e.exit_code == 0
+        puts 'Failed to install “bundler” gem'
+        exit
+      end
     end
     #Gem.clear_paths
   end
@@ -32,6 +36,10 @@ task :install_deps do
     cmd.execute
   rescue Gem::SystemExitException => e
     puts "Update exit code: #{e.exit_code}"
+    unless e.exit_code == 0
+      puts 'Failed to update “bundler” gem to latest version'
+      exit
+    end
   end
   Gem.clear_paths
 
