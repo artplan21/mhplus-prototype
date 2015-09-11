@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+	$(document).foundation();
 	$(document).foundation({
 	  offcanvas : {
 		// Sets method in which offcanvas opens.
