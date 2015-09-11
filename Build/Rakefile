@@ -1,5 +1,8 @@
 # encoding: utf-8
 
+require "shellwords"
+
+# simulate bash's “which” as function
 def which(binary)
    possibles = ENV["PATH"].split(File::PATH_SEPARATOR)
    possibles.map {|p| File.join( p, binary ) }.find {|p| File.exists?(p) && File.executable?(p) }
@@ -17,6 +20,10 @@ task :install_deps do
       cmd.execute
     rescue Gem::SystemExitException => e
       puts "Installation exit code: #{e.exit_code}"
+      unless e.exit_code == 0
+        puts 'Failed to install “bundler” gem'
+        exit
+      end
     end
     #Gem.clear_paths
   end
@@ -29,14 +36,18 @@ task :install_deps do
     cmd.execute
   rescue Gem::SystemExitException => e
     puts "Update exit code: #{e.exit_code}"
+    unless e.exit_code == 0
+      puts 'Failed to update “bundler” gem to latest version'
+      exit
+    end
   end
   Gem.clear_paths
 
   BUNDLE=Gem.bin_path('bundler', 'bundle')
 
   if BUNDLE
-    sh "#{BUNDLE} install --binstubs"
-    sh "#{BUNDLE} update"
+    sh "#{BUNDLE.shellescape} install --binstubs"
+    sh "#{BUNDLE.shellescape} update"
     puts 'Ruby build environment has been installed and updated.'
   else
     puts 'Could not install ruby build environment.'
@@ -45,8 +56,8 @@ task :install_deps do
 
   NPM=which('npm')
   if NPM
-    sh "#{NPM} install"
-    sh "#{NPM} update"
+    sh "#{NPM.shellescape} install"
+    sh "#{NPM.shellescape} update"
     puts 'Node.js build environment has been installed and updated.'
   else
     puts 'Could not install node.js build environment.'
