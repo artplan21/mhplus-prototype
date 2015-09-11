@@ -45,7 +45,7 @@ task :install_deps do
 
   BUNDLE=Gem.bin_path('bundler', 'bundle')
 
-  if BUNDLE.any?
+  if BUNDLE
     sh "#{BUNDLE.shellescape} install --binstubs"
     sh "#{BUNDLE.shellescape} update"
     puts 'Ruby build environment has been installed and updated.'
@@ -55,7 +55,7 @@ task :install_deps do
   end
 
   NPM=which('npm')
-  if NPM.any?
+  if NPM
     sh "#{NPM.shellescape} install"
     sh "#{NPM.shellescape} update"
     puts 'Node.js build environment has been installed and updated.'
