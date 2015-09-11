@@ -2,11 +2,11 @@
 
 A graphical website-relaunch.
 
-# naming-conventions
+## Naming-Conventions
 
 - basically: https://docs.typo3.org/typo3cms/ExtbaseFluidBook/a-CodingGuidelines/Index.html
 
-# path-layout
+## Path-Layout
 
 - [Build](./Build)
   • Place everthing that is needed to build the prototype here.
@@ -49,13 +49,13 @@ A graphical website-relaunch.
     - [Partials](./Resources/Private/Partials)
       • Fluid-partials, as soon as those are relevant
 
-# Entwicklungs-Umgebung
+## Development-Environment
 
-## Ruby basierte Werzeuge
+### Ruby based tools
 
-siehe [Build/Gemfile.lock](./Build/Gemfile.lock)
+see [Build/Gemfile.lock](./Build/Gemfile.lock)
 
-Stand 11.09.2015:
+11.09.2015:
 
 - ruby 2.1.6-p336
 - bigdecimal (1.2.4)
@@ -81,10 +81,14 @@ Stand 11.09.2015:
 - test-unit (2.1.6.0)
 - thor (0.19.1)
 
-## Node.js basierte Werzeuge
+### Node.js based tools
 
-Stand 11.09.2015:
+11.09.2015:
 
 - node.js 4.0.0
-  - enthält npm
+  - contains npm
 - bower 1.5.2
+
+## Framework and toolchain
+
+[Foundation](http://foundation.zurb.com)
