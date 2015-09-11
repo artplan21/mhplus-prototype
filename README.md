@@ -1,4 +1,4 @@
-# mhplus-prototype
+# mhplus Prototype
 
 A graphical website-relaunch.
 
