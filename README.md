@@ -83,6 +83,8 @@ see [Build/Gemfile.lock](./Build/Gemfile.lock)
 
 ### Node.js based tools
 
+see [Build/package.json](./Build/package.json)
+
 11.09.2015:
 
 - node.js 4.0.0
