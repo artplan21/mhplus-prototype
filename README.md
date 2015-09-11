@@ -18,7 +18,7 @@ A graphical website-relaunch.
   - [Public](./Resources/Public)
     • All public resource files belong here
     - [Prototype](./Resources/Public/Prototype)
-      place prototype-markup files (*.html) here
+      • place prototype-markup files (*.html) here
     - [Scripts](./Resources/Public/Scripts)
       • place (public, minified) javascript here
       • try to put their (raw not minified) sources under [Resources/Private/Sources](./Resources/Private/Sources)
@@ -49,18 +49,42 @@ A graphical website-relaunch.
     - [Partials](./Resources/Private/Partials)
       • Fluid-partials, as soon as those are relevant
 
-# entwicklungs-umgebung von Olaf
+# Entwicklungs-Umgebung
+
+## Ruby basierte Werzeuge
+
+siehe [Build/Gemfile.lock](./Build/Gemfile.lock)
+
+Stand 11.09.2015:
 
 - ruby 2.1.6-p336
 - bigdecimal (1.2.4)
+- bundler (1.10.6)
+- chunky_png (1.3.4, 1.3.3)
+- compass (1.0.3, 1.0.1)
+- compass-core (1.0.3, 1.0.1)
+- compass-import-once (1.0.5)
 - cssminify (1.0.2)
+- ffi (1.9.10 x86-mingw32, 1.9.6 x86-mingw32)
+- foundation (1.0.4)
 - io-console (0.4.3)
 - json (1.8.1)
 - minitest (4.7.5)
+- multi_json (1.11.2, 1.10.1)
 - psych (2.0.5)
 - rake (10.1.0)
+- rb-fsevent (0.9.6, 0.9.4)
+- rb-inotify (0.9.5)
 - rdoc (4.1.0)
-- sass (3.4.18)
+- rubygems-update (2.4.8)
+- sass (3.4.18, 3.4.9)
 - test-unit (2.1.6.0)
+- thor (0.19.1)
 
+## Node.js basierte Werzeuge
 
+Stand 11.09.2015:
+
+- node.js 4.0.0
+  - enthält npm
+- bower 1.5.2
