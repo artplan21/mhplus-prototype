@@ -1,15 +1,19 @@
+
+
 @import "settings";
+
 @import "compass";
 //@import "foundation";
 
-
 @include global-reset;
+
+
 
 // Or selectively include components
  @import
    "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+   "foundation/components/alert-boxes",
+   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -18,7 +22,7 @@
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
 //   "foundation/components/forms",
-//   "foundation/components/grid",
+   "foundation/components/grid",
 //   "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",
@@ -26,7 +30,7 @@
 //   "foundation/components/magellan",
 //   "foundation/components/orbit",
 //   "foundation/components/pagination",
-//   "foundation/components/panels",
+   "foundation/components/panels",
 //   "foundation/components/pricing-tables",
 //   "foundation/components/progress-bars",
 //   "foundation/components/reveal",
@@ -40,9 +44,13 @@
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
 //   "foundation/components/type",
-//  "foundation/components/offcanvas",
-   "foundation/components/visibility";
+  "foundation/components/offcanvas",
+  "foundation/components/visibility";
 
-body { 
-	background: #000;
+
+#navi {
+	@extend .hide-for-medium-up;
 }
+.display { 
+ background-color: $aluminum;
+ }
