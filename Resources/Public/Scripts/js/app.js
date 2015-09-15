@@ -14,16 +14,12 @@ jQuery.noConflict();
 	});
 		
 	$(document).ready(function() {
-	
-		
-		
 		
 		var isMobile = function() {
 			if ($('#navi:visible').length > 0) return true;
 			return false;
 		}
 		
-		$('body').addClass('js');
 		/*
 		$('#navi').click(function() {
 			$('body').toggleClass('naviopen');

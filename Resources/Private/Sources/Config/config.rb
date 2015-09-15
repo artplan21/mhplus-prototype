@@ -2,7 +2,7 @@
 add_import_path "bower_components/foundation/scss"
 
 # Set this to the root of your project when deployed:
-http_path = "../../../Public/Prototype"
+http_path = "Prototype"
 css_dir = "../../../Public/Styles"
 sass_dir = "../scss"
 images_dir = "../../../Public/Styles/Images"

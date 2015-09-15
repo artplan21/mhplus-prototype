@@ -1,56 +1,193 @@
+@import "theme_settings";
+@import "theme_mixins";
+@import "compass_settings";
+@import "foundation_settings";
+@import "foundation_components";
 
 
-@import "settings";
-
-@import "compass";
-//@import "foundation";
-
-@include global-reset;
-
-
-
-// Or selectively include components
- @import
-   "foundation/components/accordion",
-   "foundation/components/alert-boxes",
-   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-  "foundation/components/offcanvas",
-  "foundation/components/visibility";
-
-
-#navi {
-	@extend .hide-for-medium-up;
+body {
+	margin-top: 50px;
+	background-color: $dark-grey;
+	border-top: 5px solid $light-grey;
 }
-.display { 
- background-color: $aluminum;
- }
+
+#wrapper { 
+	background-color: $white;
+}
+
+header {
+	position: relative;
+	height: 145px; 
+}
+
+#topnav {
+	margin-top: -43px;
+	max-width: rem-calc($max-width+17);
+	margin-left: -17px;
+	li {
+		margin-left: 0px;
+		a {
+			display: block; 
+			padding: 8px 17px 14px 17px;
+			color: $white;
+			font-size: rem-calc(14);
+		}
+	}
+}
+
+#targetnav li a:hover, #targetnav li.active a {
+	background-color: $white;
+	color: $link-color;
+}
+		
+#contactnav {
+	li {
+		padding: 3px 0px 0px 20px;
+		a {
+			padding: 6px 0px 5px 0px;
+		}
+		&:first-child {
+			padding-left: 0px;
+			padding-right: 22px;
+		}
+	}
+}
+
+.phone24 {
+	font-size: rem-calc(18) !important;
+	line-height: 1rem !important;
+	@include icon(standard, phone24);
+}
+.contact { 
+	background-color: $deep-dark-grey;
+	padding-right: 8px !important;
+	padding-top: 8px !important;
+	padding-bottom: 5px !important;
+	margin-top: -2px;
+	line-height: 1rem !important;
+	@include icon(standard, contact);
+	&::before {
+		margin-left: -10px;
+	}
+}
+.settings {
+	@include icon(standard, settings);
+	text-indent: -1000em;
+}
+
+.login {
+	color: $link-color !important;
+	padding-right: 52px !important;
+	@include icon(standard, login_navi, after, 24px, 19px, 14px, 0px);
+	&::after {
+		margin-right: -32px;
+	}
+}
+
+#searchinput {
+	position: absolute;
+	right: 0px;
+	top: 69px;
+	input {
+		float: left;
+		width: rem-calc(430);
+		height: rem-calc(39);
+		padding-left: 25px;
+		padding-right: 25px;
+		border: none;
+		background-color: $deep-light-grey;
+		@include box-shadow(none);
+		font-size: rem-calc(22);
+		color: $link-color;
+		font-weight: 400;
+		@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: -10%)));
+	}
+	button {
+		float: right;
+		width: rem-calc(48);
+		height: rem-calc(39);
+		margin: 0px;
+		padding-left: 11px;
+		padding-top: 14px;
+		border: none;
+		overflow: hidden;
+		text-indent: -1000em;
+		background-color: $deep-light-grey;
+		@include icon(standard, lens, before, 26px, 26px);
+		
+	}
+}
+
+#mainnav {
+	position: absolute; 
+	top: 152px;
+	width: 100%;
+	background-color: rgba(255,255,255,0.85);
+	.subnav {
+		width: 100%;
+		padding-top: 40px;
+		padding-bottom: 30px;
+		background: $white;
+		@include box-shadow($box-shadow-color-lighten 3px 4px 7px -3px);
+	}
+	.top-bar-section {
+		.has-dropdown { 
+			position: inherit; 
+			&:hover, &.hover {
+				@include box-shadow($box-shadow-color-lighten 3px 4px 7px -3px);
+				a {
+					background-color: $white;
+				}
+			}
+		}
+		.dropdown {
+			li.columns { 
+				@extent .columns;
+				@extend .small-3;
+				label {
+					margin-bottom: 15px;
+					padding: 0px ($topbar-link-padding - ($column-gutter/2));
+				}
+				ul {
+					margin-top: 10px;
+					li { 
+						display: block;
+						a {
+							font-size: rem-calc(14);
+							line-height: rem-calc(16);
+							padding: rem-calc(5) rem-calc(5);
+
+							&:hover {
+								color: $white;
+								background-color: $light-blue;
+							}
+							&::before {
+								content: '\0025FE';
+								display: block;
+								float: left;
+								margin-top: -1px;
+								margin-right: 6px;
+								font-size: rem-calc(18);
+								color: $light-blue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+	
+#logo {
+	position: absolute;
+	top: 57px;
+	width: 220px;
+	height: 65px;
+	text-indent: -1000em;
+}
+
+
+footer {
+	background-color: $dark-grey;
+	border-top: 5px solid $light-grey;
+}

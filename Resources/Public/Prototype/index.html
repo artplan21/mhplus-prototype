@@ -48,102 +48,156 @@
 
 <body>
 	
-	<header>
-
-	<ul>
-		<li id="logo"><a href="" accesskey="0">mhplus - Home</a></li>
-		<li class="hidden"><a href="#content" accesskey="2">Zum Inhalt</a></li>
-		<li class="hidden"><a href="#navi" accesskey="3">Zur Navigation</a></li>
-	</ul>
-	<hr class="hidden" />
-	
-	</header>
-	
-	<div class="off-canvas-wrap" data-offcanvas>
-	 <div class="inner-wrap">
-	 
-			<a id="navi" class="left-off-canvas-toggle">Menu</a>
-	
-			<nav class="left-off-canvas-menu">
+	<div id="wrapper">
 		
-				<form action="index.php" method="get">
-				<select name="id">
-					<option value="1">Privatkunden</option>
-					<option value="2">Firmenkunden</option>
-				</select>
-				<input type="submit">
-				</form>	
+		<header class="row">
+
+			<ul class="no-padding no-margin">
+				<li><a href="index.html" id="logo" class="standard-logo" accesskey="0">mhplus - Home</a></li>
+				<li class="hidden"><a href="#content" accesskey="2">Zum Inhalt</a></li>
+				<li class="hidden"><a href="#nav" accesskey="3">Zur Navigation</a></li>
+			</ul>
+			<hr class="hidden" />
 			
-				<ul>
-					<li><a href="index.html">Level 1 Link 1</a></li>
-					<li><a href="index.html">Level 1 Link 2</a></li>
-					<li><a href="index.html"  data-dropdown="drop1" aria-controls="drop1" aria-expanded="false">Level 1 Link 3</a>
-						<ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-							<li><a href="index.html">Level 2 Link 1</a></li>
-							<li><a href="index.html">Level 2 Link 2</a></li>
-							<li><a href="index.html">Level 2 Link 3</a>
-								<ul>
-									<li><a href="index.html">Level3 Link 1</a></li>
-									<li><a href="index.html">Level3 Link 2</a></li>
-									<li><a href="index.html">Level3 Link 3</a>
-										<ul>
-											<li><a href="index.html">Level4 Link 1</a></li>
-											<li><a href="index.html">Level4 Link 2</a></li>
-											<li><a href="index.html">Level4 Link 3</a>
-												<ul>
-													<li><a href="index.html">Level5 Link 1</a></li>
-													<li><a href="index.html">Level5 Link 2</a></li>
-													<li><a href="index.html">Level5 Link 3</a>
-														<ul>
-															<li><a href="index.html">Level6 Link 1</a></li>
-															<li><a href="index.html">Level6 Link 2</a></li>
-															<li><a href="index.html">Level6 Link 3</a></li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="index.html">Level 2 Link 4</a></li>
-						</ul>
+			<nav id="topnav" class="row">				
+				<ul id="contactnav" class="right inline-list">
+					<li><a class="phone24" href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
+					<li>
+						<a class="contact" data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
+						<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+							<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+						</div>
 					</li>
-					<li><a href="index.html">Level 1 Link 4</a></li>
-					<li><a href="index.html">Level 1 Link 5</a></li>
+					<li>
+						<a class="settings" data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
+						<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+							<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+						</div>
+					</li>
+					<li id="searchinput">
+						<form><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
+					</li>
 				</ul>
+				
+				<ul id="targetnav" class="left inline-list">
+					<li class="active"><a href="index.html">Privatkunden</a></li>
+					<li><a href="index.html">Firmenkunden</a></li>
+					<li><a href="index.html">Vertriebspartner</a></li>
+					<li><a href="index.html">Karriere</a></li>
+					<li><a href="index.html">Unternehmen</a></li>
+				</ul>
+				
 			</nav>
 			
-			<article id="content">
-
-				<h1>Article Header</h1>
-
-				<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-
-				<h2>Article Subhead</h2>
-
-				<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
-				<div class="row">
-					  <div class="small-2 columns"><div class="panel">...</div></div>
-					  <div class="small-2 columns"><div class="panel">...</div></div>
-					  <div class="small-4 columns"><div class="panel">...</div></div>
-					  <div class="small-6 columns last"><div class="panel">...</div></div>
+			<hr class="hidden" />
+			
+			<nav id="mainnav" class="small-14 top-bar" data-topbar>
+				<section class="top-bar-section">
+					<ul>
+						<li class="has-dropdown">
+							<a href="index.html">Mitglied werden</a>
+							<ul class="dropdown subnav">
+								<li class="small-3 columns"><label>Vier gute Gründe</label>
+									<ul>
+										<li><a href="index.html">Service</a></li>
+										<li><a href="index.html">Innovation</a></li>
+										<li><a href="index.html">Beratung</a></li>
+										<li><a href="index.html">Versorgung</a></li>
+									</ul>
+								</li>
+								<li class="small-3 columns"><label>Infos zur Mitgliedschaft</label>
+									<ul>
+										<li><a href="index.html">Broschüren bestellen</a></li>
+										<li><a href="index.html">So werden Sie Mitglied</a></li>
+										<li><a href="index.html">Mitglieder werben Mitglieder</a></li>
+										<li><a href="index.html">Mitgliedsantrag</a></li>
+										<li><a href="index.html">Platzhalter Nr 5</a></li>
+										<li><a href="index.html">Platzhalter Nr 6</a></li>
+										<li><a href="index.html">Platzhalter Nr 7</a></li>
+									</ul>
+								</li>
+								<li class="small-3 columns"><label>Überzeugen Sie sich</label>
+									<ul>
+										<li><a href="index.html">Vorteilsrechner</a></li>
+										<li><a href="index.html">mhplus im Test</a></li>
+									</ul>
+								</li>
+								<li class="small-3 pull-2 columns"><label>Tolle Extras</label>
+									<ul>
+										<li><a href="index.html">Bonusprogramme</a></li>
+										<li><a href="index.html">Prämien-Programm</a></li>
+										<li><a href="index.html">Präventionsangebote</a></li>
+										<li><a href="index.html">Wahltarife</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="index.html">Leistungen</a></li>
+						<li><a href="index.html">Versicherung</a></li>
+						<li><a href="index.html">Gesundheit</a></li>
+						<li><a href="index.html">Service</a></li>
+						<li><a href="index.html">Pflege</a></li>
+						<li class="right"><a class="login" href="index.html">mhplusdirekt</a></li>
+					</ul>		
+				</section>
+			</nav>
+			<hr class="hidden" />
+			
+		</header>
+		
+		<div class="row">
+		
+			<img src="../Images/teaser_test.jpg" alt="Teaser" />
+			
+			<div class="off-canvas-wrap" data-offcanvas>
+				<div class="inner-wrap">
+			 
+					<a id="navi" class="left-off-canvas-toggle">Menu</a>
+			
+					<nav class="left-off-canvas-menu">
+					</nav>
+					
+					<article>
+					</article>
+					
+					<a class="exit-off-canvas"></a>
 				</div>
+			</div>
+					
+			
+			<div class="medium-10 small-14 columns">
+				<article id="content">
 
-			</article>
+					<h1>Article Header</h1>
 
+					<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
 
-			<aside>
-				<h2>Sidebar Content</h2>
-			</aside>
+					<h2>Article Subhead</h2>
 
-			<footer>
-				Footer inhalt
-			</footer>
-	
-		 <a class="exit-off-canvas"></a>
-	   </div>
-	  </div>
+					<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
+					<div class="row">
+						  <div class="small-2 columns"><div class="panel">...</div></div>
+						  <div class="small-2 columns"><div class="panel">...</div></div>
+						  <div class="small-4 columns"><div class="panel">...</div></div>
+						  <div class="small-6 columns last"><div class="panel">...</div></div>
+					</div>
+
+				</article>
+			</div>
+
+			<div class="medium-4 small-14 columns">
+				<aside>
+					<h2>Sidebar Content</h2>
+				</aside>
+			</div>
+				
+		</div>
+	</div>
+		
+	<footer>
+			Footer inhalt
+	</footer>
+		
 
 <!-- don't forget to concatenate and minify for production -->
 <script src="../../../Resources/Public/Scripts/bower_components/jquery/dist/jquery.min.js"></script>

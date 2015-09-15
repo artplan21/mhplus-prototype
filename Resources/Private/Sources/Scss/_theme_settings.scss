@@ -1,0 +1,40 @@
+/* variables */
+
+// max width of the site
+$max-width: 1140;
+
+// colors used in backgrounds
+$dark-grey: #585858;
+$deep-dark-grey: #464646;
+$light-grey: #dfe0e0;
+$deep-light-grey: #f0f0f0;
+
+$box-shadow-color: #6f6c6c;
+$box-shadow-color-lighten: scale-color($box-shadow-color,  $lightness: -25%);
+
+// colors used in links
+$link-color: #222222;
+$link-color-light: #585858;
+
+// light blue from CD
+$light-blue: #97cde8;
+$light-blue-text: #63b3db;
+
+
+
+/* some global class definitions */
+html { 
+ overflow-y: scroll;
+}
+
+.hidden { 
+	position: absolute; 
+	left: -3000px; 
+	top: -3000px;
+}
+.no-padding {
+	padding: 0px !important;
+}
+.no-margin {
+	margin: 0px !important;
+}

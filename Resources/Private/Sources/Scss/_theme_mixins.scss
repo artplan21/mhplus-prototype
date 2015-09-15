@@ -1,0 +1,36 @@
+
+@mixin icon($type, $icon, $position:before, $width:29px, $height:29px, $margin-top:-8px, $margin-side:7px ) {
+	min-width: 29px;
+	&::#{$position} {
+		content: '';
+		display: block;
+		@if $position == before { float: left; }
+		@if $position == after { float: right; }		
+		width: $width;
+		height: $height;
+		margin-top: $margin-top;
+		@if $position == before { margin-right: $margin-side; }
+		@if $position == after { margin-left: $margin-side; }		
+		@extend .#{$type}-#{$icon};
+	}
+}
+
+// need to use the "mixin"-prefix, because mixin input-placeholder is in use by compass (?)
+@mixin mixin-input-placeholder($args) {
+	&::-webkit-input-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+	&::-moz-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+	&:-ms-input-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+}
+	
