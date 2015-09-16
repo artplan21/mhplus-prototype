@@ -87,7 +87,7 @@ $column-gutter: rem-calc(20);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Franklin Gothic", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Franklin Gothic", Arial, Utopia, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -1434,7 +1434,7 @@ $topbar-link-padding: rem-calc(20);
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: transparent;
-$topbar-dropdown-link-color: $black;
+$topbar-dropdown-link-color: $link-color;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 $topbar-dropdown-link-bg: $white;
 // $topbar-dropdown-link-bg-hover: $jet;

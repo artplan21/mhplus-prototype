@@ -1,0 +1,21 @@
+
+
+// need to use the "mixin"-prefix, because mixin input-placeholder is in use by compass (?)
+@mixin mixin-input-placeholder($args) {
+	&::-webkit-input-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+	&::-moz-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+	&:-ms-input-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+}
+	

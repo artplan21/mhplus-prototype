@@ -1,10 +1,32 @@
-@import "theme_settings";
-@import "theme_mixins";
-@import "compass_settings";
+@import "theme/settings";
+
+@import "compass";
+
+// reset before loading foundation!
+@include global-reset;
+
 @import "foundation_settings";
 @import "foundation_components";
 
 
+/* some global class definitions */
+html { 
+ overflow-y: scroll;
+}
+
+.hidden { 
+	position: absolute; 
+	left: -3000px; 
+	top: -3000px;
+}
+.no-padding {
+	padding: 0px !important;
+}
+.no-margin {
+	margin: 0px !important;
+}
+
+/* layout */
 body {
 	margin-top: 50px;
 	background-color: $dark-grey;
@@ -20,11 +42,10 @@ header {
 	height: 145px; 
 }
 
-#topnav {
-	margin-top: -43px;
-	max-width: rem-calc($max-width+17);
-	margin-left: -17px;
+#targetnav, #contactnav {
 	li {
+		display: block;
+		float: left;
 		margin-left: 0px;
 		a {
 			display: block; 
@@ -35,12 +56,18 @@ header {
 	}
 }
 
-#targetnav li a:hover, #targetnav li.active a {
-	background-color: $white;
-	color: $link-color;
+#targetnav {
+	position: absolute; 
+	top: -195px;
+	margin-left: -17px;
+	li a:hover, li.active a{
+		background-color: $white;
+		color: $link-color;
+	}
 }
-		
+	
 #contactnav {
+	margin-top: -43px;
 	li {
 		padding: 3px 0px 0px 20px;
 		a {
@@ -56,7 +83,6 @@ header {
 .phone24 {
 	font-size: rem-calc(18) !important;
 	line-height: 1rem !important;
-	@include icon(standard, phone24);
 }
 .contact { 
 	background-color: $deep-dark-grey;
@@ -65,20 +91,17 @@ header {
 	padding-bottom: 5px !important;
 	margin-top: -2px;
 	line-height: 1rem !important;
-	@include icon(standard, contact);
 	&::before {
 		margin-left: -10px;
 	}
 }
 .settings {
-	@include icon(standard, settings);
 	text-indent: -1000em;
 }
 
 .login {
 	color: $link-color !important;
 	padding-right: 52px !important;
-	@include icon(standard, login_navi, after, 24px, 19px, 14px, 0px);
 	&::after {
 		margin-right: -32px;
 	}
@@ -112,25 +135,19 @@ header {
 		border: none;
 		overflow: hidden;
 		text-indent: -1000em;
-		background-color: $deep-light-grey;
-		@include icon(standard, lens, before, 26px, 26px);
-		
+		background-color: $deep-light-grey;		
 	}
 }
 
 #mainnav {
 	position: absolute; 
+	z-index: 10;
 	top: 152px;
-	width: 100%;
 	background-color: rgba(255,255,255,0.85);
-	.subnav {
-		width: 100%;
-		padding-top: 40px;
-		padding-bottom: 30px;
-		background: $white;
-		@include box-shadow($box-shadow-color-lighten 3px 4px 7px -3px);
-	}
 	.top-bar-section {
+		li:first-child {
+			display: none;
+		}
 		.has-dropdown { 
 			position: inherit; 
 			&:hover, &.hover {
@@ -141,9 +158,25 @@ header {
 			}
 		}
 		.dropdown {
+			padding-top: 40px;
+			padding-bottom: 30px;
+			background: $white;
+			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
 			li.columns { 
+			
+				border-left: 1px solid $light-border;
+				
+				// need to overwrite!
 				@extent .columns;
 				@extend .small-3;
+				&:last-child {
+					float: left !important;
+				}
+				
+				&:first-child {
+					border-left: none;
+				}
+				
 				label {
 					margin-bottom: 15px;
 					padding: 0px ($topbar-link-padding - ($column-gutter/2));
@@ -190,4 +223,53 @@ header {
 footer {
 	background-color: $dark-grey;
 	border-top: 5px solid $light-grey;
+}
+
+
+
+
+@media screen and (max-width: 580px) {
+
+	#targetnav {
+		position: relative;
+		top: 30px;
+		li {
+			float: none;
+		}
+	}
+	
+	#mainnav {
+		width: 315px;
+		left: -260px;
+	}
+	#mainnav.expanded {
+		-moz-transform: translateX(260px);
+		-webkit-transform: translateX(260px);
+		-o-transform: translateX(260px);
+		-ms-transform: translateX(260px);
+		transform: translateX(260px);
+		transition: transform 0.3s linear 0s;
+	}
+	
+	#mainnav .top-bar-section {
+		background-color: $deep-light-grey;
+		li:first-child {
+			display: block;
+		}
+		.right {
+			float: none !important;
+		}
+	}	
+	
+	/*
+	.navopen #mainnav {
+		-moz-transform: translateX(200px);
+		-webkit-transform: translateX(200px);
+		-o-transform: translateX(200px);
+		-ms-transform: translateX(200px);
+		transform: translateX(200px);
+		transition: transform 0.3s linear 0s;
+		
+	}
+	*/
 }

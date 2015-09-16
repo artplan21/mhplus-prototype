@@ -3,14 +3,17 @@ jQuery.noConflict();
 (function($) {
 
 	$(document).foundation({
-	  offcanvas : {
-		// Sets method in which offcanvas opens.
-		// [ move | overlap_single | overlap ]
-		open_method: 'overlap', 
-		// Should the menu close when a menu link is clicked?
-		// [ true | false ]
-		close_on_click : false
-	  }
+		offcanvas : {
+			// Sets method in which offcanvas opens.
+			// [ move | overlap_single | overlap ]
+			open_method: 'overlap', 
+			// Should the menu close when a menu link is clicked?
+			// [ true | false ]
+			close_on_click : false
+		},
+		topbar: {
+			back_text: 'Übersicht Menü', // Define what you want your custom back text to be if custom_back_text: true
+		}
 	});
 		
 	$(document).ready(function() {
@@ -21,8 +24,14 @@ jQuery.noConflict();
 		}
 		
 		/*
+		$('.toggle-topbar').click(function() {
+			$('body').toggleClass('navopen');
+		)};
+		*/
+		
+		/*
 		$('#navi').click(function() {
-			$('body').toggleClass('naviopen');
+			$('body').toggleClass('navopen');
 			return false;
 			if  ($('body').hasClass('naviopen')) {
 				$( "#mainnavi" ).animate({

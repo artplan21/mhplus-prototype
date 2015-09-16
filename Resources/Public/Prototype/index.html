@@ -49,7 +49,7 @@
 <body>
 	
 	<div id="wrapper">
-		
+						
 		<header class="row">
 
 			<ul class="no-padding no-margin">
@@ -59,27 +59,38 @@
 			</ul>
 			<hr class="hidden" />
 			
-			<nav id="topnav" class="row">				
-				<ul id="contactnav" class="right inline-list">
-					<li><a class="phone24" href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
-					<li>
-						<a class="contact" data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
-						<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
-							<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
-						</div>
-					</li>
-					<li>
-						<a class="settings" data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
-						<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
-							<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
-						</div>
-					</li>
-					<li id="searchinput">
-						<form><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
-					</li>
+							
+			<ul id="contactnav" class="right inline-list">
+				<li><a class="phone24" href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
+				<li>
+					<a class="contact" data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
+					<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+						<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+					</div>
+				</li>
+				<li>
+					<a class="settings" data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
+					<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+						<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+					</div>
+				</li>
+				<li id="searchinput">
+					<form><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
+				</li>
+			</ul>
+			
+			<hr class="hidden" />
+
+			
+			<nav id="mainnav" class="small-14 top-bar" data-topbar role="navigation">
+			
+				<ul class="title-area">
+					<li class="name"></li>
+					 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>				
 				</ul>
 				
-				<ul id="targetnav" class="left inline-list">
+				<ul id="targetnav">
 					<li class="active"><a href="index.html">Privatkunden</a></li>
 					<li><a href="index.html">Firmenkunden</a></li>
 					<li><a href="index.html">Vertriebspartner</a></li>
@@ -87,17 +98,13 @@
 					<li><a href="index.html">Unternehmen</a></li>
 				</ul>
 				
-			</nav>
-			
-			<hr class="hidden" />
-			
-			<nav id="mainnav" class="small-14 top-bar" data-topbar>
 				<section class="top-bar-section">
 					<ul>
+						<li><a href="index.html">Startseite</a></li>
 						<li class="has-dropdown">
 							<a href="index.html">Mitglied werden</a>
-							<ul class="dropdown subnav">
-								<li class="small-3 columns"><label>Vier gute Gründe</label>
+							<ul class="dropdown" data-equalizer>
+								<li class="small-3 columns" data-equalizer-watch><label>Vier gute Gründe</label>
 									<ul>
 										<li><a href="index.html">Service</a></li>
 										<li><a href="index.html">Innovation</a></li>
@@ -105,7 +112,7 @@
 										<li><a href="index.html">Versorgung</a></li>
 									</ul>
 								</li>
-								<li class="small-3 columns"><label>Infos zur Mitgliedschaft</label>
+								<li class="small-3 columns" data-equalizer-watch><label>Infos zur Mitgliedschaft</label>
 									<ul>
 										<li><a href="index.html">Broschüren bestellen</a></li>
 										<li><a href="index.html">So werden Sie Mitglied</a></li>
@@ -116,13 +123,13 @@
 										<li><a href="index.html">Platzhalter Nr 7</a></li>
 									</ul>
 								</li>
-								<li class="small-3 columns"><label>Überzeugen Sie sich</label>
+								<li class="small-3 columns" data-equalizer-watch><label>Überzeugen Sie sich</label>
 									<ul>
 										<li><a href="index.html">Vorteilsrechner</a></li>
 										<li><a href="index.html">mhplus im Test</a></li>
 									</ul>
 								</li>
-								<li class="small-3 pull-2 columns"><label>Tolle Extras</label>
+								<li class="small-3 columns" data-equalizer-watch><label>Tolle Extras</label>
 									<ul>
 										<li><a href="index.html">Bonusprogramme</a></li>
 										<li><a href="index.html">Prämien-Programm</a></li>
@@ -132,7 +139,24 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="index.html">Leistungen</a></li>
+						<li class="has-dropdown"><a href="index.html">Leistungen</a>
+							<ul class="dropdown" data-equalizer>
+								<li class="small-3 columns" data-equalizer-watch><label>Überzeugen Sie sich</label>
+									<ul>
+										<li><a href="index.html">Vorteilsrechner</a></li>
+										<li><a href="index.html">mhplus im Test</a></li>
+									</ul>
+								</li>
+								<li class="small-3 columns" data-equalizer-watch><label>Tolle Extras</label>
+									<ul>
+										<li><a href="index.html">Bonusprogramme</a></li>
+										<li><a href="index.html">Prämien-Programm</a></li>
+										<li><a href="index.html">Präventionsangebote</a></li>
+										<li><a href="index.html">Wahltarife</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 						<li><a href="index.html">Versicherung</a></li>
 						<li><a href="index.html">Gesundheit</a></li>
 						<li><a href="index.html">Service</a></li>
@@ -148,22 +172,7 @@
 		<div class="row">
 		
 			<img src="../Images/teaser_test.jpg" alt="Teaser" />
-			
-			<div class="off-canvas-wrap" data-offcanvas>
-				<div class="inner-wrap">
-			 
-					<a id="navi" class="left-off-canvas-toggle">Menu</a>
-			
-					<nav class="left-off-canvas-menu">
-					</nav>
-					
-					<article>
-					</article>
-					
-					<a class="exit-off-canvas"></a>
-				</div>
-			</div>
-					
+							
 			
 			<div class="medium-10 small-14 columns">
 				<article id="content">

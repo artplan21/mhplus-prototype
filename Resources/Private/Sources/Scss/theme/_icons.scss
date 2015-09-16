@@ -1,0 +1,44 @@
+
+@import "compass/utilities/sprites";
+@import "Sprites/standard/\*.png";
+@include all-standard-sprites;
+
+@import "Sprites/retina/\*.png";
+@include all-retina-sprites;
+
+@mixin icon($type, $icon, $position:before, $width:29px, $height:29px, $margin-top:-8px, $margin-side:7px ) {
+	min-width: $width;
+	&::#{$position} {
+		content: '';
+		display: block;
+		@if $position == before { float: left; }
+		@if $position == after { float: right; }		
+		width: $width;
+		height: $height;
+		margin-top: $margin-top;
+		@if $position == before { margin-right: $margin-side; }
+		@if $position == after { margin-left: $margin-side; }		
+		@extend .#{$type}-#{$icon};
+	}
+}
+
+
+.phone24 {
+	@include icon(standard, phone24);
+}
+
+.contact {
+	@include icon(standard, contact);
+}
+
+.settings {
+	@include icon(standard, settings);
+}
+
+.login {
+	@include icon(standard, login_navi, after, 24px, 19px, 14px, 0px);
+}
+
+#searchinput button {
+	@include icon(standard, lens, before, 26px, 26px);
+}
