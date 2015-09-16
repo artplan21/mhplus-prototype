@@ -19,15 +19,28 @@ jQuery.noConflict();
 	$(document).ready(function() {
 		
 		var isMobile = function() {
-			if ($('#navi:visible').length > 0) return true;
+			if ($('#toggle-topbar:visible').length > 0) return true;
 			return false;
 		}
 		
-		/*
-		$('.toggle-topbar').click(function() {
-			$('body').toggleClass('navopen');
-		)};
-		*/
+		$('#toggle-topbar').click(function() {
+			$('#mainnav').toggleClass('expanded');
+			if($('#mainnav.expanded').length == 0) {
+				$('#mainnav').css('height', 'auto');
+			}
+			$('body').toggleClass('expanded');
+		});
+		
+		var replaceTargetNav = function() {
+			var select = $('<select>').attr('id', 'targetnav-select').attr('aria-hidden', 'true').insertBefore('#mainnav').change(function(){
+				window.location.href = $(this).children('option:selected').val();
+			});
+			$('#targetnav li a').each(function(){
+				var a = $('<option>').attr('value', $(this).attr('href')).text($(this).text());
+				a.appendTo(select);
+			});			
+		}
+		replaceTargetNav();
 		
 		/*
 		$('#navi').click(function() {

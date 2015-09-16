@@ -53,43 +53,39 @@
 		<header class="row">
 
 			<ul class="no-padding no-margin">
-				<li><a href="index.html" id="logo" class="standard-logo" accesskey="0">mhplus - Home</a></li>
+				<li id="logo"><a href="index.html" accesskey="0">mhplus - Home</a></li>
 				<li class="hidden"><a href="#content" accesskey="2">Zum Inhalt</a></li>
 				<li class="hidden"><a href="#nav" accesskey="3">Zur Navigation</a></li>
 			</ul>
 			<hr class="hidden" />
 			
 							
-			<ul id="contactnav" class="right inline-list">
-				<li><a class="phone24" href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
-				<li>
-					<a class="contact" data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
+			<ul id="utilitynav">
+				<li id="loginlink" ><a href="index.html">Login</a></li>
+				<li id="phone24"><a href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
+				<li id="contact">
+					<a data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
 					<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
 						<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
 					</div>
 				</li>
-				<li>
-					<a class="settings" data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
+				<li id="settings">
+					<a data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
 					<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
 						<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
 					</div>
 				</li>
+				<li id="searchlink"><a href="index.html">Suche</a></li>
 				<li id="searchinput">
 					<form><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
 				</li>
 			</ul>
 			
 			<hr class="hidden" />
-
+			
+			<div id="toggle-topbar"><a href="#">Menu</a></div>
 			
 			<nav id="mainnav" class="small-14 top-bar" data-topbar role="navigation">
-			
-				<ul class="title-area">
-					<li class="name"></li>
-					 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>				
-				</ul>
-				
 				<ul id="targetnav">
 					<li class="active"><a href="index.html">Privatkunden</a></li>
 					<li><a href="index.html">Firmenkunden</a></li>
@@ -97,7 +93,6 @@
 					<li><a href="index.html">Karriere</a></li>
 					<li><a href="index.html">Unternehmen</a></li>
 				</ul>
-				
 				<section class="top-bar-section">
 					<ul>
 						<li><a href="index.html">Startseite</a></li>
@@ -161,7 +156,7 @@
 						<li><a href="index.html">Gesundheit</a></li>
 						<li><a href="index.html">Service</a></li>
 						<li><a href="index.html">Pflege</a></li>
-						<li class="right"><a class="login" href="index.html">mhplusdirekt</a></li>
+						<li id="login" class="right"><a href="index.html">mhplusdirekt</a></li>
 					</ul>		
 				</section>
 			</nav>

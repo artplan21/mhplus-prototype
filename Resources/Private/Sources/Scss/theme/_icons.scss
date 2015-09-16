@@ -1,44 +1,144 @@
 
-@import "compass/utilities/sprites";
-@import "Sprites/standard/\*.png";
-@include all-standard-sprites;
+/* icon map */
+$standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 
-@import "Sprites/retina/\*.png";
-@include all-retina-sprites;
+/* mixins and extends */
+@mixin get-sprite($sprite, $icon-offset-x:0, $height: true, $width: true)
+{
+  $sprite-image: sprite-file($standard-icon-map, $sprite) ;
+  $sprite-map: sprite-url($standard-icon-map);
+  $sprite-position: sprite-position($standard-icon-map, $sprite, $icon-offset-x);
+  background-position: $sprite-position;
+  @if ($height == true) {
+    $sprite-height: image-height($sprite-image);
+    height: $sprite-height;
+  }
+  @if($width == true) {
+    $sprite-width: image-width($sprite-image);
+    width: $sprite-width;
+    }
+}
 
-@mixin icon($type, $icon, $position:before, $width:29px, $height:29px, $margin-top:-8px, $margin-side:7px ) {
-	min-width: $width;
-	&::#{$position} {
-		content: '';
-		display: block;
-		@if $position == before { float: left; }
-		@if $position == after { float: right; }		
-		width: $width;
-		height: $height;
-		margin-top: $margin-top;
-		@if $position == before { margin-right: $margin-side; }
-		@if $position == after { margin-left: $margin-side; }		
-		@extend .#{$type}-#{$icon};
+@mixin icon($icon, $position:before, $icon-offset-x:0) {
+	@if($position != false) {
+		&::#{$position} {
+			@include get-sprite($icon, $icon-offset-x, $height: true, $width: true);
+		}
+	}
+	@if($position == false) {
+		@include get-sprite($icon, $icon-offset-x, $height: false, $width: false);
 	}
 }
 
 
-.phone24 {
-	@include icon(standard, phone24);
+@mixin icon-standards {
+	content: '';
+	display: block;
+	margin-top: -8px;
+	background-repeat: no-repeat;
+	@extend %all-sprites-standard;
 }
 
-.contact {
-	@include icon(standard, contact);
+%add-before {
+	&::before {
+		@include icon-standards;
+		float: left;
+		margin-right: 7px;
+	}
 }
 
-.settings {
-	@include icon(standard, settings);
+%add-after {
+	&::after {
+		@include icon-standards;
+		float:right;
+		margin-left: 7px;
+	}
 }
 
-.login {
-	@include icon(standard, login_navi, after, 24px, 19px, 14px, 0px);
+%all-sprites-standard {
+	$sprite-map: sprite-url($standard-icon-map);
+	background-image: $sprite-map;
+}
+
+
+/* icons */
+
+#phone24 a {
+	@extend %add-before;
+	@include icon(phone24);
+	@media #{$small-only} {
+		@include icon(phone24_smart);
+		@media #{$retina} {
+			@include icon(phone24_smart_retina);
+		}
+	}
+	@media #{$retina} {
+		@include icon(phone24_retina);
+	}
+}
+
+#contact a {
+	@extend %add-before;
+	@include icon(contact);
+	@media #{$retina} {
+		@include icon(contact_retina);
+	}
+}
+
+#settings a {
+	@extend %add-before;
+	@include icon(settings);
+	@media #{$retina} {
+		@include icon(settings_retina);
+	}
+}
+
+#login a {
+	@extend %add-after;
+	&::after {
+		margin-top: 14px;
+		margin-left: 0px;
+	}
+	@include icon(login_navi, after);
+	@media #{$retina} {
+		@include icon(login_navi_retina);
+	}
+}
+
+#loginlink a {
+	@extend %add-before;
+	@include icon(login_smart);
+	@media #{$retina} {
+		@include icon(login_smart_retina);
+	}
+}
+
+#searchlink a {
+	@extend %add-before;
+	@include icon(lens_smart);
+	@media #{$retina} {
+		@include icon(lens_smart_retina);
+	}
 }
 
 #searchinput button {
-	@include icon(standard, lens, before, 26px, 26px);
+	@extend %add-before;
+	@include icon(lens);
+	@media #{$retina} {
+		@include icon(lens_retina);
+	}
 }
+
+#toggle-topbar a {
+	@extend %add-before;
+	@include icon(burger);
+}
+.expanded #toggle-topbar a {
+	@include icon(cross);
+}
+
+.js #targetnav-select {
+	@extend %all-sprites-standard;
+	@include icon(caret_down_black, false, ($menu-width-mobile - 50));
+}
+
