@@ -27,8 +27,12 @@ jQuery.noConflict();
 			$('#mainnav').toggleClass('expanded');
 			if($('#mainnav.expanded').length == 0) {
 				$('#mainnav').css('height', 'auto');
+				$('body').removeClass('expanded');
 			}
-			$('body').toggleClass('expanded');
+			else {
+				$('body').addClass('expanded');
+			}
+			
 		});
 		
 		var replaceTargetNav = function() {
