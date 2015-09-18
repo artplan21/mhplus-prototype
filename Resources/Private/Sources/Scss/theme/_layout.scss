@@ -5,13 +5,35 @@ body {
 	border-top: 5px solid $light-grey;
 }
 
+ul, ol, dl {
+	font-size: rem-calc($text-font-size) !important;
+}
+
+nav, nav a {
+	font-family: $nav-font !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font !important;
+}
+
 #wrapper { 
+	padding: 0px 10px 0px 10px;
 	background-color: $white;
+	font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
+	min-width: $medium-breakpoint;
+}
+
+.row {
+	font-size: rem-calc($text-font-size) !important;
 }
 
 header {
 	position: relative;
 	height: 145px; 
+	ul, ul li { 
+		list-style: none;
+	}
 }
 
 #targetnav, #utilitynav {
@@ -24,7 +46,7 @@ header {
 			display: block; 
 			padding: 8px 17px 14px 17px;
 			color: $white;
-			font-size: rem-calc(14);
+			font-size: rem-calc($text-font-size);
 		}
 	}
 }
@@ -98,10 +120,10 @@ header {
 		border: none;
 		background-color: $deep-light-grey;
 		@include box-shadow(none);
+		font-family: $nav-font;
 		font-size: rem-calc(22);
 		color: $link-color;
 		font-weight: 400;
-		@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: -10%)));
 	}
 	button {
 		float: right;
@@ -143,6 +165,9 @@ header {
 					background-color: $white;
 				}
 			}
+			a::before {
+				display: none;
+			}
 		}
 		.dropdown {
 			padding-top: 40px;
@@ -151,6 +176,10 @@ header {
 			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
 			li.back {
 				display: none;
+			}
+			label {
+				margin-bottom: 15px;
+				padding: 0px ($topbar-link-padding - ($column-gutter/2));
 			}
 			li.columns { 
 			
@@ -165,17 +194,13 @@ header {
 				
 				&:last-child {
 					border-right: none;
-				}	
-				label {
-					margin-bottom: 15px;
-					padding: 0px ($topbar-link-padding - ($column-gutter/2));
 				}
 				ul {
 					margin-top: 10px;
 					li { 
 						display: block;
 						a {
-							font-size: rem-calc(14);
+							font-size: rem-calc($text-font-size);
 							line-height: rem-calc(16);
 							padding: rem-calc(5) rem-calc(5);
 
@@ -210,15 +235,97 @@ header {
 		height: 65px;
 		text-indent: -1000em;
 		@extend %all-sprites-standard;
-		@include icon(logo, false, 0);
+		@include icon(logo, 1, false);
+		@media #{$retina} {
+			@include icon(logo_retina, 2, false);
+		}
 	}
 }
 
+.main-content {
+	padding-left: 0px;
+}
 
 footer {
+	color: $white;
+	font-size: rem-calc($text-font-size) !important;
+	padding: 0px 10px 70px 10px;
 	background-color: $dark-grey;
 	border-top: 5px solid $light-grey;
+	ul, ul li {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	#footer-accordion {
+		margin-bottom: 0px;
+		border-bottom: 1px solid $deep-dark-grey;
+	}
+	a, a:hover {
+		color: inherit;
+	}
+	/* reset */
+	.accordion, dd.accordion-navigation, 
+	dd.accordion-navigation .content,
+	.accordion .accordion-navigation > .content, 
+	.accordion dd > .content,
+	.accordion .accordion-navigation > a, .accordion dd > a,
+	.accordion .accordion-navigation > a:hover, .accordion dd > a:hover	{
+		padding: 0px;
+		color: inherit;
+		background-color: $dark-grey !important;
+	}
+	.accordion-navigation {
+		> a {
+			padding: 15px 0px 14px 0px !important;
+			font-size: rem-calc(18) !important;
+			font-family: $text-font;
+		}
+		&.active > a {
+			&::before {
+				transform: rotate(90deg);
+				margin-left: 4px;
+				margin-right: 10px;
+			}
+		}
+	}
+	.accordion .content {
+		padding: 20px 0px 20px 0px !important;
+	}
+	.columns {
+		ul {
+			margin-top: 24px;
+		}
+		&:first-child {
+			padding-left: 0px;
+			ul {
+				float: left;
+				max-width: 30%;
+				margin-right: 10%;
+			}
+		}
+		&:last-child {
+			padding-right: 0px;
+			ul {
+				float: left;
+				&:first-child {
+					max-width: 35%;
+				}
+				&:last-child {
+					float: right;
+				}
+			}
+		}
+	}
+	.newsletter-input {
+		max-width: 175px;
+		float: left;
+	}
+	button.small {
+		background-color: scale-color($dark-grey, $lightness: 10%);
+	}
 }
+
 
 
 /* hide mobile elements */

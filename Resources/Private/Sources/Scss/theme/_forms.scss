@@ -7,7 +7,17 @@
 			#{$key}: #{$val};
 		}
 	}
+	&:-webkit-input-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
 	&::-moz-placeholder {
+		@each $key, $val in $args {
+			#{$key}: #{$val};
+		}
+	}
+	&:-moz-placeholder {
 		@each $key, $val in $args {
 			#{$key}: #{$val};
 		}
@@ -18,4 +28,45 @@
 		}
 	}
 }
+
+/*
+::-webkit-input-placeholder {
+   color: scale-color($link-color-light, $lightness: +50%);
+}
+:-moz-placeholder { 
+   color: scale-color($link-color-light, $lightness: +50%);  
+}
+::-moz-placeholder { 
+   color: scale-color($link-color-light, $lightness: +50%);  
+}
+:-ms-input-placeholder {  
+   color: scale-color($link-color-light, $lightness: +50%);  
+}
+*/
 	
+fieldset.input-button-group {
+	padding: 0px;
+	margin: 6px -100px 6px 0px;
+	border: none;
+
+}
+
+input {
+	padding: 0px;
+	//@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: +60%)));
+}
+
+
+button, .button {
+	background-color: $dark-grey;
+}
+
+button.small, button.small:hover {
+	width: 24px !important;
+	height: 23px !important;
+	padding: 0px !important;
+	margin: 0px !important;
+	background-color: $dark-grey;
+	text-indent: -1000em;
+	overflow: hidden;
+}

@@ -2,8 +2,6 @@
 
 @import "compass";
 
-// reset before loading foundation!
-@include global-reset;
 
 @import "foundation_settings";
 @import "foundation_components";
@@ -26,9 +24,10 @@ html {
 	margin: 0px !important;
 }
 
-/* imports components */
+/* import components */
 @import "theme/forms";
 @import "theme/icons";
+@import "theme/slider";
 
 /* import layouts */
 @import "theme/layout";

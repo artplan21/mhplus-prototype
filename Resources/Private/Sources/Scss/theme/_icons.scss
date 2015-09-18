@@ -1,32 +1,29 @@
 
 /* icon map */
-$standard-icon-map: sprite-map("Sprites/Icons/\*.png");
+$standard-icon-map: sprite-map("Sprites/Icons/\*.png", $position: 0%, $spacing: 2px);
 
 /* mixins and extends */
-@mixin get-sprite($sprite, $icon-offset-x:0, $height: true, $width: true)
+@mixin get-sprite($sprite, $icon-offset-x:0, $ratio: 1, $height: true, $width: true)
 {
-  $sprite-image: sprite-file($standard-icon-map, $sprite) ;
-  $sprite-map: sprite-url($standard-icon-map);
-  $sprite-position: sprite-position($standard-icon-map, $sprite, $icon-offset-x);
-  background-position: $sprite-position;
-  @if ($height == true) {
-    $sprite-height: image-height($sprite-image);
-    height: $sprite-height;
-  }
-  @if($width == true) {
-    $sprite-width: image-width($sprite-image);
-    width: $sprite-width;
-    }
+	background-size: (image-width(sprite-path($standard-icon-map)) / $ratio) (image-height(sprite-path($standard-icon-map)) / $ratio);
+	background-position: (round(nth(sprite-position($standard-icon-map, $sprite, $icon-offset-x), 1) / $ratio)) round(nth(sprite-position($standard-icon-map, $sprite), 2) / $ratio);
+	
+	@if ($height == true) {
+		height: (image-height(sprite-file($standard-icon-map, $sprite)) / $ratio) + 1; // need to add one due to rounding
+	}
+	@if($width == true) {
+		width: (image-width(sprite-file($standard-icon-map, $sprite)) / $ratio) + 1;
+	}
 }
 
-@mixin icon($icon, $position:before, $icon-offset-x:0) {
+@mixin icon($icon, $ratio:1, $position:before, $icon-offset-x:0) {
 	@if($position != false) {
 		&::#{$position} {
-			@include get-sprite($icon, $icon-offset-x, $height: true, $width: true);
+			@include get-sprite($icon, $icon-offset-x, $ratio, $height: true, $width: true );
 		}
 	}
 	@if($position == false) {
-		@include get-sprite($icon, $icon-offset-x, $height: false, $width: false);
+		@include get-sprite($icon, $icon-offset-x, $ratio, $height: false, $width: false);
 	}
 }
 
@@ -38,6 +35,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	background-repeat: no-repeat;
 	@extend %all-sprites-standard;
 }
+
 
 %add-before {
 	&::before {
@@ -66,14 +64,14 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 #phone24 a {
 	@extend %add-before;
 	@include icon(phone24);
+	@media #{$retina} {
+		@include icon(phone24_retina, 2);
+	}
 	@media #{$small-only} {
 		@include icon(phone24_smart);
 		@media #{$retina} {
-			@include icon(phone24_smart_retina);
+			@include icon(phone24_smart_retina, 2);
 		}
-	}
-	@media #{$retina} {
-		@include icon(phone24_retina);
 	}
 }
 
@@ -81,7 +79,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	@extend %add-before;
 	@include icon(contact);
 	@media #{$retina} {
-		@include icon(contact_retina);
+		@include icon(contact_retina, 2);
 	}
 }
 
@@ -89,7 +87,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	@extend %add-before;
 	@include icon(settings);
 	@media #{$retina} {
-		@include icon(settings_retina);
+		@include icon(settings_retina, 2);
 	}
 }
 
@@ -99,9 +97,9 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 		margin-top: 14px;
 		margin-left: 0px;
 	}
-	@include icon(login_navi, after);
+	@include icon(login_navi, 1, after);
 	@media #{$retina} {
-		@include icon(login_navi_retina);
+		@include icon(login_navi_retina, 2);
 	}
 }
 
@@ -109,7 +107,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	@extend %add-before;
 	@include icon(login_smart);
 	@media #{$retina} {
-		@include icon(login_smart_retina);
+		@include icon(login_smart_retina, 2);
 	}
 }
 
@@ -117,7 +115,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	@extend %add-before;
 	@include icon(lens_smart);
 	@media #{$retina} {
-		@include icon(lens_smart_retina);
+		@include icon(lens_smart_retina, 2);
 	}
 }
 
@@ -125,7 +123,7 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 	@extend %add-before;
 	@include icon(lens);
 	@media #{$retina} {
-		@include icon(lens_retina);
+		@include icon(lens_retina, 2);
 	}
 }
 
@@ -139,6 +137,58 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png");
 
 .js #targetnav-select {
 	@extend %all-sprites-standard;
-	@include icon(caret_down_black, false, ($menu-width-mobile - 50));
+	@include icon(caret_down_black, 1, false, ($menu-width-mobile - 50));
+	@media #{$xsmall-only} {
+		@include icon(caret_down_black, 1, false, ($menu-width-xs-mobile - 50));
+	}
 }
 
+.has-dropdown > a, .dropdown .back a {
+	@extend %add-before;
+	@include icon(caret_down_black);
+}
+.has-dropdown > a {
+	&::before {
+		float: right;
+		transform: rotate(270deg);
+		margin-right: -2px;
+		margin-top: -13px;
+	}
+}
+.dropdown .back a {
+	&::before {
+		transform: rotate(90deg);
+		margin-left: -22px;
+		margin-top: -14px;
+	}
+}
+
+button.small {
+	@extend %add-before;
+	@include icon(caret_right_white_small);
+	&::before {
+		margin-top: 3px;
+		margin-left: 9px;
+	}
+}
+
+footer .accordion-navigation a {
+	@extend %add-before;
+	@include icon(caret_right_white);
+	&::before {
+		margin-top: 7px;
+		margin-right: 14px;
+	}
+}
+
+.js .slide-title {
+	@extend %add-after;
+	&::after {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+	@include icon(caret_down_black_slider, 1, after);
+}

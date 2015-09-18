@@ -1,9 +1,47 @@
+
+@mixin breakpoint-menuwidth($menu-width-mobile) {
+
+	.js #targetnav-select, .js #mainnav, .js .top-bar {
+		width:#{$menu-width-mobile}px;
+		left: -#{$menu-width-mobile}px;
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+	
+	.js .expanded #targetnav-select, .js .expanded #toggle-topbar, .js #mainnav.expanded {
+		@include transform2d(translateX(#{$menu-width-mobile}px));
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+	
+	.js #toggle-topbar {
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+}
+
+
 @media #{$small-only} {
+
+	@include breakpoint-menuwidth($menu-width-mobile);
 	
 	body {
 		margin-top: 0px;
 	}
 	
+	#wrapper {
+		min-width: 100%;
+		max-width: 100%;
+		padding: 0px;
+	}
+	
+	.row {
+		min-width: 100%;
+		max-width: 100%;
+	}
+	
+	nav, nav a {
+		font-family: $text-font !important;
+		font-size: rem-calc($menu-font-size-mobile) !important;
+	}
+
 	.no-js header {
 		height: auto;
 	}
@@ -64,9 +102,7 @@
 		position: absolute;
 		display: block;
 		top: 122px;
-		left: -#{$menu-width-mobile}px;
 		height: 49px;
-		width:#{$menu-width-mobile}px;
 		padding: 0px 10px 0px 17px;
 		border: none;
 		background-color: $white;
@@ -74,16 +110,12 @@
 		text-transform: uppercase;
 		font-size: rem-calc(16) !important;
 		@include transform2d(translateX(0px));
-		transition: transform 0.2s ease 0s;
 		option {
 			font-size: inherit !important;
 			padding: 0px 17px;
 		}
 	}
-	.js .expanded #targetnav-select {
-		@include transform2d(translateX(#{$menu-width-mobile}px));
-		transition: transform 0.2s ease 0s;
-	}
+	
 	
 	.js #toggle-topbar {
 		position: absolute;
@@ -94,8 +126,7 @@
 		width: 60px;
 		overflow: hidden;
 		background-color: $white;
-		@include transform2d(translateX(0px));
-		transition: transform 0.2s ease 0s;
+		@include transform2d(translateX(0px));	
 		a {
 			position: absolute;
 			display: block;
@@ -109,14 +140,12 @@
 			}
 		}
 	}
-	.js .expanded #toggle-topbar {
-		@include transform2d(translateX(#{$menu-width-mobile}px));
-		transition: transform 0.2s ease 0s;
-	}
+	
 	
 	.no-js #mainnav{
 		position: relative;
 		top: 0px;
+		margin-top: 172px;
 		overflow: visible;
 		height: auto !important;
 		.title-area {
@@ -124,30 +153,25 @@
 		}
 	}
 	
-	.js #mainnav.expanded {
-		@include transform2d(translateX(#{$menu-width-mobile}px));
-		transition: transform 0.2s ease 0s;
-	}
+	
 	
 	.js #mainnav, .js .top-bar {
-		width: #{$menu-width-mobile}px;
-		left: -#{$menu-width-mobile}px;
+		overflow-y: auto;
 		top: 174px;
-		font-size: rem-calc(18) !important;
-		@include box-shadow($box-shadow-color-lighten 5px 7px 7px -7px);
+		@include box-shadow($box-shadow-color-lighten 10px 10px 15px -9px);
 		@include transform2d(translateX(0px));
-		transition: transform 0.2s ease 0s;
 	}
 	 
 	#mainnav {
+		
 		background-color: $deep-light-grey;
 		.top-bar-section {
-			font-size: inherit !important;
+			
 			background-color: $deep-light-grey;
 			li, li:hover {
-				font-size: inherit !important;
+				
 				a, a:hover {
-					font-size: inherit !important;
+					
 					border-bottom: 1px solid $white;
 					color: $link-color;
 					background-color: $deep-light-grey;
@@ -164,40 +188,39 @@
 						background-color: transparent;
 					}
 				}
+				a::before {
+					display: block;
+				}
 			}
 			.dropdown {
+				
 				padding-top: 0px;
 				background-color: $deep-light-grey;
 				@include box-shadow(none);
-				li.back {
+				li.back, li.parent-link {
 					display: inherit;
+				}
+				h5, li.parent-link {
+					line-height: inherit !important;
+					
+					a {
+						padding: 12px 0px 12px $topbar-link-padding;
+						
+					}
 				}
 				li, li.columns { 
 					padding: 0px !important;
 					float: none !important;
 					width: 100% !important;
 					height: auto !important;
-					h5 {
-						font-size: inherit !important;
-						a {
-							padding: 12px 0px 12px $topbar-link-padding;
-							font-size: inherit !important;
-						}
-					}
-					label {
-						font-size: inherit !important;
-						color: $link-color;
-						margin-bottom: 0px;
-						padding: 12px 0px 12px $topbar-link-padding;
-					}
 					ul {
 						border-top: 1px solid $white;
 						margin-top: 0px;
 						li { 
-							font-size: inherit !important;
+							
 							display: block;
 							a {
-								font-size: inherit !important;
+							
 								line-height: inherit;
 								padding: 12px $topbar-link-padding 12px ($topbar-link-padding*2);
 
@@ -212,6 +235,16 @@
 						}
 					}
 				}
+				li.active a, a.parent-link, .hover a.parent-link, a.parent-link:hover {
+					background-color: $light-blue !important;
+				}
+			}
+			ul.dropdown label {
+				line-height: inherit !important;
+				font-size: rem-calc($menu-font-size-mobile) !important;
+				color: $link-color;
+				margin-bottom: 0px;
+				padding: 12px 0px 12px $topbar-link-padding;
 			}
 		}
 	}
@@ -226,6 +259,18 @@
 				margin-top: 6px;
 			}
 		}
+	}
+	.no-js #login { 
+		margin-top: 0px; 
+	}
+	
+	#exit-off-canvas {
+		position: absolute;
+		display: block;
+		top: 0px; 
+		left: 0px;
+		z-index: 5;
+		width: 100%;
 	}
 	
 	#contact, 
@@ -253,4 +298,42 @@
 		}
 	}
 	
+	.main-content {
+		padding-left:rem-calc($gutter-width / 2);
+	}
+		
+	footer {
+		padding: 0px;
+		.columns {
+			&:first-child {
+				padding-left: rem-calc($gutter-width / 2);
+				ul {
+					float: left;
+					max-width: 100%;
+					margin-right: 10%;
+					li:last-child {
+						margin-right: 0px;
+					}
+				}
+			}
+			&:last-child {
+				padding-right: rem-calc($gutter-width / 2);
+				ul {
+					float: left;
+					&:first-child {
+						max-width: 50%;
+					}
+					&:last-child {
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media #{$xsmall-only} {
+	@include breakpoint-menuwidth($menu-width-xs-mobile);
 }

@@ -3,11 +3,28 @@
 
 // max width of the site
 $max-width: 1140;
+$gutter-width: 20;
 
-// menu width in mobile version
-$menu-width-mobile: 315;
+// menue width in mobile version
+$menu-width-mobile: 300;
+$menu-width-xs-mobile: 250;
 
-// text color
+// animation speed/type for menue
+$menu-animation-speed: 0.2s;
+$menu-animation-type: ease;
+
+// font
+$text-font: Arial, "ITCFranklinGothicW01-Dm 812668", "Utopia W01 It", sans-serif;
+$header-font: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
+$nav-font: $header-font;
+
+// font-size
+$text-font-size: 14;
+
+// off-cancas menue font-size
+$menu-font-size-mobile: 16px;
+
+// font color
 $text-color: #222222;
 
 // colors used in backgrounds
@@ -32,3 +49,14 @@ $light-blue: #97cde8;
 $light-blue-text: #63b3db;
 
 
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=322b7a64-a76a-4d73-b98f-f94e1caf18cd");
+@font-face{
+font-family:"ITCFranklinGothicW01-Dm 812668";
+src:url("Fonts/498d8f5c-6dfe-4a07-9fdf-321bcc11909c.eot?#iefix");
+src:url("Fonts/498d8f5c-6dfe-4a07-9fdf-321bcc11909c.eot?#iefix") format("eot"),url("Fonts/ea7dcf5e-c101-46d3-a553-bb46f78ca7e4.woff2") format("woff2"),url("Fonts/08fe22ab-0517-4203-bcc9-1ba2ca45f40c.woff") format("woff"),url("Fonts/6adc2e3a-d0c4-4c48-ba68-91b4107515d7.ttf") format("truetype"),url("Fonts/426ce955-d5bd-4a77-b077-402088f77e65.svg#426ce955-d5bd-4a77-b077-402088f77e65") format("svg");
+}
+@font-face{
+font-family:"Utopia W01 It";
+src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix");
+src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix") format("eot"),url("Fonts/b58a7ef2-1af1-4388-bea9-35a36e882eee.woff2") format("woff2"),url("Fonts/91100087-f732-4de0-aa71-80eccd860c00.woff") format("woff"),url("Fonts/ebb5c4d7-df95-4959-9bf3-9f1dbef0b9cd.ttf") format("truetype"),url("Fonts/0b69d819-2210-4ff4-ab5b-0838cc946334.svg#0b69d819-2210-4ff4-ab5b-0838cc946334") format("svg");
+}

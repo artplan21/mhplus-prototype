@@ -1,0 +1,178 @@
+.js #mainslider .slide {
+	opacity: 0;
+}
+
+#mainslider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 416px;
+	@media #{$small-only} {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.slide {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 1140px;
+		height: 416px;
+		overflow: hidden;
+		visibility: hidden;
+		
+		@media #{$small-only} {
+			left: -350px;
+			margin-left: 50%;
+			width: 685px;
+			height: 250px;
+			img {		
+				height: 250px;
+				min-height: 250px;
+				min-width: 685px;
+				max-width: 685px;
+				width: 685px;
+			}
+		}
+		
+		> a { 
+			display: block;
+		}
+		
+		&:first-child {
+			visibility: visible;
+		}
+		&.closed {
+			visibility: visible;
+		}
+		&.open {
+			visibility: visible;
+		}
+	}
+	
+	// slide-desc not as a child of .slide, because is js moved out of slide !!
+	.slide-desc {
+		position: absolute;
+		z-index: 5;
+		width: 300px;
+		right: 20px;
+		bottom: 22px;
+		padding: 20px;
+		background-color: $white;
+		margin: 1px 0px 1px 0px;
+		
+		@media #{$small-only} {
+			width: 100%;
+		}
+		
+		.slide-title {
+			margin-bottom: 10px;
+			font-family: $header-font;
+			font-size: rem-calc(24);
+			transition: font 0.3s ease;
+		}
+		
+		.slide-text {
+			margin-bottom: 0px;
+			line-height: rem-calc(17);
+			p {
+				line-height: inherit;
+				margin-bottom: rem-calc(10);
+			}
+			.button {
+				padding: 10px;
+				background-color: $light-blue;
+				font-weight: 700;
+				margin-bottom: 0px;
+				&:hover {
+					background-color: $light-blue-text;
+				}
+			}
+		}
+	}
+	.slide-caller {
+		position: absolute;
+		z-index: 5;
+		left: 20px;
+		bottom: 22px;
+		font-family: $header-font;
+		
+		@media #{$small-only} {
+			display: none;
+		}
+		
+		.slide-header {
+			position: relative;
+			display: inline;
+			padding: 0px 10px 0px 10px;
+			width: auto;
+			background-color: $white;
+			font-size: rem-calc(38) !important;
+			span {
+				color: $light-blue-text;
+			}
+		}
+
+		> p, > span {
+			font-weight: 500;
+			font-size: rem-calc(18) !important;
+			line-height: rem-calc(18);
+			display: inline-block;
+			margin-top: 15px;
+			margin-bottom: 0px;
+			padding: 4px 10px 4px 10px;
+			background-color: $light-blue;
+		}
+	}
+	
+	/* after js working */
+	
+	.slider-stage {
+		position: absolute;
+		width: 300px;
+		right: 20px;
+		bottom: 22px;
+		@media #{$small-only} {
+			position: relative;
+			width: 80%;
+			margin-top: 250px;
+			top: 0px;
+			left: 8%;
+		}
+		
+		.slide-desc {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			overflow: hidden;
+			@media #{$small-only} {
+				border-bottom: 1px solid $light-grey;
+			}
+			
+			&.closed {
+				padding-top: 0px;
+				padding-bottom: 0px;
+				
+				.slide-text {
+					overflow: hidden;
+				}
+				.slide-title {
+					margin-bottom: 0px;
+					cursor: pointer;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					font-family: $text-font;
+					font-size: rem-calc($text-font-size);
+					transition: font 0.3s ease;
+				}
+			}
+			&.open {
+				.slide-title::after {
+					display: none;
+				}
+			}
+		}
+		
+		
+	}
+}
