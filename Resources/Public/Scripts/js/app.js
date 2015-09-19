@@ -23,16 +23,22 @@ jQuery.noConflict();
 			return false;
 		}
 		
-		function setMainnavHeight() {
+		
+		var setMainnavHeight = function() {
 			$('#mainnav').css('visibility', 'visible');
-			setTimeout(function() {
-				var max_avail_height = $('body').height() - $('#mainnav').offset().top + 5;
-				$('#mainnav').css('height', max_avail_height);
+			if (isMobile()) {
 				setTimeout(function() {
-					if (!$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
-				},200);
-			}, 10);
+					var max_avail_height = $('body').height() - $('#mainnav').offset().top + 5;
+					$('#mainnav').css('height', max_avail_height);
+					setTimeout(function() {
+						if (!$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
+					},200);
+				}, 10);
+			}
 		}
+		$( window ).resize(function() {
+			setMainnavHeight();
+		});
 		
 		$('#mainnav').click(function() {
 			if ($(this).hasClass('expanded') && isMobile()) setMainnavHeight();
@@ -47,7 +53,7 @@ jQuery.noConflict();
 			// some more
 			if($('#mainnav.expanded').length == 0) {
 			
-				// set height of top-bar (overwrite top-bar-js)
+				// set height and visibility of top-bar (overwrite top-bar-js)
 				setMainnavHeight()
 				
 				// hide other dependencies
@@ -57,13 +63,12 @@ jQuery.noConflict();
 			else {
 				
 				// show other dependencies
-				
 				$('body').addClass('expanded');
 				
-				// set height of mainnav again
+				// set height and visibility of mainnav again
 				setMainnavHeight()
 				
-				// create a close overlay
+				// create a closer overlay
 				$('<a>')
 					.attr('id', 'exit-off-canvas')
 					.appendTo('body')
@@ -83,8 +88,8 @@ jQuery.noConflict();
 			
 		});
 		
-		/* replace target menue to select menue */
-		var replaceTargetNav = function() {
+		/* replace targetgroup menue to select menue */
+		var replaceTargetGroupNav = function() {
 			var select = $('<select>')
 					.attr('id', 'targetnav-select')
 					.attr('aria-hidden', 'true')
@@ -99,7 +104,7 @@ jQuery.noConflict();
 				a.appendTo(select);
 			});			
 		}
-		replaceTargetNav();
+		replaceTargetGroupNav();
 		
 		/* start slider */
 		$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600});

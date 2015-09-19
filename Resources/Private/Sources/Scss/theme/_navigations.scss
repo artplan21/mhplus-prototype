@@ -1,0 +1,377 @@
+@mixin breakpoint-menuwidth($menu-width) {
+
+	.js #targetnav-select, .js #mainnav, .js .top-bar {
+		width:#{$menu-width}px;
+		left: -#{$menu-width}px;
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+	
+	.js .expanded #targetnav-select, .js .expanded #toggle-topbar, .js #mainnav.expanded {
+		@include transform2d(translateX(#{$menu-width}px));
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+	
+	.js #toggle-topbar {
+		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+}
+
+
+@media #{$small-only} {
+	@include breakpoint-menuwidth($menu-width-mobile);
+}
+
+
+@media #{$xsmall-only} {
+	@include breakpoint-menuwidth($menu-width-xs-mobile);
+}
+
+
+/* menues top of the site */
+#targetnav, #utilitynav {
+	margin-bottom: 0px;
+	li {
+		display: block;
+		float: left;
+		margin-left: 0px;
+		a {
+			display: block; 
+			padding: 8px 17px 14px 17px;
+			color: $white;
+			font-size: rem-calc($text-font-size);
+		}
+	}
+}
+
+/* left side */
+#targetnav {
+	position: absolute; 
+	top: -195px;
+	margin-left: -17px;
+	li a:hover, li.active a{
+		background-color: $white;
+		color: $link-color;
+	}
+	
+	@media #{$small-only} {
+		position: relative;
+		top: 0px;
+		margin-left: 0px;
+		margin-top: -35px;
+		li {
+			float: none;
+		}
+		li a, li a:hover, li.active a {
+			padding: 3px 17px 3px 17px;
+			background-color: $white;
+			color: $link-color;
+			text-transform: uppercase;
+			font-family: $text-font !important;
+			font-size: rem-calc($menu-font-size-mobile) !important;
+			line-height: inherit !important;
+		}
+
+		.js & { // replaced through select menue
+			display: none;
+		}
+		
+		.no-js & {
+			top: 0px;
+			margin-top: 10px;
+			li a, li a:hover, li.active a {
+				border-bottom: 1px solid $light-grey;
+			}
+			li:first-child a {
+				border-top: 1px solid $light-grey;
+			}
+		}
+	}
+	
+}
+
+/* right side */
+#utilitynav {
+	float: right;
+	margin-top: -43px;
+	li {
+		padding: 3px 0px 0px 20px;
+		a {
+			padding: 6px 0px 5px 0px;
+		}
+		&:first-child {
+			padding-left: 0px;
+			padding-right: 22px;
+		}
+	}
+	
+	@media #{$small-only} {
+		margin-top: 130px;
+		margin-right: 17px;
+		li {
+			padding: 0px 0px 0px 5px;
+			a {
+				width: 40px;
+				padding: 0px;
+			}
+			&:first-child {
+				padding: 0px;
+			}
+		}
+	}
+}
+
+/* replace the "targetnav"-menu in mobile version */
+#targetnav-select { 
+	display: none;
+	position: absolute;
+	top: 122px;
+	height: 49px;
+	padding: 0px 10px 0px 17px;
+	border: none;
+	background-color: $white;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: rem-calc(16) !important;
+	@include transform2d(translateX(0px));
+	option {
+		font-size: inherit !important;
+		padding: 0px 17px;
+	}
+	
+	@media #{$small-only} {
+		.js & {
+			display: block;
+		}
+	}
+}
+
+/* burger icon for toggling the mainnav in mobile version */
+#toggle-topbar { 
+	display: none;
+	position: absolute;
+	left: 0px; 
+	top: 112px;
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+	background-color: $white;
+	@include transform2d(translateX(0px));	
+	a {
+		position: absolute;
+		display: block;
+		width: 62px;
+		height: 60px;
+		color: $link-color;
+		text-indent: -1000em;
+		&::before {
+			margin-top: 16px;
+			margin-left: 20px;
+		}
+	}
+	@media #{$small-only} {
+		.js & {
+			display: block;
+		}
+	}
+}
+
+/* js generated area above the content for closing mainnav */
+#exit-off-canvas {
+	position: absolute;
+	display: block;
+	top: 0px; 
+	left: 0px;
+	z-index: 5;
+	width: 100%;
+}
+
+
+/* main menue */
+#mainnav {
+	position: absolute; 
+	z-index: 10;
+	top: 152px;
+	background-color: rgba(255,255,255,0.85);
+	
+	@media #{$small-only} {
+	
+		background-color: $deep-light-grey;
+		
+		.js & {
+			overflow-y: auto;
+			top: 174px;
+			@include box-shadow($box-shadow-color-lighten 10px 10px 15px -9px);
+			@include transform2d(translateX(0px));
+		}
+	
+		.no-js & {
+			position: relative;
+			top: 0px;
+			margin-top: 172px;
+			overflow: visible;
+			height: auto !important;
+			.title-area {
+				display: none !important;
+			}
+		}
+	}
+	
+	.top-bar-section {
+	
+		// hide home-link-placeholder
+		li:first-child {
+			display: none;
+			@media #{$small-only} {
+				display: block;
+			}
+		}
+		@media #{$small-only} {
+		
+			/* reset desktop definitions */
+			h5 { // back-link is wrapped by h5 !
+				line-height: inherit !important;
+			}
+			li, li:hover, li.hover, .dropdown li.columns ul li {	
+				a, h5 a, label {
+					display: block;
+					float: none;
+					padding: 9px 0px 9px $topbar-link-padding;
+					border-bottom: 1px solid $white;
+					color: $link-color; 
+					background-color: $deep-light-grey;
+					font-family: $text-font !important;
+					font-size: rem-calc($menu-font-size-mobile) !important;
+					line-height: inherit !important;
+				}
+			}
+			
+			li.active a, a.parent-link, .hover a.parent-link, a.parent-link:hover {
+				background-color: $light-blue !important;
+			}
+		}
+	
+		.has-dropdown { 
+			position: inherit; 
+			
+			&:hover, &.hover {
+				@include box-shadow($box-shadow-color-lighten 3px 4px 7px -3px);
+				a {
+					background-color: $white;
+				}
+			}
+			a::before {
+				display: none;
+			}
+			
+			@media #{$small-only} {
+				&:hover, &.hover {
+					@include box-shadow(none);
+					a {
+						background-color: transparent;
+					}
+				}
+				a::before {
+					display: block;
+				}
+			}
+		}
+		
+		.dropdown {
+			padding-top: 40px;
+			padding-bottom: 30px;
+			background-color: $white;
+			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
+			
+			@media #{$small-only} {
+				padding-top: 0px;
+				background-color: $deep-light-grey;
+				@include box-shadow(none);
+			}
+			
+			li.back, li.parent {
+				display: none;
+				@media #{$small-only} {
+					display: inherit;
+				}
+			}
+			
+			label {
+				margin-bottom: 15px;
+				padding: 0px ($topbar-link-padding - ($column-gutter/2));
+
+				@media #{$small-only} {
+					margin-bottom: 0px;
+					padding: 9px 0px 9px $topbar-link-padding;
+				}
+			}
+			
+			li.columns { 
+			
+				border-right: 1px solid $light-border;
+				
+				// need to overwrite foundation top-bar definitions!
+				@extend .columns;
+				@extend .small-3;
+				&:last-child {
+					float: left !important;
+				}
+				
+				&:last-child {
+					border-right: none;
+				}
+				
+				@media #{$small-only} {
+					padding: 0px !important;
+					float: none !important;
+					width: 100% !important;
+					height: auto !important;
+					border-right: none;
+				}
+				
+				ul {
+					margin-top: 10px;
+					@media #{$small-only} {
+						margin-top: 0px;
+					}
+					
+					li { 
+						display: block;
+						a {
+							font-size: rem-calc($text-font-size);
+							line-height: rem-calc(16);
+							padding: rem-calc(5) rem-calc(5);
+
+							&:hover {
+								color: $white;
+								background-color: $light-blue;
+							}
+							&::before {
+								content: '\0025FE';
+								display: block;
+								float: left;
+								margin-top: -1px;
+								margin-right: 6px;
+								font-size: rem-calc(18);
+								color: $light-blue;
+							}
+							
+							@media #{$small-only} {
+							
+								line-height: inherit;
+								padding: 9px $topbar-link-padding 9px ($topbar-link-padding*2);
+								
+								&:hover {
+									color: $link-color;
+									background-color: inherit;
+								}
+								&::before {
+									display: none;
+								}
+							}							
+						}
+					}
+				}
+			}
+		}				
+	}
+}

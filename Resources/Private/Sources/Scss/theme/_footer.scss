@@ -1,0 +1,119 @@
+footer {
+	
+	color: $white;
+	font-size: rem-calc($text-font-size) !important;
+	padding: 0px 10px 70px 10px;
+	background-color: $dark-grey;
+	border-top: 5px solid $light-grey;
+	
+	@media #{$small-only} {
+		padding: 0px 0px 40px 0px;
+		min-width: 100%;
+		max-width: 100%;
+	}
+	
+
+	ul, ul li {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	#footer-accordion {
+		padding: 0px 20px 0px 20px;
+		margin: 0rem -#{rem-calc($gutter-width / 2)} 0rem -#{rem-calc($gutter-width / 2)};
+		border-bottom: 1px solid $deep-dark-grey;
+		
+		@media #{$small-only} {
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+	a, a:hover {
+		color: inherit;
+	}
+	/* reset */
+	.accordion, dd.accordion-navigation, 
+	dd.accordion-navigation .content,
+	.accordion .accordion-navigation > .content, 
+	.accordion dd > .content,
+	.accordion .accordion-navigation > a, .accordion dd > a,
+	.accordion .accordion-navigation > a:hover, .accordion dd > a:hover	{
+		padding-top: 0px;
+		padding-bottom: 0px;
+		color: inherit;
+		background-color: $dark-grey !important;
+	}
+	.accordion-navigation {
+		> a {
+			padding: 15px 0px 14px 0px !important;
+			font-size: rem-calc(18) !important;
+			font-family: $text-font;
+		}
+		&.active > a {
+			&::before {
+				transform: rotate(90deg);
+				margin-left: 4px;
+				margin-right: 10px;
+			}
+		}
+	}
+	.accordion .content {
+		padding: 20px 0px 20px 0px !important;
+		.no-js & {
+			display: block !important;
+		}
+	}
+	.columns {
+		ul {
+			margin-top: 24px;
+		}
+		&:first-child {
+			padding-left: 0px;
+			ul {
+				float: left;
+				max-width: 30%;
+				margin-right: 10%;
+			}
+		}
+		&:last-child {
+			padding-right: 0px;
+			ul {
+				float: left;
+				&:first-child {
+					max-width: 35%;
+				}
+				&:last-child {
+					float: right;
+				}
+			}
+		}
+		@media #{$small-only} {
+			&:first-child {
+				padding-left: rem-calc($gutter-width / 2);
+				ul {
+					max-width: 100%;
+					li:last-child {
+						margin-right: 0px;
+					}
+				}
+			}
+			&:last-child {
+				padding-right: rem-calc($gutter-width / 2);
+				ul {
+					&:first-child {
+						max-width: 50%;
+					}
+				}
+			}
+		}
+	}
+	
+	
+	.newsletter-input {
+		max-width: 175px;
+		float: left;
+	}
+	button.small {
+		background-color: scale-color($dark-grey, $lightness: 10%);
+	}
+}

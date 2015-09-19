@@ -3,6 +3,14 @@ body {
 	margin-top: 50px;
 	background-color: $dark-grey;
 	border-top: 5px solid $light-grey;
+	font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
+	min-width: em-calc(1024);
+	
+	@media #{$small-only} {
+		margin-top: 0px;
+		min-width: 100%;
+		max-width: 100%;
+	}
 }
 
 ul, ol, dl {
@@ -18,71 +26,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #wrapper { 
-	padding: 0px 10px 0px 10px;
+	padding: 0px 10px 0px 10px; // leaving bit of white space around
 	background-color: $white;
-	font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
-	min-width: $medium-breakpoint;
+	font-size: rem-calc($text-font-size) !important;
+	@media #{$small-only} {
+		padding: 0px;
+	}
+	
 }
 
 .row {
-	font-size: rem-calc($text-font-size) !important;
+	@media #{$small-only} {
+		min-width: 100%;
+		max-width: 100%;
+	}
 }
 
 header {
 	position: relative;
 	height: 145px; 
+	
 	ul, ul li { 
 		list-style: none;
 	}
+	
+	@media #{$small-only} {
+		height: 174px;
+		border-bottom: 2px solid $light-grey;
+		margin-bottom: 1px;
+		.no-js & {
+			height: auto;
+		}
+	}
 }
 
-#targetnav, #utilitynav {
-	margin-bottom: 0px;
-	li {
+#logo {
+	position: absolute;
+	top: 57px;
+	height: 65px;
+	a {
 		display: block;
-		float: left;
-		margin-left: 0px;
+		width: 220px;
+		height: 65px;
+		text-indent: -1000em;
+		@extend %all-sprites-standard;
+		@include icon(logo, 1, false);
+		@media #{$retina} {
+			@include icon(logo_retina, 2, false);
+		}
+	}
+	@media #{$small-only} {
+		top: 34px;
+		left: 0px;
+		width: 100%;
+		height: 78px;
+		border-bottom: 2px solid $light-grey;
 		a {
-			display: block; 
-			padding: 8px 17px 14px 17px;
-			color: $white;
-			font-size: rem-calc($text-font-size);
+			margin-left: 20px;
 		}
 	}
 }
 
-#targetnav {
-	position: absolute; 
-	top: -195px;
-	margin-left: -17px;
-	li a:hover, li.active a{
-		background-color: $white;
-		color: $link-color;
-	}
-}
-#targetnav-select { 
-	display: none;
-}
+/* navigations */
+@import "navigations";
 
-#utilitynav {
-	float: right;
-	margin-top: -43px;
-	li {
-		padding: 3px 0px 0px 20px;
-		a {
-			padding: 6px 0px 5px 0px;
-		}
-		&:first-child {
-			padding-left: 0px;
-			padding-right: 22px;
-		}
-	}
-}
 
 #phone24 a {
 	font-size: rem-calc(18) !important;
 	line-height: 1rem !important;
+	@media #{$small-only} {
+		text-indent: -1000em;
+	}
 }
+
 #contact a { 
 	background-color: $deep-dark-grey;
 	padding-right: 8px !important;
@@ -99,11 +115,22 @@ header {
 	text-indent: -1000em;
 }
 
-#login a {
-	color: $link-color !important;
-	padding-right: 52px !important;
-	&::after {
-		margin-right: -32px;
+@media #{$small-only} {
+	#contact,
+	#settings,
+	#searchinput
+	{
+		display: none !important; 
+	}
+}
+
+#searchlink, #loginlink {
+	display: none !important;
+	a {
+		text-indent: -1000em;
+	}
+	@media #{$small-only} {
+		display: block !important;
 	}
 }
 
@@ -139,200 +166,57 @@ header {
 	}
 }
 
-#toggle-topbar { 
-	display: none;
-}
-
-#mainnav {
-	position: absolute; 
-	z-index: 10;
-	top: 152px;
-	background-color: rgba(255,255,255,0.85);
-	.top-bar-section {
-		// hide home-link-placeholder
-		li:first-child {
-			display: none;
-		}
-		// but display following first childs (is this a bug?)
-		ul ul li:first-child {
-			display: inherit;
-		}
-		.has-dropdown { 
-			position: inherit; 
-			&:hover, &.hover {
-				@include box-shadow($box-shadow-color-lighten 3px 4px 7px -3px);
-				a {
-					background-color: $white;
-				}
-			}
-			a::before {
-				display: none;
-			}
-		}
-		.dropdown {
-			padding-top: 40px;
-			padding-bottom: 30px;
-			background: $white;
-			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
-			li.back {
-				display: none;
-			}
-			label {
-				margin-bottom: 15px;
-				padding: 0px ($topbar-link-padding - ($column-gutter/2));
-			}
-			li.columns { 
-			
-				border-right: 1px solid $light-border;
-				
-				// need to overwrite!
-				@extend .columns;
-				@extend .small-3;
-				&:last-child {
-					float: left !important;
-				}
-				
-				&:last-child {
-					border-right: none;
-				}
-				ul {
-					margin-top: 10px;
-					li { 
-						display: block;
-						a {
-							font-size: rem-calc($text-font-size);
-							line-height: rem-calc(16);
-							padding: rem-calc(5) rem-calc(5);
-
-							&:hover {
-								color: $white;
-								background-color: $light-blue;
-							}
-							&::before {
-								content: '\0025FE';
-								display: block;
-								float: left;
-								margin-top: -1px;
-								margin-right: 6px;
-								font-size: rem-calc(18);
-								color: $light-blue;
-							}
-						}
-					}
-				}
+#login a {
+	color: $link-color !important;
+	padding-right: 52px !important;
+	&::after {
+		margin-right: -32px;
+	}
+}	
+@media #{$small-only} {
+	#login {
+		float: none !important;
+		margin-top: 51px;
+		margin-bottom: 60px;
+		a {
+			background-color: $white !important;
+			&::after {
+				margin-top: 6px;
 			}
 		}
 	}
-}
-	
-#logo {
-	position: absolute;
-	top: 57px;
-	height: 65px;
-	a {
-		display: block;
-		width: 220px;
-		height: 65px;
-		text-indent: -1000em;
-		@extend %all-sprites-standard;
-		@include icon(logo, 1, false);
-		@media #{$retina} {
-			@include icon(logo_retina, 2, false);
-		}
+	.no-js #login { 
+		margin-top: 0px; 
 	}
 }
+
 
 .main-content {
 	padding-left: 0px;
-}
-
-footer {
-	color: $white;
-	font-size: rem-calc($text-font-size) !important;
-	padding: 0px 10px 70px 10px;
-	background-color: $dark-grey;
-	border-top: 5px solid $light-grey;
-	ul, ul li {
-		list-style: none;
-		padding: 0px;
-		margin: 0px;
-	}
-	#footer-accordion {
-		margin-bottom: 0px;
-		border-bottom: 1px solid $deep-dark-grey;
-	}
-	a, a:hover {
-		color: inherit;
-	}
-	/* reset */
-	.accordion, dd.accordion-navigation, 
-	dd.accordion-navigation .content,
-	.accordion .accordion-navigation > .content, 
-	.accordion dd > .content,
-	.accordion .accordion-navigation > a, .accordion dd > a,
-	.accordion .accordion-navigation > a:hover, .accordion dd > a:hover	{
-		padding: 0px;
-		color: inherit;
-		background-color: $dark-grey !important;
-	}
-	.accordion-navigation {
-		> a {
-			padding: 15px 0px 14px 0px !important;
-			font-size: rem-calc(18) !important;
-			font-family: $text-font;
-		}
-		&.active > a {
-			&::before {
-				transform: rotate(90deg);
-				margin-left: 4px;
-				margin-right: 10px;
-			}
-		}
-	}
-	.accordion .content {
-		padding: 20px 0px 20px 0px !important;
-	}
-	.columns {
-		ul {
-			margin-top: 24px;
-		}
-		&:first-child {
-			padding-left: 0px;
-			ul {
-				float: left;
-				max-width: 30%;
-				margin-right: 10%;
-			}
-		}
-		&:last-child {
-			padding-right: 0px;
-			ul {
-				float: left;
-				&:first-child {
-					max-width: 35%;
-				}
-				&:last-child {
-					float: right;
-				}
-			}
-		}
-	}
-	.newsletter-input {
-		max-width: 175px;
-		float: left;
-	}
-	button.small {
-		background-color: scale-color($dark-grey, $lightness: 10%);
+	width: 71.92982456140351%;
+	@media #{$small-only} {
+		width: 100%;
+		float: none;
+		padding-left:rem-calc($gutter-width / 2);
 	}
 }
 
-
-
-/* hide mobile elements */
-#searchlink, #loginlink {
-	display: none !important;
-	a {
-		text-indent: -1000em;
+.sidebar-content {
+	width: 28.07017543859649%;
+	padding-right: 0px;
+	@media #{$small-only} {
+		width: 100%;
+		float: none;
+		padding-right:rem-calc($gutter-width / 2);
 	}
 }
+
+.invers { background-color: $light-blue;
+}
+
+/* footer */
+@import "footer";
+
+
+
 

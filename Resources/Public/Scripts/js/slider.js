@@ -13,7 +13,10 @@
 				hideClass: 'closed',
 				titleHeight: 34,
 				moveAnimationSpeed: 800,
-				imageAnimationSpeed: 1000 
+				imageAnimationSpeed: 1000,
+				autoStart: true,
+				stopOnClick: true,
+				slideshowSpeed: 5000
 			};
 
 			//initial variables
@@ -33,19 +36,22 @@
 				i++;
 				$(this).attr('data-slide-count', i);
 				
+				var auto = false;
 				// move description to stage
 				$(this).children('.'+opts.slideDescName)
 				.appendTo(sliderStage)
 				.attr('data-slide-count', i)
 				.addClass(i == 1 ? opts.hideClass : opts.openClass)
 				.css('visibility', 'hidden') // hide before animated
-				.children('.'+opts.slideTitleName).click(function() {
+				.children('.'+opts.slideTitleName).click(function(e) {
 					// click function on slider title for animation
-		
 					if ($(this).parent().hasClass(opts.openClass)) return false;
 	
+					// stop auto start ?
+					if (opts.stopOnClick && e.originalEvent != undefined) clearInterval(autoStart);
+					
 					// animate active back
-					self.find('.'+opts.slideDescName+'.'+opts.openClass).animate({
+					self.find('.'+opts.slideDescName+'.'+opts.openClass).stop(true, false).animate({
 						height: opts.titleHeight
 					}, opts.animationSpeed, function() {
 						$(this).css('visibility', 'visible')
@@ -66,7 +72,7 @@
 					$(this).parent().removeClass(opts.hideClass).addClass(opts.openClass);
 					
 					// animate
-					$(this).parent().animate({
+					$(this).parent().stop(true, false).animate({
 							height: ( $(this).parent().attr('data-slide-height') != undefined ? parseInt($(this).parent().attr('data-slide-height')) : defaultHeight) + $(this).parent().children('.'+opts.slideTextName).height()
 						}, opts.animationSpeed, function() {
 							// remove calculation errors
@@ -81,14 +87,25 @@
 						opacity: 1
 					},opts.imageAnimationSpeed, function(){
 						$(this).show()
-					});					
+					});
 				});
 			});
 			
-			// start
+			// initial start
 			$('.'+opts.stageName+' .'+opts.slideDescName+':first').children('.'+opts.slideTitleName).click();
 
+			// auto start ?
+			if (opts.autoStart) {
+				var autoStart = setInterval(function() {
+					var next = $('.'+opts.stageName+' .'+opts.slideDescName+'.'+opts.openClass).next();
+					var first = $('.'+opts.stageName+' .'+opts.slideDescName+':first');
+					if (next.length != 0) next.children('.'+opts.slideTitleName).click();
+					else first.children('.'+opts.slideTitleName).click();
+				}, opts.slideshowSpeed);
+			}
 				
+				
+			
 			function getDefaultHeight(element) {
 				var defaultHeight = (element.height() + parseInt(element.css('paddingTop')) + parseInt(element.css('paddingBottom'))) - element.children('.'+opts.slideTextName).height();
 				return defaultHeight;
