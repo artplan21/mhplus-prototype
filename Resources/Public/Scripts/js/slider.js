@@ -14,7 +14,7 @@
 				titleHeight: 34,
 				moveAnimationSpeed: 800,
 				imageAnimationSpeed: 1000,
-				autoStart: true,
+				autoPlay: true,
 				stopOnClick: true,
 				slideshowSpeed: 5000
 			};
@@ -47,8 +47,8 @@
 					// click function on slider title for animation
 					if ($(this).parent().hasClass(opts.openClass)) return false;
 	
-					// stop auto start ?
-					if (opts.stopOnClick && e.originalEvent != undefined) clearInterval(autoStart);
+					// stop auto play ?
+					if (opts.stopOnClick && e.originalEvent != undefined) clearInterval(autoPlay);
 					
 					// animate active back
 					self.find('.'+opts.slideDescName+'.'+opts.openClass).stop(true, false).animate({
@@ -95,8 +95,8 @@
 			$('.'+opts.stageName+' .'+opts.slideDescName+':first').children('.'+opts.slideTitleName).click();
 
 			// auto start ?
-			if (opts.autoStart) {
-				var autoStart = setInterval(function() {
+			if (opts.autoPlay && i>1) {
+				var autoPlay = setInterval(function() {
 					var next = $('.'+opts.stageName+' .'+opts.slideDescName+'.'+opts.openClass).next();
 					var first = $('.'+opts.stageName+' .'+opts.slideDescName+':first');
 					if (next.length != 0) next.children('.'+opts.slideTitleName).click();

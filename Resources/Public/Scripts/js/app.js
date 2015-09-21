@@ -88,23 +88,35 @@ jQuery.noConflict();
 			
 		});
 		
-		/* replace targetgroup menue to select menue */
-		var replaceTargetGroupNav = function() {
+		/* function for replacing targetnav and tabmenues */
+		$.replaceToSelectMenue = function(opts) {
 			var select = $('<select>')
-					.attr('id', 'targetnav-select')
 					.attr('aria-hidden', 'true')
-					.insertBefore('#mainnav')
+					.insertBefore(opts.insertBefore)
 					.change(function(){
 						window.location.href = $(this).children('option:selected').val();
 					});
-			$('#targetnav li a').each(function(){
+			if (opts.id) select.attr('id', opts.id);
+			if (opts.addclass) select.addClass(opts.addclass);
+			
+			opts.selector.each(function(){
 				var a = $('<option>')
 					.attr('value', $(this).attr('href'))
+					.attr('selected', $(this).hasClass('active') || $(this).parent().hasClass('active') ? 'selected' : false)
 					.text($(this).text());
 				a.appendTo(select);
-			});			
+			});	
+					
 		}
-		replaceTargetGroupNav();
+		
+		/* replace targetnav-select */
+		$.replaceToSelectMenue({id: 'targetnav-select', insertBefore: $('#mainnav'), selector: $('#targetnav li a')});
+		
+		$('.tabs').each(function(){
+			$.replaceToSelectMenue({addclass: 'tabs-select', insertBefore: $(this), selector: $(this).find('a')});
+		});
+		
+		
 		
 		/* start slider */
 		$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600});

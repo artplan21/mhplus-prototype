@@ -26,9 +26,84 @@
 	@include breakpoint-menuwidth($menu-width-xs-mobile);
 }
 
+/* breadcrumb */
+.breadcrumbnav {
+	margin-top: 2px;
+	font-weight: 400;
+	font-family: $secondary-font !important;
+	a {
+		font-weight: 400;
+		font-family: $secondary-font !important;
+	}
+}
+
+/* tabs */
+ul.tabs {
+	position: relative;
+	list-style: none;
+	margin: 0px 0px rem-calc(20px) 0px;
+	padding: 0px;
+	border-bottom: 1px solid #cccccc;
+	
+	@media #{$small-only} {
+		display: none;
+	}
+	
+	li {
+		float: left;
+		padding: 0px;
+		margin: 0px 0px -1px 0px;
+		
+		@media #{$small-only} {
+			float: none;
+			width: 100%;
+		}
+		
+		&:last-child a {
+			margin-right: 0px;	
+		}
+		
+		a {
+			display: block;
+			padding: 12px 10px 10px 10px;
+			margin-right: 5px;
+			background-color: $light-grey;
+			
+			@media #{$small-only} {
+				margin-right: 0px;;
+				border-bottom: 2px solid $white;				
+			}
+		
+		}
+		&.active {
+			border-bottom: none;
+			a {
+				background-color: $white;
+				border: 1px solid #cccccc;
+				border-bottom: none;
+			}
+		}
+	}
+	
+	&::after, &::before {
+		content: ' ';
+		display: table;
+		clear: both;
+	}
+}
+
+.tabs-select {
+	display: none;
+	@media #{$small-only} {
+		position: relative;
+		min-height: 70px;
+		display: block;
+	}
+}
 
 /* menues top of the site */
 #targetnav, #utilitynav {
+	font-family: $nav-font;
 	margin-bottom: 0px;
 	li {
 		display: block;
@@ -36,7 +111,7 @@
 		margin-left: 0px;
 		a {
 			display: block; 
-			padding: 8px 17px 14px 17px;
+			padding: 10px 17px 16px 17px;
 			color: $white;
 			font-size: rem-calc($text-font-size);
 		}
@@ -48,9 +123,12 @@
 	position: absolute; 
 	top: -195px;
 	margin-left: -17px;
-	li a:hover, li.active a{
+	li a {
+		color: #a7a7a7;
+	}
+	li a:hover, li.active a {
 		background-color: $white;
-		color: $link-color;
+		//color: $link-color;
 	}
 	
 	@media #{$small-only} {
@@ -77,7 +155,7 @@
 		
 		.no-js & {
 			top: 0px;
-			margin-top: 10px;
+			margin-top: 0px;
 			li a, li a:hover, li.active a {
 				border-bottom: 1px solid $light-grey;
 			}
@@ -106,7 +184,6 @@
 	
 	@media #{$small-only} {
 		margin-top: 130px;
-		margin-right: 17px;
 		li {
 			padding: 0px 0px 0px 5px;
 			a {
@@ -195,6 +272,9 @@
 	
 	@media #{$small-only} {
 	
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		
 		background-color: $deep-light-grey;
 		
 		.js & {
@@ -207,7 +287,7 @@
 		.no-js & {
 			position: relative;
 			top: 0px;
-			margin-top: 172px;
+			margin-top: 10px;
 			overflow: visible;
 			height: auto !important;
 			.title-area {
@@ -219,7 +299,7 @@
 	.top-bar-section {
 	
 		// hide home-link-placeholder
-		li:first-child {
+		> ul > li:first-child {
 			display: none;
 			@media #{$small-only} {
 				display: block;
@@ -235,7 +315,7 @@
 				a, h5 a, label {
 					display: block;
 					float: none;
-					padding: 9px 0px 9px $topbar-link-padding;
+					padding: 14px 0px 13px $topbar-link-padding;
 					border-bottom: 1px solid $white;
 					color: $link-color; 
 					background-color: $deep-light-grey;
@@ -301,7 +381,7 @@
 
 				@media #{$small-only} {
 					margin-bottom: 0px;
-					padding: 9px 0px 9px $topbar-link-padding;
+					padding: 14px 0px 13px $topbar-link-padding;
 				}
 			}
 			
@@ -358,7 +438,7 @@
 							@media #{$small-only} {
 							
 								line-height: inherit;
-								padding: 9px $topbar-link-padding 9px ($topbar-link-padding*2);
+								padding: 14px $topbar-link-padding 13px ($topbar-link-padding*2);
 								
 								&:hover {
 									color: $link-color;
@@ -373,5 +453,38 @@
 				}
 			}
 		}				
+	}
+}
+
+/* accordion */
+ul.accordion {
+	margin-left: 0px;
+}
+.accordion .accordion-navigation, .accordion dd {
+	position: relative;
+	margin-bottom: 10px !important;
+	a::after {
+		content: '\00203A';
+		display: block;
+		position: absolute;
+		top: 0px; 
+		right: 0px;
+		width: 41px;
+		height: 41px;
+		border-bottom: 1px solid $deep-light-grey;
+		font-weight: 400;
+		font-size: rem-calc(30);
+		text-align: center;
+		padding-top: rem-calc(8);
+		transform: rotate(90deg);
+	}
+	&.active a::after {
+		transform: rotate(270deg);
+		color: $white;
+		border-bottom: none;
+		border-top: 1px solid $deep-light-grey;
+	}
+	> a {
+		font-weight: 700;
 	}
 }

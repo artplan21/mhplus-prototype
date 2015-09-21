@@ -16,20 +16,64 @@ body {
 ul, ol, dl {
 	font-size: rem-calc($text-font-size) !important;
 }
+ul.linklist {
+	margin-left: 0px;
+	margin-right: 0px;
+	li {
+		list-style: none;
+		margin: 2px 0px 2px 0px;
+		a {	
+			font-weight: 700;
+			&::before {
+				content: '\00203A';
+				font-size: rem-calc(22);
+				color: $white;
+				margin-right: 8px;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+em, i {
+	font-family: $secondary-font;
+}
+
+a {
+	color: $link-color;
+}
 
 nav, nav a {
 	font-family: $nav-font !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $header-font !important;
 }
 
+h1.pagetitle {
+	color: $light-blue-text;
+}
+
+@for $i from 1 through 6 {
+  .h#{$i} { 
+	@extend h#{$i};
+	display: block;
+  }
+}
+
+
 #wrapper { 
-	padding: 0px 10px 0px 10px; // leaving bit of white space around
+	//padding: rem-calc(0px) rem-calc(10px) rem-calc(25px) rem-calc(10px); // leaving bit of white space around
+	margin-left: rem-calc(-10px);
 	background-color: $white;
 	font-size: rem-calc($text-font-size) !important;
+	
 	@media #{$small-only} {
+		overflow: hidden;
+		margin-left: 0;
 		padding: 0px;
 	}
 	
@@ -38,7 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 .row {
 	@media #{$small-only} {
 		min-width: 100%;
-		max-width: 100%;
+		//max-width: 100%;
+		/*.row .row {
+			margin-left: 0;
+			margin-right: 0;
+		}*/
 	}
 }
 
@@ -136,7 +184,7 @@ header {
 
 #searchinput {
 	position: absolute;
-	right: 0px;
+	right: 20px;
 	top: 69px;
 	input {
 		float: left;
@@ -181,7 +229,7 @@ header {
 		a {
 			background-color: $white !important;
 			&::after {
-				margin-top: 6px;
+				margin-top: 0px;
 			}
 		}
 	}
@@ -192,27 +240,111 @@ header {
 
 
 .main-content {
-	padding-left: 0px;
-	width: 71.92982456140351%;
-	@media #{$small-only} {
-		width: 100%;
-		float: none;
-		padding-left:rem-calc($gutter-width / 2);
-	}
+	width: 71.1864406779661%;
 }
-
 .sidebar-content {
-	width: 28.07017543859649%;
-	padding-right: 0px;
+	width: 28.8135593220339%;
+}
+.main-content, .sidebar-content {
+	margin-top: rem-calc($gutter-width);
 	@media #{$small-only} {
 		width: 100%;
 		float: none;
-		padding-right:rem-calc($gutter-width / 2);
+	}
+	&.no-margin {
+		margin-top: 0;
 	}
 }
 
-.invers { background-color: $light-blue;
+.sm-buttons {
+	padding-top: rem-calc(40px);
+	padding-bottom: rem-calc(25px);
+	@media #{$small-only} {
+		margin-right: rem-calc(-15px);
+		width: auto;
+	}
+	
+	.columns {
+		margin-left: rem-calc(-10px);
+	}
+	
+
+	a {
+		display: inline-block;
+		width: rem-calc(70px);
+		margin-right: rem-calc(50px);
+		margin-top: rem-calc(20px);
+		text-align: center;
+		em { 
+			display: inline-block;
+			margin-top: rem-calc(2px);
+		}
+		&::before {
+			content: '';
+			display: block;
+			margin: 0 auto;
+			border-radius: 50%;
+			background-color: $light-blue;
+			width: rem-calc(52px);
+			height: rem-calc(52px); 
+		}
+
+		&.toplink {
+			float: right;
+			width: rem-calc(65px);
+			margin-left: auto;
+			margin-right: rem-calc(-10px);
+			&::before {
+				background-color: $dark-grey;
+			}
+			@media #{$small-only} { 
+				margin-right: 0px;
+			}
+		}
+		@media #{$small-only} {
+			margin-right: rem-calc(10px);
+		}
+	}	
 }
+
+ul.contact-list {
+	min-height: rem-calc(354px);
+	padding: 0px;
+	margin: -#{rem-calc($gutter-width)} 0px 0px 0px;
+	border-bottom: 1px solid $deep-light-blue;
+	list-style: none;
+	.h4 {
+		margin: rem-calc(-8) 0px 0px 0px;
+	}
+	li { 
+		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(20px);
+		border-top: 1px solid $deep-light-blue;
+		min-height: rem-calc(68px);
+		
+		&::before {
+			content: '';
+			display: inline-block;
+			float: left;
+			margin: rem-calc(-6) rem-calc(10px) 0rem rem-calc(-5); 
+			border-radius: 50%;
+			background-color: $white;
+			width: rem-calc(52px);
+			height: rem-calc(52px); 
+		}
+	}
+}
+
+#badge-box.box {
+
+	min-height: rem-calc(254);
+	
+	&::before {
+		position: relative;
+		float: right;
+		margin: rem-calc(-20) 0px 0px 0px;
+	}
+}
+
 
 /* footer */
 @import "footer";

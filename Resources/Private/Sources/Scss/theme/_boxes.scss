@@ -1,0 +1,126 @@
+
+.invers { 
+	background-color: $light-blue;
+	h1, h2, h3, h4 {
+		color: $white;
+	}
+	a {
+		.h1, .h2, .h3, .h4 {
+			color: $white;
+		}
+	}
+}
+
+.box { 
+	position: relative;
+	padding: rem-calc(20px);
+	margin-bottom: rem-calc($gutter-width);
+	p:last-child, .button:last-child {
+		margin-bottom: 0px;
+	}
+	h4 {
+		margin: 0 0 $header-bottom-margin 0;
+	}
+	h5 {
+		margin-top: -#{$header-bottom-margin};
+		margin-bottom: rem-calc(20);
+	}
+}
+
+.box.numbers {
+	padding-left: rem-calc(40px);
+	padding-bottom: rem-calc(35);
+	margin-top: rem-calc(30);
+	margin-left: rem-calc(29);
+	border-top: 1px solid $light-blue;
+	border-left: 1px solid $light-blue;
+	h5 {
+		margin-bottom: rem-calc(10);
+		margin-top: rem-calc(-18);
+	}
+	&::before {
+		content: ' ';
+		display: block;
+		text-align: center;
+		padding-top: rem-calc(14);
+		margin: rem-calc(-32) 0 0 rem-calc(-70);
+		height: rem-calc(52);
+		width: rem-calc(52);
+		color: $white;
+		font-size: rem-calc(36);
+		font-family: $header-font;
+		background-color: $light-blue;
+	}
+	.button {
+		position: absolute;
+		bottom: 0;
+	}
+}
+@for $i from 1 through 12 {
+	.box.numbers.n#{$i}::before { 
+		content: '#{$i}';
+	}
+}
+.imagebox {
+	margin-bottom: rem-calc($gutter-width);
+	padding: rem-calc(20px);
+	
+	ul.linklist:last-child, .button:last-child, h4 {
+		margin-bottom: 0px;
+	}
+
+	.image {
+		width: 100%;
+		z-index: 1;
+		
+		img {
+			min-width: 100%; 
+		}
+	}
+	.text {
+		width: 100%;
+		margin-top: rem-calc(-35);
+		padding: 0;
+		z-index: 3;
+	}
+	&.invers h4 {
+		display: inline-block;
+		font-size: $h5-font-size;
+		font-family: $text-font;
+		color: $text-color;
+		background-color: $white;
+		padding: 0px rem-calc(5px) 0px rem-calc(5px);
+		margin: rem-calc(-80) 0rem rem-calc(30px) rem-calc(10px);
+	}
+}
+@media #{$medium-up} {
+	.imagebox.wide {
+	
+		padding: 0;
+		.image {
+			width: 60%;
+		}
+		.text {
+			width: 40%;
+			margin-top: 0px;
+			padding: rem-calc(20px);
+		}
+		h4 {
+			display: block;
+			font-size: $h4-font-size;
+			font-family: $header-font;
+			color: $white;
+			background-color: transparent;
+			padding: 0;
+			margin: 0 0 $header-bottom-margin 0;
+		}
+		h5 {
+			margin-top: -#{$header-bottom-margin};
+			margin-bottom: rem-calc(20);
+		}
+	}
+}
+
+
+
+

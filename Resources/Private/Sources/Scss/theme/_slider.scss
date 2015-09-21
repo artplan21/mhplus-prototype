@@ -1,16 +1,21 @@
 
 #mainslider {
 	position: relative;
-	width: 100%;
+	max-width: 100%;
 	overflow: hidden;
 	height: 416px;
+	margin: 0 rem-calc($gutter-width/2);
 	@media #{$small-only} {
-		max-width: 100%;
 		height: auto;
+		margin: 0;
 	}
 	
 	.js & .slide {
 		opacity: 0;
+		
+		&:first-child {
+			opacity: 1;
+		}
 	}
 	.no-js & .slide {
 		width: 100%;
@@ -80,6 +85,7 @@
 			}
 			.button {
 				padding: 10px;
+				color: $white;
 				background-color: $light-blue;
 				font-weight: 700;
 				margin-bottom: 0px;
@@ -146,6 +152,8 @@
 			overflow: hidden;
 			@media #{$small-only} {
 				border-bottom: 1px solid $light-grey;
+				padding-left: 0px;
+				padding-right: 0px;
 			}
 			
 			&.closed {
@@ -170,8 +178,17 @@
 					display: none;
 				}
 			}
+
+			.slide-title::after {
+				position: absolute;
+				top: 14px;
+				right: 20px;
+				margin-top: 0px;
+				margin-left: 0px;
+				@media #{$small-only} {
+					right: 0px;
+				}
+			}			
 		}
-		
-		
 	}
 }

@@ -116,7 +116,7 @@ $white       : #FFFFFF;
 $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: $dark-grey;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -225,15 +225,15 @@ $retina: (
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(26);
+$h2-font-size: rem-calc(24);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(24);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
+//$h1-font-reduction: rem-calc(10);
 // $h2-font-reduction: rem-calc(10);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
@@ -255,8 +255,8 @@ $retina: (
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
 $paragraph-font-size: rem-calc($text-font-size);
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-line-height: rem-calc(17);
+$paragraph-margin-bottom: rem-calc(16);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -337,12 +337,12 @@ $paragraph-font-size: rem-calc($text-font-size);
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: $silver;
+$accordion-navigation-padding: rem-calc(12) rem-calc(60) rem-calc(12) rem-calc(16);
+$accordion-navigation-bg-color: $light-grey;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
+$accordion-navigation-active-bg-color: $light-blue;
+$accordion-navigation-font-color: $text-color;
+$accordion-navigation-font-size: rem-calc($text-font-size);
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: ($column-gutter/2);
@@ -443,10 +443,10 @@ $paragraph-font-size: rem-calc($text-font-size);
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
+$button-tny: rem-calc(7);
+$button-sml: rem-calc(7);
+$button-med: rem-calc(7);
+$button-lrg: rem-calc(7);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -454,11 +454,11 @@ $paragraph-font-size: rem-calc($text-font-size);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
-// $button-font-color: $white;
-// $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
+$button-font-color: $white;
+$button-font-color-alt: $white;
+$button-font-tny: rem-calc(14);
+$button-font-sml: rem-calc(14);
+$button-font-med: rem-calc(14);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;
@@ -469,7 +469,7 @@ $paragraph-font-size: rem-calc($text-font-size);
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);

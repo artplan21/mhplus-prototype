@@ -2,7 +2,7 @@
 /* variables */
 
 // max width of the site
-$max-width: 1140;
+$max-width: 1180; // real max-size + gutter width!!
 $gutter-width: 40;
 
 // menue width in mobile version
@@ -17,8 +17,9 @@ $menu-animation-type: ease;
 $text-font: Arial, "ITCFranklinGothicW01-Dm 812668", "Utopia W01 It", sans-serif;
 $header-font: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
 $nav-font: $header-font;
+$secondary-font: "Utopia W01 It";
 
-// font-size
+// font-size, line-height
 $text-font-size: 14;
 
 // off-cancas menue font-size
@@ -33,6 +34,11 @@ $deep-dark-grey: #464646;
 $light-grey: #dfe0e0;
 $deep-light-grey: #f0f0f0;
 
+// light blue from CD
+$light-blue: #97cde8;
+$deep-light-blue: #acd7ed;
+$light-blue-text: #63b3db;
+
 // borders
 $light-border: #f1f1f1;
 
@@ -44,9 +50,7 @@ $box-shadow-color-lighten: scale-color($box-shadow-color,  $lightness: -25%);
 $link-color: #222222;
 $link-color-light: #585858;
 
-// light blue from CD
-$light-blue: #97cde8;
-$light-blue-text: #63b3db;
+
 
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=322b7a64-a76a-4d73-b98f-f94e1caf18cd");
