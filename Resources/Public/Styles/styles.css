@@ -23,20 +23,20 @@ meta.foundation-mq-small {
 
 /* line 373, ../../Private/Sources/scss/foundation/components/_global.scss */
 meta.foundation-mq-small-only {
-  font-family: "/only screen and (max-width: 40em)/";
+  font-family: "/only screen and (max-width: 48em)/";
   width: 0;
 }
 
 /* line 378, ../../Private/Sources/scss/foundation/components/_global.scss */
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:40.0625em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:48.0625em)/";
+  width: 48.0625em;
 }
 
 /* line 383, ../../Private/Sources/scss/foundation/components/_global.scss */
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.0625em) and (max-width:64em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:48.0625em) and (max-width:64em)/";
+  width: 48.0625em;
 }
 
 /* line 388, ../../Private/Sources/scss/foundation/components/_global.scss */
@@ -946,7 +946,7 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 250, ../../Private/Sources/scss/foundation/components/_buttons.scss */
   button, .button {
     display: inline-block;
@@ -1912,7 +1912,7 @@ label.error {
     float: left;
   }
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 155, ../../Private/Sources/scss/foundation/components/_grid.scss */
   .medium-push-0 {
     position: relative;
@@ -2986,8 +2986,8 @@ label.error {
 }
 /* line 113, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.0625em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:48.0625em)/";
+  width: 48.0625em;
 }
 
 /* Wrapped around .top-bar to contain to grid width */
@@ -3067,7 +3067,7 @@ meta.foundation-mq-topbar {
   padding-bottom: 0.4125rem;
   padding-top: 0.4125rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 188, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
   .top-bar .button, .top-bar button {
     position: relative;
@@ -3507,7 +3507,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 492, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: transparent;
@@ -3770,7 +3770,7 @@ meta.foundation-mq-topbar {
   text-align: justify !important;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 162, ../../Private/Sources/scss/foundation/components/_type.scss */
   .small-only-text-left {
     text-align: left !important;
@@ -3812,7 +3812,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+@media only screen and (min-width: 48.0625em) and (max-width: 64em) {
   /* line 162, ../../Private/Sources/scss/foundation/components/_type.scss */
   .medium-only-text-left {
     text-align: left !important;
@@ -3833,7 +3833,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 162, ../../Private/Sources/scss/foundation/components/_type.scss */
   .medium-text-left {
     text-align: left !important;
@@ -4312,7 +4312,7 @@ blockquote p {
   padding: 0 0.0625rem;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 455, ../../Private/Sources/scss/foundation/components/_type.scss */
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     line-height: 1.4;
@@ -4599,7 +4599,7 @@ ul.off-canvas-list li a:active {
   top: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 281, ../../Private/Sources/scss/foundation/components/_offcanvas.scss */
   .move-right .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -4631,7 +4631,7 @@ ul.off-canvas-list li a:active {
   top: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 281, ../../Private/Sources/scss/foundation/components/_offcanvas.scss */
   .move-left .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -4663,7 +4663,7 @@ ul.off-canvas-list li a:active {
   top: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 281, ../../Private/Sources/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -4695,7 +4695,7 @@ ul.off-canvas-list li a:active {
   top: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 281, ../../Private/Sources/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap-left .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -4727,7 +4727,7 @@ ul.off-canvas-list li a:active {
   top: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 281, ../../Private/Sources/scss/foundation/components/_offcanvas.scss */
   .offcanvas-overlap-right .exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -4949,7 +4949,7 @@ ul.off-canvas-list li a:active {
   }
 }
 /* medium displays */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 244, ../../Private/Sources/scss/foundation/components/_visibility.scss */
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
     display: inherit !important;
@@ -5732,7 +5732,7 @@ button.small, button.small:hover {
     width: 30px;
   }
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 21, ../../Private/Sources/scss/theme/_icons.scss */
   #phone24 a::before {
     background-size: 440px 3388px;
@@ -5741,7 +5741,7 @@ button.small, button.small:hover {
     width: 41px;
   }
 }
-@media only screen and (max-width: 40em) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 40em) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 40em) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (max-width: 40em) and (min-device-pixel-ratio: 2), only screen and (max-width: 40em) and (min-resolution: 192dpi), only screen and (max-width: 40em) and (min-resolution: 2dppx) {
+@media only screen and (max-width: 48em) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 48em) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 48em) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (max-width: 48em) and (min-device-pixel-ratio: 2), only screen and (max-width: 48em) and (min-resolution: 192dpi), only screen and (max-width: 48em) and (min-resolution: 2dppx) {
   /* line 21, ../../Private/Sources/scss/theme/_icons.scss */
   #phone24 a::before {
     background-size: 220px 1694px;
@@ -5961,7 +5961,7 @@ footer .accordion-navigation a::before {
   margin: 0 1.25rem;
   /* after js working */
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 2, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider {
     height: auto;
@@ -5991,7 +5991,7 @@ footer .accordion-navigation a::before {
   overflow: hidden;
   visibility: hidden;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 25, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide {
     left: -350px;
@@ -6027,7 +6027,7 @@ footer .accordion-navigation a::before {
   background-color: #FFFFFF;
   margin: 1px 0px 1px 0px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 58, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide-desc {
     width: 100%;
@@ -6070,7 +6070,7 @@ footer .accordion-navigation a::before {
   bottom: 22px;
   font-family: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 98, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide-caller {
     display: none;
@@ -6107,7 +6107,7 @@ footer .accordion-navigation a::before {
   right: 20px;
   bottom: 22px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 135, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     position: relative;
@@ -6124,7 +6124,7 @@ footer .accordion-navigation a::before {
   bottom: auto;
   overflow: hidden;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 148, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage .slide-desc {
     border-bottom: 1px solid #dfe0e0;
@@ -6163,7 +6163,7 @@ footer .accordion-navigation a::before {
   margin-top: 0px;
   margin-left: 0px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 182, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage .slide-desc .slide-title::after {
     right: 0px;
@@ -6333,7 +6333,7 @@ footer .accordion-navigation a::before {
   margin: -5rem 0rem 1.875rem 0.625rem;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   /* line 97, ../../Private/Sources/scss/theme/_boxes.scss */
   .imagebox.wide {
     padding: 0;
@@ -6374,7 +6374,7 @@ body {
   font-size: 16px;
   min-width: 64em;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 2, ../../Private/Sources/scss/theme/_layout.scss */
   body {
     margin-top: 0px;
@@ -6396,7 +6396,7 @@ ul.linklist {
 /* line 22, ../../Private/Sources/scss/theme/_layout.scss */
 ul.linklist li {
   list-style: none;
-  margin: 2px 0px 2px 0px;
+  margin: 0px 0px 0px 0px;
 }
 /* line 25, ../../Private/Sources/scss/theme/_layout.scss */
 ul.linklist li a {
@@ -6475,7 +6475,7 @@ h1.pagetitle, .pagetitle.h1 {
   background-color: #FFFFFF;
   font-size: 0.875rem !important;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 68, ../../Private/Sources/scss/theme/_layout.scss */
   #wrapper {
     overflow: hidden;
@@ -6484,7 +6484,7 @@ h1.pagetitle, .pagetitle.h1 {
   }
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 82, ../../Private/Sources/scss/theme/_layout.scss */
   .row {
     min-width: 100%;
@@ -6504,7 +6504,7 @@ header {
 header ul, header ul li {
   list-style: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 93, ../../Private/Sources/scss/theme/_layout.scss */
   header {
     height: 174px;
@@ -6539,7 +6539,7 @@ header ul, header ul li {
     background-position: 0 -1076px;
   }
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 111, ../../Private/Sources/scss/theme/_layout.scss */
   #logo {
     top: 34px;
@@ -6555,7 +6555,7 @@ header ul, header ul li {
 }
 
 /* navigations */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 3, ../../Private/Sources/scss/theme/_navigations.scss */
   .js #targetnav-select, .js #mainnav, .js .top-bar {
     width: 300px;
@@ -6621,7 +6621,7 @@ ul.tabs {
   padding: 0px;
   border-bottom: 1px solid #cccccc;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 41, ../../Private/Sources/scss/theme/_navigations.scss */
   ul.tabs {
     display: none;
@@ -6633,7 +6633,7 @@ ul.tabs li {
   padding: 0px;
   margin: 0px 0px -1px 0px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 52, ../../Private/Sources/scss/theme/_navigations.scss */
   ul.tabs li {
     float: none;
@@ -6651,7 +6651,7 @@ ul.tabs li a {
   margin-right: 5px;
   background-color: #dfe0e0;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 66, ../../Private/Sources/scss/theme/_navigations.scss */
   ul.tabs li a {
     margin-right: 0px;
@@ -6679,7 +6679,7 @@ ul.tabs::after, ul.tabs::before {
 .tabs-select {
   display: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 95, ../../Private/Sources/scss/theme/_navigations.scss */
   .tabs-select {
     position: relative;
@@ -6723,7 +6723,7 @@ ul.tabs::after, ul.tabs::before {
 #targetnav li a:hover, #targetnav li.active a {
   background-color: #FFFFFF;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 122, ../../Private/Sources/scss/theme/_navigations.scss */
   #targetnav {
     position: relative;
@@ -6783,7 +6783,7 @@ ul.tabs::after, ul.tabs::before {
   padding-left: 0px;
   padding-right: 22px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 171, ../../Private/Sources/scss/theme/_navigations.scss */
   #utilitynav {
     margin-top: 130px;
@@ -6826,7 +6826,7 @@ ul.tabs::after, ul.tabs::before {
   font-size: inherit !important;
   padding: 0px 17px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 219, ../../Private/Sources/scss/theme/_navigations.scss */
   .js #targetnav-select {
     display: block;
@@ -6863,7 +6863,7 @@ ul.tabs::after, ul.tabs::before {
   margin-top: 16px;
   margin-left: 20px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 249, ../../Private/Sources/scss/theme/_navigations.scss */
   .js #toggle-topbar {
     display: block;
@@ -6889,7 +6889,7 @@ ul.tabs::after, ul.tabs::before {
   top: 152px;
   background-color: rgba(255, 255, 255, 0.85);
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 267, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav {
     padding-left: 0 !important;
@@ -6925,13 +6925,13 @@ ul.tabs::after, ul.tabs::before {
 #mainnav .top-bar-section > ul > li:first-child {
   display: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 302, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section > ul > li:first-child {
     display: block;
   }
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 299, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section {
     /* reset desktop definitions */
@@ -6975,7 +6975,7 @@ ul.tabs::after, ul.tabs::before {
 #mainnav .top-bar-section .has-dropdown a::before {
   display: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 347, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .has-dropdown:hover, #mainnav .top-bar-section .has-dropdown.hover {
     -moz-box-shadow: none;
@@ -7000,7 +7000,7 @@ ul.tabs::after, ul.tabs::before {
   -webkit-box-shadow: #535151 3px 5px 7px -3px;
   box-shadow: #535151 3px 5px 7px -3px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 359, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown {
     padding-top: 0px;
@@ -7014,7 +7014,7 @@ ul.tabs::after, ul.tabs::before {
 #mainnav .top-bar-section .dropdown li.back, #mainnav .top-bar-section .dropdown li.parent {
   display: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 371, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown li.back, #mainnav .top-bar-section .dropdown li.parent {
     display: inherit;
@@ -7025,7 +7025,7 @@ ul.tabs::after, ul.tabs::before {
   margin-bottom: 15px;
   padding: 0px 0rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 378, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown label {
     margin-bottom: 0px;
@@ -7044,7 +7044,7 @@ ul.tabs::after, ul.tabs::before {
 #mainnav .top-bar-section .dropdown li.columns:last-child {
   border-right: none;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 388, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown li.columns {
     padding: 0px !important;
@@ -7058,7 +7058,7 @@ ul.tabs::after, ul.tabs::before {
 #mainnav .top-bar-section .dropdown li.columns ul {
   margin-top: 10px;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 411, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown li.columns ul {
     margin-top: 0px;
@@ -7089,7 +7089,7 @@ ul.tabs::after, ul.tabs::before {
   font-size: 1.125rem;
   color: #97cde8;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 419, ../../Private/Sources/scss/theme/_navigations.scss */
   #mainnav .top-bar-section .dropdown li.columns ul li a {
     line-height: inherit;
@@ -7150,7 +7150,7 @@ ul.accordion {
   font-size: 1.125rem !important;
   line-height: 1rem !important;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 142, ../../Private/Sources/scss/theme/_layout.scss */
   #phone24 a {
     text-indent: -1000em;
@@ -7177,7 +7177,7 @@ ul.accordion {
   text-indent: -1000em;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 167, ../../Private/Sources/scss/theme/_layout.scss */
   #contact,
   #settings,
@@ -7193,7 +7193,7 @@ ul.accordion {
 #searchlink a, #loginlink a {
   text-indent: -1000em;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 175, ../../Private/Sources/scss/theme/_layout.scss */
   #searchlink, #loginlink {
     display: block !important;
@@ -7247,7 +7247,7 @@ ul.accordion {
   margin-right: -32px;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 225, ../../Private/Sources/scss/theme/_layout.scss */
   #login {
     float: none !important;
@@ -7282,7 +7282,7 @@ ul.accordion {
 .main-content, .sidebar-content {
   margin-top: 2.5rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 248, ../../Private/Sources/scss/theme/_layout.scss */
   .main-content, .sidebar-content {
     width: 100%;
@@ -7299,7 +7299,7 @@ ul.accordion {
   padding-top: 2.5rem;
   padding-bottom: 1.5625rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 259, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons {
     margin-right: -0.9375rem;
@@ -7344,13 +7344,13 @@ ul.accordion {
 .sm-buttons a.toplink::before {
   background-color: #585858;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 292, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons a.toplink {
     margin-right: 0px;
   }
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 272, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons a {
     margin-right: 0.625rem;
@@ -7365,33 +7365,48 @@ ul.contact-list {
   border-bottom: 1px solid #acd7ed;
   list-style: none;
 }
-/* line 316, ../../Private/Sources/scss/theme/_layout.scss */
-ul.contact-list .h4 {
-  margin: -0.5rem 0px 0px 0px;
+@media only screen and (max-width: 48em) {
+  /* line 310, ../../Private/Sources/scss/theme/_layout.scss */
+  ul.contact-list {
+    min-height: auto;
+  }
 }
 /* line 319, ../../Private/Sources/scss/theme/_layout.scss */
+ul.contact-list .h4 {
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+}
+/* line 323, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list li {
-  padding: 0.75rem 1.25rem 0 1.25rem;
+  position: relative;
+  padding: 0.75rem 1.25rem 0 4.9375rem;
   border-top: 1px solid #acd7ed;
   min-height: 4.25rem;
 }
-/* line 324, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 329, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list li::before {
   content: '';
-  display: inline-block;
-  float: left;
-  margin: -0.375rem 0.625rem 0rem -0.3125rem;
+  display: block;
+  position: absolute;
+  left: 17px;
+  top: 6px;
   border-radius: 50%;
   background-color: #FFFFFF;
   width: 3.25rem;
   height: 3.25rem;
 }
 
-/* line 337, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 343, ../../Private/Sources/scss/theme/_layout.scss */
 #badge-box.box {
   min-height: 15.875rem;
 }
-/* line 341, ../../Private/Sources/scss/theme/_layout.scss */
+@media only screen and (max-width: 48em) {
+  /* line 343, ../../Private/Sources/scss/theme/_layout.scss */
+  #badge-box.box {
+    min-height: auto;
+  }
+}
+/* line 349, ../../Private/Sources/scss/theme/_layout.scss */
 #badge-box.box::before {
   position: relative;
   float: right;
@@ -7409,7 +7424,7 @@ footer {
   border-top: 5px solid #dfe0e0;
   /* reset */
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 1, ../../Private/Sources/scss/theme/_footer.scss */
   footer {
     padding: 0px 0px 40px 0px;
@@ -7428,7 +7443,7 @@ footer ul, footer ul li {
 footer #footer-accordion {
   border-bottom: 1px solid #464646;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 23, ../../Private/Sources/scss/theme/_footer.scss */
   footer #footer-accordion {
     padding: 0px;
@@ -7498,7 +7513,7 @@ footer .lastrow .columns:last-child ul:first-child, footer .lastrow #mainnav .to
 footer .lastrow .columns:last-child ul:last-child, footer .lastrow #mainnav .top-bar-section .dropdown li.columns:last-child ul:last-child, #mainnav .top-bar-section .dropdown footer .lastrow li.columns:last-child ul:last-child {
   float: right;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   /* line 100, ../../Private/Sources/scss/theme/_footer.scss */
   footer .lastrow .columns:first-child ul, footer .lastrow #mainnav .top-bar-section .dropdown li.columns:first-child ul, #mainnav .top-bar-section .dropdown footer .lastrow li.columns:first-child ul {
     max-width: 100%;

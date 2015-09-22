@@ -21,7 +21,7 @@ ul.linklist {
 	margin-right: 0px;
 	li {
 		list-style: none;
-		margin: 2px 0px 2px 0px;
+		margin: 0px 0px 0px 0px;
 		a {	
 			font-weight: 700;
 			&::before {
@@ -309,23 +309,29 @@ header {
 
 ul.contact-list {
 	min-height: rem-calc(354px);
+	@media #{$small-only} { 
+		min-height: auto;
+	}	
 	padding: 0px;
 	margin: -#{rem-calc($gutter-width)} 0px 0px 0px;
 	border-bottom: 1px solid $deep-light-blue;
 	list-style: none;
 	.h4 {
-		margin: rem-calc(-8) 0px 0px 0px;
+		margin-top: rem-calc(-8);
+		margin-bottom: 0;
 	}
 	li { 
-		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(20px);
+		position: relative;
+		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(79px);
 		border-top: 1px solid $deep-light-blue;
 		min-height: rem-calc(68px);
 		
 		&::before {
 			content: '';
-			display: inline-block;
-			float: left;
-			margin: rem-calc(-6) rem-calc(10px) 0rem rem-calc(-5); 
+			display: block;
+			position: absolute;
+			left: 17px;
+			top: 6px;
 			border-radius: 50%;
 			background-color: $white;
 			width: rem-calc(52px);
@@ -337,7 +343,9 @@ ul.contact-list {
 #badge-box.box {
 
 	min-height: rem-calc(254);
-	
+	@media #{$small-only} { 
+		min-height: auto;
+	}
 	&::before {
 		position: relative;
 		float: right;
