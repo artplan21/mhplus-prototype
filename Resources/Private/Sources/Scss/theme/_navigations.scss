@@ -111,7 +111,7 @@ ul.tabs {
 		margin-left: 0px;
 		a {
 			display: block; 
-			padding: 10px 17px 16px 17px;
+			padding: 10px 17px 17px 17px;
 			color: $white;
 			font-size: rem-calc($text-font-size);
 		}
@@ -476,10 +476,12 @@ ul.accordion {
 		font-size: rem-calc(30);
 		text-align: center;
 		padding-top: rem-calc(8);
-		transform: rotate(90deg);
+		//transform: rotate(90deg);
+		@include transform(rotate(90deg));
 	}
 	&.active a::after {
-		transform: rotate(270deg);
+		//transform: rotate(270deg);
+		@include transform(rotate(270deg));
 		color: $white;
 		border-bottom: none;
 		border-top: 1px solid $deep-light-grey;

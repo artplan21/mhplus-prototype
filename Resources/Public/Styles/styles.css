@@ -5898,12 +5898,15 @@ button.small, button.small:hover {
 /* line 151, ../../Private/Sources/scss/theme/_icons.scss */
 .has-dropdown > a::before {
   float: right;
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
   margin-right: -2px;
   margin-top: -18px;
 }
 
-/* line 159, ../../Private/Sources/scss/theme/_icons.scss */
+/* line 160, ../../Private/Sources/scss/theme/_icons.scss */
 .dropdown .back a::before {
   transform: rotate(90deg);
   margin-left: -22px;
@@ -5917,7 +5920,7 @@ button.small::before {
   height: 11px;
   width: 8px;
 }
-/* line 169, ../../Private/Sources/scss/theme/_icons.scss */
+/* line 170, ../../Private/Sources/scss/theme/_icons.scss */
 button.small::before {
   margin-top: 3px;
   margin-left: 9px;
@@ -5930,7 +5933,7 @@ footer .accordion-navigation a::before {
   height: 16px;
   width: 7px;
 }
-/* line 178, ../../Private/Sources/scss/theme/_icons.scss */
+/* line 179, ../../Private/Sources/scss/theme/_icons.scss */
 footer .accordion-navigation a::before {
   margin-top: 2px;
   margin-right: 14px;
@@ -6710,7 +6713,7 @@ ul.tabs::after, ul.tabs::before {
 /* line 112, ../../Private/Sources/scss/theme/_navigations.scss */
 #targetnav li a, #utilitynav li a {
   display: block;
-  padding: 10px 17px 16px 17px;
+  padding: 10px 17px 17px 17px;
   color: #FFFFFF;
   font-size: 0.875rem;
 }
@@ -7138,16 +7141,22 @@ ul.accordion {
   font-size: 1.875rem;
   text-align: center;
   padding-top: 0.5rem;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 481, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 482, ../../Private/Sources/scss/theme/_navigations.scss */
 .accordion .accordion-navigation.active a::after, .accordion dd.active a::after {
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
   color: #FFFFFF;
   border-bottom: none;
   border-top: 1px solid #f0f0f0;
 }
-/* line 487, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 489, ../../Private/Sources/scss/theme/_navigations.scss */
 .accordion .accordion-navigation > a, .accordion dd > a {
   font-weight: 700;
 }
