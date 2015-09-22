@@ -14,8 +14,10 @@ footer {
 		max-width: 100%;
 	}
 	
-
-	ul, ul li {
+	dfn { 
+		display: none;
+	}
+	ul, ul li, ul ul, ul ul ul, ul ul li, ul ul ul li {
 		list-style: none;
 		padding: 0px;
 		margin: 0px;
@@ -46,7 +48,7 @@ footer {
 		background-color: $dark-grey !important;
 	}
 	.accordion .accordion-navigation {
-		> a {
+		a {
 			padding: 15px 0px 14px 0px !important;
 			font-size: rem-calc(18) !important;
 			font-family: $text-font;
