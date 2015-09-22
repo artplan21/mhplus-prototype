@@ -158,7 +158,8 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png", $position: 0%, $spacing: 
 }
 .dropdown .back a {
 	&::before {
-		transform: rotate(90deg);
+		//transform: rotate(90deg);
+		@include transform(rotate(90deg));
 		margin-left: -22px;
 		margin-top: -14px;
 	}

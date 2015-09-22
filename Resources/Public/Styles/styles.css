@@ -5908,6 +5908,9 @@ button.small, button.small:hover {
 
 /* line 160, ../../Private/Sources/scss/theme/_icons.scss */
 .dropdown .back a::before {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   margin-left: -22px;
   margin-top: -14px;
@@ -5920,7 +5923,7 @@ button.small::before {
   height: 11px;
   width: 8px;
 }
-/* line 170, ../../Private/Sources/scss/theme/_icons.scss */
+/* line 171, ../../Private/Sources/scss/theme/_icons.scss */
 button.small::before {
   margin-top: 3px;
   margin-left: 9px;
@@ -5933,7 +5936,7 @@ footer .accordion-navigation a::before {
   height: 16px;
   width: 7px;
 }
-/* line 179, ../../Private/Sources/scss/theme/_icons.scss */
+/* line 180, ../../Private/Sources/scss/theme/_icons.scss */
 footer .accordion-navigation a::before {
   margin-top: 2px;
   margin-right: 14px;
