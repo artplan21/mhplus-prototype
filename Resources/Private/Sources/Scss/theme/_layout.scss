@@ -67,6 +67,7 @@ h1.pagetitle {
 
 #wrapper { 
 	//padding: rem-calc(0px) rem-calc(10px) rem-calc(25px) rem-calc(10px); // leaving bit of white space around
+	min-width: 100%;
 	margin-left: rem-calc(-10px);
 	background-color: $white;
 	font-size: rem-calc($text-font-size) !important;
