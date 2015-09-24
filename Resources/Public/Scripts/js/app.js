@@ -13,17 +13,31 @@ jQuery.noConflict();
 		},
 		topbar: {
 			back_text: 'Übersicht Menü', // Define what you want your custom back text to be if custom_back_text: true
-		}
+		}		
 	});
 		
 	$(document).ready(function() {
-		
+				
 		var isMobile = function() {
 			if ($('#toggle-topbar:visible').length > 0) return true;
 			return false;
 		}
 		
 		
+		/* toggle searchinput in mobile */
+		$('#searchinput form button').click(function(event) {		
+			var $target = $('#searchinput form input');
+			console.log($target.val());
+			if (isMobile()) {
+				if (!$target.hasClass('show') || $target.val() == '') {
+					event.preventDefault();
+					$target.toggleClass('show');
+				}
+			}
+		});
+		
+		
+		/* set height and visibility of the menue */
 		var setMainnavHeight = function() {
 			$('#mainnav').css('visibility', 'visible');
 			if (isMobile()) {
@@ -36,7 +50,10 @@ jQuery.noConflict();
 				}, 10);
 			}
 		}
+		
+		/* start function on resize window */
 		$( window ).resize(function() {
+			if (isMobile() && $('body').hasClass('expanded')) $('#toggle-topbar').click();
 			setMainnavHeight();
 		});
 		
@@ -44,9 +61,11 @@ jQuery.noConflict();
 			if ($(this).hasClass('expanded') && isMobile()) setMainnavHeight();
 		});
 		
+		
 		/* create off-canvas menue toggle */
 		$('#toggle-topbar').click(function() {
 			
+						
 			// toggle class
 			$('#mainnav').toggleClass('expanded');
 				
@@ -56,11 +75,15 @@ jQuery.noConflict();
 				// set height and visibility of top-bar (overwrite top-bar-js)
 				setMainnavHeight()
 				
+				$('#toggle-topbar').css('left', -300);
+				
 				// hide other dependencies
 				$('body').removeClass('expanded');
 				$('#exit-off-canvas').remove();
 			}
 			else {
+				
+				$('#toggle-topbar').css('left', $('body').width() - $('#mainnav').width() - $('#toggle-topbar').width());
 				
 				// show other dependencies
 				$('body').addClass('expanded');
@@ -116,11 +139,69 @@ jQuery.noConflict();
 			$.replaceToSelectMenue({addclass: 'tabs-select', insertBefore: $(this), selector: $(this).find('a')});
 		});
 		
-		
-		
 		/* start slider */
 		$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600});
 		
+			var IMG_WIDTH = 990;
+			var currentImg = 0;
+			var maxImages = 4;
+			var speed = 500;
+			var swipeOptions = {
+				triggerOnTouchEnd: true,
+				swipeStatus: swipeStatus,
+				allowPageScroll: "vertical",
+				threshold: 75
+			};
+			var imgs = $('#mainslider');
+			
+			
+			function swipeStatus(event, phase, direction, distance) {
+				console.log(phase);
+				//If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
+				if (phase == "move" && (direction == "left" || direction == "right")) {
+					var duration = 0;
+
+					if (direction == "left") {
+						scrollImages((IMG_WIDTH * currentImg) + distance, duration);
+					} else if (direction == "right") {
+						scrollImages((IMG_WIDTH * currentImg) - distance, duration);
+					}
+
+				} else if (phase == "cancel") {
+					scrollImages(IMG_WIDTH * currentImg, speed);
+				} else if (phase == "end") {
+					if (direction == "right") {
+						previousImage();
+					} else if (direction == "left") {
+						nextImage();
+					}
+				}
+			}
+
+			function previousImage() {
+				currentImg = Math.max(currentImg - 1, 0);
+				scrollImages(IMG_WIDTH * currentImg, speed);
+			}
+
+			function nextImage() {
+				currentImg = Math.min(currentImg + 1, maxImages - 1);
+				scrollImages(IMG_WIDTH * currentImg, speed);
+			}
+
+			/**
+			 * Manually update the position of the imgs on drag
+			 */
+			function scrollImages(distance, duration) {
+				imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
+
+				//inverse the number we set in the css
+				var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+				imgs.css("transform", "translate(" + value + "px,0)");
+			}
+			
+			//imgs.swipe(swipeOptions);
+			
 
 	});
 })(jQuery);
+

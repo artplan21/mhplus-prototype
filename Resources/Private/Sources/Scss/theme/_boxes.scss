@@ -95,7 +95,6 @@
 }
 @media #{$medium-up} {
 	.imagebox.wide {
-	
 		padding: 0;
 		.image {
 			width: 60%;
@@ -105,9 +104,9 @@
 			margin-top: 0px;
 			padding: rem-calc(20px);
 		}
-		h4 {
+		&.invers h4 {
 			display: block;
-			font-size: $h4-font-size;
+			font-size: $h4-font-size - $h4-font-reduction;
 			font-family: $header-font;
 			color: $white;
 			background-color: transparent;
@@ -120,7 +119,23 @@
 		}
 	}
 }
+@media #{$large-up} {
+	.imagebox.wide.invers h4 {
+		font-size: $h4-font-size;
+	}
+}
 
+.f-dropdown li {
+	cursor: default;
+}
 
-
+#contact_info.open {
+	width: 333px;
+}
+#settings_info {
+	padding: rem-calc(20);
+	.button {
+			cursor: default;
+	}
+}
 

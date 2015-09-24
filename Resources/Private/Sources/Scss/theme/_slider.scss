@@ -1,26 +1,41 @@
 
 #mainslider {
+	
 	position: relative;
 	max-width: 100%;
 	overflow: hidden;
 	height: 416px;
 	margin: 0 rem-calc($gutter-width/2);
-	@media #{$small-only} {
-		height: auto;
-		margin: 0;
-	}
 	
-	.js & .slide {
-		opacity: 0;
-		
-		&:first-child {
-			opacity: 1;
+	
+	@media #{$small-only} {
+		.js & {
+			height: auto;
+			margin: 0;
+			
+			&.swipe {
+				overflow: visible;
+				height: 450px;
+				max-width: initial;
+				transform: translate(0, 0);
+			}
+		}
+		.no-js & {
+			overflow: visible;
+			height: auto;
+			padding-top: 450px;
 		}
 	}
-	.no-js & .slide {
-		width: 100%;
-		height: auto;
+	@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+		.no-js & {
+			padding-top: 550px;
+		}
+		
+		.js &.swipe {
+			height: 580px;
+		}
 	}
+	
 	
 	.slide {
 		position: absolute;
@@ -29,10 +44,31 @@
 		width: 1140px;
 		height: 416px;
 		overflow: hidden;
-		visibility: hidden;
+		visibility: hidden;		
+		
+		.js & {
+			opacity: 0;
+			&:first-child {
+				opacity: 1;
+			}
+			
+			&.swipe {
+				position: relative;
+				display: inline-block;
+				opacity: 1;
+				visibility: visible;
+				overflow: visible;
+				transform: translate(0, 0);
+			}
+		}
+		.no-js & {
+			overflow: visible;
+			//width: 100%;
+			//height: auto;
+		}
 		
 		@media #{$small-only} {
-			left: -350px;
+			left: -343px;
 			margin-left: 50%;
 			width: 685px;
 			height: 250px;
@@ -43,7 +79,29 @@
 				max-width: 685px;
 				width: 685px;
 			}
+			&.swipe {
+				left: 0px;
+				margin-left: 0px;
+			}
 		}
+		@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+			left: -495px;
+			margin-left: 50%;
+			width: 990px;
+			height: 361px;
+			img {		
+				height: 361px;
+				min-height: 361px;
+				min-width: 990px;
+				max-width: 990px;
+				width: 990px;
+			}
+			&.swipe {	
+				left: 0px;
+				margin-left: 0px;
+			}
+		}
+		
 		
 		> a { 
 			display: block;
@@ -65,8 +123,66 @@
 		background-color: $white;
 		margin: 1px 0px 1px 0px;
 		
+		.js & {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			overflow: hidden;
+			
+			@media #{$small-only} {
+				width: auto;
+				border-bottom: 1px solid $light-grey;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			
+			.slide-title {
+				@extend .icon-mhplus-pfeil-smart;
+				&::before {
+					right: 20px;
+					top: 9px;
+					color: $text-color;
+					font-size: rem-calc(15);
+					@include transform(rotate(90deg));
+					
+					@media #{$small-only} {
+						right: 5px;
+					}
+				}
+			}
+			&.closed {
+				padding-top: 0px;
+				padding-bottom: 0px;
+				
+				.slide-text {
+					overflow: hidden;
+				}
+				.slide-title {
+					margin-bottom: 0px;
+					cursor: pointer;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					font-family: $text-font;
+					font-size: rem-calc($text-font-size);
+					transition: font 0.3s ease;
+				}
+			}
+			&.open {
+				.slide-title::before {
+					display: none;
+				}
+			}
+		}	
+			
 		@media #{$small-only} {
-			width: 100%;
+			.no-js & {
+				position: relative;
+				width: 280px;
+				//margin-top: 252px;
+				top: 0px;
+				left: -140px;
+				margin-left: 50%;
+			}
 		}
 		
 		.slide-title {
@@ -95,6 +211,18 @@
 			}
 		}
 	}
+	.js & .slide.swipe .slide-desc {
+		position: absolute;
+		width: 290px;
+		left: -145px;
+		margin-left: 50%;
+		.slide-title::after {
+			display: none;
+		}
+		border-bottom: none;
+	
+	}
+	
 	.slide-caller {
 		position: absolute;
 		z-index: 5;
@@ -145,40 +273,11 @@
 			left: 8%;
 		}
 		
+		@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+			margin-top: 364px;
+		}
+		
 		.slide-desc {
-			position: relative;
-			right: auto;
-			bottom: auto;
-			overflow: hidden;
-			@media #{$small-only} {
-				border-bottom: 1px solid $light-grey;
-				padding-left: 0px;
-				padding-right: 0px;
-			}
-			
-			&.closed {
-				padding-top: 0px;
-				padding-bottom: 0px;
-				
-				.slide-text {
-					overflow: hidden;
-				}
-				.slide-title {
-					margin-bottom: 0px;
-					cursor: pointer;
-					padding-top: 5px;
-					padding-bottom: 5px;
-					font-family: $text-font;
-					font-size: rem-calc($text-font-size);
-					transition: font 0.3s ease;
-				}
-			}
-			&.open {
-				.slide-title::after {
-					display: none;
-				}
-			}
-
 			.slide-title::after {
 				position: absolute;
 				top: 14px;

@@ -22,6 +22,7 @@ footer {
 		padding: 0px;
 		margin: 0px;
 	}
+	
 	#footer-accordion {
 		//padding: 0px 20px 0px 20px;
 		//margin: 0rem -#{rem-calc($gutter-width / 2)} 0rem -#{rem-calc($gutter-width / 2)};
@@ -48,20 +49,24 @@ footer {
 		background-color: $dark-grey !important;
 	}
 	.accordion .accordion-navigation {
-		a {
-			padding: 15px 0px 14px 0px !important;
+		> a {
+			padding: 20px 0px 10px 20px !important;
 			font-size: rem-calc(18) !important;
 			font-family: $text-font;
 			&::after {
-				content: none !important;
 				display: none !important;
+			}
+			&::before {
+				left: 0px;
+				top: 8px;
+				width: 5px;
+				color: $white;
+				@include transform(rotate(0deg));
 			}
 		}
 		&.active > a {
 			&::before {
-				transform: rotate(90deg);
-				margin-left: 4px;
-				margin-right: 10px;
+				@include transform(rotate(90deg));
 			}
 		}
 	}
@@ -70,6 +75,54 @@ footer {
 		.no-js & {
 			display: block !important;
 		}
+		
+		ul li a {
+			font-weight: 700;
+		}
+		ul li ul li a {
+			font-weight: 400;
+		}
+		ul li {
+			margin-bottom: 20px;
+			
+		}
+		ul li ul {
+			margin-top: rem-calc(20px);
+		}
+		ul li ul li { 
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		ul li ul li > strong {
+			display: none;
+		}
+		ul li ul li ul li > a {
+			display: inline-block;
+		}
+		
+		@media #{$small-only} {
+			li.small-2 {
+				width: 50%;
+				&:nth-child(2n+1) {
+					clear: left;
+				}
+				&:last-child {
+					float: left !important;
+				}
+			}
+		}
+		@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+			li.small-2 {
+				width: 33%;
+				&:nth-child(2n+1) {
+					clear: none;
+				}
+				&:nth-child(3n+1) {
+					clear: left;
+				}
+			}
+		}
+
 	}
 	
 	.lastrow .columns {

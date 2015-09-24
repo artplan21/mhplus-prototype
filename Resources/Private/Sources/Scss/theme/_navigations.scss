@@ -6,9 +6,13 @@
 		transition: transform $menu-animation-speed $menu-animation-type 0s;
 	}
 	
-	.js .expanded #targetnav-select, .js .expanded #toggle-topbar, .js #mainnav.expanded {
+	.js .expanded #targetnav-select, .js #mainnav.expanded {
 		@include transform2d(translateX(#{$menu-width}px));
 		transition: transform $menu-animation-speed $menu-animation-type 0s;
+	}
+	
+	.js .expanded #toggle-topbar {
+		@include transform2d(translateX(#{$menu-width}px));
 	}
 	
 	.js #toggle-topbar {
@@ -21,9 +25,11 @@
 	@include breakpoint-menuwidth($menu-width-mobile);
 }
 
-
 @media #{$xsmall-only} {
 	@include breakpoint-menuwidth($menu-width-xs-mobile);
+}
+@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+	@include breakpoint-menuwidth($menu-width-medium-mobile);
 }
 
 /* breadcrumb */
@@ -68,10 +74,14 @@ ul.tabs {
 			padding: 12px 10px 10px 10px;
 			margin-right: 5px;
 			background-color: $light-grey;
-			
+			@include single-transition(background-color);
 			@media #{$small-only} {
 				margin-right: 0px;;
 				border-bottom: 2px solid $white;				
+			}
+			
+			&:hover {
+				background-color: $accordion-navigation-hover-bg-color;
 			}
 		
 		}
@@ -96,10 +106,14 @@ ul.tabs {
 	display: none;
 	@media #{$small-only} {
 		position: relative;
-		min-height: 70px;
 		display: block;
+		min-height: 41px;
+		font-weight: 700;
+		padding: $accordion-navigation-padding;
+		cursor: pointer;
 	}
 }
+
 
 /* menues top of the site */
 #targetnav, #utilitynav {
@@ -125,6 +139,7 @@ ul.tabs {
 	margin-left: -17px;
 	li a {
 		color: #a7a7a7;
+		@include single-transition(background-color);
 	}
 	li a:hover, li.active a {
 		background-color: $white;
@@ -174,16 +189,14 @@ ul.tabs {
 	li {
 		padding: 3px 0px 0px 20px;
 		a {
+			position: relative;
 			padding: 6px 0px 5px 0px;
-		}
-		&:first-child {
-			padding-left: 0px;
-			padding-right: 22px;
 		}
 	}
 	
 	@media #{$small-only} {
 		margin-top: 130px;
+		margin-right: 45px;
 		li {
 			padding: 0px 0px 0px 5px;
 			a {
@@ -206,6 +219,8 @@ ul.tabs {
 	padding: 0px 10px 0px 17px;
 	border: none;
 	background-color: $white;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDEzLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMTQ5NDgpICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJFYmVuZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iNDAuMDA3cHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCA0MC4wMDcgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MC4wMDcgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlsaW5lIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMjguNDk0LDQ3LjQ1NSAyMS45MDEsNTMgMTkuMjAzLDUzIDEyLjQ1OSw0Ny40NTUgMTUuNjU2LDQ3LjYwNSAyMC41MDMsNTIuMDAxIDI1LjU5Nyw0Ny41MDUgIi8+CjxyZWN0IGZpbGw9IiNGMEYwRjAiIHdpZHRoPSIwLjAwMSIgaGVpZ2h0PSIxMDAiLz4KPHJlY3QgeD0iNDAiIGZpbGw9IiNGMEYwRjAiIHdpZHRoPSIwLjAwMSIgaGVpZ2h0PSIxMDAiLz4KPC9zdmc+);
+	background-position: right center;
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: rem-calc(16) !important;
@@ -226,23 +241,37 @@ ul.tabs {
 #toggle-topbar { 
 	display: none;
 	position: absolute;
-	left: 0px; 
+	left: -300px; 
 	top: 112px;
 	height: 60px;
-	width: 60px;
+	width: 375px;
 	overflow: hidden;
 	background-color: $white;
-	@include transform2d(translateX(0px));	
+	@include transform2d(translateX(0px));
+	
+	/* icon */
 	a {
 		position: absolute;
 		display: block;
-		width: 62px;
+		width: 75px;
 		height: 60px;
+		right: 0px;
 		color: $link-color;
 		text-indent: -1000em;
-		&::before {
-			margin-top: 16px;
-			margin-left: 20px;
+		@extend .icon-mhplus-mobil-menue;
+		&::after {
+			position: absolute;
+			text-indent: 1000em;
+			font-size: 28px;
+			top: 15px;
+			right: 19px;
+			color: $link-color;
+		}
+	}
+	.expanded & a {
+		@extend .icon-mhplus-mobil-close;
+		&::after {
+			color: $link-color;
 		}
 	}
 	@media #{$small-only} {
@@ -251,6 +280,7 @@ ul.tabs {
 		}
 	}
 }
+
 
 /* js generated area above the content for closing mainnav */
 #exit-off-canvas {
@@ -330,6 +360,17 @@ ul.tabs {
 			}
 		}
 	
+		.has-dropdown > a, .dropdown .back a {
+			@extend  .icon-mhplus-pfeil-smart;
+			&::before {
+				position: relative;
+				font-size: 15px;
+				color: $text-color;
+				margin-top: 0px;
+				margin-right: 20px;
+			}
+		}
+
 		.has-dropdown { 
 			position: inherit; 
 			
@@ -341,6 +382,7 @@ ul.tabs {
 			}
 			a::before {
 				display: none;
+				float: right;
 			}
 			
 			@media #{$small-only} {
@@ -357,7 +399,7 @@ ul.tabs {
 		}
 		
 		.dropdown {
-			padding-top: 40px;
+			padding-top: 34px;
 			padding-bottom: 30px;
 			background-color: $white;
 			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
@@ -375,8 +417,14 @@ ul.tabs {
 				}
 			}
 			
+			li.back a::before {
+				@include transform(rotate(180deg));
+				float: left;
+				margin-top: 1px;
+			}
+			
 			label {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 				padding: 0px ($topbar-link-padding - ($column-gutter/2));
 
 				@media #{$small-only} {
@@ -417,9 +465,10 @@ ul.tabs {
 					li { 
 						display: block;
 						a {
+							font-family: $text-font !important;
 							font-size: rem-calc($text-font-size);
 							line-height: rem-calc(16);
-							padding: rem-calc(5) rem-calc(5);
+							padding: rem-calc(4) 0rem rem-calc(4) 0rem;
 
 							&:hover {
 								color: $white;
@@ -429,8 +478,9 @@ ul.tabs {
 								content: '\0025FE';
 								display: block;
 								float: left;
-								margin-top: -1px;
-								margin-right: 6px;
+								margin-left: -3px;
+								margin-top: 0px;
+								margin-right: 5px;
 								font-size: rem-calc(18);
 								color: $light-blue;
 							}
@@ -463,30 +513,38 @@ ul.accordion {
 .accordion .accordion-navigation, .accordion dd {
 	position: relative;
 	margin-bottom: 10px !important;
-	a::after {
-		content: '\00203A';
-		display: block;
-		position: absolute;
-		top: 0px; 
-		right: 0px;
-		width: 41px;
-		height: 41px;
-		border-bottom: 1px solid $deep-light-grey;
-		font-weight: 400;
-		font-size: rem-calc(30);
-		text-align: center;
-		padding-top: rem-calc(8);
-		//transform: rotate(90deg);
-		@include transform(rotate(90deg));
+	> a {
+		position: relative;
+		font-weight: 700;
+		@include single-transition(background-color);
+		
+		@extend .icon-mhplus-pfeil-smart;
+		&::before {
+			top: 0px; 
+			right: 0px;
+			width: 41px;
+			height: 41px;
+			color: $text-color;
+			font-weight: 400;
+			font-size: rem-calc(16);
+			text-align: center;
+			padding-top: rem-calc(12);
+			@include transform(rotate(90deg));
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0px;
+			right: 39px;
+			width: 1px;
+			height: 100%;
+			border-left: 1px solid $deep-light-grey;
+		}
 	}
-	&.active a::after {
-		//transform: rotate(270deg);
+
+	&.active > a::before {
 		@include transform(rotate(270deg));
 		color: $white;
-		border-bottom: none;
-		border-top: 1px solid $deep-light-grey;
-	}
-	> a {
-		font-weight: 700;
 	}
 }
+

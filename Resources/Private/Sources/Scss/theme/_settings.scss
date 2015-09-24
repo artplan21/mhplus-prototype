@@ -5,9 +5,14 @@
 $max-width: 1180; // real max-size + gutter width!!
 $gutter-width: 40;
 
+// media query for size between small and medium
+$between-small-medium: 640;
+
 // menue width in mobile version
 $menu-width-mobile: 300;
 $menu-width-xs-mobile: 250;
+$menu-width-medium-mobile: 400;
+
 
 // animation speed/type for menue
 $menu-animation-speed: 0.2s;
@@ -30,6 +35,7 @@ $text-color: #222222;
 
 // colors used in backgrounds
 $dark-grey: #585858;
+$grey: #777777;
 $deep-dark-grey: #464646;
 $light-grey: #dfe0e0;
 $deep-light-grey: #f0f0f0;
@@ -64,3 +70,102 @@ font-family:"Utopia W01 It";
 src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix");
 src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix") format("eot"),url("Fonts/b58a7ef2-1af1-4388-bea9-35a36e882eee.woff2") format("woff2"),url("Fonts/91100087-f732-4de0-aa71-80eccd860c00.woff") format("woff"),url("Fonts/ebb5c4d7-df95-4959-9bf3-9f1dbef0b9cd.ttf") format("truetype"),url("Fonts/0b69d819-2210-4ff4-ab5b-0838cc946334.svg#0b69d819-2210-4ff4-ab5b-0838cc946334") format("svg");
 }
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('Fonts/icomoon.eot?leo0r3');
+	src:url('Fonts/icomoon.eot?#iefixleo0r3') format('embedded-opentype'),
+		url('Fonts/icomoon.ttf?leo0r3') format('truetype'),
+		url('Fonts/icomoon.woff?leo0r3') format('woff'),
+		url('Fonts/icomoon.svg?leo0r3#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icomoon {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	text-indent: 0px;
+	position: absolute;
+	color: $light-blue;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mhplus-mobil-close:after {
+	@extend  .icomoon;
+	content: "\e60f";
+}
+.icon-mhplus-mobil-menue:after {
+	@extend  .icomoon;
+	content: "\e610";
+}
+.icon-mhplus-pfeil-big:before {
+	@extend  .icomoon;
+	content: "\e600";
+}
+.icon-mhplus-pfeil-smart:before {
+	@extend  .icomoon;
+	content: "\e601";
+}
+.icon-mhplus-mhplusdirekt-small:before {
+	@extend  .icomoon;
+	content: "\e602";
+}
+.icon-mhplus-search:before {
+	@extend  .icomoon;
+	content: "\e603";
+}
+.icon-mhplus-einstellungen:before {
+	@extend  .icomoon;
+	content: "\e604";
+}
+.icon-mhplus-facebook:before {
+	@extend  .icomoon;
+	content: "\e605";
+}
+.icon-mhplus-gesch-stelle:before {
+	@extend  .icomoon;
+	content: "\e606";
+}
+.icon-mhplus-hotline:before {
+	@extend  .icomoon;
+	content: "\e607";
+}
+.icon-mhplus-hotline24h:before {
+	@extend  .icomoon;
+	content: "\e608";
+}
+.icon-mhplus-mhplusdirekt:before {
+	@extend  .icomoon;
+	content: "\e609";
+}
+.icon-mhplus-newsletter:before {
+	@extend  .icomoon;
+	content: "\e60a";
+}
+.icon-mhplus-twitter:before {
+	@extend  .icomoon;
+	content: "\e60b";
+}
+.icon-mhplus-videochat:before {
+	@extend  .icomoon;
+	content: "\e60c";
+}
+.icon-mhplus-w-adresse:before {
+	@extend  .icomoon;
+	content: "\e60d";
+}
+.icon-mhplus-w-email:before {
+	@extend  .icomoon;
+	content: "\e60e";
+}
+

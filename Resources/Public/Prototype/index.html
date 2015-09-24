@@ -66,62 +66,13 @@
 					<li id="phone24"><a href="tel:+49714197900">0 71 41 - 97 90 0</a></li>
 					<li id="contact">
 						<a data-dropdown="contact_info" aria-controls="contact_info" aria-expanded="false">Kontakt &amp; Geschäftsstellen</a>
-						<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
-							<div class="box invers">
-								<h4>Mein Kontakt</h4>
-								<h5><em>Wir beraten Sie herzlich gerne.</em></h5>
-								<p>
-									Sie haben Fragen oder benötigen eine 
-									persönliche Beratung? Nutzen Sie einen 
-									unserer zahlreichen Kontaktkanäle.<br />
-									Wir freuen uns auf Sie.
-								</p>
-							</div>
-				
-							<ul class="contact-list invers">
-								<li>
-									<a href="tel:+49714197902">
-										<span class="h4">0 71 41 - 97 90 2</span>
-										24h  am Tag - 7 Tage die Woche
-									</a>
-								</li>
-								<li>
-									<a href="index.html">
-										<span class="h4">Email senden</span>
-										Hier geht's zum E-Mailformular
-									</a>
-								</li>
-								<li>
-									mhplus Betriebskrankenkasse<br />
-									71632 Ludwigsburg
-								</li>
-								<li>
-									<a href="index.html">
-										<span class="h4">Videoberatung</span>
-										Hier geht's zum Videochat
-									</a>
-								</li>
-								<li>
-									<span class="h4">Geschäftstelle</span>
-									<form>
-										<fieldset class="input-button-group">
-											<input name="" type="text" value="" size="16" placeholder="Hier PLZ eingeben" /> 
-											<button class="small" type="submit">Absenden</button>
-										</fieldset>
-									</form>
-								</li>
-							</ul>
-						</div>
 					</li>
 					<li id="settings">
 						<a data-dropdown="settings_info" aria-controls="settings_info" aria-expanded="false">Einstellungen</a>
-						<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
-							<p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
-						</div>
 					</li>
 					<li id="searchlink"><a href="index.html">Suche</a></li>
 					<li id="searchinput">
-						<form><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
+						<form action="index.html"><input type="text" name="search" value="" placeholder="Suchbegriff oder Webcode eingeben" /><button type="submit">Suchen</button></form>
 					</li>
 				</ul>
 			</div>
@@ -221,9 +172,6 @@
 						<div class="slide-title">Rücken stärken</div>
 						<div class="slide-text">
 							<p>
-								Erfahren Sie hier was Sie tun können um 
-								dem Rückenschmerz entgegenzuwirken.
-								Exklusiv! Der mhplus Online Rückentest: 
 								Erfahren Sie hier was Sie tun können um 
 								dem Rückenschmerz entgegenzuwirken.
 								Exklusiv! Der mhplus Online Rückentest: 
@@ -436,29 +384,30 @@
 						</div>
 			
 						<ul class="contact-list invers">
-							<li>
+							<li class="icon-mhplus-hotline24h">
 								<a href="tel:+49714197902">
 									<span class="h4">0 71 41 - 97 90 2</span>
 									24h  am Tag - 7 Tage die Woche
 								</a>
 							</li>
-							<li>
+							
+							<li class="icon-mhplus-w-email">
 								<a href="index.html">
 									<span class="h4">Email senden</span>
 									Hier geht's zum E-Mailformular
 								</a>
 							</li>
-							<li>
+							<li class="icon-mhplus-w-adresse">
 								mhplus Betriebskrankenkasse<br />
 								71632 Ludwigsburg
 							</li>
-							<li>
+							<li class="icon-mhplus-videochat">
 								<a href="index.html">
 									<span class="h4">Videoberatung</span>
 									Hier geht's zum Videochat
 								</a>
-							</li>
-							<li>
+							</li>	
+							<li class="icon-mhplus-gesch-stelle">
 								<span class="h4">Geschäftstelle</span>
 								<form>
 									<fieldset class="input-button-group">
@@ -477,21 +426,24 @@
 
 		<div class="row sm-buttons">	
 			<div class="columns small-12">
-				<a href="#"><em>Facebook</em></a>
-				<a href="#"><em>Twitter</em></a>
-				<a href="#"><em>Videochat</em></a>
-				<a href="#"><em>Newsletter</em></a>
-				<a href="#"><em>mhplusdirekt</em></a>
+				<a href="#" class="icon-mhplus-facebook"><em>Facebook</em></a>
+				<a href="#" class="icon-mhplus-twitter"><em>Twitter</em></a>
+				<a href="#" class="icon-mhplus-videochat"><em>Videochat</em></a>
+				<a href="#" class="icon-mhplus-newsletter"><em>Newsletter</em></a>
+				<a href="#" class="icon-mhplus-mhplusdirekt"><em>mhplusdirekt</em></a>
 				<a href="#"><em>App</em></a>
-				<a href="#"><em>Rückruf</em></a>
+				<a href="#" class="icon-mhplus-hotline"><em>Rückruf</em></a>
 			
 				<a class="toplink" href="#top" accesskey="1"><em>nach oben</em></a>
 			</div>
 		</div>
 			
+		
+			
 	</div>
 		
 	<footer>
+	
 		<div id="footer-accordion">
 			<div class="row">
 				<ul class="accordion columns small-12" data-accordion>
@@ -499,7 +451,7 @@
 					<a href="#footer_panel">Ihre mhplus im Überblick</a>
 					<div id="footer_panel" class="content">
 						<ul class="row">
-							<li class="columns small-6 medium-2"><a href="kontakt-infos-mhplus.html">Kontakt</a>
+							<li class="columns small-2"><a href="kontakt-infos-mhplus.html">Kontakt</a>
 								<ul>
 									<li><dfn class="menu">1.1:</dfn><strong>Ihre mhplus</strong><span class="hidden">.</span>
 										<ul>
@@ -527,7 +479,7 @@
 								</ul>
 							</li>
 
-							<li class="columns small-6 medium-2"><dfn class="menu">2:</dfn><a href="mitgliedschaft-beitraege.html">Mitgliedschaft</a>
+							<li class="columns small-2"><dfn class="menu">2:</dfn><a href="mitgliedschaft-beitraege.html">Mitgliedschaft</a>
 								<ul>
 									<li><dfn class="menu">2.1:</dfn><strong>Beiträge</strong><span class="hidden">.</span>
 										<ul>
@@ -557,7 +509,7 @@
 								</ul>
 							</li>
 
-							<li class="columns small-6 medium-2"><dfn class="menu">3:</dfn><a href="leistungen-bonustarife.html">Leistungen</a>
+							<li class="columns small-2"><dfn class="menu">3:</dfn><a href="leistungen-bonustarife.html">Leistungen</a>
 								<ul>
 									<li><dfn class="menu">3.1:</dfn><strong>Leistungen</strong><span class="hidden">.</span>
 										<ul>
@@ -589,7 +541,7 @@
 								</ul>
 							</li>
 
-							<li class="columns small-6 medium-2"><dfn class="menu">4:</dfn><a href="service-beratung.html">Service</a>
+							<li class="columns small-2"><dfn class="menu">4:</dfn><a href="service-beratung.html">Service</a>
 								<ul>
 									<li><dfn class="menu">4.1:</dfn><strong>Service-Angebote</strong><span class="hidden">.</span>
 										<ul>
@@ -620,7 +572,7 @@
 								</ul>
 							</li>
 
-							<li class="columns small-6 medium-2"><dfn class="menu">5:</dfn><a href="gesundheit-vorsorge.html?&amp;no_cache=1">Gesundheit</a>
+							<li class="columns small-2"><dfn class="menu">5:</dfn><a href="gesundheit-vorsorge.html?&amp;no_cache=1">Gesundheit</a>
 								<ul>
 									<li><dfn class="menu">5.1:</dfn><strong>Prävention</strong><span class="hidden">.</span>
 										<ul>
@@ -655,7 +607,7 @@
 								</ul>
 							</li>
 							
-							<li class="columns small-6 medium-2"><dfn class="menu">6:</dfn><a href="1586.html">mhplus Info-Portale</a>
+							<li class="columns small-2"><dfn class="menu">6:</dfn><a href="1586.html">mhplus Info-Portale</a>
 								<ul>
 									<li><dfn class="menu">6.1:</dfn><strong>Ihre Spezialseiten</strong><span class="hidden">.</span>
 										<ul>
@@ -713,11 +665,74 @@
 		</div>
 	</footer>
 
-
+	
+	<div id="contact_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+		<div class="box invers">
+			<h4>Mein Kontakt</h4>
+			<h5><em>Wir beraten Sie herzlich gerne.</em></h5>
+			<p>
+				Sie haben Fragen oder benötigen eine 
+				persönliche Beratung? Nutzen Sie einen 
+				unserer zahlreichen Kontaktkanäle.<br />
+				Wir freuen uns auf Sie.
+			</p>
+		</div>
+		<ul class="contact-list invers">
+			<li class="icon-mhplus-hotline24h">
+				<a href="tel:+49714197902">
+					<span class="h4">0 71 41 - 97 90 2</span>
+					24h  am Tag - 7 Tage die Woche
+				</a>
+			</li>
+			
+			<li class="icon-mhplus-w-email">
+				<a href="index.html">
+					<span class="h4">Email senden</span>
+					Hier geht's zum E-Mailformular
+				</a>
+			</li>
+			<li class="icon-mhplus-w-adresse">
+				mhplus Betriebskrankenkasse<br />
+				71632 Ludwigsburg
+			</li>
+			<li class="icon-mhplus-videochat">
+				<a href="index.html">
+					<span class="h4">Videoberatung</span>
+					Hier geht's zum Videochat
+				</a>
+			</li>	
+			<li class="icon-mhplus-gesch-stelle">
+				<span class="h4">Geschäftstelle</span>
+				<form>
+					<fieldset class="input-button-group">
+						<input name="" type="text" value="" size="16" placeholder="Hier PLZ eingeben" /> 
+						<button class="small" type="submit">Absenden</button>
+					</fieldset>
+				</form>
+			</li>
+		</ul>
+	</div>	
+	
+	<div id="settings_info" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+		<div class="button-bar">
+		  <ul class="button-group radius">
+			<li><span class="small button">STRG</span></li>
+			<li><span class="small button">+</span></li>
+		  </ul>
+		  <ul class="button-group radius">
+			<li><span class="small button">STRG</span></li>
+			<li><span class="small button">-</span></li>
+		  </ul>
+		</div>
+		<p>Sie können die Seite mithilfe Ihres Browsers größer oder kleiner anzeigen lassen. Verwenden Sie dafür bitte  STRG + und STRG - . Mit STRG 0 gelangen Sie wieder zur Ausgangsgröße.</p>
+	</div>
+						
+			
 <!-- don't forget to concatenate and minify for production -->
 <script src="../../../Resources/Public/Scripts/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../../../Resources/Public/Scripts/bower_components/foundation/js/foundation.min.js"></script>
-<script async src="../../../Resources/Public/Scripts/js/slider.js"></script>
+<script src="../../../Resources/Public/Scripts/bower_components/foundation/js/foundation.js"></script>
+<script src="../../../Resources/Public/Scripts/libs/jquery.touchSwipe.min.js"></script>
+<script src="../../../Resources/Public/Scripts/js/slider.js"></script>
 <script async src="../../../Resources/Public/Scripts/js/app.js"></script>
 
 

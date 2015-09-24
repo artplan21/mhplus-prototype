@@ -1965,7 +1965,7 @@
             e.stopPropagation();
             return;
           }
-
+		  
           self.close.call(self, S('[' + self.attr_name() + '-content]'));
         })
         .on('opened.fndtn.dropdown', '[' + self.attr_name() + '-content]', function () {
@@ -1974,7 +1974,7 @@
         .on('closed.fndtn.dropdown', '[' + self.attr_name() + '-content]', function () {
           self.settings.closed.call(this);
         });
-
+		
       S(window)
         .off('.dropdown')
         .on('resize.fndtn.dropdown', self.throttle(function () {

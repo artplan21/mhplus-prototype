@@ -152,8 +152,8 @@ $primary-color: $dark-grey;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $xsmall-breakpoint:  em-calc(320);
-$small-breakpoint:  em-calc(768);
-$medium-breakpoint: em-calc(1024);
+$small-breakpoint:  em-calc(990);
+$medium-breakpoint: em-calc(1080);
 // $large-breakpoint:  em-calc(1440);
 // $xlarge-breakpoint: em-calc(1920);
 
@@ -233,9 +233,9 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-//$h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
-// $h3-font-reduction: rem-calc(5);
+$h1-font-reduction: rem-calc(5);
+$h2-font-reduction: rem-calc(5);
+$h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
 // $h5-font-reduction: 0;
 // $h6-font-reduction: 0;
@@ -339,7 +339,7 @@ $paragraph-margin-bottom: rem-calc(16);
 
 $accordion-navigation-padding: rem-calc(12) rem-calc(60) rem-calc(12) rem-calc(16);
 $accordion-navigation-bg-color: $light-grey;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -15%);
 $accordion-navigation-active-bg-color: $light-blue;
 $accordion-navigation-font-color: $text-color;
 $accordion-navigation-font-size: rem-calc($text-font-size);
@@ -536,12 +536,12 @@ $button-bg-color: $primary-color;
 // $include-html-dropdown-classes: $include-html-classes;
 
 // We use these to controls height and width styles.
-// $f-dropdown-max-width: 200px;
+$f-dropdown-max-width: 400px;
 // $f-dropdown-height: auto;
 // $f-dropdown-max-height: none;
 
 // Used for bottom position
-// $f-dropdown-margin-top: 2px;
+$f-dropdown-margin-top: 10px;
 
 // Used for right position
 // $f-dropdown-margin-left: $f-dropdown-margin-top;
@@ -553,29 +553,29 @@ $button-bg-color: $primary-color;
 // $f-dropdown-margin-bottom: $f-dropdown-margin-top;
 
 // We use this to control the background color
-// $f-dropdown-bg: $white;
+$f-dropdown-bg: $light-blue;
 
 // We use this to set the border styles for dropdowns.
-// $f-dropdown-border-style: solid;
+$f-dropdown-border-style: none;
 // $f-dropdown-border-width: 1px;
 // $f-dropdown-border-color: scale-color($white, $lightness: -20%);
 
 // We use these to style the triangle pip.
 // $f-dropdown-triangle-size: 6px;
-// $f-dropdown-triangle-color: $white;
+$f-dropdown-triangle-color: $light-blue;
 // $f-dropdown-triangle-side-offset: 10px;
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
-// $f-dropdown-font-color: $charcoal;
+$f-dropdown-font-color: $text-color;
 // $f-dropdown-font-size: rem-calc(14);
-// $f-dropdown-list-padding: rem-calc(5, 10);
+$f-dropdown-list-padding: rem-calc(0);
 // $f-dropdown-line-height: rem-calc(18);
-// $f-dropdown-list-hover-bg: $smoke;
+$f-dropdown-list-hover-bg: none;
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
-// $f-dropdown-content-padding: rem-calc(20);
+$f-dropdown-content-padding: rem-calc(0);
 
 // Default radius for dropdown.
 // $f-dropdown-radius: $global-radius;
@@ -707,8 +707,8 @@ $input-box-shadow: none; //inset 0 1px 2px rgba(0,0,0,0.1);
 // $input-transition-fade-timing-function: linear;
 
 // Select variables
-// $select-bg-color: $ghost;
-// $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
+$select-bg-color: $light-grey;
+$select-hover-bg-color: scale-color($select-bg-color, $lightness: -15%);
 
 
 // 12. Icon Bar
