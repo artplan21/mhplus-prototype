@@ -84,9 +84,9 @@ fieldset {
 		
 		br {
 			clear: both;
-			margin-top: 5px;
+			line-height: 30px;
 			&:first-child {
-				float: right;
+				line-height: 1px;
 			}
 		}
 		br~label.checkbox {
@@ -105,7 +105,7 @@ fieldset {
 		margin: 20px;
 	}
 	p+div.field {
-		margin-top: -10px;
+		margin-top: -25px;
 	}
 	
 	.field .switch, .field.switch {

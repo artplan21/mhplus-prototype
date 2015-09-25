@@ -1,9 +1,0 @@
-diff a/Resources/Private/Sources/Scss/_foundation_components.scss b/Resources/Private/Sources/Scss/_foundation_components.scss	(rejected hunks)
-@@ -5,7 +5,6 @@
-    "foundation/components/accordion",
- //   "foundation/components/alert-boxes",
- // "foundation/components/block-grid",
--  "foundation/components/breadcrumbs",
- // "foundation/components/breadcrumbs",
-   "foundation/components/button-groups",
- //  "foundation/components/buttons",

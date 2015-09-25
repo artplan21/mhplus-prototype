@@ -7494,11 +7494,11 @@ fieldset .field input[type="text"] {
 /* line 85, ../../Private/Sources/scss/theme/_forms.scss */
 fieldset .field br {
   clear: both;
-  margin-top: 5px;
+  line-height: 30px;
 }
 /* line 88, ../../Private/Sources/scss/theme/_forms.scss */
 fieldset .field br:first-child {
-  float: right;
+  line-height: 1px;
 }
 /* line 92, ../../Private/Sources/scss/theme/_forms.scss */
 fieldset .field br ~ label.checkbox {
@@ -7517,7 +7517,7 @@ fieldset p {
 }
 /* line 107, ../../Private/Sources/scss/theme/_forms.scss */
 fieldset p + div.field {
-  margin-top: -10px;
+  margin-top: -25px;
 }
 /* line 112, ../../Private/Sources/scss/theme/_forms.scss */
 fieldset .field .switch label.checkbox, fieldset .field.switch label.checkbox {

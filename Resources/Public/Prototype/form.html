@@ -191,8 +191,8 @@
 			<div id="content" class="main-content columns small-12">
 			
 				<ul class="tabs">
-					<li class="tab-title"><a href="form2.html">Arbeitnehmer & Azubis</a></li>
-					<li class="tab-title active"><a href="form.html">Studenten</a></li>
+					<li class="tab-title active"><a href="form2.html">Arbeitnehmer & Azubis</a></li>
+					<li class="tab-title"><a href="form.html">Studenten</a></li>
 					<li class="tab-title"><a href="form.html">Selbstständige</a></li>
 
 				</ul>				
@@ -236,55 +236,63 @@
 							
 							<fieldset>
 								<legend>Versicherungsrechtliche Angaben</legend>
-								<div class="field">
+								<div class="field switch small">
 									<label for="alt1">Sind Sie älter als 30 Jahre?&nbsp;<span class="mandatory">*</span></label>
-									<input id="alt1" name="CALCULATOR[alt]" value="1" class="checkbox" type="radio">
-									<label for="alt1" class="checkbox">Ja</label>
-									<input id="alt2" name="CALCULATOR[alt]" checked="checked" value="2" class="checkbox" type="radio">
-									<label for="alt2" class="checkbox">Nein</label>
+										<input id="alt1" name="CALCULATOR[alt]" value="1" class="checkbox" type="radio">
+										<label for="alt1" class="checkbox">Ja</label>
+										<input id="alt2" name="CALCULATOR[alt]" checked="checked" value="2" class="checkbox" type="radio">
+										<label for="alt2" class="checkbox">Nein</label>
 								</div>
-								<div class="field">
+								<div class="field switch small">
 									<label for="sem1">Studieren Sie bereits mehr als 14 Semester im derzeitigen Studienfach?&nbsp;<span class="mandatory">*</span></label>
+									
 									<input id="sem1" name="CALCULATOR[sem]" value="1" class="checkbox" type="radio">
-									<label for="sem1" class="checkbox">ja</label>
+									<label for="sem1" class="checkbox">Ja</label>
 									
 									<input id="sem2" name="CALCULATOR[sem]" checked="checked" value="2" class="checkbox" type="radio">
-									<label for="sem2" class="checkbox">nein</label>
+									<label for="sem2" class="checkbox">Nein</label>
 									
 								</div>
-								<div class="field">
+								<div class="field switch small">
 									<label for="famili1">Sind Sie familienversichert?&nbsp;<span class="mandatory">*</span></label>
 									<input id="famili1" name="CALCULATOR[famili]" value="1" class="checkbox" type="radio">
-									<label for="famili1" class="checkbox">ja</label>
+									<label for="famili1" class="checkbox">Ja</label>
 									
 									<input id="famili2" name="CALCULATOR[famili]" checked="checked" value="2" class="checkbox" type="radio">
-									<label for="famili2" class="checkbox">nein</label>
+									<label for="famili2" class="checkbox">Nein</label>
 									
 								</div>
 							</fieldset>
 							<fieldset>
 								<legend>Angaben zu Einnahmen</legend>
+							
+								
 								<div class="field">
 									<label for="brutto">Monatliches Bruttoeinkommen&nbsp;<span class="mandatory">*</span></label>
-									<input id="brutto" name="CALCULATOR[brutto]" value="" size="5" maxlength="10" type="text">EUR<br />
+									<input id="brutto" name="CALCULATOR[brutto]" value="" size="5" maxlength="10" type="text">EUR
 									<!--<span class="error"></span>-->
 								</div>
 
+								
 								<p>Monatliches Bruttoeinkommen aus&nbsp;<span class="mandatory">*</span></p>
-								<div class="field">
+								<div class="field switch small">
 									<br />
+									
 									<input id="handel1" name="CALCULATOR[handel]" checked="checked" value="1" class="checkbox" type="radio">
 									<label for="handel1" class="checkbox">sonstige Einkünfte (z.B. BAFöG, Mieteinnahmen, Unterstützung von Eltern)</label>
 									
 									<br />
+									
 									<input id="handel2" name="CALCULATOR[handel]" value="2" class="checkbox" type="radio">
 									<label for="handel2" class="checkbox">selbstständiger Tätigkeit</label>
-									
+
 									<br />
+								
 									<input id="handel3" name="CALCULATOR[handel]" value="3" class="checkbox" type="radio">
 									<label for="handel3" class="checkbox">Beschäftigung (Arbeitszeit bis 20 Stunden/Woche)</label>
 									
 									<br />
+								
 									<input id="handel4" name="CALCULATOR[handel]" value="4" class="checkbox" type="radio">
 									<label for="handel4" class="checkbox">Beschäftigung (Arbeitszeit mehr als 20 Stunden/Woche)</label>
 									
@@ -292,7 +300,7 @@
 
 								
 								<p>Beschäftigungsort (Pflegeversicherung)&nbsp;<span class="mandatory">*</span></p>
-								<div class="field">
+								<div class="field switch small">
 									<br />
 									<input id="ort1" name="CALCULATOR[ort]" checked="checked" value="1" class="checkbox" type="radio">
 									<label for="ort1" class="checkbox">Bundesgebiet ohne Sachsen</label>
@@ -302,7 +310,6 @@
 								</div>
 								
 							</fieldset>
-							
 							
 							<p class="mandatory">
 								<em>Mit <span class="mandatory">*</span> gekennzeichneten Felder sind Pflichtfelder und müssen
