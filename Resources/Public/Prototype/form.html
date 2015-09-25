@@ -167,9 +167,9 @@
 				<div class="slide">
 					<img src="../../../Resources/Public/Images/Bild-3.jpg" alt="Teaser 1" />
 					<div class="slide-caller">
-						<div class="slide-header">Die elektronische Gesundheitskarte</div>
+						<div class="slide-header">Lorem ipsum</div>
 						<br />
-						<p>Eine Versichertenkarte - viele Funktionen</p>
+						<p>Lorim ipsum dolor sit elitr</p>
 					</div>
 				</div>
 			</div>
@@ -190,66 +190,135 @@
 			
 			<div id="content" class="main-content columns small-12">
 			
-				<h1 class="pagetitle">Elektronische Gesundheitskarte (eGK)</h1>
-				<h5>Die eGK - Ihr Versicherungsnachweis</h5>
+				<ul class="tabs">
+					<li class="tab-title"><a href="form2.html">Arbeitnehmer & Azubis</a></li>
+					<li class="tab-title active"><a href="form.html">Studenten</a></li>
+					<li class="tab-title"><a href="form.html">Selbstständige</a></li>
+
+				</ul>				
 				
-				<div class="left margin">
-					<img src="../Images/img_eGK.jpg" alt="eGK" />
-				</div>
+				<h1 class="pagetitle">Beitragsrechner für Studenten</h1>
+
+				<form method="post" id="tx_a21beitragsrechner" name="tx_a21beitragsrechner" action="form.html">
 				
-				<p>
-					Die elektronische Gesundheitskarte (eGK) hat die gewohnte 
-					Versichertenkarte ersetzt. Sie ist mit einem Lichtbild ausgestattet. 
-					Auf dem Foto sollten die Karteninhaber gut erkennbar sein. Andernfalls könnte die Arztpraxis die Behandlung verweigern.
-				</p>
-				<p>
-					Versicherte können der mhplus ihr digitales Foto auf elektronischem Weg zukommen lassen. Von Versicherten bis zum 15. Lebensjahr und Versicherten der Pflegestufe II und III wird kein Foto benötigt, für diese Gruppen ist eine eGK ohne Bild vorgesehen.
-					Nutzen Sie dazu unser Uploadtool oder unsere mhplus App.
-				</p>
-				
-				<p class="clearfix"></p>
-				
-				<p>
-					<strong>Laden Sie hier Ihr Bild online hoch</strong><br />
-					<a href="verteiler.html" class="button blue large">Bildupload Online</a>
-					<br />
-					<strong>Noch einfacher geht es mit der Mobilversion für Smartphones</strong><br />
-					<a href="verteiler.html" class="button blue large">mhplus App-Upload</a>
-				</p>
-				
-				<h5>Weitere Infos zur eGK</h5>
-			
-				<div class="row">
-					<div class="columns small-12">
-						<ul class="accordion" data-accordion>
-							<li class="accordion-navigation">
-								<a href="#panel1a">Wozu benötigen Sie die eGK?</a>
-								<div id="panel1a" class="content">
-								Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					<div class="row">
+						<div class="columns small-12">
+
+							<ul class="small-block-grid-4 medium-block-grid-7">
+								<li class="numbers small active">
+									<input name="CALCULATOR[suba]" value="Registrierung für Eltern" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Account aktivieren" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Auswahl Angebot" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Login mit Passwort" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Anmeldung eines Kindes" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Anmeldung prüfen" type="submit" />
+								</li>
+								<li class="numbers small">
+									<input name="CALCULATOR[suba]" value="Fertig" type="submit" />
+								</li>
+							</ul>
+					
+						</div>
+					</div>	
+					<p></p>
+					<div class="row">
+						<div class="columns small-12">
+							
+							<fieldset>
+								<legend>Versicherungsrechtliche Angaben</legend>
+								<div class="field">
+									<label for="alt1">Sind Sie älter als 30 Jahre?&nbsp;<span class="mandatory">*</span></label>
+									<input id="alt1" name="CALCULATOR[alt]" value="1" class="checkbox" type="radio">
+									<label for="alt1" class="checkbox">Ja</label>
+									<input id="alt2" name="CALCULATOR[alt]" checked="checked" value="2" class="checkbox" type="radio">
+									<label for="alt2" class="checkbox">Nein</label>
 								</div>
-							</li>
-							<li class="accordion-navigation">
-								<a href="#panel2a">Was kann die eGK?</a>
-								<div id="panel2a" class="content">
-								Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<div class="field">
+									<label for="sem1">Studieren Sie bereits mehr als 14 Semester im derzeitigen Studienfach?&nbsp;<span class="mandatory">*</span></label>
+									<input id="sem1" name="CALCULATOR[sem]" value="1" class="checkbox" type="radio">
+									<label for="sem1" class="checkbox">ja</label>
+									
+									<input id="sem2" name="CALCULATOR[sem]" checked="checked" value="2" class="checkbox" type="radio">
+									<label for="sem2" class="checkbox">nein</label>
+									
 								</div>
-							</li>
-							<li class="accordion-navigation">
-								<a href="#panel3a">Mehrwertfunktionen</a>
-								<div id="panel3a" class="content">
-								Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<div class="field">
+									<label for="famili1">Sind Sie familienversichert?&nbsp;<span class="mandatory">*</span></label>
+									<input id="famili1" name="CALCULATOR[famili]" value="1" class="checkbox" type="radio">
+									<label for="famili1" class="checkbox">ja</label>
+									
+									<input id="famili2" name="CALCULATOR[famili]" checked="checked" value="2" class="checkbox" type="radio">
+									<label for="famili2" class="checkbox">nein</label>
+									
 								</div>
-							</li>
-							<li class="accordion-navigation">
-								<a href="#panel4a">Informationsflyer zur eGK  (in 11 Sprachen verfügbar)</a>
-								<div id="panel4a" class="content">
-								Panel 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</fieldset>
+							<fieldset>
+								<legend>Angaben zu Einnahmen</legend>
+								<div class="field">
+									<label for="brutto">Monatliches Bruttoeinkommen&nbsp;<span class="mandatory">*</span></label>
+									<input id="brutto" name="CALCULATOR[brutto]" value="" size="5" maxlength="10" type="text">EUR<br />
+									<!--<span class="error"></span>-->
 								</div>
-							</li>
-						</ul>
+
+								<p>Monatliches Bruttoeinkommen aus&nbsp;<span class="mandatory">*</span></p>
+								<div class="field">
+									<br />
+									<input id="handel1" name="CALCULATOR[handel]" checked="checked" value="1" class="checkbox" type="radio">
+									<label for="handel1" class="checkbox">sonstige Einkünfte (z.B. BAFöG, Mieteinnahmen, Unterstützung von Eltern)</label>
+									
+									<br />
+									<input id="handel2" name="CALCULATOR[handel]" value="2" class="checkbox" type="radio">
+									<label for="handel2" class="checkbox">selbstständiger Tätigkeit</label>
+									
+									<br />
+									<input id="handel3" name="CALCULATOR[handel]" value="3" class="checkbox" type="radio">
+									<label for="handel3" class="checkbox">Beschäftigung (Arbeitszeit bis 20 Stunden/Woche)</label>
+									
+									<br />
+									<input id="handel4" name="CALCULATOR[handel]" value="4" class="checkbox" type="radio">
+									<label for="handel4" class="checkbox">Beschäftigung (Arbeitszeit mehr als 20 Stunden/Woche)</label>
+									
+								</div>
+
+								
+								<p>Beschäftigungsort (Pflegeversicherung)&nbsp;<span class="mandatory">*</span></p>
+								<div class="field">
+									<br />
+									<input id="ort1" name="CALCULATOR[ort]" checked="checked" value="1" class="checkbox" type="radio">
+									<label for="ort1" class="checkbox">Bundesgebiet ohne Sachsen</label>
+									<br />
+									<input id="ort2" name="CALCULATOR[ort]" value="2" class="checkbox" type="radio">
+									<label for="ort2" class="checkbox">Sachsen</label>
+								</div>
+								
+							</fieldset>
+							
+							
+							<p class="mandatory">
+								<em>Mit <span class="mandatory">*</span> gekennzeichneten Felder sind Pflichtfelder und müssen
+								ausgefüllt werden!</em>
+							</p>
+							
+							<div class="button_set">
+									<input class="submit blue large" value="Beitrag berechnen" title="Beitrag berechnen" type="submit" />
+									<input id="calculateKK" name="calculateKK" value="1" maxlength="1" type="hidden">
+							</div>
+								
+							
+								
+						</div>
 					</div>
-				</div>
-				
+				</form>
 			</div>
 
 			

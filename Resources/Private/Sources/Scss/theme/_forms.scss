@@ -43,6 +43,122 @@
    color: scale-color($link-color-light, $lightness: +50%);  
 }
 
+
+fieldset {
+	position: relative;
+	background-color: $deep-light-grey;
+	border: none;
+	padding: 0px 0px 0px 0px;
+	
+	legend {
+		@extend .h5;
+		width: 100%;
+		background-color: $white;
+		padding-bottom: 5px;
+	}
+	
+	.field {
+		margin: 20px;
+		&::before, &::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		label {
+			width: 50%;
+			margin-right: 10px;
+			float: left;
+			
+			&.checkbox {
+				width: 4%;
+			}
+		}	
+		input {
+			margin-right: 10px;
+			float: left;
+		}
+		input[type="text"] {
+			width: auto;
+			margin-right: 10px;
+		}
+		
+		br {
+			clear: both;
+			margin-top: 5px;
+			&:first-child {
+				float: right;
+			}
+		}
+		br~label.checkbox {
+			width: 84%;
+		}
+		
+		@media #{$xsmall-only} {
+			label:not(.checkbox) {
+				float: none;
+				width: auto;
+			}
+		}
+		
+	}
+	p { 
+		margin: 20px;
+	}
+	p+div.field {
+		margin-top: -10px;
+	}
+	
+	.field .switch, .field.switch {
+		label.checkbox {
+			position: relative;
+			//margin-top: 15px;
+			width: auto !important;
+			padding-left: 48px;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				width: 42px;
+				height: 24px;
+				left: 0px;
+				top: -3px;
+				background: $light-grey;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				height: 18px;
+				width: 18px;
+				left: 3px;
+				top: 0px;
+				background: #FFF;
+				transition: left 0.15s ease-out 0s;			
+			}
+		}
+		input {
+			position: absolute;
+			opacity: 0;
+		}
+		input:checked+label {
+			color: $light-blue-text;
+			&::before {
+				background: $light-blue;
+			}
+			&::after {
+				left: 21px;
+			}
+		}
+	
+	}	
+}
+  
+  
+.button_set {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid $light-blue;
+}
+
 select {
 	@include single-transition(background-color);
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDEzLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMTQ5NDgpICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJFYmVuZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iNDBweCIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDQwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlsaW5lIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMjguNDg2LDQ3LjQ1NSAyMS44OTQsNTMgMTkuMTk2LDUzIDEyLjQ1Miw0Ny40NTUgMTUuNjQ5LDQ3LjYwNSAyMC40OTYsNTIuMDAxIDI1LjU5LDQ3LjUwNSAiLz4KPHJlY3QgZmlsbD0iI0YwRjBGMCIgd2lkdGg9IjEuMDIyIiBoZWlnaHQ9IjEwMCIvPgo8cmVjdCB4PSIzOS45OTkiIGZpbGw9IiNGMEYwRjAiIHdpZHRoPSIwLjAwMSIgaGVpZ2h0PSIxMDAiLz4KPC9zdmc+);
@@ -50,6 +166,7 @@ select {
 }
 
 fieldset.input-button-group {
+	background: none;
 	padding: 0px;
 	margin: 6px 0px 6px 0px;
 	border: none;
@@ -67,6 +184,10 @@ fieldset.input-button-group {
 input {
 	padding: 0px;
 	//@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: +60%)));
+	
+	&[type="submit"] {
+		@extend .button
+	}
 }
 
 

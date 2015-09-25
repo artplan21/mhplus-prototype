@@ -27,23 +27,29 @@
 	}
 }
 
-.box.numbers {
+.numbers {
+	position: relative;
 	padding-left: rem-calc(40px);
 	padding-bottom: rem-calc(35);
+	padding-top: rem-calc(30px) !important;
+	padding-right: 0px;
 	margin-top: rem-calc(30);
 	margin-left: rem-calc(29);
 	border-top: 1px solid $light-blue;
 	border-left: 1px solid $light-blue;
 	h5 {
 		margin-bottom: rem-calc(10);
-		margin-top: rem-calc(-18);
+		margin-top: rem-calc(-7);
 	}
 	&::before {
 		content: ' ';
+		position: absolute;
 		display: block;
 		text-align: center;
 		padding-top: rem-calc(14);
-		margin: rem-calc(-32) 0 0 rem-calc(-70);
+		top: -11px;
+		left: -31px;
+		//margin: rem-calc(-32) 0 0 rem-calc(-70);
 		height: rem-calc(52);
 		width: rem-calc(52);
 		color: $white;
@@ -51,13 +57,51 @@
 		font-family: $header-font;
 		background-color: $light-blue;
 	}
+	&.small {
+		margin-left: 0px;
+		border-left: none;
+		padding-bottom: 0px !important;
+		&::before {
+			position: relative;
+			height: rem-calc(37);
+			width: rem-calc(37);
+			margin: -40px 0 0 0;
+			top: 0px;
+			left: 0px;
+			padding-top: rem-calc(10);
+			font-size: rem-calc(24);
+			background-color: scale-color($light-blue, $lightness: 60%);
+		}
+		&.active::before {
+			background-color: $light-blue;
+		}
+		
+		input[type="submit"] {
+			position: relative;
+			bottom: auto;
+			background: none;
+			border: none;
+			color: $text-color;
+			padding-left: 0px;
+			margin-top: 0px;
+			margin-left: -2px;
+			margin-bottom: 0px;
+			text-align: left;
+			white-space: pre-wrap;
+		}
+	}
 	.button {
 		position: absolute;
 		bottom: 0;
 	}
 }
+
 @for $i from 1 through 12 {
-	.box.numbers.n#{$i}::before { 
+	.numbers:nth-child(#{$i})::before { 
+		content: '#{$i}';
+	}
+	
+	.numbers.n#{$i}::before { 
 		content: '#{$i}';
 	}
 }

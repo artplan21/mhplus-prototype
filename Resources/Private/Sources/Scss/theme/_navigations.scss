@@ -335,14 +335,27 @@ ul.tabs {
 				display: block;
 			}
 		}
+		
+		
+		ul li {
+		 
+            > a {
+              line-height: $topbar-height;
+              padding: 0 $topbar-link-padding;
+              
+            }
+          
+		}
+		
+		
 		@media #{$small-only} {
 		
 			/* reset desktop definitions */
 			h5 { // back-link is wrapped by h5 !
 				line-height: inherit !important;
 			}
-			li, li:hover, li.hover, .dropdown li.columns ul li {	
-				a, h5 a, label {
+			ul li, li, li:hover, li.hover, .dropdown li.columns ul li {	
+				> a, a, h5 a, label {
 					display: block;
 					float: none;
 					padding: 14px 0px 13px $topbar-link-padding;
@@ -370,7 +383,7 @@ ul.tabs {
 				margin-right: 20px;
 			}
 		}
-
+			
 		.has-dropdown { 
 			position: inherit; 
 			
@@ -384,7 +397,8 @@ ul.tabs {
 				display: none;
 				float: right;
 			}
-			
+		
+		
 			@media #{$small-only} {
 				&:hover, &.hover {
 					@include box-shadow(none);

@@ -400,7 +400,7 @@ $accordion-navigation-font-size: rem-calc($text-font-size);
 // $block-grid-elements: 12;
 // $block-grid-default-spacing: rem-calc(20);
 
-// $align-block-grid-to-grid: false;
+$align-block-grid-to-grid: true;
 // @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter;}
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
@@ -643,15 +643,15 @@ $form-spacing: rem-calc(6.5);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
+$form-label-font-size: rem-calc($text-font-size);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color($black, $lightness: 30%);
+$form-label-font-color: $text-color;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 $input-font-color: $text-color;
-// $input-font-size: rem-calc(14);
+$input-font-size: rem-calc($text-font-size);
 $input-bg-color: $white;
 $input-focus-bg-color: $input-bg-color;
 //$input-border-color: scale-color($white, $lightness: -20%);
