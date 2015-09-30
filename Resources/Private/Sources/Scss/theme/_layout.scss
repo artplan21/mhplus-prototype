@@ -445,7 +445,7 @@ header {
 .sidebar-content {
 	width: 28.8135593220339%;
 }
-.main-content, .sidebar-content {
+.main-content, .main-content.wide, .sidebar-content {
 	margin-top: rem-calc($gutter-width);
 	@media #{$small-only} {
 		width: 100%;

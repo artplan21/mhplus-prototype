@@ -9800,18 +9800,18 @@ ul.pagination li .current a {
 }
 
 /* line 448, ../../Private/Sources/scss/theme/_layout.scss */
-.main-content, .sidebar-content {
+.main-content, .main-content.wide, .sidebar-content {
   margin-top: 2.5rem;
 }
 @media only screen and (max-width: 61.875em) {
   /* line 448, ../../Private/Sources/scss/theme/_layout.scss */
-  .main-content, .sidebar-content {
+  .main-content, .main-content.wide, .sidebar-content {
     width: 100%;
     float: none;
   }
 }
 /* line 454, ../../Private/Sources/scss/theme/_layout.scss */
-.main-content.no-margin, .sidebar-content.no-margin {
+.main-content.no-margin, .main-content.wide.no-margin, .sidebar-content.no-margin {
   margin-top: 0;
 }
 
