@@ -100,6 +100,10 @@ src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix") format("eot"),u
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mhplus-lupe-mobile:before {
+	@extend  .icomoon;
+	content: "\e613";
+}
 
 .icon-mhplus-app:before {
 	@extend  .icomoon;

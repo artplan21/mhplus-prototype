@@ -11,5 +11,12 @@
 		&:last-child {
 			padding-right: rem-calc($gutter-width/2);
 		}
+		
+		@media #{$small-only} {
+			&.small-12 {
+				padding-left: rem-calc($gutter-width/2);
+				padding-right: rem-calc($gutter-width/2);
+			}
+		}
 	}
 }

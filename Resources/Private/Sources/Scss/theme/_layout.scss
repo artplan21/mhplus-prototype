@@ -354,7 +354,7 @@ header {
 		
 		@media #{$small-only} {
 			font-size: rem-calc(18) !important;
-			margin-top: -8px;
+			margin-top: -9px;
 			width: 0px !important;
 			height: rem-calc(40);
 			padding-left: 0px;
@@ -364,8 +364,8 @@ header {
 			&.show {
 				width: rem-calc(200) !important;
 				padding-left: 10px;
-				padding-right: 30px;
-				margin-right: -20px;
+				padding-right: 20px;
+				margin-right: -13px;
 				background-color: $deep-light-grey;
 			}
 		}		
@@ -395,15 +395,11 @@ header {
 			height: rem-calc(40px);
 			background-color: transparent;
 			&::before {
-				border-radius: 50%;
-				background-color: $light-blue;
+				content: "\e613";
 				top: -8px;
 				right: 0px;
-				width: rem-calc(40px);
-				height: rem-calc(40px); 
-				color: $white;
-				font-size: 29px;
-				padding: 9px 0px 0px 9px;
+				color: $light-blue;
+				font-size: 39px;
 			}
 		}
 	}

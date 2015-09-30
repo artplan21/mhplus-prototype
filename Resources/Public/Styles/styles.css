@@ -18,7 +18,7 @@
   font-style: normal;
 }
 /* line 86, ../../Private/Sources/scss/theme/_settings.scss */
-.icomoon, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, #mainnav .top-bar-section .dropdown li.columns ul li a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion dd > a:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
+.icomoon, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, #mainnav .top-bar-section .dropdown li.columns ul li a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion dd > a:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -34,97 +34,102 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 104, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 103, ../../Private/Sources/scss/theme/_settings.scss */
+.icon-mhplus-lupe-mobile:before {
+  content: "\e613";
+}
+
+/* line 108, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-app:before {
   content: "\e611";
 }
 
-/* line 108, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 112, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-quadrat:before, #mainnav .top-bar-section .dropdown li.columns ul li a:before {
   content: "\e612";
 }
 
-/* line 112, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 116, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after {
   content: "\e60f";
 }
 
-/* line 116, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 120, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-mobil-menue:after, #toggle-topbar a:after {
   content: "\e610";
 }
 
-/* line 120, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 124, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, .sm-buttons a.toplink:before {
   content: "\e600";
 }
 
-/* line 124, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 128, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion dd > a:before {
   content: "\e601";
 }
 
-/* line 128, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 132, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-mhplusdirekt-small:before, #login a:before {
   content: "\e602";
 }
 
-/* line 132, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 136, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before {
   content: "\e603";
 }
 
-/* line 136, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 140, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-einstellungen:before, #settings > a:before {
   content: "\e604";
 }
 
-/* line 140, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 144, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-facebook:before {
   content: "\e605";
 }
 
-/* line 144, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 148, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-gesch-stelle:before, #contact a:before {
   content: "\e606";
 }
 
-/* line 148, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 152, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-hotline:before {
   content: "\e607";
 }
 
-/* line 152, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 156, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-hotline24h:before, #phone24 a:before {
   content: "\e608";
 }
 
-/* line 156, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 160, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-mhplusdirekt:before, #loginlink a:before {
   content: "\e609";
 }
 
-/* line 160, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 164, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-newsletter:before {
   content: "\e60a";
 }
 
-/* line 164, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 168, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-twitter:before {
   content: "\e60b";
 }
 
-/* line 168, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 172, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-videochat:before {
   content: "\e60c";
 }
 
-/* line 172, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 176, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-w-adresse:before {
   content: "\e60d";
 }
 
-/* line 176, ../../Private/Sources/scss/theme/_settings.scss */
+/* line 180, ../../Private/Sources/scss/theme/_settings.scss */
 .icon-mhplus-w-email:before {
   content: "\e60e";
 }
@@ -8510,6 +8515,13 @@ button.small::before, button.small:hover::before {
 .columns.gutter-30:last-child, #mainnav .top-bar-section .dropdown li.gutter-30.columns:last-child {
   padding-right: 1.25rem;
 }
+@media only screen and (max-width: 61.875em) {
+  /* line 16, ../../Private/Sources/scss/theme/_grid.scss */
+  .columns.gutter-30.small-12, #mainnav .top-bar-section .dropdown li.gutter-30.small-12.columns {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
 
 /* import layout */
 /* some globals */
@@ -9075,7 +9087,7 @@ ul.tabs::after, ul.tabs::before {
   /* line 186, ../../Private/Sources/scss/theme/_navigations.scss */
   #utilitynav {
     margin-top: 130px;
-    margin-right: 45px;
+    margin-right: 43px;
   }
   /* line 200, ../../Private/Sources/scss/theme/_navigations.scss */
   #utilitynav li {
@@ -9683,7 +9695,7 @@ ul.pagination li .current a {
   /* line 340, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput input {
     font-size: 1.125rem !important;
-    margin-top: -8px;
+    margin-top: -9px;
     width: 0px !important;
     height: 2.5rem;
     padding-left: 0px;
@@ -9694,8 +9706,8 @@ ul.pagination li .current a {
   #searchinput input.show {
     width: 12.5rem !important;
     padding-left: 10px;
-    padding-right: 30px;
-    margin-right: -20px;
+    padding-right: 20px;
+    margin-right: -13px;
     background-color: #f0f0f0;
   }
 }
@@ -9729,25 +9741,21 @@ ul.pagination li .current a {
   }
   /* line 397, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput button::before {
-    border-radius: 50%;
-    background-color: #97cde8;
+    content: "\e613";
     top: -8px;
     right: 0px;
-    width: 2.5rem;
-    height: 2.5rem;
-    color: #FFFFFF;
-    font-size: 29px;
-    padding: 9px 0px 0px 9px;
+    color: #97cde8;
+    font-size: 39px;
   }
 }
 
-/* line 412, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 408, ../../Private/Sources/scss/theme/_layout.scss */
 #login a {
   position: relative;
   color: #222222 !important;
   padding-right: 52px !important;
 }
-/* line 417, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 413, ../../Private/Sources/scss/theme/_layout.scss */
 #login a::before {
   position: absolute;
   right: 18px;
@@ -9757,73 +9765,73 @@ ul.pagination li .current a {
 }
 
 @media only screen and (max-width: 61.875em) {
-  /* line 426, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 422, ../../Private/Sources/scss/theme/_layout.scss */
   #login {
     float: none !important;
     margin-top: 51px;
     margin-bottom: 60px;
   }
-  /* line 430, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 426, ../../Private/Sources/scss/theme/_layout.scss */
   #login a {
     background-color: #FFFFFF !important;
   }
-  /* line 432, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 428, ../../Private/Sources/scss/theme/_layout.scss */
   #login a::after {
     margin-top: 0px;
   }
 
-  /* line 437, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 433, ../../Private/Sources/scss/theme/_layout.scss */
   .no-js #login {
     margin-top: 0px;
   }
 }
-/* line 443, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 439, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content {
   width: 65%;
 }
-/* line 445, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 441, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content.wide {
   width: 71.1864406779661%;
 }
 
-/* line 449, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 445, ../../Private/Sources/scss/theme/_layout.scss */
 .sidebar-content {
   width: 28.8135593220339%;
 }
 
-/* line 452, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 448, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content, .sidebar-content {
   margin-top: 2.5rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 452, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 448, ../../Private/Sources/scss/theme/_layout.scss */
   .main-content, .sidebar-content {
     width: 100%;
     float: none;
   }
 }
-/* line 458, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 454, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content.no-margin, .sidebar-content.no-margin {
   margin-top: 0;
 }
 
-/* line 463, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 459, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons {
   padding-top: 2.1875rem;
   padding-bottom: 1.5625rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 463, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 459, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons {
     margin-right: -0.9375rem;
     width: auto;
   }
 }
-/* line 471, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 467, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons .columns, .sm-buttons #mainnav .top-bar-section .dropdown li.columns, #mainnav .top-bar-section .dropdown .sm-buttons li.columns {
   margin-left: -0.625rem;
 }
-/* line 476, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 472, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a {
   display: inline-block;
   width: 4.375rem;
@@ -9831,12 +9839,12 @@ ul.pagination li .current a {
   margin-top: 1.25rem;
   text-align: center;
 }
-/* line 482, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 478, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a em, .sm-buttons a th {
   display: inline-block;
   margin-top: 0.125rem;
 }
-/* line 486, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 482, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a::before {
   position: relative;
   display: block;
@@ -9845,14 +9853,14 @@ ul.pagination li .current a {
   height: 3.25rem;
   font-size: 52px;
 }
-/* line 495, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 491, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a.toplink {
   float: right;
   width: 4.0625rem;
   margin-left: auto;
   margin-right: -0.625rem;
 }
-/* line 501, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 497, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a.toplink::before {
   position: relative;
   height: 3.25rem;
@@ -9866,19 +9874,19 @@ ul.pagination li .current a {
   font-size: 26px;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 495, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 491, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons a.toplink {
     margin-right: 0px;
   }
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 476, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 472, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons a {
     margin-right: 0.625rem;
   }
 }
 
-/* line 524, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 520, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list {
   min-height: 22.125rem;
   padding: 0px;
@@ -9887,24 +9895,24 @@ ul.contact-list {
   list-style: none;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 524, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 520, ../../Private/Sources/scss/theme/_layout.scss */
   ul.contact-list {
     min-height: auto;
   }
 }
-/* line 533, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 529, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list .h4 {
   margin-top: -0.5rem;
   margin-bottom: 0;
 }
-/* line 537, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 533, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list li {
   position: relative;
   padding: 0.75rem 1.25rem 0 4.9375rem;
   border-top: 1px solid #acd7ed;
   min-height: 4.25rem;
 }
-/* line 543, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 539, ../../Private/Sources/scss/theme/_layout.scss */
 ul.contact-list li::before {
   display: block;
   position: absolute;
@@ -9916,17 +9924,17 @@ ul.contact-list li::before {
   height: 3.25rem;
 }
 
-/* line 556, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 552, ../../Private/Sources/scss/theme/_layout.scss */
 #badge-box.box {
   min-height: 15.875rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 556, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 552, ../../Private/Sources/scss/theme/_layout.scss */
   #badge-box.box {
     min-height: initial;
   }
 }
-/* line 562, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 558, ../../Private/Sources/scss/theme/_layout.scss */
 #badge-box.box::before {
   position: relative;
   float: right;
