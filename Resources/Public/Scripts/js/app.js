@@ -53,6 +53,7 @@ jQuery.noConflict();
 		
 		/* start function on resize window */
 		$( window ).resize(function() {
+			//document.location.reload()
 			if (isMobile() && $('body').hasClass('expanded')) $('#toggle-topbar').click();
 			setMainnavHeight();
 		});

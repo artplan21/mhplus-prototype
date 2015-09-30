@@ -66,7 +66,7 @@ $rem-base: 16px;
 // $base-font-size: 100%;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-// $base-line-height: 150%;
+// $base-line-height:150%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -281,7 +281,7 @@ $paragraph-margin-bottom: rem-calc(16);
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
+$hr-border-color: $light-blue;
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
@@ -645,12 +645,13 @@ $form-spacing: rem-calc(6.5);
 // $form-label-pointer: pointer;
 $form-label-font-size: rem-calc($text-font-size);
 // $form-label-font-weight: $font-weight-normal;
-// $form-label-line-height: 1.5;
+$form-label-line-height: rem-calc(17);
 $form-label-font-color: $text-color;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 $input-font-color: $text-color;
+$input-placeholder-font-color: scale-color($link-color-light, $lightness: +5%);
 $input-font-size: rem-calc($text-font-size);
 $input-bg-color: $white;
 $input-focus-bg-color: $input-bg-color;
@@ -958,32 +959,32 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -15%);
 // $include-pagination-classes: $include-html-classes;
 
 // We use these to control the pagination container
-// $pagination-height: rem-calc(24);
-// $pagination-margin: rem-calc(-5);
+$pagination-height: rem-calc(44);
+$pagination-margin: rem-calc(0);
 
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
 // $pagination-li-height: rem-calc(24);
-// $pagination-li-font-color: $jet;
+$pagination-li-font-color: $white;
 // $pagination-li-font-size: rem-calc(14);
-// $pagination-li-margin: rem-calc(5);
+$pagination-li-margin: rem-calc(0);
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: $aluminum;
-// $pagination-link-active-bg: scale-color($white, $lightness: -10%);
+$pagination-link-font-color: $white;
+$pagination-link-active-bg: $light-blue; //scale-color($white, $lightness: -10%);
 
 // We use these for disabled anchor links
 // $pagination-link-unavailable-cursor: default;
-// $pagination-link-unavailable-font-color: $aluminum;
+$pagination-link-unavailable-font-color: $white;
 // $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
-// $pagination-link-current-background: $primary-color;
+$pagination-link-current-background: $light-blue;
 // $pagination-link-current-font-color: $white;
-// $pagination-link-current-font-weight: $font-weight-bold;
+$pagination-link-current-font-weight: 400	;
 // $pagination-link-current-cursor: default;
-// $pagination-link-current-active-bg: $primary-color;
+$pagination-link-current-active-bg: $light-blue;
 
 // 21. Panels
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1298,19 +1299,19 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -15%);
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
-// $table-even-row-bg: $snow;
+ $table-even-row-bg: $white;
 
 // These control the table cell border style
-// $table-border-style: solid;
+ $table-border-style: none;
 // $table-border-size: 1px;
-// $table-border-color: $gainsboro;
+$table-border-color: none;
 
 // These control the table head styles
 // $table-head-bg: $white-smoke;
 // $table-head-font-size: rem-calc(14);
-// $table-head-font-color: $jet;
+ $table-head-font-color: $text-color;
 // $table-head-font-weight: $font-weight-bold;
-// $table-head-padding: rem-calc(8 10 10);
+$table-head-padding: rem-calc(0);
 
 // These control the table foot styles
 // $table-foot-bg: $table-head-bg;
@@ -1326,7 +1327,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -15%);
 // $table-caption-font-weight: bold;
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
+$table-row-padding: rem-calc(0 30 10 0);
 // $table-row-font-size: rem-calc(14);
 // $table-row-font-color: $jet;
 // $table-line-height: rem-calc(18);

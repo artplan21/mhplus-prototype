@@ -2,47 +2,12 @@
 
 // need to use the "mixin"-prefix, because mixin input-placeholder is in use by compass (?)
 @mixin mixin-input-placeholder($args) {
-	&::-webkit-input-placeholder {
-		@each $key, $val in $args {
-			#{$key}: #{$val};
-		}
-	}
-	&:-webkit-input-placeholder {
-		@each $key, $val in $args {
-			#{$key}: #{$val};
-		}
-	}
-	&::-moz-placeholder {
-		@each $key, $val in $args {
-			#{$key}: #{$val};
-		}
-	}
-	&:-moz-placeholder {
-		@each $key, $val in $args {
-			#{$key}: #{$val};
-		}
-	}
 	&:-ms-input-placeholder {
 		@each $key, $val in $args {
 			#{$key}: #{$val};
 		}
 	}
 }
-
-
-::-webkit-input-placeholder {
-   color: scale-color($link-color-light, $lightness: +50%);
-}
-:-moz-placeholder { 
-   color: scale-color($link-color-light, $lightness: +50%);  
-}
-::-moz-placeholder { 
-   color: scale-color($link-color-light, $lightness: +50%);  
-}
-:-ms-input-placeholder {  
-   color: scale-color($link-color-light, $lightness: +50%);  
-}
-
 
 fieldset {
 	position: relative;
@@ -67,6 +32,7 @@ fieldset {
 		label {
 			width: 50%;
 			margin-right: 10px;
+			margin-bottom: 5px;
 			float: left;
 			
 			&.checkbox {
@@ -111,6 +77,7 @@ fieldset {
 	.field .switch, .field.switch {
 		label.checkbox {
 			position: relative;
+			margin-bottom: 10px;
 			//margin-top: 15px;
 			width: auto !important;
 			padding-left: 48px;
@@ -134,6 +101,31 @@ fieldset {
 				background: #FFF;
 				transition: left 0.15s ease-out 0s;			
 			}
+			
+			/*
+			&::before {
+				content: '';
+				position: absolute;
+				background-color: white;
+				border: 1px solid black;
+				border-radius: 50%;
+				
+				left: 0px;
+				height: 20px;
+				width: 20px;
+			}
+			
+			&::after {
+				content: '';
+				position: absolute; 
+				background-color: red;
+				border-radius: 50%;
+				left: 5px;
+				top: 5px;
+				height: 10px;
+				width: 10px;
+			}
+			*/
 		}
 		input {
 			position: absolute;
@@ -160,10 +152,18 @@ fieldset {
 }
 
 select {
+	min-height: 32px;
 	@include single-transition(background-color);
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDEzLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMTQ5NDgpICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJFYmVuZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iNDBweCIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDQwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlsaW5lIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMjguNDg2LDQ3LjQ1NSAyMS44OTQsNTMgMTkuMTk2LDUzIDEyLjQ1Miw0Ny40NTUgMTUuNjQ5LDQ3LjYwNSAyMC40OTYsNTIuMDAxIDI1LjU5LDQ3LjUwNSAiLz4KPHJlY3QgZmlsbD0iI0YwRjBGMCIgd2lkdGg9IjEuMDIyIiBoZWlnaHQ9IjEwMCIvPgo8cmVjdCB4PSIzOS45OTkiIGZpbGw9IiNGMEYwRjAiIHdpZHRoPSIwLjAwMSIgaGVpZ2h0PSIxMDAiLz4KPC9zdmc+);
 	background-position: right center;
 }
+.invers select {
+	background-color: $white;
+	&:hover {
+		background-color: $white;
+	}
+}
+
 
 fieldset.input-button-group {
 	background: none;
@@ -183,7 +183,10 @@ fieldset.input-button-group {
 
 input {
 	padding: 0px;
-	//@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: +60%)));
+	
+	&[type="text"] { // need to repeat here, because foundation settings dont work in IE
+		@include mixin-input-placeholder((color: scale-color($link-color-light, $lightness: +5%)));
+	}
 	
 	&[type="submit"] {
 		@extend .button
@@ -201,14 +204,19 @@ button, .button {
 		font-size: rem-calc(16);
 		padding: 13px 35px 13px 35px;
 	}
-}
-button.blue, .button.blue {
-	background-color: $light-blue;
-	color: $white;
-	&:hover {
-		background-color: $light-blue-text;
+	&.blue {
+		background-color: $light-blue;
+		color: $white;
+		&:hover {
+			background-color: $light-blue-text;
+		}
+	}
+	&.fullwidth {
+		text-align: left;
+		width: 100%;
 	}
 }
+
 
 button.small, button.small:hover {
 	width: 24px !important;

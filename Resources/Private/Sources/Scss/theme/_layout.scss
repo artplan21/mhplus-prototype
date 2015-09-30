@@ -1,23 +1,18 @@
-/* layout */
+/* some globals */
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box;
 }
 
+html { 
+ overflow-y: scroll;
+}
 
-body {
-	margin-top: 50px;
-	background-color: $dark-grey;
-	border-top: 5px solid $light-grey;
-	//font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
-	//min-width: em-calc(1024);
-	
-	@media #{$small-only} {
-		margin-top: 0px;
-		min-width: 100%;
-		max-width: 100%;
-	}
+.hidden { 
+	position: absolute; 
+	left: -3000px; 
+	top: -3000px;
 }
 
 ul, ol, dl {
@@ -44,8 +39,37 @@ ul.linklist {
 	}
 }
 
+th {
+	@extend em;
+	font-weight: 400;
+}
+
+ol.heading {
+	margin-top: rem-calc(20);
+	font-weight: 700;
+	li {
+		margin-bottom: rem-calc(20);
+		em {
+			font-weight: 400;
+		}
+	}
+}
+
 em, i {
 	font-family: $secondary-font;
+	font-style: normal;
+	font-size: rem-calc(15);
+	letter-spacing: rem-calc(-0.3);
+	
+	&.normal {
+		font-family: $text-font;
+		font-style: italic;
+		font-size: rem-calc(14);
+		letter-spacing: 0;
+	}
+}
+h5 em {
+	font-size: rem-calc(18);
 }
 
 a {
@@ -77,6 +101,45 @@ h1.pagetitle {
 	}
 	&.right {
 		margin-left: 20px;
+	}
+	&.bottom {
+		margin-bottom: 20px;
+	}
+	&.bottom-large {
+		margin-bottom: 40px;
+	}
+	&.top {
+		margin-top: 20px;
+	}
+	&.top-large {
+		margin-top: 40px;
+	}
+}
+
+
+.no-padding {
+	padding: 0px !important;
+}
+.no-margin {
+	margin: 0px !important;
+}
+
+.closer {
+	line-height: rem-calc(14);
+}
+/* layout begin */
+
+body {
+	margin-top: 44px;
+	background-color: $dark-grey;
+	border-top: 5px solid $light-grey;
+	//font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
+	//min-width: em-calc(1024);
+	
+	@media #{$small-only} {
+		margin-top: 0px;
+		min-width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -286,7 +349,7 @@ header {
 		@include box-shadow(none);
 		font-family: $nav-font;
 		font-size: rem-calc(22);
-		color: $link-color;
+		//color: $link-color;
 		font-weight: 400;
 		
 		@media #{$small-only} {
@@ -378,7 +441,10 @@ header {
 
 
 .main-content {
-	width: 71.1864406779661%;
+	width: 65%;
+	&.wide {
+		width: 71.1864406779661%;
+	}
 }
 .sidebar-content {
 	width: 28.8135593220339%;
@@ -395,7 +461,7 @@ header {
 }
 
 .sm-buttons {
-	padding-top: rem-calc(40px);
+	padding-top: rem-calc(35px);
 	padding-bottom: rem-calc(25px);
 	@media #{$small-only} {
 		margin-right: rem-calc(-15px);

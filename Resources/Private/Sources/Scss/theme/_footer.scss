@@ -33,8 +33,12 @@ footer {
 			margin: 0px;
 		}
 	}
-	a, a:hover {
+	a, a:hover, a:focus {
+		display: block;
 		color: inherit;
+	}
+	a:hover, a:focus {
+		background-color: $deep-dark-grey;
 	}
 	/* reset */
 	.accordion, dd.accordion-navigation, 
@@ -97,7 +101,7 @@ footer {
 			display: none;
 		}
 		ul li ul li ul li > a {
-			display: inline-block;
+			//display: inline-block;
 		}
 		
 		@media #{$small-only} {

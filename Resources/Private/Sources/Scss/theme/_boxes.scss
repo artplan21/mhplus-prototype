@@ -1,4 +1,22 @@
 
+.line-after {
+	margin-bottom: rem-calc(25);
+	padding-bottom: rem-calc(25);
+	border-bottom: 1px solid $light-grey;
+	&:last-child {
+		border-color: $light-blue;
+	}
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	
+	p:last-child, .button:last-child {
+		margin-bottom: 0px;
+	}
+}
+
 .invers { 
 	background-color: $light-blue;
 	h1, h2, h3, h4 {
@@ -109,6 +127,10 @@
 	margin-bottom: rem-calc($gutter-width);
 	padding: rem-calc(20px);
 	
+	&.last {
+		margin-bottom: 0px;
+	}
+	
 	ul.linklist:last-child, .button:last-child, h4 {
 		margin-bottom: 0px;
 	}
@@ -169,6 +191,7 @@
 	}
 }
 
+/* used in header dropdowns */
 .f-dropdown li {
 	cursor: default;
 }
@@ -183,3 +206,29 @@
 	}
 }
 
+
+/* broschueren */
+.brochure {
+	li {
+		padding-bottom: rem-calc(45);
+	}
+	h5 {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	input, input[type="text"]:focus {
+		display: inline-block;
+		width: 30px;
+		margin-right: 8px;
+		background-color: $light-grey;
+	}
+	a {
+		display: block;
+		&::before {
+			content: 'icon';
+			display: inline-block;
+			width: 30px;
+			margin-right: 8px;
+		}
+	}
+}

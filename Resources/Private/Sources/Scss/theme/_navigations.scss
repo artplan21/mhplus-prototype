@@ -47,7 +47,7 @@
 ul.tabs {
 	position: relative;
 	list-style: none;
-	margin: 0px 0px rem-calc(20px) 0px;
+	margin: 0px 0px rem-calc(50px) 0px;
 	padding: 0px;
 	border-bottom: 1px solid #cccccc;
 	
@@ -562,6 +562,35 @@ ul.accordion {
 	&.active > a::before {
 		@include transform(rotate(270deg));
 		color: $white;
+	}
+}
+
+
+/* pagination */
+.showResultsWrap { 
+	font-size: rem-calc(16);
+	color: $dark-grey;
+	text-align: center;
+	margin-bottom: rem-calc(5);
+}
+ul.pagination {
+	text-align: center;
+	padding-top: rem-calc(15);
+	li {
+		display: inline;
+		float: none;
+		border-left: 1px solid $white;
+		&:first-child {
+			border: none;
+		}
+		a {
+			font-weight: 700;
+			font-size: rem-calc(16);
+			display: inline;
+		}
+		.current a {
+			font-weight: 400;
+		}
 	}
 }
 

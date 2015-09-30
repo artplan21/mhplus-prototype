@@ -7,28 +7,12 @@
 @import "foundation_components";
 
 
-/* some global class definitions */
-html { 
- overflow-y: scroll;
-}
-
-.hidden { 
-	position: absolute; 
-	left: -3000px; 
-	top: -3000px;
-}
-.no-padding {
-	padding: 0px !important;
-}
-.no-margin {
-	margin: 0px !important;
-}
-
 /* import components */
 @import "theme/forms";
 @import "theme/icons";
 @import "theme/slider";
 @import "theme/boxes";
+@import "theme/grid";
 
 /* import layout */
 @import "theme/layout";

@@ -25,6 +25,17 @@
 			var self = $(this);
 			var defaultHeight = getDefaultHeight(self.children('.'+opts.slideName+':first').children('.'+opts.slideDescName));
 			
+			var maxImages = self.find('.'+opts.slideName).length;
+			var IMG_WIDTH = self.find('.'+opts.slideName+':first').width();
+			var currentImg = 0;
+			
+			var speed = 500;
+			var imgs;	
+		
+			var parentWidth = self.parent().width();
+			var leftMargin = (parentWidth - IMG_WIDTH) / 2;
+			
+			
 			// create stage
 			var sliderStage = $('<div>').addClass(opts.stageName).appendTo(self);
 	
@@ -36,8 +47,18 @@
 				i++;
 				$(this).attr('data-slide-count', i);
 				
+				// remove link for catching swipe events
+				var link = $(this).children('a');
+				link.children().prependTo($(this));
+				link.prependTo($(this));
+					
 				// move description to stage
-				if (!isTouch()) {
+				if ( (!isTouch() || ( isTouch() && !isMobile() )) && maxImages > 1) {
+				
+					$(this).children('img').click(function() {
+						window.location = $(this).prev('a').attr('href');
+					});
+				
 					$(this).children('.'+opts.slideDescName)
 					.appendTo(sliderStage)
 					.attr('data-slide-count', i)
@@ -50,36 +71,38 @@
 			});
 			
 			
-			if (isMobile() && isTouch()) {
+			if (isMobile() && isTouch() && maxImages > 1) {
 			
-				var IMG_WIDTH = self.find('.'+opts.slideName+':first').width();
-				var currentImg = 0;
-				var maxImages = self.find('.'+opts.slideName).length;
-				var speed = 500;
-				var imgs;	
-			
-				var parentWidth = self.parent().width();
-				var leftMargin = (parentWidth - IMG_WIDTH) / 2;
-				
 				self.addClass('swipe').css('margin-left', leftMargin).css('width', (IMG_WIDTH * maxImages) + 20);
 
 				var swipeOptions = {
 					triggerOnTouchEnd: true,
 					swipeStatus: swipeStatus,
 					allowPageScroll: "vertical",
-					threshold: 75
+					threshold: 75,
+					doubleTap:function(event, target) {
+						  tapCount++;
+						  console.log(target);
+						},
 				};
 				
 				self.children('.'+opts.slideName).each(function() {
 					$(this).addClass('swipe');
-					var h = $(this).children('a').children();
-					h.prependTo($(this));
-					$(this).children('a').remove();
+					
 				});
 				
-				
 				imgs = $('#mainslider');
-				imgs.swipe(swipeOptions);
+				imgs.swipe({
+					triggerOnTouchEnd: true,
+					swipeStatus: swipeStatus,
+					allowPageScroll: "vertical",
+					threshold: 75,
+					tap:function(event, target) {
+						  console.log(target);
+						},
+					swipe:function() {
+					}
+				});
 				
 			}
 			else {
@@ -101,8 +124,7 @@
 				if (next.length != 0) animate(next.children('.'+opts.slideTitleName), false);
 				else animate(first.children('.'+opts.slideTitleName), false);
 			}
-			
-			
+						
 			function getDefaultHeight(element) {
 				var defaultHeight = (element.height() + parseInt(element.css('paddingTop')) + parseInt(element.css('paddingBottom'))) - element.children('.'+opts.slideTextName).height();
 				return defaultHeight;
@@ -114,7 +136,7 @@
 			}
 			
 			function isTouch() {
-				return false;
+				//return false;
 				if ($('html').hasClass('touch')) return true;
 				return false;
 			}

@@ -216,7 +216,7 @@
 		width: 290px;
 		left: -145px;
 		margin-left: 50%;
-		.slide-title::after {
+		.slide-title::before {
 			display: none;
 		}
 		border-bottom: none;
@@ -236,8 +236,8 @@
 		
 		.slide-header {
 			position: relative;
-			display: inline;
-			padding: 0px 10px 0px 10px;
+			display: inline-block;
+			padding:10px 10px 12px 10px;
 			width: auto;
 			background-color: $white;
 			font-size: rem-calc(38) !important;
@@ -251,7 +251,7 @@
 			font-size: rem-calc(18) !important;
 			line-height: rem-calc(18);
 			display: inline-block;
-			margin-top: 15px;
+			margin-top: 8px;
 			margin-bottom: 0px;
 			padding: 4px 10px 4px 10px;
 			background-color: $light-blue;
