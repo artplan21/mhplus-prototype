@@ -38,6 +38,10 @@ fieldset {
 			&.checkbox {
 				width: 4%;
 			}
+			
+			&~label.checkbox {
+				margin-right: 20px;
+			}
 		}	
 		input {
 			margin-right: 10px;
