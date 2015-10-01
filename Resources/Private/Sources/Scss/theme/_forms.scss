@@ -132,9 +132,10 @@ fieldset {
 			opacity: 0;
 		}
 		input:checked+label {
-			color: $light-blue-text;
+			//color: $light-blue-text;
+			font-weight: 700;
 			&::before {
-				background: $light-blue;
+				background: $dark-grey;
 			}
 			&::after {
 				left: 21px;

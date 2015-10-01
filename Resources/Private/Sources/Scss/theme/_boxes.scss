@@ -19,11 +19,11 @@
 
 .invers { 
 	background-color: $light-blue;
-	h1, h2, h3, h4 {
+	h1, h2, .h1, .h2 {
 		color: $white;
 	}
 	a {
-		.h1, .h2, .h3, .h4 {
+		.h1, .h2 {
 			color: $white;
 		}
 	}
@@ -36,12 +36,20 @@
 	p:last-child, .button:last-child {
 		margin-bottom: 0px;
 	}
-	h4 {
+	h2, .h2 {
 		margin: 0 0 $header-bottom-margin 0;
+		font-size: $h2-font-size - $h2-font-reduction;
+		
+		@media #{$large-up} {
+			font-size: $h2-font-size;
+		}
 	}
-	h5 {
+	h3, .h3 {
+		font-family: $secondary-font;
 		margin-top: -#{$header-bottom-margin};
 		margin-bottom: rem-calc(20);
+		font-weight: 500;
+		letter-spacing: rem-calc(-0.3);
 	}
 }
 
@@ -55,7 +63,8 @@
 	margin-left: rem-calc(29);
 	border-top: 1px solid $light-blue;
 	border-left: 1px solid $light-blue;
-	h5 {
+	.h3 {
+		font-family: $header-font !important;
 		margin-bottom: rem-calc(10);
 		margin-top: rem-calc(-7);
 	}
@@ -114,6 +123,15 @@
 	}
 }
 
+div[data-equalizer-watch]:not(.imagebox) {
+	padding-bottom: rem-calc(35);
+	button, .button {
+		position: absolute;
+		bottom: 0;
+		margin-bottom: 0px;
+	}
+}
+
 @for $i from 1 through 12 {
 	.numbers:nth-child(#{$i})::before { 
 		content: '#{$i}';
@@ -149,10 +167,18 @@
 		padding: 0;
 		z-index: 3;
 	}
-	&.invers h4 {
+	
+	h3, .h3 {
+		font-family: $secondary-font;
+		font-weight: 500;
+		letter-spacing: rem-calc(-0.3);
+	}
+	
+	&.invers h2, &.invers .h2 {
 		display: inline-block;
-		font-size: $h5-font-size;
+		font-size: $h3-font-size;
 		font-family: $text-font;
+		font-weight: 700;
 		color: $text-color;
 		background-color: $white;
 		padding: 0px rem-calc(5px) 0px rem-calc(5px);
@@ -170,26 +196,86 @@
 			margin-top: 0px;
 			padding: rem-calc(20px);
 		}
-		&.invers h4 {
+		&.invers h2, &.invers .h2 {
 			display: block;
-			font-size: $h4-font-size - $h4-font-reduction;
+			font-size: $h2-font-size - $h2-font-reduction;
 			font-family: $header-font;
+			font-weight: 500;
 			color: $white;
 			background-color: transparent;
 			padding: 0;
 			margin: 0 0 $header-bottom-margin 0;
+			
+			@media #{$large-up} {
+				font-size: $h2-font-size;
+			}
 		}
-		h5 {
+		h3, .h3 {
+			font-family: $secondary-font;
 			margin-top: -#{$header-bottom-margin};
 			margin-bottom: rem-calc(20);
 		}
 	}
 }
-@media #{$large-up} {
-	.imagebox.wide.invers h4 {
-		font-size: $h4-font-size;
+
+/* aside box with badge */
+#badge-box.box {
+
+	min-height: rem-calc(254);
+	@media #{$small-only} { 
+		min-height: initial;
+	}
+	&::before {
+		position: relative;
+		float: right;
+		margin: rem-calc(-20) -5px 0px 0px;
+	}
+	
+	@extend %add-before;
+	@include icon(badge-einfachmitglied_retina, 2);
+}
+
+/* aside and dropdown box with contactinfo */
+ul.contact-list {
+	min-height: rem-calc(354px);
+	@media #{$small-only} { 
+		min-height: auto;
+	}	
+	padding: 0px;
+	margin: -#{rem-calc($gutter-width)} 0px 0px 0px;
+	border-bottom: 1px solid $deep-light-blue;
+	list-style: none;
+	.h2 {
+		margin-top: rem-calc(-8);
+		margin-bottom: 0;
+		@include single-transition(color);
+		@include single-transition(background-color);
+	}
+	a:hover, a:focus {
+		.h2 {
+			color: $grey;
+			background-color: $white;
+		}
+	}
+	li { 
+		position: relative;
+		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(79px);
+		border-top: 1px solid $deep-light-blue;
+		min-height: rem-calc(68px);
+		
+		&::before {
+			display: block;
+			position: absolute;
+			left: 17px;
+			top: 6px;
+			color: $white;
+			font-size: 52px;
+			width: rem-calc(52px);
+			height: rem-calc(52px); 
+		}
 	}
 }
+
 
 /* used in header dropdowns */
 .f-dropdown li {
@@ -231,4 +317,12 @@
 			margin-right: 8px;
 		}
 	}
+}
+
+/* geschaeftsstellen */
+.gs-header {
+	
+}
+.gs-search {
+	float: right;
 }

@@ -26,12 +26,18 @@ ul.linklist {
 		margin: 0px 0px 0px 0px;
 		a {	
 			font-weight: 700;
+			&:hover, &:focus {
+				background-color: $dark-grey;
+				color: $white;
+				padding-left: 1px;
+			}
 			&::before {
 				content: '\00203A';
 				font-size: rem-calc(22);
 				color: $white;
 				margin-right: 8px;
 			}
+			
 		}
 		&:last-child {
 			margin-bottom: 0px;
@@ -40,7 +46,7 @@ ul.linklist {
 }
 
 th {
-	@extend em;
+	@extend .utopia;
 	font-weight: 400;
 }
 
@@ -50,24 +56,21 @@ ol.heading {
 	li {
 		margin-bottom: rem-calc(20);
 		em {
-			font-weight: 400;
+			@extend .utopia;
+			font-weight: 500;
 		}
 	}
 }
 
-em, i {
+
+.utopia {
 	font-family: $secondary-font;
 	font-style: normal;
-	font-size: rem-calc(15);
+	font-size: rem-calc(15) !important;
 	letter-spacing: rem-calc(-0.3);
-	
-	&.normal {
-		font-family: $text-font;
-		font-style: italic;
-		font-size: rem-calc(14);
-		letter-spacing: 0;
-	}
 }
+
+
 h5 em {
 	font-size: rem-calc(18);
 }
@@ -81,11 +84,12 @@ nav, nav a {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: $header-font !important;
+	font-family: $header-font;
 }
 	
-h1.pagetitle {
+h2.pagetitle {
 	color: $light-blue-text;
+	font-size: rem-calc(26);
 }
 
 @for $i from 1 through 6 {
@@ -124,9 +128,7 @@ h1.pagetitle {
 	margin: 0px !important;
 }
 
-.closer {
-	line-height: rem-calc(14);
-}
+
 /* layout begin */
 
 body {
@@ -474,6 +476,7 @@ header {
 		width: rem-calc(70px);
 		margin-right: rem-calc(50px);
 		margin-top: rem-calc(20px);
+		@extend .utopia;
 		text-align: center;
 		em { 
 			display: inline-block;
@@ -515,54 +518,6 @@ header {
 			margin-right: rem-calc(10px);
 		}
 	}	
-}
-
-ul.contact-list {
-	min-height: rem-calc(354px);
-	@media #{$small-only} { 
-		min-height: auto;
-	}	
-	padding: 0px;
-	margin: -#{rem-calc($gutter-width)} 0px 0px 0px;
-	border-bottom: 1px solid $deep-light-blue;
-	list-style: none;
-	.h4 {
-		margin-top: rem-calc(-8);
-		margin-bottom: 0;
-	}
-	li { 
-		position: relative;
-		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(79px);
-		border-top: 1px solid $deep-light-blue;
-		min-height: rem-calc(68px);
-		
-		&::before {
-			display: block;
-			position: absolute;
-			left: 17px;
-			top: 6px;
-			color: $white;
-			font-size: 52px;
-			width: rem-calc(52px);
-			height: rem-calc(52px); 
-		}
-	}
-}
-
-#badge-box.box {
-
-	min-height: rem-calc(254);
-	@media #{$small-only} { 
-		min-height: initial;
-	}
-	&::before {
-		position: relative;
-		float: right;
-		margin: rem-calc(-20) -5px 0px 0px;
-	}
-	
-	@extend %add-before;
-	@include icon(badge-einfachmitglied_retina, 2);
 }
 
 
