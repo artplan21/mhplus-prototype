@@ -38,10 +38,6 @@ fieldset {
 			&.checkbox {
 				width: 4%;
 			}
-			
-			&~label.checkbox {
-				margin-right: 20px;
-			}
 		}	
 		input {
 			margin-right: 10px;
@@ -239,5 +235,6 @@ button.small, button.small:hover {
 		top: 2px;
 		color: $white;
 		font-size: 19px;
+		color: $white !important;
 	}
 }

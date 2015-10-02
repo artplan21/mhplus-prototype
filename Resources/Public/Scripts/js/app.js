@@ -13,7 +13,11 @@ jQuery.noConflict();
 		},
 		topbar: {
 			back_text: 'Übersicht Menü', // Define what you want your custom back text to be if custom_back_text: true
-		}		
+		},
+		equalizer : {
+			// Specify if Equalizer should make elements equal height once they become stacked.
+			equalize_on_stack: true,
+		}
 	});
 		
 	$(document).ready(function() {

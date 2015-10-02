@@ -1,21 +1,41 @@
-
+	
 #mainslider {
 	
 	position: relative;
 	max-width: 100%;
 	overflow: hidden;
-	height: 416px;
-	margin: 0 rem-calc($gutter-width/2);
+	
+	height: auto;
+	margin: 0;
+	
+	.no-js & {
+		padding-top: rem-calc(450);
+	}
+	
+	@media #{$large-up} {
+		.no-js &{
+			padding-top: rem-calc(550);
+		}
+	}
+	@media #{$xlarge-up} {
+		overflow: hidden;
+		height: rem-calc(416);
+		margin: 0 rem-calc($gutter-width/2);
+		.no-js & {
+			padding-top: 0;
+		}
+	}
 	
 	
-	@media #{$small-only} {
+	/*
+	@media #{$mobile-only} {
 		.js & {
 			height: auto;
 			margin: 0;
 			
 			&.swipe {
 				overflow: visible;
-				height: 450px;
+				height: rem-calc(450);
 				max-width: initial;
 				transform: translate(0, 0);
 			}
@@ -23,29 +43,38 @@
 		.no-js & {
 			overflow: visible;
 			height: auto;
-			padding-top: 450px;
+			padding-top: rem-calc(450);
 		}
 	}
-	@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
+	@media #{$mobile-only} {
 		.no-js & {
-			padding-top: 550px;
+			padding-top: rem-calc(550);
 		}
 		
 		.js &.swipe {
-			height: 580px;
+			height: rem-calc(580);
 		}
 	}
+	*/
 	
 	
 	.slide {
 		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 1140px;
-		height: 416px;
-		overflow: hidden;
-		visibility: hidden;		
 		
+		top: 0;
+		left: rem-calc(-343);
+		margin-left: 50%;
+		width: rem-calc(685);
+		height: rem-calc(250);
+		visibility: hidden;
+		img {		
+			height: rem-calc(250);
+			min-height: rem-calc(250);
+			min-width: rem-calc(685);
+			max-width: rem-calc(685);
+			width: rem-calc(685);
+		}
+			
 		.js & {
 			opacity: 0;
 			&:first-child {
@@ -62,64 +91,80 @@
 			}
 		}
 		.no-js & {
-			overflow: visible;
-			//width: 100%;
-			//height: auto;
+			overflow: visible !important;
 		}
-		
-		@media #{$small-only} {
-			left: -343px;
-			margin-left: 50%;
-			width: 685px;
-			height: 250px;
-			img {		
-				height: 250px;
-				min-height: 250px;
-				min-width: 685px;
-				max-width: 685px;
-				width: 685px;
-			}
-			&.swipe {
-				left: 0px;
-				margin-left: 0px;
-			}
-		}
-		@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
-			left: -495px;
-			margin-left: 50%;
-			width: 990px;
-			height: 361px;
-			img {		
-				height: 361px;
-				min-height: 361px;
-				min-width: 990px;
-				max-width: 990px;
-				width: 990px;
-			}
-			&.swipe {	
-				left: 0px;
-				margin-left: 0px;
-			}
-		}
-		
 		
 		> a { 
 			display: block;
 		}
 		
 		&:first-child, &.closed, &.open {
-			visibility: visible;
+			visibility: visible !important;
 		}
+		
+		@media #{$large-up} {
+			left: rem-calc(-495);
+			width: rem-calc(990);
+			height: rem-calc(361);
+			img {		
+				height: rem-calc(361);
+				min-height: rem-calc(361);
+				min-width: rem-calc(990);
+				max-width: rem-calc(990);
+				width: rem-calc(990);
+			}
+			&.swipe {	
+				left: 0;
+				margin-left: 0;
+			}
+		}		
+		@media #{$xlarge-up} {
+			left: 0;
+			margin-left: 0;
+			width: rem-calc(1140);
+			height: rem-calc(416);
+			overflow: hidden;
+			.no-js & {
+				overflow: hidden !important;
+				padding-top: 0;
+			}
+			img {
+				height: auto;
+				min-height: auto;
+				max-width: 100%;
+				width: 100%;
+			}
+		}		
+		
+		/*
+		@media #{$small-up} {
+			left: rem-calc(-343);
+			margin-left: 50%;
+			width: rem-calc(685);
+			height: rem-calc(250);
+			img {		
+				height: rem-calc(250);
+				min-height: rem-calc(250);
+				min-width: rem-calc(685);
+				max-width: rem-calc(685);
+				width: rem-calc(685);
+			}
+			&.swipe {
+				left: 0;
+				margin-left: 0;
+			}
+		}
+		*/
 	}
 	
 	// slide-desc not as a child of .slide, because is moved out of slide by js
 	.slide-desc {
 		position: absolute;
 		z-index: 5;
-		width: 300px;
-		right: 20px;
-		bottom: 22px;
-		padding: 20px;
+		width: rem-calc(300);
+		right: rem-calc(20);
+		bottom: rem-calc(22);
+		padding: rem-calc(20);
 		background-color: $white;
 		margin: 1px 0px 1px 0px;
 		
@@ -129,39 +174,39 @@
 			bottom: auto;
 			overflow: hidden;
 			
-			@media #{$small-only} {
+			@media #{$mobile-only} {
 				width: auto;
 				border-bottom: 1px solid $light-grey;
-				padding-left: 0px;
-				padding-right: 0px;
+				padding-left: 0;
+				padding-right: 0;
 			}
 			
 			.slide-title {
 				@extend .icon-mhplus-pfeil-smart;
 				&::before {
-					right: 20px;
-					top: 9px;
+					right: rem-calc(20);
+					top: rem-calc(9);
 					color: $text-color;
 					font-size: rem-calc(15);
 					@include transform(rotate(90deg));
 					
-					@media #{$small-only} {
-						right: 5px;
+					@media #{$mobile-only} {
+						right: rem-calc(5);
 					}
 				}
 			}
 			&.closed {
-				padding-top: 0px;
-				padding-bottom: 0px;
+				padding-top: 0;
+				padding-bottom: 0;
 				
 				.slide-text {
 					overflow: hidden;
 				}
 				.slide-title {
-					margin-bottom: 0px;
+					margin-bottom: 0;
 					cursor: pointer;
-					padding-top: 5px;
-					padding-bottom: 5px;
+					padding-top: rem-calc(5);
+					padding-bottom: rem-calc(5);
 					font-family: $text-font;
 					font-size: rem-calc($text-font-size);
 					transition: font 0.3s ease;
@@ -173,38 +218,39 @@
 				}
 			}
 		}	
-			
-		@media #{$small-only} {
+		
+	
+		@media #{$mobile-only} {
 			.no-js & {
 				position: relative;
-				width: 280px;
-				//margin-top: 252px;
-				top: 0px;
-				left: -140px;
+				width: rem-calc(280);
+				//margin-top: rem-calc(252);
+				top: 0;
+				left: rem-calc(-140);
 				margin-left: 50%;
 			}
 		}
 		
 		.slide-title {
-			margin-bottom: 10px;
+			margin-bottom: rem-calc(10);
 			font-family: $header-font;
 			font-size: rem-calc(24);
 			transition: font 0.3s ease;
 		}
 		
 		.slide-text {
-			margin-bottom: 0px;
+			margin-bottom: 0;
 			line-height: rem-calc(17);
 			p {
 				line-height: inherit;
 				margin-bottom: rem-calc(10);
 			}
 			.button {
-				padding: 10px;
+				padding: rem-calc(10);
 				color: $white;
 				background-color: $light-blue;
 				font-weight: 700;
-				margin-bottom: 0px;
+				margin-bottom: 0;
 				&:hover {
 					background-color: $light-blue-text;
 				}
@@ -213,8 +259,8 @@
 	}
 	.js & .slide.swipe .slide-desc {
 		position: absolute;
-		width: 290px;
-		left: -145px;
+		width: rem-calc(290);
+		left: rem-calc(-145);
 		margin-left: 50%;
 		.slide-title::before {
 			display: none;
@@ -226,19 +272,19 @@
 	.slide-caller {
 		position: absolute;
 		z-index: 5;
-		left: 20px;
-		bottom: 22px;
+		left: rem-calc(20);
+		bottom: rem-calc(22);
 		font-family: $header-font;
 		
-		@media #{$small-only} {
+		@media #{$mobile-only} {
 			display: none;
 		}
 		
 		.slide-header {
 			position: relative;
 			display: inline-block;
-			padding:10px 10px 13px 10px;
-			margin: 0px;
+			padding: rem-calc(10) rem-calc(10) rem-calc(13) rem-calc(10);
+			margin: 0;
 			width: auto;
 			background-color: $white;
 			font-size: rem-calc(38) !important;
@@ -253,9 +299,9 @@
 			font-size: rem-calc(18) !important;
 			line-height: rem-calc(18);
 			display: inline-block;
-			margin-top: 8px;
-			margin-bottom: 0px;
-			padding: 4px 10px 4px 10px;
+			margin-top: rem-calc(8);
+			margin-bottom: 0;
+			padding: rem-calc(4) rem-calc(10) rem-calc(4) rem-calc(10);
 			background-color: $light-blue;
 		}
 	}
@@ -263,33 +309,25 @@
 	/* after js working */
 	
 	.slider-stage {
-		position: absolute;
-		width: 300px;
-		right: 20px;
-		bottom: 22px;
-		@media #{$small-only} {
-			position: relative;
-			width: 80%;
-			margin-top: 252px;
-			top: 0px;
-			left: 8%;
+	
+		position: relative;
+		width: 80%;
+		margin-top: rem-calc(252);
+		top: 0;
+		left: 8%;
+	
+		@media #{$large-up} {
+			margin-top: rem-calc(364);
 		}
 		
-		@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
-			margin-top: 364px;
-		}
-		
-		.slide-desc {
-			.slide-title::after {
-				position: absolute;
-				top: 14px;
-				right: 20px;
-				margin-top: 0px;
-				margin-left: 0px;
-				@media #{$small-only} {
-					right: 0px;
-				}
-			}			
+		@media #{$xlarge-up} {
+			position: absolute;
+			width: rem-calc(300);
+			top: auto;
+			left: auto;
+			margin: 0;
+			right: rem-calc(20);
+			bottom: rem-calc(22);
 		}
 	}
 }

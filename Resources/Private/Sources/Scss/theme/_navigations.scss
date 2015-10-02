@@ -21,15 +21,13 @@
 }
 
 
-@media #{$small-only} {
+@media #{$mobile-only} {
 	@include breakpoint-menuwidth($menu-width-mobile);
 }
 
+
 @media #{$xsmall-only} {
 	@include breakpoint-menuwidth($menu-width-xs-mobile);
-}
-@media #{$screen} and (min-width:em-calc($between-small-medium)) and (max-width:$small-breakpoint) {
-	@include breakpoint-menuwidth($menu-width-medium-mobile);
 }
 
 /* breadcrumb */
@@ -46,23 +44,30 @@
 /* tabs */
 ul.tabs {
 	position: relative;
+	display: block;
 	list-style: none;
 	margin: 0px 0px rem-calc(50px) 0px;
 	padding: 0px;
 	border-bottom: 1px solid #cccccc;
 	
-	@media #{$small-only} {
+	.js & {
 		display: none;
+	}
+	@media #{$xlarge-up} {
+		.js & {
+			display: block;
+		}
 	}
 	
 	li {
-		float: left;
+		float: none;
 		padding: 0px;
 		margin: 0px 0px -1px 0px;
+		width: 100%;
 		
-		@media #{$small-only} {
-			float: none;
-			width: 100%;
+		@media #{$xlarge-up} {
+			float: left;
+			width: auto;
 		}
 		
 		&:last-child a {
@@ -72,12 +77,13 @@ ul.tabs {
 		a {
 			display: block;
 			padding: 12px 10px 10px 10px;
-			margin-right: 5px;
+			margin-right: 0px;
 			background-color: $light-grey;
+			border-bottom: 2px solid $white;
 			@include single-transition(background-color);
-			@media #{$small-only} {
-				margin-right: 0px;;
-				border-bottom: 2px solid $white;				
+			@media #{$xlarge-up} {
+				margin-right: 5px;;
+				border-bottom: none;				
 			}
 			
 			&:hover {
@@ -89,8 +95,10 @@ ul.tabs {
 			border-bottom: none;
 			a {
 				background-color: $white;
-				border: 1px solid #cccccc;
-				border-bottom: none;
+				@media #{$xlarge-up} {
+					border: 1px solid #cccccc;
+					border-bottom: none;
+				}
 			}
 		}
 	}
@@ -104,13 +112,20 @@ ul.tabs {
 
 .tabs-select {
 	display: none;
-	@media #{$small-only} {
-		position: relative;
+	.js & {
 		display: block;
-		min-height: 41px;
-		font-weight: 700;
-		padding: $accordion-navigation-padding;
-		cursor: pointer;
+	}
+	position: relative;
+	min-height: 41px;
+	margin-bottom: rem-calc(50px);
+	font-weight: 700;
+	padding: $accordion-navigation-padding;
+	cursor: pointer;
+	
+	@media #{$xlarge-up} {
+		.js & {
+			display: none;
+		}
 	}
 }
 
@@ -145,8 +160,8 @@ ul.tabs {
 		background-color: $white;
 		//color: $link-color;
 	}
-	
-	@media #{$small-only} {
+		
+	@media #{$mobile-only} {
 		position: relative;
 		top: 0px;
 		margin-left: 0px;
@@ -194,7 +209,7 @@ ul.tabs {
 		}
 	}
 	
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		margin-top: 130px;
 		margin-right: 43px;
 		li {
@@ -230,7 +245,7 @@ ul.tabs {
 		padding: 0px 17px;
 	}
 	
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		.js & {
 			display: block;
 		}
@@ -274,11 +289,16 @@ ul.tabs {
 			color: $link-color;
 		}
 	}
-	@media #{$small-only} {
-		.js & {
-			display: block;
+	.js & {
+		display: block;
+		@media #{$xlarge-up} {
+			display: none;
 		}
 	}
+	
+	
+	
+	
 }
 
 
@@ -300,7 +320,7 @@ ul.tabs {
 	top: 152px;
 	background-color: rgba(255,255,255,0.85);
 	
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 	
 		padding-left: 0 !important;
 		padding-right: 0 !important;
@@ -317,7 +337,7 @@ ul.tabs {
 		.no-js & {
 			position: relative;
 			top: 0px;
-			margin-top: 10px;
+			margin-top: 20px;
 			overflow: visible;
 			height: auto !important;
 			.title-area {
@@ -331,7 +351,7 @@ ul.tabs {
 		// hide home-link-placeholder
 		> ul > li:first-child {
 			display: none;
-			@media #{$small-only} {
+			@media #{$mobile-only} {
 				display: block;
 			}
 		}
@@ -348,7 +368,7 @@ ul.tabs {
 		}
 		
 		
-		@media #{$small-only} {
+		@media #{$mobile-only} {
 		
 			/* reset desktop definitions */
 			h5 { // back-link is wrapped by h5 !
@@ -399,7 +419,7 @@ ul.tabs {
 			}
 		
 		
-			@media #{$small-only} {
+			@media #{$mobile-only} {
 				&:hover, &.hover {
 					@include box-shadow(none);
 					a {
@@ -418,7 +438,7 @@ ul.tabs {
 			background-color: $white;
 			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
 			
-			@media #{$small-only} {
+			@media #{$mobile-only} {
 				padding-top: 0px;
 				background-color: $deep-light-grey;
 				@include box-shadow(none);
@@ -426,7 +446,7 @@ ul.tabs {
 			
 			li.back, li.parent {
 				display: none;
-				@media #{$small-only} {
+				@media #{$mobile-only} {
 					display: inherit;
 				}
 			}
@@ -441,7 +461,7 @@ ul.tabs {
 				margin-bottom: 10px;
 				padding: 0px ($topbar-link-padding - ($column-gutter/2));
 
-				@media #{$small-only} {
+				@media #{$mobile-only} {
 					margin-bottom: 0px;
 					padding: 14px 0px 13px $topbar-link-padding;
 				}
@@ -462,7 +482,7 @@ ul.tabs {
 					border-right: none;
 				}
 				
-				@media #{$small-only} {
+				@media #{$mobile-only} {
 					padding: 0px !important;
 					float: none !important;
 					width: 100% !important;
@@ -472,7 +492,7 @@ ul.tabs {
 				
 				ul {
 					margin-top: 10px;
-					@media #{$small-only} {
+					@media #{$mobile-only} {
 						margin-top: 0px;
 					}
 					
@@ -502,7 +522,7 @@ ul.tabs {
 								
 							}
 							
-							@media #{$small-only} {
+							@media #{$mobile-only} {
 							
 								line-height: inherit;
 								padding: 14px $topbar-link-padding 13px ($topbar-link-padding*2);
@@ -584,12 +604,42 @@ ul.pagination {
 			border: none;
 		}
 		a {
+			position: relative;
+			display: inline-block;
 			font-weight: 700;
 			font-size: rem-calc(16);
-			display: inline;
 		}
 		.current a {
 			font-weight: 400;
+		}
+		&.prev a {
+			padding-left: 15px;
+			&::before {
+				content: '\00ab';
+				left: 0px;
+			}
+		}
+		&.next a {
+			padding-right: 15px;
+			&::after {
+				content: '\00bb';
+				right: 0px
+			}
+		}
+		
+		&.next a, &.prev a {
+			text-indent: -5000rem;
+			&::after, &::before {
+				position: absolute;
+				font-size: rem-calc(20);
+				text-indent: 0;
+				top: 0px;
+			}
+			@media #{$large-up} {
+				text-indent: 0;
+			}
+			
+			
 		}
 	}
 }

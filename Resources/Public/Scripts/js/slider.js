@@ -136,7 +136,7 @@
 			}
 			
 			function isTouch() {
-				//return false;
+				return false;
 				if ($('html').hasClass('touch')) return true;
 				return false;
 			}

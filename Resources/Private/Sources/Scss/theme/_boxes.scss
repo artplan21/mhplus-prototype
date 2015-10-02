@@ -2,7 +2,7 @@
 .line-after {
 	margin-bottom: rem-calc(25);
 	padding-bottom: rem-calc(25);
-	border-bottom: 1px solid $light-grey;
+	border-bottom: rem-calc(1) solid $light-grey;
 	&:last-child {
 		border-color: $light-blue;
 	}
@@ -13,7 +13,7 @@
 	}
 	
 	p:last-child, .button:last-child {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 }
 
@@ -31,16 +31,16 @@
 
 .box { 
 	position: relative;
-	padding: rem-calc(20px);
+	padding: rem-calc(20);
 	margin-bottom: rem-calc($gutter-width);
 	p:last-child, .button:last-child {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 	h2, .h2 {
 		margin: 0 0 $header-bottom-margin 0;
 		font-size: $h2-font-size - $h2-font-reduction;
 		
-		@media #{$large-up} {
+		@media #{$xxlarge-up} {
 			font-size: $h2-font-size;
 		}
 	}
@@ -55,14 +55,14 @@
 
 .numbers {
 	position: relative;
-	padding-left: rem-calc(40px);
+	padding-left: rem-calc(40);
 	padding-bottom: rem-calc(35);
-	padding-top: rem-calc(30px) !important;
-	padding-right: 0px;
+	padding-top: rem-calc(30) !important;
+	padding-right: 0;
 	margin-top: rem-calc(30);
 	margin-left: rem-calc(29);
-	border-top: 1px solid $light-blue;
-	border-left: 1px solid $light-blue;
+	border-top: rem-calc(1) solid $light-blue;
+	border-left: rem-calc(1) solid $light-blue;
 	.h3 {
 		font-family: $header-font !important;
 		margin-bottom: rem-calc(10);
@@ -74,8 +74,8 @@
 		display: block;
 		text-align: center;
 		padding-top: rem-calc(14);
-		top: -11px;
-		left: -31px;
+		top: rem-calc(-11);
+		left: rem-calc(-31);
 		//margin: rem-calc(-32) 0 0 rem-calc(-70);
 		height: rem-calc(52);
 		width: rem-calc(52);
@@ -85,18 +85,34 @@
 		background-color: $light-blue;
 	}
 	&.small {
-		margin-left: 0px;
+		margin-left: 0;
 		border-left: none;
-		padding-bottom: 0px !important;
+		border-top: rem-calc(1) solid $light-blue;
+		@media #{$small-only} {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+		@media #{$medium-only} {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+		padding-bottom: 0 !important;
+		
 		&::before {
 			position: relative;
-			height: rem-calc(37);
-			width: rem-calc(37);
-			margin: -40px 0 0 0;
-			top: 0px;
-			left: 0px;
-			padding-top: rem-calc(10);
-			font-size: rem-calc(24);
+			height: rem-calc(30);
+			width: rem-calc(30);
+			margin: rem-calc(-40) 0 0 0;
+			top: 0;
+			left: 0;
+			padding-top: rem-calc(7);
+			font-size: rem-calc(20);
+			@media #{$large-up} {
+				height: rem-calc(37);
+				width: rem-calc(37);
+				padding-top: rem-calc(10);
+				font-size: rem-calc(24);
+			}
 			background-color: scale-color($light-blue, $lightness: 60%);
 		}
 		&.active::before {
@@ -105,16 +121,35 @@
 		
 		input[type="submit"] {
 			position: relative;
+			display: none;
+			@media #{$large-up} {
+				display: inline-block;
+			}
 			bottom: auto;
 			background: none;
 			border: none;
 			color: $text-color;
-			padding-left: 0px;
-			margin-top: 0px;
-			margin-left: -2px;
-			margin-bottom: 0px;
+			padding-left: 0;
+			margin-top: 0;
+			margin-left: rem-calc(-2);
+			margin-bottom: 0;
 			text-align: left;
 			white-space: pre-wrap;
+		}
+		
+		.has-tip {
+			position: absolute;
+			z-index: 10;
+			left: 0;
+			margin-top: rem-calc(-40);
+			height: rem-calc(30);
+			width: rem-calc(30);
+			border: none;
+		}
+		@media #{$large-up} {
+			.has-tip {
+				display: none;
+			}
 		}
 	}
 	.button {
@@ -123,14 +158,15 @@
 	}
 }
 
-div[data-equalizer-watch]:not(.imagebox) {
+div[data-equalizer-watch]:not(.imagebox):not(.box) {
 	padding-bottom: rem-calc(35);
 	button, .button {
 		position: absolute;
 		bottom: 0;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 }
+
 
 @for $i from 1 through 12 {
 	.numbers:nth-child(#{$i})::before { 
@@ -143,14 +179,16 @@ div[data-equalizer-watch]:not(.imagebox) {
 }
 .imagebox {
 	margin-bottom: rem-calc($gutter-width);
-	padding: rem-calc(20px);
+	padding: rem-calc(20);
 	
-	&.last {
-		margin-bottom: 0px;
+	@media #{$large-up} {
+		&.last {
+			margin-bottom: 0;
+		}
 	}
 	
 	ul.linklist:last-child, .button:last-child, h4 {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 
 	.image {
@@ -181,11 +219,11 @@ div[data-equalizer-watch]:not(.imagebox) {
 		font-weight: 700;
 		color: $text-color;
 		background-color: $white;
-		padding: 0px rem-calc(5px) 0px rem-calc(5px);
-		margin: rem-calc(-80) 0rem rem-calc(30px) rem-calc(10px);
+		padding: 0 rem-calc(5) 0 rem-calc(5);
+		margin: rem-calc(-80) 0rem rem-calc(30) rem-calc(10);
 	}
 }
-@media #{$medium-up} {
+@media #{$xlarge-up} {
 	.imagebox.wide {
 		padding: 0;
 		.image {
@@ -193,8 +231,8 @@ div[data-equalizer-watch]:not(.imagebox) {
 		}
 		.text {
 			width: 40%;
-			margin-top: 0px;
-			padding: rem-calc(20px);
+			margin-top: 0;
+			padding: rem-calc(20);
 		}
 		&.invers h2, &.invers .h2 {
 			display: block;
@@ -206,7 +244,7 @@ div[data-equalizer-watch]:not(.imagebox) {
 			padding: 0;
 			margin: 0 0 $header-bottom-margin 0;
 			
-			@media #{$large-up} {
+			@media #{$xxlarge-up} {
 				font-size: $h2-font-size;
 			}
 		}
@@ -220,15 +258,10 @@ div[data-equalizer-watch]:not(.imagebox) {
 
 /* aside box with badge */
 #badge-box.box {
-
-	min-height: rem-calc(254);
-	@media #{$small-only} { 
-		min-height: initial;
-	}
 	&::before {
 		position: relative;
 		float: right;
-		margin: rem-calc(-20) -5px 0px 0px;
+		margin: rem-calc(-20) rem-calc(-5) 0 0;
 	}
 	
 	@extend %add-before;
@@ -237,13 +270,9 @@ div[data-equalizer-watch]:not(.imagebox) {
 
 /* aside and dropdown box with contactinfo */
 ul.contact-list {
-	min-height: rem-calc(354px);
-	@media #{$small-only} { 
-		min-height: auto;
-	}	
-	padding: 0px;
-	margin: -#{rem-calc($gutter-width)} 0px 0px 0px;
-	border-bottom: 1px solid $deep-light-blue;
+	padding: 0;
+	margin: -#{rem-calc($gutter-width)} 0 0 0;
+	border-bottom: rem-calc(1) solid $deep-light-blue;
 	list-style: none;
 	.h2 {
 		margin-top: rem-calc(-8);
@@ -259,19 +288,19 @@ ul.contact-list {
 	}
 	li { 
 		position: relative;
-		padding: rem-calc(12px) rem-calc(20px) rem-calc(0px) rem-calc(79px);
-		border-top: 1px solid $deep-light-blue;
-		min-height: rem-calc(68px);
+		padding: rem-calc(12) rem-calc(20) 0 rem-calc(79);
+		border-top: rem-calc(1) solid $deep-light-blue;
+		min-height: rem-calc(68);
 		
 		&::before {
 			display: block;
 			position: absolute;
-			left: 17px;
-			top: 6px;
+			left: rem-calc(17);
+			top: rem-calc(6);
 			color: $white;
-			font-size: 52px;
-			width: rem-calc(52px);
-			height: rem-calc(52px); 
+			font-size: rem-calc(52);
+			width: rem-calc(52);
+			height: rem-calc(52); 
 		}
 	}
 }
@@ -283,7 +312,7 @@ ul.contact-list {
 }
 
 #contact_info.open {
-	width: 333px;
+	width: rem-calc(333);
 }
 #settings_info {
 	padding: rem-calc(20);
@@ -299,13 +328,13 @@ ul.contact-list {
 		padding-bottom: rem-calc(45);
 	}
 	h5 {
-		margin-top: 20px;
-		margin-bottom: 0px;
+		margin-top: rem-calc(20);
+		margin-bottom: 0;
 	}
 	input, input[type="text"]:focus {
 		display: inline-block;
-		width: 30px;
-		margin-right: 8px;
+		width: rem-calc(30);
+		margin-right: rem-calc(8);
 		background-color: $light-grey;
 	}
 	a {
@@ -313,8 +342,8 @@ ul.contact-list {
 		&::before {
 			content: 'icon';
 			display: inline-block;
-			width: 30px;
-			margin-right: 8px;
+			width: rem-calc(30);
+			margin-right: rem-calc(8);
 		}
 	}
 }

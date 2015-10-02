@@ -132,83 +132,82 @@ h2.pagetitle {
 /* layout begin */
 
 body {
-	margin-top: 44px;
+	margin-top: 0px;
+	min-width: 100%;
+	max-width: 100%;
 	background-color: $dark-grey;
 	border-top: 5px solid $light-grey;
 	//font-size: $rem-base; // need the rem-base again for calculating the em width of breakpoint
 	//min-width: em-calc(1024);
 	
-	@media #{$small-only} {
-		margin-top: 0px;
-		min-width: 100%;
-		max-width: 100%;
+	@media #{$xlarge-up} {
+		margin-top: 44px;
+		min-width: inherit;
+		max-width: inherit;
 	}
 }
 
 #wrapper { 
 	//min-width: 100%;
 	//width: 100%;
-	//overflow-x: hidden;
+	
 	background-color: $white;
 	font-size: rem-calc($text-font-size) !important;
-	
-	@media #{$small-only} {
-		overflow-x: hidden;
-		margin-left: 0;
-		padding: 0px;
-	}
-}
-
-
-.row {
-	@media #{$small-only} {
-		min-width: 100%;
-		//max-width: 100%;
-		/*.row .row {
-			margin-left: 0;
-			margin-right: 0;
-		}*/
+	overflow-x: hidden;
+		
+	@media #{$xlarge-up} {
+		overflow-x: visible;
 	}
 }
 
 header {
 	position: relative;
-	height: 145px; 
+	height: 174px;
+	border-bottom: 2px solid $light-grey;
+	margin-bottom: 1px;
+	.no-js & {
+		height: auto;
+	}
+	
+	@media #{$xlarge-up} {
+		height: 145px; 
+		border-bottom: none;
+		margin-bottom: 0px;
+		.no-js & {
+			height: 145px; 
+		}
+	}	
 	
 	ul, ul li { 
 		list-style: none;
-	}
-	
-	@media #{$small-only} {
-		height: 174px;
-		border-bottom: 2px solid $light-grey;
-		margin-bottom: 1px;
-		.no-js & {
-			height: auto;
-		}
 	}
 }
 
 #logo {
 	position: absolute;
-	top: 57px;
-	height: 65px;
+	top: 34px;
+	left: 0px;
+	width: 100%;
+	height: 78px;
+	border-bottom: 2px solid $light-grey;
 	a {
 		display: block;
 		width: 220px;
 		height: 65px;
+		margin-left: 20px;
 		text-indent: -1000em;
 		@extend %all-sprites-standard;
 		@include icon(logo, 1, false);
 	}
-	@media #{$small-only} {
-		top: 34px;
-		left: 0px;
-		width: 100%;
-		height: 78px;
-		border-bottom: 2px solid $light-grey;
+		
+	@media #{$xlarge-up} {
+		left: auto;
+		top: 57px;
+		height: 65px;
+		width: auto;
+		border-bottom: none;
 		a {
-			margin-left: 20px;
+			margin-left: 0px;
 		}
 	}
 	.svg & a {
@@ -232,7 +231,7 @@ header {
 		top: -1px;
 		font-size: 29px;
 	}
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		width: 29px;
 		text-indent: -5000rem;
 		padding-left: 0px !important;
@@ -242,7 +241,7 @@ header {
 			font-size: 39px;
 		}
 	}
-	@media #{$medium-only} {
+	@media #{$xlarge-only} {
 		width: 29px;
 		text-indent: -5000rem;
 		padding-left: 0px !important;
@@ -251,7 +250,7 @@ header {
 
 #contact { 
 	margin-left: 10px !important; 
-	@media #{$medium-only} {
+	@media #{$xlarge-only} {
 		margin-left: 0px !important;
 	}
 	
@@ -267,7 +266,7 @@ header {
 			top: 0px;
 			font-size: 29px;
 		}
-		@media #{$medium-only} {
+		@media #{$xlarge-only} {
 			width: 29px;
 			text-indent: -5000rem;
 			background: none;
@@ -290,7 +289,7 @@ header {
 	}
 }
 
-@media #{$small-only} {
+@media #{$mobile-only} {
 	#contact, #settings {
 		display: none !important; 
 	}
@@ -299,7 +298,7 @@ header {
 #loginlink {
 	position: relative;
 	display: none !important;
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		display: block !important;
 	}
 	a {
@@ -329,12 +328,13 @@ header {
 }
 #searchlink { display: none !important; }
 
+
 #searchinput {
 	position: absolute;
 	right: 20px;
 	top: 69px;
 	
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		top: 130px;
 		right: 20px;
 	}
@@ -354,7 +354,7 @@ header {
 		//color: $link-color;
 		font-weight: 400;
 		
-		@media #{$small-only} {
+		@media #{$mobile-only} {
 			font-size: rem-calc(18) !important;
 			margin-top: -9px;
 			width: 0px !important;
@@ -391,7 +391,7 @@ header {
 			color: $grey;
 		}
 		
-		@media #{$small-only} {
+		@media #{$mobile-only} {
 			overflow: visible;
 			width: rem-calc(40px);
 			height: rem-calc(40px);
@@ -420,7 +420,7 @@ header {
 		color: $light-blue-text;
 	}
 }	
-@media #{$small-only} {
+@media #{$mobile-only} {
 	#login {
 		float: none !important;
 		margin-top: 51px;
@@ -437,39 +437,38 @@ header {
 	}
 }
 
-
-.main-content {
-	width: 65%;
-	&.wide {
-		width: 71.1864406779661%;
-	}
-}
-.sidebar-content {
-	width: 28.8135593220339%;
-}
 .main-content, .main-content.wide, .sidebar-content {
 	margin-top: rem-calc($gutter-width);
-	@media #{$small-only} {
-		width: 100%;
-		float: none;
-	}
+	width: 100%;
+	
 	&.no-margin {
 		margin-top: 0;
 	}
 }
+@media #{$xlarge-up} {
+	.main-content {
+		width: 65%;
+		&.wide {
+			width: 71.1864406779661%;
+		}
+	}
+	.sidebar-content {
+		float: right !important;
+		width: 28.8135593220339%;
+	}
+}
+
 
 .sm-buttons {
 	padding-top: rem-calc(35px);
 	padding-bottom: rem-calc(25px);
-	@media #{$small-only} {
+	@media #{$mobile-only} {
 		margin-right: rem-calc(-15px);
 		width: auto;
 	}
-	
 	.columns {
 		margin-left: rem-calc(-10px);
 	}
-	
 
 	a {
 		display: inline-block;
@@ -510,11 +509,11 @@ header {
 				font-size: 26px;
 				
 			}
-			@media #{$small-only} { 
+			@media #{$mobile-only} { 
 				margin-right: 0px;
 			}
 		}
-		@media #{$small-only} {
+		@media #{$mobile-only} {
 			margin-right: rem-calc(10px);
 		}
 	}	

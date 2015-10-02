@@ -1,10 +1,16 @@
 /* some special grid definitions */
 
+
 .columns {
 	&.gutter-30 {
 		padding-right: rem-calc(15);
 		padding-left: rem-calc(15);
-		
+	}
+	&.gutter-20 {
+		padding-right: rem-calc(10);
+		padding-left: rem-calc(10);
+	}
+	&.gutter-30, &.gutter-20 {
 		&:first-child {
 			padding-left: rem-calc($gutter-width/2);
 		}
@@ -20,3 +26,48 @@
 		}
 	}
 }
+
+
+
+@each $i in 1,2,3,4,6,12 {
+	$x: ( 12 / $i );
+	@media #{$medium-up} {
+		.medium-#{$i}:nth-child(#{$x}n+1) {
+			clear: both;
+		}
+	}
+	@media #{$large-up} {
+		.medium-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.large-#{$i}:nth-child(#{$x}n+1) {
+			clear: both;
+		}
+	}
+	@media #{$xlarge-up} {
+		.medium-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.large-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.xlarge-#{$i}:nth-child(#{$x}n+1) {
+			clear: both;
+		}
+	}
+	@media #{$xxlarge-up} {
+		.medium-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.large-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.xlarge-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
+		.xxlarge-#{$i}:nth-child(#{$x}n+1) {
+			clear: both;
+		}
+	}
+}
+
