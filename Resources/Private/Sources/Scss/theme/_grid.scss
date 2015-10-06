@@ -31,12 +31,25 @@
 
 @each $i in 1,2,3,4,6,12 {
 	$x: ( 12 / $i );
+	
+	@media #{$small-up} {
+		.small-#{$i}:nth-child(#{$x}n+1) {
+			clear: both;
+		}
+	}
+	
 	@media #{$medium-up} {
+		.small-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
 		.medium-#{$i}:nth-child(#{$x}n+1) {
 			clear: both;
 		}
 	}
 	@media #{$large-up} {
+		.small-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
 		.medium-#{$i}:nth-child(#{$x}n+1) {
 			clear: none;
 		}
@@ -45,6 +58,9 @@
 		}
 	}
 	@media #{$xlarge-up} {
+		.small-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
 		.medium-#{$i}:nth-child(#{$x}n+1) {
 			clear: none;
 		}
@@ -56,6 +72,9 @@
 		}
 	}
 	@media #{$xxlarge-up} {
+		.small-#{$i}:nth-child(#{$x}n+1) {
+			clear: none;
+		}
 		.medium-#{$i}:nth-child(#{$x}n+1) {
 			clear: none;
 		}
