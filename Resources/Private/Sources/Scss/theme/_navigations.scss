@@ -35,6 +35,18 @@
 	margin-top: 2px;
 	font-weight: 400;
 	font-family: $secondary-font !important;
+	ol {
+		display: inline;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			display: inline;
+			margin: 0;
+			padding: 0;
+		}
+	}
 	a {
 		font-weight: 400;
 		font-family: $secondary-font !important;
@@ -375,12 +387,12 @@ ul.tabs {
 				line-height: inherit !important;
 			}
 			ul li, li, li:hover, li.hover, .dropdown li.columns ul li {	
-				> a, a, h5 a, label {
+				> a, a, h5 a, a.label {
 					display: block;
 					float: none;
 					padding: 14px 0px 13px $topbar-link-padding;
 					border-bottom: 1px solid $white;
-					color: $link-color; 
+					color: $link-color !important; 
 					background-color: $deep-light-grey;
 					font-family: $text-font !important;
 					font-size: rem-calc($menu-font-size-mobile) !important;
@@ -397,10 +409,17 @@ ul.tabs {
 			@extend  .icon-mhplus-pfeil-smart;
 			&::before {
 				position: relative;
+				display: block;
 				font-size: 15px;
 				color: $text-color;
 				margin-top: 0px;
-				margin-right: 20px;
+				margin-right: rem-calc(15);
+			}
+		}
+		.dropdown .fullback a {
+			&::before {
+				content: "\e610";
+				float: left;
 			}
 		}
 			
@@ -420,6 +439,7 @@ ul.tabs {
 		
 		
 			@media #{$mobile-only} {
+				position: static !important;
 				&:hover, &.hover {
 					@include box-shadow(none);
 					a {
@@ -444,23 +464,26 @@ ul.tabs {
 				@include box-shadow(none);
 			}
 			
-			li.back, li.parent {
-				display: none;
+			li.back, li.parent-link {
+				display: none !important;
 				@media #{$mobile-only} {
-					display: inherit;
+					display: inherit !important;
 				}
 			}
 			
-			li.back a::before {
+			li.back:not(.fullback) a::before {
 				@include transform(rotate(180deg));
 				float: left;
 				margin-top: 1px;
 			}
 			
-			label {
-				margin-bottom: 10px;
+			a.label {
+				margin-bottom: rem-calc(10);
+				font-size: rem-calc(18);
+				line-height: inherit;
+				color: $light-blue-text;
 				padding: 0px ($topbar-link-padding - ($column-gutter/2));
-
+				
 				@media #{$mobile-only} {
 					margin-bottom: 0px;
 					padding: 14px 0px 13px $topbar-link-padding;
@@ -508,9 +531,27 @@ ul.tabs {
 								color: $white;
 								background-color: $light-blue;
 							}
+							
+							@media #{$mobile-only} {
+								line-height: inherit;
+								padding: 14px $topbar-link-padding 13px $topbar-link-padding;
+								
+								&:hover {
+									color: $link-color;
+									background-color: inherit;
+								}							
+							}							
+						}
+						
+						@media #{$mobile-only} {
+							&:not(.back) a::before {
+								display: none !important;
+							}
+						}
+						
+						&:not(.back) a {
 							@extend .icon-mhplus-quadrat;
 							&::before {
-								
 								display: block;
 								position: relative;
 								float: left;
@@ -519,22 +560,7 @@ ul.tabs {
 								margin-right: 9px;
 								font-size: rem-calc(6);
 								color: $light-blue;
-								
 							}
-							
-							@media #{$mobile-only} {
-							
-								line-height: inherit;
-								padding: 14px $topbar-link-padding 13px ($topbar-link-padding*2);
-								
-								&:hover {
-									color: $link-color;
-									background-color: inherit;
-								}
-								&::before {
-									display: none;
-								}
-							}							
 						}
 					}
 				}
