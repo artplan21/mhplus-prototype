@@ -86,21 +86,22 @@ jQuery.noConflict();
 					}
 					else {
 						li.prependTo($(this));
-							var li = $('<li>')
-								.addClass('back')
-								.addClass('title')
-								.addClass('fullback')
-								.addClass('js-generated');
-								
-							var a = $('<a>')
-								.attr('href', 'javascript:void(0)')
-								.html('Übersicht Menü')
-								.click(function() {
-									$(this).parents('ul.dropdown').last().children('li.title.back').find('a').not($(this)).click();
-								})
-								.appendTo(li);
-								
-							li.prependTo($(this));
+						
+						var li = $('<li>')
+							.addClass('back')
+							.addClass('title')
+							.addClass('fullback')
+							.addClass('js-generated');
+							
+						var a = $('<a>')
+							.attr('href', 'javascript:void(0)')
+							.html('Übersicht Menü')
+							.click(function() {
+								$(this).parents('ul.dropdown').last().children('li.title.back').find('a').not($(this)).click();
+							})
+							.appendTo(li);
+							
+						li.prependTo($(this));
 					}
 				}
 			});
