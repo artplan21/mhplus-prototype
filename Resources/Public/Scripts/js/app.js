@@ -52,7 +52,7 @@ jQuery.noConflict();
 			$('#mainnav').css('visibility', 'visible');
 			if (isMobile()) {
 				setTimeout(function() {	
-					var max_avail_height = $('#wrapper').height() - $('#mainnav').offset().top + 5;
+					var max_avail_height = $('#wrapper').height() - $('#mainnav').offset().top - 50;
 					$('#mainnav').css('height', max_avail_height);
 					setTimeout(function() {
 						if (!$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
@@ -66,7 +66,7 @@ jQuery.noConflict();
 		});
 	
 	
-		function createTopbarBacklink() {
+		function createTopbarBacklinks() {
 			/* create back link for topbar previous level */
 			$('#mainnav ul.dropdown').each(function() {
 				if ($(this).find('a.parent-link').length == 0) {
@@ -80,8 +80,28 @@ jQuery.noConflict();
 						.addClass('parent-link')
 						.appendTo(li);
 					
-					if ($(this).children('li.title.back').length != 0) li.insertAfter($(this).children('li:first'));
-					else li.prependTo($(this));
+					if ($(this).children('li.title.back').length != 0) {
+						$(this).children('li.title.back').addClass('fullback');
+						li.insertAfter($(this).children('li:first'));
+					}
+					else {
+						li.prependTo($(this));
+							var li = $('<li>')
+								.addClass('back')
+								.addClass('title')
+								.addClass('fullback')
+								.addClass('js-generated');
+								
+							var a = $('<a>')
+								.attr('href', 'javascript:void(0)')
+								.html('Übersicht Menü')
+								.click(function() {
+									$(this).parents('ul.dropdown').last().children('li.title.back').find('a').not($(this)).click();
+								})
+								.appendTo(li);
+								
+							li.prependTo($(this));
+					}
 				}
 			});
 		}
@@ -137,14 +157,14 @@ jQuery.noConflict();
 				
 				// generate foundation dropdowns
 				createDropdownClasses();
-				createTopbarBacklink();
-				$(document).foundation({
+				createTopbarBacklinks();
+				/*$(document).foundation({
 					topbar: {
 						mobile_show_parent_link: false,
 						back_text: 'Übersicht Menü', // Define what you want your custom back text to be if custom_back_text: true
 					},
-				});
-				overwriteTopbarBackhandler();
+				});*/
+				//overwriteTopbarBackhandler();
 		
 				// show other dependencies
 				$('body').addClass('expanded');
@@ -156,7 +176,7 @@ jQuery.noConflict();
 				$('<a>')
 					.attr('id', 'exit-off-canvas')
 					.appendTo('body')
-					.css('height', ($('body').height()-$('#mainnav').offset().top))
+					.css('height', ($('#wrapper').height()-$('#mainnav').offset().top))
 					.css('top', $('#mainnav').offset().top)
 					.click(function() {
 						$('#toggle-topbar').click();
