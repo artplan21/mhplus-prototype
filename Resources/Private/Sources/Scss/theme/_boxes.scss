@@ -33,7 +33,7 @@
 	position: relative;
 	padding: rem-calc(20);
 	margin-bottom: rem-calc($gutter-width);
-	p:last-child, .button:last-child {
+	p:last-child, .button:last-child, .csc-textpic-text p:last-child, .csc-textpic-text .button:last-child {
 		margin-bottom: 0;
 	}
 	h2, .h2 {
@@ -63,7 +63,7 @@
 	margin-left: rem-calc(29);
 	border-top: rem-calc(1) solid $light-blue;
 	border-left: rem-calc(1) solid $light-blue;
-	.h3 {
+	h3, .h3 {
 		font-family: $header-font !important;
 		margin-bottom: rem-calc(10);
 		margin-top: rem-calc(-7);
@@ -181,6 +181,10 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 	margin-bottom: rem-calc($gutter-width);
 	padding: rem-calc(20);
 	
+	p:last-child, .button:last-child, .csc-textpic-text p:last-child, .csc-textpic-text .button:last-child {
+		margin-bottom: 0;
+	}
+	
 	@media #{$large-up} {
 		&.last {
 			margin-bottom: 0;
@@ -191,19 +195,42 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 		margin-bottom: 0;
 	}
 
-	.image {
+	.image, .csc-textpic-imagewrap {
 		width: 100%;
 		z-index: 1;
-		
+		margin: 0 !important;
 		img {
+			width: 100% !important;
+			height: auto !important;
 			min-width: 100%; 
 		}
 	}
-	.text {
+	.text, .csc-textpic-text {
 		width: 100%;
-		margin-top: rem-calc(-35);
+		margin: 0 !important;
+		margin-top: rem-calc(-35) !important;
 		padding: 0;
 		z-index: 3;
+	}
+	.csc-textpic-intext-left-nowrap {
+		.csc-textpic-text {
+			float: right;
+		}
+		.csc-textpic-imagewrap {
+			float: left;
+		}
+	}
+	.csc-textpic-intext-right-nowrap  {
+		.csc-textpic-text {
+			float: left;
+		}
+		.csc-textpic-imagewrap {
+			float: right;
+		}
+	}
+	
+	.csc-textpic-image {
+		margin: 0 !important;
 	}
 	
 	h3, .h3 {
@@ -221,17 +248,20 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 		background-color: $white;
 		padding: 0 rem-calc(5) 0 rem-calc(5);
 		margin: rem-calc(-80) 0rem rem-calc(30) rem-calc(10);
+		a {
+			color: $text-color;
+		}
 	}
 }
 @media #{$xlarge-up} {
 	.imagebox.wide {
 		padding: 0;
-		.image {
+		.image, .csc-textpic-imagewrap {
 			width: 60%;
 		}
-		.text {
+		.text, .csc-textpic-text {
 			width: 40%;
-			margin-top: 0;
+			margin-top: 0 !important;
 			padding: rem-calc(20);
 		}
 		&.invers h2, &.invers .h2 {
@@ -243,7 +273,9 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 			background-color: transparent;
 			padding: 0;
 			margin: 0 0 $header-bottom-margin 0;
-			
+			a {
+				color: $white;
+			}
 			@media #{$xxlarge-up} {
 				font-size: $h2-font-size;
 			}
@@ -327,15 +359,18 @@ ul.contact-list {
 	li {
 		padding-bottom: rem-calc(45);
 	}
-	h5 {
+	.h3 {
 		margin-top: rem-calc(20);
-		margin-bottom: 0;
+		margin-bottom: rem-calc(2);
 	}
 	input, input[type="text"]:focus {
 		display: inline-block;
 		width: rem-calc(30);
 		margin-right: rem-calc(8);
 		background-color: $light-grey;
+	}
+	p {
+		min-height: rem-calc(34);
 	}
 	a {
 		display: block;
@@ -349,9 +384,4 @@ ul.contact-list {
 }
 
 /* geschaeftsstellen */
-.gs-header {
-	
-}
-.gs-search {
-	float: right;
-}
+

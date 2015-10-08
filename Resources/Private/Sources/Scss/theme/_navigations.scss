@@ -54,7 +54,7 @@
 }
 
 /* tabs */
-ul.tabs {
+ul.tabs, ul.csc-menu-1 {
 	position: relative;
 	display: block;
 	list-style: none;
@@ -92,6 +92,7 @@ ul.tabs {
 			margin-right: 0px;
 			background-color: $light-grey;
 			border-bottom: 2px solid $white;
+			font-family: $text-font !important;
 			@include single-transition(background-color);
 			@media #{$xlarge-up} {
 				margin-right: 5px;;
@@ -104,10 +105,11 @@ ul.tabs {
 		
 		}
 		&.active {
-			border-bottom: none;
+			border-bottom-color: $white;
 			a {
 				background-color: $white;
 				@media #{$xlarge-up} {
+					padding-top: 11px;
 					border: 1px solid #cccccc;
 					border-bottom: none;
 				}
@@ -131,6 +133,7 @@ ul.tabs {
 	min-height: 41px;
 	margin-bottom: rem-calc(50px);
 	font-weight: 700;
+	font-family: $text-font !important;
 	padding: $accordion-navigation-padding;
 	cursor: pointer;
 	
@@ -314,7 +317,7 @@ ul.tabs {
 }
 
 
-/* js generated area above the content for closing mainnav */
+/* js generated area laying on the content for closing mainnav */
 #exit-off-canvas {
 	position: absolute;
 	display: block;
@@ -453,12 +456,14 @@ ul.tabs {
 		}
 		
 		.dropdown {
+			min-height: 260px;
 			padding-top: 34px;
 			padding-bottom: 30px;
 			background-color: $white;
 			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
 			
 			@media #{$mobile-only} {
+				min-height: initial;
 				padding-top: 0px;
 				background-color: $deep-light-grey;
 				@include box-shadow(none);
@@ -492,6 +497,7 @@ ul.tabs {
 			
 			li.columns { 
 			
+				min-height: 195px;
 				border-right: 1px solid $light-border;
 				
 				// need to overwrite foundation top-bar definitions!
@@ -510,6 +516,7 @@ ul.tabs {
 					float: none !important;
 					width: 100% !important;
 					height: auto !important;
+					min-height: initial;
 					border-right: none;
 				}
 				
@@ -573,12 +580,18 @@ ul.tabs {
 ul.accordion {
 	margin-left: 0px;
 }
-.accordion .accordion-navigation, .accordion dd {
+.accordion .accordion-navigation, .accordion dd, .accordionSingle {
 	position: relative;
 	margin-bottom: 10px !important;
-	> a {
+	> a, h4 {
 		position: relative;
 		font-weight: 700;
+		font-family: $text-font;
+		line-height: rem-calc(17);
+		background-color: #DFE0E0;
+		padding:  rem-calc(12) rem-calc(60) rem-calc(12) rem-calc(16);
+		margin: 0;
+		cursor: pointer;
 		@include single-transition(background-color);
 		
 		@extend .icon-mhplus-pfeil-smart;
@@ -603,11 +616,37 @@ ul.accordion {
 			height: 100%;
 			border-left: 1px solid $deep-light-grey;
 		}
+		&:hover {
+			background-color: scale-color($accordion-navigation-bg-color, $lightness: -15%)
+		}
 	}
 
-	&.active > a::before {
+	&.active > a::before, &.active h4::before {
 		@include transform(rotate(270deg));
 		color: $white;
+	}
+	&.active h4 {
+		background-color: $light-blue;
+	}
+}
+.no-js .accordionSingle, .js .accordionSingle.active {
+	padding-bottom: rem-calc(20);
+	h4 {
+		margin-bottom: rem-calc(20);
+	}
+}
+.js .accordionSingle {
+	padding-bottom: 0;
+	h4 {
+		margin-bottom: 0;
+	}
+	*:not(.csc-header):not(h4) {
+		display: none;
+	}
+	&.active {
+		*:not(.csc-header):not(h4) {
+			display: initial;
+		}
 	}
 }
 
@@ -634,6 +673,10 @@ ul.pagination {
 			display: inline-block;
 			font-weight: 700;
 			font-size: rem-calc(16);
+			background-color: $light-blue;
+			&:hover {
+				background-color: $light-blue-text;
+			}
 		}
 		.current a {
 			font-weight: 400;

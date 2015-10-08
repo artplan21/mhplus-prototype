@@ -196,11 +196,20 @@ input {
 
 
 button, .button {
+	color: $white;
 	background-color: $dark-grey;
+	margin-bottom: 0;
+	
+	/*
 	margin-top: 10px;
 	p+& {
 		margin-top: 0px;
 	}
+	p & {
+		margin-top: 0px;
+	}
+	*/
+	
 	&.large {
 		font-size: rem-calc(16);
 		padding: 13px 35px 13px 35px;

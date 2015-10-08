@@ -126,7 +126,14 @@
 	}
 	
 	// slide-desc not as a child of .slide, because is moved out of slide by js
-	.slide-desc {
+	
+	/* reset css_styled_content */
+	.csc-textpic-text, .csc-textpic-imagewrap, figure {
+		float: none;
+		margin: 0 !important;
+	}
+	
+	.slide-desc, .csc-textpic-bodytext {
 		position: absolute;
 		z-index: 5;
 		width: rem-calc(300);
@@ -149,7 +156,7 @@
 				padding-right: 0;
 			}
 			
-			.slide-title {
+			.slide-title, h3 {
 				@extend .icon-mhplus-pfeil-smart;
 				&::before {
 					right: rem-calc(20);
@@ -170,7 +177,7 @@
 				.slide-text {
 					overflow: hidden;
 				}
-				.slide-title {
+				.slide-title, h3 {
 					margin-bottom: 0;
 					cursor: pointer;
 					padding-top: rem-calc(5);
@@ -181,7 +188,7 @@
 				}
 			}
 			&.open {
-				.slide-title::before {
+				.slide-title::before, h3::before {
 					display: none;
 				}
 			}
@@ -197,13 +204,17 @@
 			}
 		}
 		
-		.slide-title {
+		.slide-title, h3 {
+			padding: 0;
+			margin-top: 0px;
 			margin-bottom: rem-calc(10);
 			font-family: $header-font;
 			font-size: rem-calc(24);
+			line-height: rem-calc(24);
 			transition: font 0.3s ease;
 		}
 		
+		/*
 		.slide-text {
 			margin-bottom: 0;
 			line-height: rem-calc(17);
@@ -211,15 +222,25 @@
 				line-height: inherit;
 				margin-bottom: rem-calc(10);
 			}
-			.button {
-				padding: rem-calc(10);
-				color: $white;
-				background-color: $light-blue;
-				font-weight: 700;
-				margin-bottom: 0;
-				&:hover {
-					background-color: $light-blue-text;
-				}
+		}
+		*/
+		
+		p {
+			line-height: rem-calc(17);
+			margin-bottom: rem-calc(10);
+			&:last-child {
+				margin-bottom: 0 !important;
+			}
+		}
+		
+		.button {
+			padding: rem-calc(10);
+			color: $white;
+			background-color: $light-blue;
+			font-weight: 700;
+			margin-bottom: 0;
+			&:hover {
+				background-color: $light-blue-text;
 			}
 		}
 	}
@@ -235,7 +256,7 @@
 	
 	}
 	
-	.slide-caller {
+	.slide-caller, .csc-textpicHeader {
 		position: absolute;
 		z-index: 5;
 		left: rem-calc(20);
@@ -246,21 +267,32 @@
 			display: none;
 		}
 		
-		.slide-header {
+		.slide-header, h1 {
 			position: relative;
-			display: inline-block;
-			padding: rem-calc(10) rem-calc(10) rem-calc(13) rem-calc(10);
+			display: inline;
+			padding: 0px;
 			margin: 0;
 			width: auto;
-			background-color: $white;
 			font-size: rem-calc(38) !important;
 			line-height: inherit !important;
-			span {
-				color: $light-blue-text;
+			a, span {
+				display: inline-block;
+				padding: rem-calc(10) rem-calc(10) rem-calc(13) rem-calc(10);
+				color: $text-color;
+				background-color: $white;
+				span {
+					display: inline;
+					padding: 0;
+					color: $light-blue-text;
+				}
+			}
+			&::after {
+				content: '';
+				display: block;
 			}
 		}
 
-		> p, > span {
+		> h2, > p, > span {
 			font-weight: 500;
 			font-size: rem-calc(18) !important;
 			line-height: rem-calc(18);
