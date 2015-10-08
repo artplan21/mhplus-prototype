@@ -51,8 +51,8 @@ jQuery.noConflict();
 		var setMainnavHeight = function() {
 			$('#mainnav').css('visibility', 'visible');
 			if (isMobile()) {
-				setTimeout(function() {
-					var max_avail_height = $('body').height() - $('#mainnav').offset().top + 5;
+				setTimeout(function() {	
+					var max_avail_height = $('#wrapper').height() - $('#mainnav').offset().top + 5;
 					$('#mainnav').css('height', max_avail_height);
 					setTimeout(function() {
 						if (!$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
@@ -121,12 +121,6 @@ jQuery.noConflict();
 			
 				// destroy foundation dropdowns
 				destroyDropdownClasses();
-				$(document).foundation({
-					topbar: {
-						mobile_show_parent_link: false,
-						back_text: 'Übersicht Menü', // Define what you want your custom back text to be if custom_back_text: true
-					},
-				});
 				
 				// set height and visibility of top-bar (overwrite top-bar-js)
 				setMainnavHeight()

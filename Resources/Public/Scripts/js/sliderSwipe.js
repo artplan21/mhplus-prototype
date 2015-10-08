@@ -96,14 +96,12 @@
 			
 			self.swipe({
 				tap:function(event, target) {
-					 window.location.href = $(target).prev('a').attr('href');
+					 //window.location.href = $(target).prev('a').attr('href');
 				},
 				triggerOnTouchEnd: true,
 				swipeStatus: swipeStatus,
 				allowPageScroll: "vertical",
-				threshold: opts.threshold,
-				swipe:function() {
-				}
+				threshold: opts.threshold
 			});
 		}
 		
