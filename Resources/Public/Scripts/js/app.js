@@ -227,16 +227,16 @@ jQuery.noConflict();
 		/* start slider */
 		function generateSlider() {
 			if ($('#mainslider.single').length != 0) return false;
-			
+			/*
 			if (isMobile() && isTouch()) {
 				$('#mainslider').slider('destroy');
 				$('#mainslider').sliderSwipe();
 				$('#mainslider').sliderSwipe('resize');
 			}
-			else {
+			else {*/
 				$('#mainslider').sliderSwipe('destroy');
 				$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600});
-			}
+			//}
 		}
 		generateSlider();
 		
