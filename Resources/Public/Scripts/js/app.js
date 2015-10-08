@@ -50,15 +50,17 @@ jQuery.noConflict();
 		/* set height and visibility of the menue */
 		var setMainnavHeight = function() {
 			$('#mainnav').css('visibility', 'visible');
-			if (isMobile()) {
+			
 				setTimeout(function() {	
-					var max_avail_height = $('#wrapper').height() - $('#mainnav').offset().top - 50;
-					$('#mainnav').css('height', max_avail_height);
-					setTimeout(function() {
-						if (!$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
-					},200);
+					if (isMobile()) {
+						var max_avail_height = $('#wrapper').height() - $('#mainnav').offset().top - 50;
+						$('#mainnav').css('height', max_avail_height);
+						setTimeout(function() {
+							if (isMobile() && !$('#mainnav').hasClass('expanded') && parseInt($('#mainnav').position().left) < 245) $('#mainnav').css('visibility', 'hidden');
+						},200);
+					}
 				}, 10);
-			}
+			
 		}
 		
 		$('#mainnav').click(function() {
@@ -72,7 +74,8 @@ jQuery.noConflict();
 				if ($(this).find('a.parent-link').length == 0) {
 					var li = $('<li>')
 						.addClass('back')
-						.addClass('js-generated');
+						.addClass('js-generated')
+						.attr('aria-hidden', 'true');
 						
 					var a = $('<a>')
 						.attr('href', 'javascript:void(0)')
@@ -91,7 +94,8 @@ jQuery.noConflict();
 							.addClass('back')
 							.addClass('title')
 							.addClass('fullback')
-							.addClass('js-generated');
+							.addClass('js-generated')
+							.attr('aria-hidden', 'true');
 							
 						var a = $('<a>')
 							.attr('href', 'javascript:void(0)')
@@ -132,7 +136,6 @@ jQuery.noConflict();
 		
 		/* create off-canvas menue toggle */
 		$('#toggle-topbar').click(function() {
-			
 						
 			// toggle class
 			$('#mainnav').toggleClass('expanded');

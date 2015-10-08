@@ -142,6 +142,8 @@
 				} else if (direction == "left") {
 					nextImage();
 				}
+			} else {
+				return true;
 			}
 		}
 
