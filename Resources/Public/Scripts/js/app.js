@@ -236,7 +236,7 @@ jQuery.noConflict();
 			}
 			else {*/
 				//$('#mainslider').sliderSwipe('destroy');
-				//$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600, slideDescName: '.csc-textpic-bodytext', slideTitleName: 'h3'});
+				$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600, slideDescName: 'div.csc-textpic-bodytext', slideTitleName: 'h3'});
 			//}
 		}
 		generateSlider();

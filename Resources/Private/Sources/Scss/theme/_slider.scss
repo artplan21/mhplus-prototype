@@ -73,7 +73,12 @@
 				opacity: 1;
 				visibility: visible;
 				overflow: visible;
+				
+				transition-property: transform;
+				transition-duration: 0.5s;
+				transition-timing-function: ease-out;
 				transform: translate(0, 0);
+				
 				left: 0;
 				margin-left: 0;
 			}
