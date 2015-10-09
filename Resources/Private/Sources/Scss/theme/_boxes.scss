@@ -19,11 +19,11 @@
 
 .invers { 
 	background-color: $light-blue;
-	h1, h2, .h1, .h2 {
+	h1, h2, h2.csc-firstHeader, .h1, .h2 {
 		color: $white;
 	}
 	a {
-		.h1, .h2 {
+		.h1, .h2, h1, h2 {
 			color: $white;
 		}
 	}
@@ -36,9 +36,10 @@
 	p:last-child, .button:last-child, .csc-textpic-text p:last-child, .csc-textpic-text .button:last-child {
 		margin-bottom: 0;
 	}
-	h2, .h2 {
+	h2, h2.csc-firstHeader, .h2 {
 		margin: 0 0 $header-bottom-margin 0;
 		font-size: $h2-font-size - $h2-font-reduction;
+		font-color: $text-color;
 		
 		@media #{$xxlarge-up} {
 			font-size: $h2-font-size;
