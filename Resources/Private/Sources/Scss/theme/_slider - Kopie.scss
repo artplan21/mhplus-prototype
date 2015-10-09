@@ -64,22 +64,8 @@
 			
 		.js & {
 			opacity: 0;
-			@include transition-property(opacity);
-			@include transition-duration(0.8s);
-			@include transition-timing-function(ease-in);
-			
 			&:first-child {
 				opacity: 1;
-			}
-			
-			&.open {
-				@include transition-property(opacity);
-				@include transition-duration(0.8s);
-				@include transition-timing-function(ease-in);
-				opacity: 1;
-			}
-			&.closed, &.closed:first-child {
-				opacity: 0;
 			}
 			
 			&.swipe {
@@ -168,11 +154,6 @@
 			right: auto;
 			bottom: auto;
 			overflow: hidden;
-			
-			height: 35px;
-			@include transition-property(height);
-			@include transition-duration(0.2s);
-			@include transition-timing-function(ease-in);
 			
 			@media #{$mobile-only} {
 				width: auto;

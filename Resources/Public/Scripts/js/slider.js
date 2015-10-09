@@ -153,19 +153,23 @@
 			if (opts.stopOnClick && e.originalEvent != undefined && autoPlay != undefined) clearInterval(autoPlay);
 			
 			// animate active back
+			/*
 			self.find(opts.slideDescName+'.'+opts.openClass).stop(true, false).animate({
 				height: opts.titleHeight
 			}, opts.animationSpeed, function() {
 				$(this).css('visibility', 'visible');
 			});
+			*/
 			
+			/*
 			self.find(opts.slideName+'[data-slide-count="'+self.find('.'+opts.slideDescName+'.'+opts.openClass).attr('data-slide-count')+'"]').stop(true, false).animate({
 				opacity: 0				
 			},opts.imageAnimationSpeed, function(){
 				// hide!
 				$(this).hide();
 			});
-		
+			*/
+			
 			// toggle classes
 			self.find(opts.slideName+'.'+opts.openClass).removeClass(opts.openClass).addClass(opts.hideClass);
 			self.find(opts.slideName+'[data-slide-count="'+element.parent().attr('data-slide-count')+'"]').removeClass(opts.hideClass).addClass(opts.openClass);
@@ -173,6 +177,7 @@
 			
 			element.parent().removeClass(opts.hideClass).addClass(opts.openClass);
 			
+			/*
 			// animate
 			element.parent().stop(true, false).animate({
 					height: ( element.parent().attr('data-slide-height') != undefined ? parseInt(element.parent().attr('data-slide-height')) : defaultHeight) + element.parent().children(opts.slideTextName).height()
@@ -183,14 +188,16 @@
 					$(this).attr('data-slide-height', getDefaultHeight($(this)));
 					$(this).css('visibility', 'visible');
 			});
+			*/
 			
+			/*
 			// show and animate 
 			self.find(opts.slideName+'[data-slide-count="'+element.parent().attr('data-slide-count')+'"]').stop(true, false).show().animate({
 				opacity: 1
 			},opts.imageAnimationSpeed, function(){
 				$(this).show();
 			});		
-		
+			*/
 		}
 	
 	}

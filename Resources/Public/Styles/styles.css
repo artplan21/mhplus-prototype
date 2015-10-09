@@ -9842,7 +9842,7 @@ button.small::before, button.small:hover::before {
   height: 15.625rem;
   visibility: hidden;
 }
-/* line 56, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 57, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide img {
   height: 15.625rem;
   min-height: 15.625rem;
@@ -9850,15 +9850,47 @@ button.small::before, button.small:hover::before {
   max-width: 42.8125rem;
   width: 42.8125rem;
 }
-/* line 64, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 65, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide {
   opacity: 0;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-/* line 66, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 71, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide:first-child {
   opacity: 1;
 }
-/* line 70, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 75, ../../Private/Sources/scss/theme/_slider.scss */
+.js #mainslider .slide.open {
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  opacity: 1;
+}
+/* line 81, ../../Private/Sources/scss/theme/_slider.scss */
+.js #mainslider .slide.closed, .js #mainslider .slide.closed:first-child {
+  opacity: 0;
+}
+/* line 85, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide.swipe {
   position: relative;
   display: inline-block;
@@ -9872,15 +9904,15 @@ button.small::before, button.small:hover::before {
   left: 0;
   margin-left: 0;
 }
-/* line 86, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 101, ../../Private/Sources/scss/theme/_slider.scss */
 .no-js #mainslider .slide {
   overflow: visible !important;
 }
-/* line 90, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 105, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide > a {
   display: block;
 }
-/* line 94, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 109, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide:first-child, #mainslider .slide.closed, #mainslider .slide.open {
   visibility: visible !important;
 }
@@ -9891,7 +9923,7 @@ button.small::before, button.small:hover::before {
     width: 61.875rem;
     height: 22.5625rem;
   }
-  /* line 102, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 117, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide img {
     height: 22.5625rem;
     min-height: 22.5625rem;
@@ -9899,7 +9931,7 @@ button.small::before, button.small:hover::before {
     max-width: 61.875rem;
     width: 61.875rem;
   }
-  /* line 109, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 124, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide.swipe {
     left: 0;
     margin-left: 0;
@@ -9914,12 +9946,12 @@ button.small::before, button.small:hover::before {
     height: 26rem;
     overflow: hidden;
   }
-  /* line 120, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 135, ../../Private/Sources/scss/theme/_slider.scss */
   .no-js #mainslider .slide {
     overflow: hidden !important;
     padding-top: 0;
   }
-  /* line 124, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 139, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide img {
     height: auto;
     min-height: auto;
@@ -9927,12 +9959,12 @@ button.small::before, button.small:hover::before {
     width: 100%;
   }
 }
-/* line 136, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 151, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .csc-textpic-text, #mainslider .csc-textpic-imagewrap, #mainslider figure {
   float: none;
   margin: 0 !important;
 }
-/* line 141, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 156, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc, #mainslider .csc-textpic-bodytext {
   position: absolute;
   z-index: 5;
@@ -9953,15 +9985,28 @@ button.small::before, button.small:hover::before {
   }
   */
 }
-/* line 151, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 166, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc, .js #mainslider .csc-textpic-bodytext {
   position: relative;
   right: auto;
   bottom: auto;
   overflow: hidden;
+  height: 35px;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 151, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 166, ../../Private/Sources/scss/theme/_slider.scss */
   .js #mainslider .slide-desc, .js #mainslider .csc-textpic-bodytext {
     width: auto;
     border-bottom: 1px solid #dfe0e0;
@@ -9969,7 +10014,7 @@ button.small::before, button.small:hover::before {
     padding-right: 0;
   }
 }
-/* line 166, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 186, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc .slide-title::before, .js #mainslider .slide-desc h3::before, .js #mainslider .slide-desc .h3::before, .js #mainslider .csc-textpic-bodytext .slide-title::before, .js #mainslider .csc-textpic-bodytext h3::before, .js #mainslider .csc-textpic-bodytext .h3::before {
   right: 1.25rem;
   top: 0.5625rem;
@@ -9981,21 +10026,21 @@ button.small::before, button.small:hover::before {
   transform: rotate(90deg);
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 166, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 186, ../../Private/Sources/scss/theme/_slider.scss */
   .js #mainslider .slide-desc .slide-title::before, .js #mainslider .slide-desc h3::before, .js #mainslider .slide-desc .h3::before, .js #mainslider .csc-textpic-bodytext .slide-title::before, .js #mainslider .csc-textpic-bodytext h3::before, .js #mainslider .csc-textpic-bodytext .h3::before {
     right: 0.3125rem;
   }
 }
-/* line 178, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 198, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed, .js #mainslider .csc-textpic-bodytext.closed {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 182, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 202, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed .slide-text, .js #mainslider .csc-textpic-bodytext.closed .slide-text {
   overflow: hidden;
 }
-/* line 185, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 205, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed .slide-title, .js #mainslider .slide-desc.closed h3, .js #mainslider .slide-desc.closed .h3, .js #mainslider .csc-textpic-bodytext.closed .slide-title, .js #mainslider .csc-textpic-bodytext.closed h3, .js #mainslider .csc-textpic-bodytext.closed .h3 {
   margin-bottom: 0;
   cursor: pointer;
@@ -10005,12 +10050,12 @@ button.small::before, button.small:hover::before {
   font-size: 0.875rem;
   transition: font 0.3s ease;
 }
-/* line 196, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 216, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.open .slide-title::before, .js #mainslider .slide-desc.open h3::before, .js #mainslider .slide-desc.open .h3::before, .js #mainslider .csc-textpic-bodytext.open .slide-title::before, .js #mainslider .csc-textpic-bodytext.open h3::before, .js #mainslider .csc-textpic-bodytext.open .h3::before {
   display: none;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 203, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 223, ../../Private/Sources/scss/theme/_slider.scss */
   .no-js #mainslider .slide-desc, .no-js #mainslider .csc-textpic-bodytext {
     position: relative;
     width: 17.5rem;
@@ -10019,7 +10064,7 @@ button.small::before, button.small:hover::before {
     margin-left: 50%;
   }
 }
-/* line 212, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 232, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .slide-title, #mainslider .slide-desc h3, #mainslider .slide-desc .h3, #mainslider .csc-textpic-bodytext .slide-title, #mainslider .csc-textpic-bodytext h3, #mainslider .csc-textpic-bodytext .h3 {
   padding: 0;
   margin-top: 0px;
@@ -10029,16 +10074,16 @@ button.small::before, button.small:hover::before {
   line-height: 1.5rem;
   transition: font 0.3s ease;
 }
-/* line 233, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 253, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc p, #mainslider .csc-textpic-bodytext p {
   line-height: 1.0625rem;
   margin-bottom: 0.625rem;
 }
-/* line 236, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 256, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc p:last-child, #mainslider .csc-textpic-bodytext p:last-child {
   margin-bottom: 0 !important;
 }
-/* line 241, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 261, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .button, #mainslider .slide-desc input[type="submit"], #mainslider .csc-textpic-bodytext .button, #mainslider .csc-textpic-bodytext input[type="submit"] {
   padding: 0.625rem;
   color: #FFFFFF;
@@ -10046,11 +10091,11 @@ button.small::before, button.small:hover::before {
   font-weight: 700;
   margin-bottom: 0;
 }
-/* line 247, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 267, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .button:hover, #mainslider .slide-desc input[type="submit"]:hover, #mainslider .csc-textpic-bodytext .button:hover, #mainslider .csc-textpic-bodytext input[type="submit"]:hover {
   background-color: #63b3db;
 }
-/* line 252, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 272, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide.swipe .slide-desc {
   position: absolute;
   width: 18.125rem;
@@ -10058,12 +10103,12 @@ button.small::before, button.small:hover::before {
   margin-left: 50%;
   border-bottom: none;
 }
-/* line 257, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 277, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide.swipe .slide-desc .slide-title::before {
   display: none;
 }
-/* line 264, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller, #mainslider .csc-textpicHeader {
+/* line 284, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller, #mainslider .csc-header {
   position: absolute;
   z-index: 5;
   left: 1.25rem;
@@ -10071,13 +10116,13 @@ button.small::before, button.small:hover::before {
   font-family: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 264, ../../Private/Sources/scss/theme/_slider.scss */
-  #mainslider .slide-caller, #mainslider .csc-textpicHeader {
+  /* line 284, ../../Private/Sources/scss/theme/_slider.scss */
+  #mainslider .slide-caller, #mainslider .csc-header {
     display: none;
   }
 }
-/* line 275, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller .slide-header, #mainslider .slide-caller h1, #mainslider .slide-caller .h1, #mainslider .csc-textpicHeader .slide-header, #mainslider .csc-textpicHeader h1, #mainslider .csc-textpicHeader .h1 {
+/* line 295, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller .slide-header, #mainslider .slide-caller h1, #mainslider .slide-caller .h1, #mainslider .csc-header .slide-header, #mainslider .csc-header h1, #mainslider .csc-header .h1 {
   position: relative;
   display: inline;
   padding: 0px;
@@ -10086,26 +10131,26 @@ button.small::before, button.small:hover::before {
   font-size: 2.375rem !important;
   line-height: inherit !important;
 }
-/* line 283, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller .slide-header a, #mainslider .slide-caller .slide-header span, #mainslider .slide-caller h1 a, #mainslider .slide-caller .h1 a, #mainslider .slide-caller h1 span, #mainslider .slide-caller .h1 span, #mainslider .csc-textpicHeader .slide-header a, #mainslider .csc-textpicHeader .slide-header span, #mainslider .csc-textpicHeader h1 a, #mainslider .csc-textpicHeader .h1 a, #mainslider .csc-textpicHeader h1 span, #mainslider .csc-textpicHeader .h1 span {
+/* line 303, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller .slide-header a, #mainslider .slide-caller .slide-header span, #mainslider .slide-caller h1 a, #mainslider .slide-caller .h1 a, #mainslider .slide-caller h1 span, #mainslider .slide-caller .h1 span, #mainslider .csc-header .slide-header a, #mainslider .csc-header .slide-header span, #mainslider .csc-header h1 a, #mainslider .csc-header .h1 a, #mainslider .csc-header h1 span, #mainslider .csc-header .h1 span {
   display: inline-block;
   padding: 0.625rem 0.625rem 0.8125rem 0.625rem;
   color: #222222;
   background-color: #FFFFFF;
 }
-/* line 288, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller .slide-header a span, #mainslider .slide-caller .slide-header span span, #mainslider .slide-caller h1 a span, #mainslider .slide-caller .h1 a span, #mainslider .slide-caller h1 span span, #mainslider .slide-caller .h1 span span, #mainslider .csc-textpicHeader .slide-header a span, #mainslider .csc-textpicHeader .slide-header span span, #mainslider .csc-textpicHeader h1 a span, #mainslider .csc-textpicHeader .h1 a span, #mainslider .csc-textpicHeader h1 span span, #mainslider .csc-textpicHeader .h1 span span {
+/* line 308, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller .slide-header a span, #mainslider .slide-caller .slide-header span span, #mainslider .slide-caller h1 a span, #mainslider .slide-caller .h1 a span, #mainslider .slide-caller h1 span span, #mainslider .slide-caller .h1 span span, #mainslider .csc-header .slide-header a span, #mainslider .csc-header .slide-header span span, #mainslider .csc-header h1 a span, #mainslider .csc-header .h1 a span, #mainslider .csc-header h1 span span, #mainslider .csc-header .h1 span span {
   display: inline;
   padding: 0;
   color: #63b3db;
 }
-/* line 294, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller .slide-header::after, #mainslider .slide-caller h1::after, #mainslider .slide-caller .h1::after, #mainslider .csc-textpicHeader .slide-header::after, #mainslider .csc-textpicHeader h1::after, #mainslider .csc-textpicHeader .h1::after {
+/* line 314, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller .slide-header::after, #mainslider .slide-caller h1::after, #mainslider .slide-caller .h1::after, #mainslider .csc-header .slide-header::after, #mainslider .csc-header h1::after, #mainslider .csc-header .h1::after {
   content: '';
   display: block;
 }
-/* line 300, ../../Private/Sources/scss/theme/_slider.scss */
-#mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
+/* line 320, ../../Private/Sources/scss/theme/_slider.scss */
+#mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span {
   font-weight: 500;
   font-size: 1.125rem !important;
   line-height: 1.125rem;
@@ -10115,7 +10160,7 @@ button.small::before, button.small:hover::before {
   padding: 0.25rem 0.625rem 0.25rem 0.625rem;
   background-color: #97cde8;
 }
-/* line 314, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 334, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slider-stage {
   position: relative;
   width: 80%;
@@ -10124,13 +10169,13 @@ button.small::before, button.small:hover::before {
   left: 8%;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 314, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 334, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     margin-top: 22.75rem;
   }
 }
 @media only screen and (min-width: 61.9375em) {
-  /* line 314, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 334, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     position: absolute;
     width: 18.75rem;
