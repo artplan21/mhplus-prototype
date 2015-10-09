@@ -9991,30 +9991,31 @@ button.small::before, button.small:hover::before {
   right: auto;
   bottom: auto;
   overflow: hidden;
-  height: 35px;
   -moz-transition-property: height;
   -o-transition-property: height;
   -webkit-transition-property: height;
   transition-property: height;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
+  height: 34px;
 }
 @media only screen and (max-width: 61.875em) {
   /* line 166, ../../Private/Sources/scss/theme/_slider.scss */
   .js #mainslider .slide-desc, .js #mainslider .csc-textpic-bodytext {
     width: auto;
+    height: auto;
     border-bottom: 1px solid #dfe0e0;
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 186, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 188, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc .slide-title::before, .js #mainslider .slide-desc h3::before, .js #mainslider .slide-desc .h3::before, .js #mainslider .csc-textpic-bodytext .slide-title::before, .js #mainslider .csc-textpic-bodytext h3::before, .js #mainslider .csc-textpic-bodytext .h3::before {
   right: 1.25rem;
   top: 0.5625rem;
@@ -10026,21 +10027,34 @@ button.small::before, button.small:hover::before {
   transform: rotate(90deg);
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 186, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 188, ../../Private/Sources/scss/theme/_slider.scss */
   .js #mainslider .slide-desc .slide-title::before, .js #mainslider .slide-desc h3::before, .js #mainslider .slide-desc .h3::before, .js #mainslider .csc-textpic-bodytext .slide-title::before, .js #mainslider .csc-textpic-bodytext h3::before, .js #mainslider .csc-textpic-bodytext .h3::before {
     right: 0.3125rem;
   }
 }
-/* line 198, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 200, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed, .js #mainslider .csc-textpic-bodytext.closed {
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  height: 34px;
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 202, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 209, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed .slide-text, .js #mainslider .csc-textpic-bodytext.closed .slide-text {
   overflow: hidden;
 }
-/* line 205, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 212, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.closed .slide-title, .js #mainslider .slide-desc.closed h3, .js #mainslider .slide-desc.closed .h3, .js #mainslider .csc-textpic-bodytext.closed .slide-title, .js #mainslider .csc-textpic-bodytext.closed h3, .js #mainslider .csc-textpic-bodytext.closed .h3 {
   margin-bottom: 0;
   cursor: pointer;
@@ -10050,12 +10064,28 @@ button.small::before, button.small:hover::before {
   font-size: 0.875rem;
   transition: font 0.3s ease;
 }
-/* line 216, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 222, ../../Private/Sources/scss/theme/_slider.scss */
+.js #mainslider .slide-desc.open, .js #mainslider .csc-textpic-bodytext.open {
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  height: 200px;
+}
+/* line 229, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide-desc.open .slide-title::before, .js #mainslider .slide-desc.open h3::before, .js #mainslider .slide-desc.open .h3::before, .js #mainslider .csc-textpic-bodytext.open .slide-title::before, .js #mainslider .csc-textpic-bodytext.open h3::before, .js #mainslider .csc-textpic-bodytext.open .h3::before {
   display: none;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 223, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 236, ../../Private/Sources/scss/theme/_slider.scss */
   .no-js #mainslider .slide-desc, .no-js #mainslider .csc-textpic-bodytext {
     position: relative;
     width: 17.5rem;
@@ -10064,7 +10094,7 @@ button.small::before, button.small:hover::before {
     margin-left: 50%;
   }
 }
-/* line 232, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 245, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .slide-title, #mainslider .slide-desc h3, #mainslider .slide-desc .h3, #mainslider .csc-textpic-bodytext .slide-title, #mainslider .csc-textpic-bodytext h3, #mainslider .csc-textpic-bodytext .h3 {
   padding: 0;
   margin-top: 0px;
@@ -10074,16 +10104,16 @@ button.small::before, button.small:hover::before {
   line-height: 1.5rem;
   transition: font 0.3s ease;
 }
-/* line 253, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 266, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc p, #mainslider .csc-textpic-bodytext p {
   line-height: 1.0625rem;
   margin-bottom: 0.625rem;
 }
-/* line 256, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 269, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc p:last-child, #mainslider .csc-textpic-bodytext p:last-child {
   margin-bottom: 0 !important;
 }
-/* line 261, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 274, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .button, #mainslider .slide-desc input[type="submit"], #mainslider .csc-textpic-bodytext .button, #mainslider .csc-textpic-bodytext input[type="submit"] {
   padding: 0.625rem;
   color: #FFFFFF;
@@ -10091,11 +10121,11 @@ button.small::before, button.small:hover::before {
   font-weight: 700;
   margin-bottom: 0;
 }
-/* line 267, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 280, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-desc .button:hover, #mainslider .slide-desc input[type="submit"]:hover, #mainslider .csc-textpic-bodytext .button:hover, #mainslider .csc-textpic-bodytext input[type="submit"]:hover {
   background-color: #63b3db;
 }
-/* line 272, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 285, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide.swipe .slide-desc {
   position: absolute;
   width: 18.125rem;
@@ -10103,11 +10133,11 @@ button.small::before, button.small:hover::before {
   margin-left: 50%;
   border-bottom: none;
 }
-/* line 277, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 290, ../../Private/Sources/scss/theme/_slider.scss */
 .js #mainslider .slide.swipe .slide-desc .slide-title::before {
   display: none;
 }
-/* line 284, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 297, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller, #mainslider .csc-header {
   position: absolute;
   z-index: 5;
@@ -10116,12 +10146,12 @@ button.small::before, button.small:hover::before {
   font-family: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 284, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 297, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide-caller, #mainslider .csc-header {
     display: none;
   }
 }
-/* line 295, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 308, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header, #mainslider .slide-caller h1, #mainslider .slide-caller .h1, #mainslider .csc-header .slide-header, #mainslider .csc-header h1, #mainslider .csc-header .h1 {
   position: relative;
   display: inline;
@@ -10131,25 +10161,25 @@ button.small::before, button.small:hover::before {
   font-size: 2.375rem !important;
   line-height: inherit !important;
 }
-/* line 303, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 316, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header a, #mainslider .slide-caller .slide-header span, #mainslider .slide-caller h1 a, #mainslider .slide-caller .h1 a, #mainslider .slide-caller h1 span, #mainslider .slide-caller .h1 span, #mainslider .csc-header .slide-header a, #mainslider .csc-header .slide-header span, #mainslider .csc-header h1 a, #mainslider .csc-header .h1 a, #mainslider .csc-header h1 span, #mainslider .csc-header .h1 span {
   display: inline-block;
   padding: 0.625rem 0.625rem 0.8125rem 0.625rem;
   color: #222222;
   background-color: #FFFFFF;
 }
-/* line 308, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 321, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header a span, #mainslider .slide-caller .slide-header span span, #mainslider .slide-caller h1 a span, #mainslider .slide-caller .h1 a span, #mainslider .slide-caller h1 span span, #mainslider .slide-caller .h1 span span, #mainslider .csc-header .slide-header a span, #mainslider .csc-header .slide-header span span, #mainslider .csc-header h1 a span, #mainslider .csc-header .h1 a span, #mainslider .csc-header h1 span span, #mainslider .csc-header .h1 span span {
   display: inline;
   padding: 0;
   color: #63b3db;
 }
-/* line 314, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 327, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header::after, #mainslider .slide-caller h1::after, #mainslider .slide-caller .h1::after, #mainslider .csc-header .slide-header::after, #mainslider .csc-header h1::after, #mainslider .csc-header .h1::after {
   content: '';
   display: block;
 }
-/* line 320, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 333, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span {
   font-weight: 500;
   font-size: 1.125rem !important;
@@ -10160,7 +10190,7 @@ button.small::before, button.small:hover::before {
   padding: 0.25rem 0.625rem 0.25rem 0.625rem;
   background-color: #97cde8;
 }
-/* line 334, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 347, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slider-stage {
   position: relative;
   width: 80%;
@@ -10169,13 +10199,13 @@ button.small::before, button.small:hover::before {
   left: 8%;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 334, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 347, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     margin-top: 22.75rem;
   }
 }
 @media only screen and (min-width: 61.9375em) {
-  /* line 334, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 347, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     position: absolute;
     width: 18.75rem;
@@ -10650,30 +10680,31 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) button, div[data-equalizer-wa
 /* line 304, ../../Private/Sources/scss/theme/_boxes.scss */
 ul.contact-list {
   padding: 0;
+  min-height: 23.1875rem;
   margin: -2.5rem 0 0 0;
   border-bottom: 0.0625rem solid #acd7ed;
   list-style: none;
 }
-/* line 309, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 310, ../../Private/Sources/scss/theme/_boxes.scss */
 ul.contact-list .h2 {
   margin-top: -0.5rem;
   margin-bottom: 0;
   transition: color 300ms ease-out;
   transition: background-color 300ms ease-out;
 }
-/* line 316, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 317, ../../Private/Sources/scss/theme/_boxes.scss */
 ul.contact-list a:hover .h2, ul.contact-list a:focus .h2 {
   color: #777777;
   background-color: #FFFFFF;
 }
-/* line 321, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 322, ../../Private/Sources/scss/theme/_boxes.scss */
 ul.contact-list li {
   position: relative;
   padding: 0.75rem 1.25rem 0 4.9375rem;
   border-top: 0.0625rem solid #acd7ed;
   min-height: 4.25rem;
 }
-/* line 327, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 328, ../../Private/Sources/scss/theme/_boxes.scss */
 ul.contact-list li::before {
   display: block;
   position: absolute;
@@ -10686,51 +10717,51 @@ ul.contact-list li::before {
 }
 
 /* used in header dropdowns */
-/* line 342, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 343, ../../Private/Sources/scss/theme/_boxes.scss */
 .f-dropdown li {
   cursor: default;
 }
 
-/* line 346, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 347, ../../Private/Sources/scss/theme/_boxes.scss */
 #contact_info.open {
   width: 20.8125rem;
 }
 
-/* line 349, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 350, ../../Private/Sources/scss/theme/_boxes.scss */
 #settings_info {
   padding: 1.25rem;
 }
-/* line 351, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 352, ../../Private/Sources/scss/theme/_boxes.scss */
 #settings_info .button, #settings_info input[type="submit"] {
   cursor: default;
 }
 
 /* broschueren */
-/* line 359, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 360, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure li {
   padding-bottom: 2.8125rem;
 }
-/* line 362, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 363, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure .h3 {
   margin-top: 1.25rem;
   margin-bottom: 0.125rem;
 }
-/* line 366, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 367, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure input, .brochure input[type="text"]:focus {
   display: inline-block;
   width: 1.875rem;
   margin-right: 0.5rem;
   background-color: #dfe0e0;
 }
-/* line 372, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 373, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure p {
   min-height: 2.125rem;
 }
-/* line 375, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 376, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure a {
   display: block;
 }
-/* line 377, ../../Private/Sources/scss/theme/_boxes.scss */
+/* line 378, ../../Private/Sources/scss/theme/_boxes.scss */
 .brochure a::before {
   content: 'icon';
   display: inline-block;

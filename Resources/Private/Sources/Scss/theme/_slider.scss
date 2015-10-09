@@ -169,13 +169,15 @@
 			bottom: auto;
 			overflow: hidden;
 			
-			height: 35px;
 			@include transition-property(height);
-			@include transition-duration(0.2s);
+			@include transition-duration(0.9s);
 			@include transition-timing-function(ease-in);
+			
+			height: 34px;
 			
 			@media #{$mobile-only} {
 				width: auto;
+				height: auto;
 				border-bottom: 1px solid $light-grey;
 				padding-left: 0;
 				padding-right: 0;
@@ -196,6 +198,11 @@
 				}
 			}
 			&.closed {
+				@include transition-property(height);
+				@include transition-duration(0.9s);
+				@include transition-timing-function(ease-in);
+			
+				height: 34px;
 				padding-top: 0;
 				padding-bottom: 0;
 				
@@ -213,6 +220,12 @@
 				}
 			}
 			&.open {
+				@include transition-property(height);
+				@include transition-duration(0.9s);
+				@include transition-timing-function(ease-in);
+			
+				height: 200px;
+				//max-height: 210px;
 				.slide-title::before, h3::before {
 					display: none;
 				}

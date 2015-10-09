@@ -102,7 +102,7 @@
 				.appendTo(sliderStage)
 				.attr('data-slide-count', i)
 				.addClass(i == 1 ? opts.hideClass : opts.openClass)
-				.css('visibility', 'hidden') // hide before animated
+				//.css('visibility', 'hidden') // hide before animated
 				.find(opts.slideTitleName).click(function(e) {
 					animate($(this), e);
 				});

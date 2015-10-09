@@ -303,6 +303,7 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 /* aside and dropdown box with contactinfo */
 ul.contact-list {
 	padding: 0;
+	min-height: rem-calc(371);
 	margin: -#{rem-calc($gutter-width)} 0 0 0;
 	border-bottom: rem-calc(1) solid $deep-light-blue;
 	list-style: none;
