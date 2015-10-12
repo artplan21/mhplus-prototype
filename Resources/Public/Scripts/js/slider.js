@@ -1,5 +1,7 @@
 (function($){
-
+	
+	"use strict";
+	
 	var PLUGIN_NS = 'Caroussel';
 	
 	var defaults = {
@@ -156,7 +158,7 @@
 			/*
 			self.find(opts.slideDescName+'.'+opts.openClass).stop(true, false).animate({
 				height: opts.titleHeight
-			}, opts.animationSpeed, function() {
+			}, opts.moveAnimationSpeed, function() {
 				$(this).css('visibility', 'visible');
 			});
 			*/
@@ -181,7 +183,7 @@
 			// animate
 			element.parent().stop(true, false).animate({
 					height: ( element.parent().attr('data-slide-height') != undefined ? parseInt(element.parent().attr('data-slide-height')) : defaultHeight) + element.parent().children(opts.slideTextName).height()
-				}, opts.animationSpeed, function() {
+				}, opts.moveAnimationSpeed, function() {
 					// remove calculation errors
 					$(this).height('auto');
 					// set new default height

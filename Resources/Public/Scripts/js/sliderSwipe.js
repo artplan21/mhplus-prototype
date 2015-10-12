@@ -1,5 +1,6 @@
 (function($){
-
+	"use strict";
+	
 	var PLUGIN_NS = 'Swipe';
 	
 	var defaults = {
@@ -29,7 +30,7 @@
 	
 		if (!options) options = {};
 		
-		options = $.extend({}, $.fn.slider.defaults, options);
+		options = $.extend({}, $.fn.sliderSwipe.defaults, options);
 		
 		return this.each(function () {
 
@@ -44,11 +45,12 @@
 	}
 
 	function Swipe(element, opts) {
-		
+
 		var self = $(element);
 		
-		var maxImages = self.find('.'+opts.slideName).length;
-		var IMG_WIDTH = self.find('.'+opts.slideName+':first').width();
+		var maxImages = self.children('.'+opts.slideName).length;
+		
+		var IMG_WIDTH = self.children('.'+opts.slideName+':first').width();
 		var currentImg = 0;
 		
 		var speed = opts.moveAnimationSpeed;
@@ -87,6 +89,7 @@
 		}
 		
 		function startSwipe() {
+		
 			self.addClass('swipe');
 			resize();
 
@@ -108,18 +111,16 @@
 		
 		function removeLinks() {
 			self.children('.'+opts.slideName).each(function() {
-				var link = $(this).children('a');
-				link.children().prependTo($(this));
-				link.prependTo($(this));
+				var link = $(this).find('figure').children('a');
+				link.children().prependTo(link.parent());
+				link.prependTo(link.parent());
 			});
 		}
 		
 		function addLinks() {
 			self.children('.'+opts.slideName).each(function() {
-				var link = $(this).children('a');
-				var img = $(this).children('img');
-				link.appendTo($(this));
-				img.appendTo(link);
+				var figure = $(this).find('figure');
+				figure.children('img').appendTo(figure.children('a'));
 			});
 		}
 		

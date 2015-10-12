@@ -283,7 +283,7 @@ $paragraph-margin-bottom: rem-calc(16);
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
 $hr-border-color: $light-blue;
-// $hr-margin: rem-calc(20);
+$hr-margin: 0 0 rem-calc(20) 0;
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
@@ -1428,9 +1428,9 @@ $topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-hover: $white;
-// $topbar-link-bg-color-hover: $charcoal;
+//$topbar-link-bg-color-hover: $charcoal;
 $topbar-link-bg-active: $white;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active-hover: $white;
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 $topbar-link-padding: rem-calc(20);

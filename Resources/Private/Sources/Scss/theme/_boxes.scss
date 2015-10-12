@@ -234,18 +234,20 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 		margin: 0 !important;
 	}
 	
+	
 	h3, .h3 {
 		font-family: $secondary-font;
 		font-weight: 500;
 		letter-spacing: rem-calc(-0.3);
+		margin: initial !important;
 	}
 	
 	&.invers h2, &.invers .h2 {
 		display: inline-block;
-		font-size: $h3-font-size;
+		font-size: $h3-font-size !important;
 		font-family: $text-font;
 		font-weight: 700;
-		color: $text-color;
+		color: $text-color !important;
 		background-color: $white;
 		padding: 0 rem-calc(5) 0 rem-calc(5);
 		margin: rem-calc(-80) 0rem rem-calc(30) rem-calc(10);
@@ -267,10 +269,10 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 		}
 		&.invers h2, &.invers .h2 {
 			display: block;
-			font-size: $h2-font-size - $h2-font-reduction;
+			font-size: $h2-font-size - $h2-font-reduction !important;
 			font-family: $header-font;
 			font-weight: 500;
-			color: $white;
+			color: $white !important;
 			background-color: transparent;
 			padding: 0;
 			margin: 0 0 $header-bottom-margin 0;
@@ -278,13 +280,13 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 				color: $white;
 			}
 			@media #{$xxlarge-up} {
-				font-size: $h2-font-size;
+				font-size: $h2-font-size !important;
 			}
 		}
 		h3, .h3 {
 			font-family: $secondary-font;
-			margin-top: -#{$header-bottom-margin};
-			margin-bottom: rem-calc(20);
+			margin-top: -#{$header-bottom-margin} !important;
+			margin-bottom: rem-calc(20) !important;
 		}
 	}
 }
@@ -341,6 +343,9 @@ ul.contact-list {
 
 
 /* used in header dropdowns */
+.f-open-dropdown {
+	outline: none;
+}
 .f-dropdown li {
 	cursor: default;
 }

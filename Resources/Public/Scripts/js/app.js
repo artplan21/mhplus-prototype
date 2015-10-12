@@ -135,8 +135,7 @@ jQuery.noConflict();
 		}		
 		
 		/* create off-canvas menue toggle */
-		$('#toggle-topbar').click(function() {
-						
+		$('#toggle-topbar').click(function() {	
 			// toggle class
 			$('#mainnav').toggleClass('expanded');
 				
@@ -198,23 +197,24 @@ jQuery.noConflict();
 		
 		/* function for replacing targetnav and tabmenues */
 		$.replaceToSelectMenue = function(opts) {
-			var select = $('<select>')
-					.attr('aria-hidden', 'true')
-					.insertBefore(opts.insertBefore)
-					.change(function(){
-						window.location.href = $(this).children('option:selected').val();
-					});
-			if (opts.id) select.attr('id', opts.id);
-			if (opts.addclass) select.addClass(opts.addclass);
-			
-			opts.selector.each(function(){
-				var a = $('<option>')
-					.attr('value', $(this).attr('href'))
-					.attr('selected', $(this).hasClass('active') || $(this).parent().hasClass('active') ? 'selected' : false)
-					.text($(this).text());
-				a.appendTo(select);
-			});	
-					
+			if (opts.selector.length != 0) {
+				var select = $('<select>')
+						.attr('aria-hidden', 'true')
+						.insertBefore(opts.insertBefore)
+						.change(function(){
+							window.location.href = $(this).children('option:selected').val();
+						});
+				if (opts.id) select.attr('id', opts.id);
+				if (opts.addclass) select.addClass(opts.addclass);
+				
+				opts.selector.each(function(){
+					var a = $('<option>')
+						.attr('value', $(this).attr('href'))
+						.attr('selected', $(this).hasClass('active') || $(this).parent().hasClass('active') ? 'selected' : false)
+						.text($(this).text());
+					a.appendTo(select);
+				});	
+			}
 		}
 		
 		/* replace targetnav-select */
@@ -228,6 +228,7 @@ jQuery.noConflict();
 		/* start slider */
 		function generateSlider() {
 			if ($('#mainslider.single').length != 0) return false;
+			
 			/*
 			if (isMobile() && isTouch()) {
 				$('#mainslider').slider('destroy');
@@ -236,8 +237,9 @@ jQuery.noConflict();
 			}
 			else {*/
 				//$('#mainslider').sliderSwipe('destroy');
-				//$('#mainslider').slider({imageAnimationSpeed: 1200, moveAnimationSpeed: 600, slideDescName: 'div.csc-textpic-bodytext', slideTitleName: 'h3'});
+				$('#mainslider').slider({slideDescName: 'div.csc-textpic-bodytext', slideTitleName: 'h3'});
 			//}
+			
 		}
 		generateSlider();
 		

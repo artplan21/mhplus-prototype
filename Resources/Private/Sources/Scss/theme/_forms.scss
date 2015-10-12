@@ -227,10 +227,6 @@ button, .button {
 	}
 }
 
-.buttons {
-	@extend .button;
-}
-
 
 button.small, button.small:hover {
 	width: 24px !important;

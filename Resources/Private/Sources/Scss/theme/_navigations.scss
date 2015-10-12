@@ -3,12 +3,17 @@
 	.js #targetnav-select, .js #mainnav, .js .top-bar {
 		width:#{$menu-width}px;
 		left: -#{$menu-width}px;
-		transition: transform $menu-animation-speed $menu-animation-type 0s;
+		@include transition-property(transform);
+		@include transition-duration($menu-animation-speed);
+		@include transition-timing-function($menu-animation-type);
+		//transition: transform $menu-animation-speed $menu-animation-type 0s;
 	}
 	
 	.js .expanded #targetnav-select, .js #mainnav.expanded {
 		@include transform2d(translateX(#{$menu-width}px));
-		transition: transform $menu-animation-speed $menu-animation-type 0s;
+		@include transition-property(transform);
+		@include transition-duration($menu-animation-speed);
+		@include transition-timing-function($menu-animation-type);
 	}
 	
 	.js .expanded #toggle-topbar {
@@ -16,7 +21,9 @@
 	}
 	
 	.js #toggle-topbar {
-		transition: transform $menu-animation-speed $menu-animation-type 0s;
+		@include transition-property(transform);
+		@include transition-duration($menu-animation-speed);
+		@include transition-timing-function($menu-animation-type);
 	}
 }
 
@@ -60,7 +67,15 @@ ul.tabs, ul.csc-menu-1 {
 	list-style: none;
 	margin: 0px 0px rem-calc(50px) 0px;
 	padding: 0px;
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 1px solid $line-grey;
+	
+	.total-wrapper-landingpage & {
+		margin-top: -109px;
+		margin-left: -20px;
+		@media #{$mobile-only} {
+			margin-top: 0px;
+		}
+	}
 	
 	.js & {
 		display: none;
@@ -82,16 +97,20 @@ ul.tabs, ul.csc-menu-1 {
 			width: auto;
 		}
 		
+		&::before {
+			content: none;
+		}
+		
 		&:last-child a {
 			margin-right: 0px;	
 		}
 		
 		a {
 			display: block;
-			padding: 12px 10px 10px 10px;
+			padding: 12px 20px 9px 20px;
 			margin-right: 0px;
 			background-color: $light-grey;
-			border-bottom: 2px solid $white;
+			border-bottom: 1px solid $line-grey;
 			font-family: $text-font !important;
 			@include single-transition(background-color);
 			@media #{$xlarge-up} {
@@ -105,13 +124,12 @@ ul.tabs, ul.csc-menu-1 {
 		
 		}
 		&.active {
-			border-bottom-color: $white;
 			a {
 				background-color: $white;
 				@media #{$xlarge-up} {
 					padding-top: 11px;
-					border: 1px solid #cccccc;
-					border-bottom: none;
+					border: 1px solid $line-grey;
+					border-bottom: 1px solid $white;
 				}
 			}
 		}
@@ -227,6 +245,11 @@ ul.tabs, ul.csc-menu-1 {
 	@media #{$mobile-only} {
 		margin-top: 130px;
 		margin-right: 43px;
+		
+		.total-wrapper-landingpage & {
+			margin-right: 0px;
+		}
+		
 		li {
 			padding: 0px 0px 0px 5px;
 			a {
@@ -323,7 +346,7 @@ ul.tabs, ul.csc-menu-1 {
 	display: block;
 	top: 0px; 
 	left: 0px;
-	z-index: 5;
+	z-index: 1;
 	width: 100%;
 }
 
@@ -333,7 +356,6 @@ ul.tabs, ul.csc-menu-1 {
 	position: absolute; 
 	z-index: 10;
 	top: 152px;
-	background-color: rgba(255,255,255,0.85);
 	
 	@media #{$mobile-only} {
 	
@@ -363,6 +385,10 @@ ul.tabs, ul.csc-menu-1 {
 	
 	.top-bar-section {
 	
+		background-color: rgba(255,255,255,0.85);
+		min-height:  rem-calc(45);
+		line-height:  rem-calc(45);
+		
 		// hide home-link-placeholder
 		> ul > li:first-child {
 			display: none;
@@ -385,6 +411,12 @@ ul.tabs, ul.csc-menu-1 {
 		
 		@media #{$mobile-only} {
 		
+			& {
+				background-color: transparent;
+				min-height: auto;
+				line-height: inherit;
+			}
+			
 			/* reset desktop definitions */
 			h5 { // back-link is wrapped by h5 !
 				line-height: inherit !important;
