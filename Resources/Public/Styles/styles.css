@@ -9629,7 +9629,7 @@ button.fullwidth, .button.fullwidth, input.fullwidth[type="submit"] {
   width: 100%;
 }
 
-/* line 239, ../../Private/Sources/scss/theme/_forms.scss */
+/* line 238, ../../Private/Sources/scss/theme/_forms.scss */
 button.small, button.small:hover {
   width: 24px !important;
   height: 23px !important;
@@ -9639,7 +9639,7 @@ button.small, button.small:hover {
   text-indent: -1000em;
   overflow: hidden;
 }
-/* line 249, ../../Private/Sources/scss/theme/_forms.scss */
+/* line 248, ../../Private/Sources/scss/theme/_forms.scss */
 button.small::before, button.small:hover::before {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
