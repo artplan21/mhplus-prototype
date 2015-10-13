@@ -212,12 +212,16 @@ button, .button {
 	
 	html[class*=layout-standard] .layout-slot-0 &,
 	html[class*=layout-standard] .layout-slot-50 &,
+	.layout-landingpage .layout-slot-0 &,
+	.layout-landingpage .layout-slot-50 &,
 	&.large {
 		font-size: rem-calc(16);
 		padding: 13px 35px 13px 35px;
 	}
 	html[class*=layout-standard] .layout-slot-0 &,
 	html[class*=layout-standard] .layout-slot-50 &,
+	.layout-landingpage .layout-slot-0 &,
+	.layout-landingpage .layout-slot-50 &,
 	&.blue {
 		background-color: $light-blue;
 		color: $white;
