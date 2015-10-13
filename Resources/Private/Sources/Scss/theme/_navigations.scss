@@ -423,6 +423,10 @@ ul.tabs, ul.csc-menu-1 {
           
 		}
 		
+		ul li.enabled a {
+			color: $link-color;
+		}
+		
 		
 		@media #{$mobile-only} {
 		
