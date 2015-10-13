@@ -408,6 +408,10 @@ header {
 	right: 20px;
 	top: 69px;
 	
+	.layout-landingpage & {
+		display: none;
+	}
+	
 	@media #{$mobile-only} {
 		top: 130px;
 		right: 20px;

@@ -12735,6 +12735,10 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   right: 20px;
   top: 69px;
 }
+/* line 411, ../../Private/Sources/scss/theme/_layout.scss */
+.layout-landingpage #searchinput {
+  display: none;
+}
 @media only screen and (max-width: 61.875em) {
   /* line 406, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput {
@@ -12742,7 +12746,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
     right: 20px;
   }
 }
-/* line 416, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 420, ../../Private/Sources/scss/theme/_layout.scss */
 #searchinput input {
   float: left;
   transition: all 0.3s ease 0s;
@@ -12760,7 +12764,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   font-weight: 400;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 416, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 420, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput input {
     font-size: 1.125rem !important;
     margin-top: -9px;
@@ -12770,7 +12774,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
     padding-right: 0px;
     background-color: transparent;
   }
-  /* line 440, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 444, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput input.show {
     width: 12.5rem !important;
     padding-left: 10px;
@@ -12779,7 +12783,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
     background-color: #f0f0f0;
   }
 }
-/* line 449, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 453, ../../Private/Sources/scss/theme/_layout.scss */
 #searchinput button {
   float: right;
   width: 3rem;
@@ -12792,7 +12796,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   text-indent: -1000em;
   background-color: #f0f0f0;
 }
-/* line 461, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 465, ../../Private/Sources/scss/theme/_layout.scss */
 #searchinput button::before {
   right: 11px;
   top: 6px;
@@ -12800,14 +12804,14 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   color: #777777;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 449, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 453, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput button {
     overflow: visible;
     width: 2.5rem;
     height: 2.5rem;
     background-color: transparent;
   }
-  /* line 473, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 477, ../../Private/Sources/scss/theme/_layout.scss */
   #searchinput button::before {
     content: "\e613";
     top: -8px;
@@ -12817,13 +12821,13 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   }
 }
 
-/* line 484, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 488, ../../Private/Sources/scss/theme/_layout.scss */
 #login a {
   position: relative;
   color: #222222 !important;
   padding-right: 52px !important;
 }
-/* line 489, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 493, ../../Private/Sources/scss/theme/_layout.scss */
 #login a::before {
   position: absolute;
   right: 18px;
@@ -12833,27 +12837,27 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
 }
 
 @media only screen and (max-width: 61.875em) {
-  /* line 498, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 502, ../../Private/Sources/scss/theme/_layout.scss */
   #login {
     float: none !important;
     margin-top: 51px;
     margin-bottom: 60px;
   }
-  /* line 502, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 506, ../../Private/Sources/scss/theme/_layout.scss */
   #login a {
     background-color: #FFFFFF !important;
   }
-  /* line 504, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 508, ../../Private/Sources/scss/theme/_layout.scss */
   #login a::after {
     margin-top: 0px;
   }
 
-  /* line 509, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 513, ../../Private/Sources/scss/theme/_layout.scss */
   .no-js #login {
     margin-top: 0px;
   }
 }
-/* line 514, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 518, ../../Private/Sources/scss/theme/_layout.scss */
 #teaser {
   position: relative;
   width: 100%;
@@ -12870,19 +12874,19 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   padding-top: 19.375rem;
 }
 
-/* line 531, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 535, ../../Private/Sources/scss/theme/_layout.scss */
 #teaser-text {
   position: relative;
   margin-left: 1.25rem;
   margin-bottom: 0;
 }
-/* line 536, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 540, ../../Private/Sources/scss/theme/_layout.scss */
 #teaser-text ul li::before {
   color: #FFFFFF;
 }
 
 @media only screen and (max-width: 61.875em) {
-  /* line 542, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 546, ../../Private/Sources/scss/theme/_layout.scss */
   #teaser {
     height: 400px;
     overflow: visible;
@@ -12892,93 +12896,93 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
     padding-bottom: 0;
   }
 
-  /* line 550, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 554, ../../Private/Sources/scss/theme/_layout.scss */
   #teaser-text {
     margin-left: 0px;
   }
 }
 @media only screen and (max-width: 22.5em) {
-  /* line 555, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 559, ../../Private/Sources/scss/theme/_layout.scss */
   #teaser {
     height: 200px;
     padding-top: 200px;
   }
 }
 @media only screen and (min-width: 22.5625em) and (max-width: 40em) {
-  /* line 561, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 565, ../../Private/Sources/scss/theme/_layout.scss */
   #teaser {
     height: 300px;
     padding-top: 300px;
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 61.875em) {
-  /* line 567, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 571, ../../Private/Sources/scss/theme/_layout.scss */
   #teaser {
     height: 500px;
     padding-top: 500px;
   }
 }
-/* line 574, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 578, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content, .main-content.wide, .sidebar-content {
   margin-top: 2.5rem;
   width: 100%;
 }
-/* line 578, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 582, ../../Private/Sources/scss/theme/_layout.scss */
 .main-content.no-margin, .main-content.wide.no-margin, .sidebar-content.no-margin {
   margin-top: 0;
 }
 
 /* landingpage !! */
-/* line 584, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 588, ../../Private/Sources/scss/theme/_layout.scss */
 .layout-landingpage .main-content, .layout-landingpage .sidebar-content {
   margin-top: 4.375rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 584, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 588, ../../Private/Sources/scss/theme/_layout.scss */
   .layout-landingpage .main-content, .layout-landingpage .sidebar-content {
     margin-top: 2.5rem;
   }
 }
 
-/* line 592, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 596, ../../Private/Sources/scss/theme/_layout.scss */
 .layout-landingpage .main-content {
   padding-left: 2.5rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 592, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 596, ../../Private/Sources/scss/theme/_layout.scss */
   .layout-landingpage .main-content {
     padding-left: 1.25rem;
   }
 }
 
 @media only screen and (min-width: 61.9375em) {
-  /* line 601, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 605, ../../Private/Sources/scss/theme/_layout.scss */
   .main-content {
     width: 65%;
   }
-  /* line 603, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 607, ../../Private/Sources/scss/theme/_layout.scss */
   .main-content.wide {
     width: 71.1864406779661%;
   }
 
-  /* line 607, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 611, ../../Private/Sources/scss/theme/_layout.scss */
   .sidebar-content {
     float: right !important;
     width: 28.8135593220339%;
   }
 }
-/* line 614, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 618, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons {
   padding-top: 2.1875rem;
   padding-bottom: 1.5625rem;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 614, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 618, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons {
     width: auto;
   }
 }
-/* line 625, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 629, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a {
   display: inline-block;
   width: 4.375rem;
@@ -12987,12 +12991,12 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   margin-top: 1.25rem;
   text-align: center;
 }
-/* line 633, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 637, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a em {
   display: inline-block;
   margin-top: 0.125rem;
 }
-/* line 637, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 641, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a::before {
   position: relative;
   display: block;
@@ -13001,14 +13005,14 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   height: 3.25rem;
   font-size: 52px;
 }
-/* line 646, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 650, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a.toplink {
   float: right;
   width: 4.0625rem;
   margin-left: auto;
   margin-right: 0;
 }
-/* line 652, ../../Private/Sources/scss/theme/_layout.scss */
+/* line 656, ../../Private/Sources/scss/theme/_layout.scss */
 .sm-buttons a.toplink::before {
   position: relative;
   height: 3.25rem;
@@ -13022,7 +13026,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   font-size: 26px;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 625, ../../Private/Sources/scss/theme/_layout.scss */
+  /* line 629, ../../Private/Sources/scss/theme/_layout.scss */
   .sm-buttons a {
     margin-right: 1.25rem;
   }
