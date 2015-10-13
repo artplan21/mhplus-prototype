@@ -181,12 +181,16 @@ ul.tabs, ul.csc-menu-1 {
 		a {
 			display: block; 
 			padding: 10px 17px 17px 17px;
+			.layout-landingpage & {
+				padding-bottom: 16px;
+			}
 			color: $white;
 			font-family: $header-font-light !important;
 			font-size: rem-calc($text-font-size);
 		}
 	}
 }
+
 
 /* left side */
 #targetnav {
