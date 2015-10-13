@@ -375,7 +375,7 @@ ul.contact-list {
 	}
 	input, input[type="text"]:focus {
 		display: inline-block;
-		width: rem-calc(30);
+		width: rem-calc(25);
 		margin-right: rem-calc(8);
 		background-color: $light-grey;
 	}
@@ -384,11 +384,13 @@ ul.contact-list {
 	}
 	a {
 		display: block;
+		@extend .icon-mhplus-download;
 		&::before {
-			content: 'icon';
+			position: relative;
 			display: inline-block;
-			width: rem-calc(30);
 			margin-right: rem-calc(8);
+			color: $dark-grey;
+			font-size: 23px;
 		}
 	}
 }

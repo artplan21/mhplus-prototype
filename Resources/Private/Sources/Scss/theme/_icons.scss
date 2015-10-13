@@ -75,6 +75,11 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png", $position: 0%, $spacing: 
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mhplus-download:before {
+	@extend  .icomoon;
+	content: "\e800";
+}
+
 .icon-mhplus-lupe-mobile:before {
 	@extend  .icomoon;
 	content: "\e613";
