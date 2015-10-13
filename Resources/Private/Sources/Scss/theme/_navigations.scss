@@ -165,7 +165,7 @@ ul.tabs, ul.csc-menu-1 {
 
 /* menues top of the site */
 #targetnav, #utilitynav {
-	font-family: $nav-font;
+	font-family: $header-font-light;
 	margin-bottom: 0px;
 	li {
 		display: block;
@@ -175,6 +175,7 @@ ul.tabs, ul.csc-menu-1 {
 			display: block; 
 			padding: 10px 17px 17px 17px;
 			color: $white;
+			font-family: $header-font-light !important;
 			font-size: rem-calc($text-font-size);
 		}
 	}

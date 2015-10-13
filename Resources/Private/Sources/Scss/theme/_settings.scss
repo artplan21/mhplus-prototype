@@ -27,6 +27,7 @@ $menu-animation-type: ease;
 // font
 $text-font: Arial, "ITCFranklinGothicW01-Dm 812668", "Utopia W01 It", sans-serif;
 $header-font: "ITCFranklinGothicW01-Dm 812668", Arial, "Utopia W01 It", sans-serif;
+$header-font-light: "ITC Franklin Gothic LT W01 Bk", Arial, "Utopia W01 It", sans-serif;
 $nav-font: $header-font;
 $secondary-font: "Utopia W01 It";
 
@@ -69,6 +70,11 @@ $link-color-light: #585858;
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=322b7a64-a76a-4d73-b98f-f94e1caf18cd");
 @font-face{
+font-family:"ITC Franklin Gothic LT W01 Bk";
+src:url("Fonts/00faf685-e292-40f6-8318-fce19d0576b1.eot?#iefix");
+src:url("Fonts/00faf685-e292-40f6-8318-fce19d0576b1.eot?#iefix") format("eot"),url("Fonts/35d6841f-a247-4989-95f3-b023bab7c876.woff2") format("woff2"),url("Fonts/e0c48fbf-6e3e-4d4a-8443-7905cf3d47f4.woff") format("woff"),url("Fonts/52a8cfe0-c0a3-4424-80ae-baf160636666.ttf") format("truetype"),url("Fonts/df864b94-3d8a-4e16-9ec8-ed159a688ca5.svg#df864b94-3d8a-4e16-9ec8-ed159a688ca5") format("svg");
+}
+@font-face{
 font-family:"ITCFranklinGothicW01-Dm 812668";
 src:url("Fonts/498d8f5c-6dfe-4a07-9fdf-321bcc11909c.eot?#iefix");
 src:url("Fonts/498d8f5c-6dfe-4a07-9fdf-321bcc11909c.eot?#iefix") format("eot"),url("Fonts/ea7dcf5e-c101-46d3-a553-bb46f78ca7e4.woff2") format("woff2"),url("Fonts/08fe22ab-0517-4203-bcc9-1ba2ca45f40c.woff") format("woff"),url("Fonts/6adc2e3a-d0c4-4c48-ba68-91b4107515d7.ttf") format("truetype"),url("Fonts/426ce955-d5bd-4a77-b077-402088f77e65.svg#426ce955-d5bd-4a77-b077-402088f77e65") format("svg");
@@ -78,6 +84,7 @@ font-family:"Utopia W01 It";
 src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix");
 src:url("Fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix") format("eot"),url("Fonts/b58a7ef2-1af1-4388-bea9-35a36e882eee.woff2") format("woff2"),url("Fonts/91100087-f732-4de0-aa71-80eccd860c00.woff") format("woff"),url("Fonts/ebb5c4d7-df95-4959-9bf3-9f1dbef0b9cd.ttf") format("truetype"),url("Fonts/0b69d819-2210-4ff4-ab5b-0838cc946334.svg#0b69d819-2210-4ff4-ab5b-0838cc946334") format("svg");
 }
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('Fonts/icomoon.eot?leo0r3');

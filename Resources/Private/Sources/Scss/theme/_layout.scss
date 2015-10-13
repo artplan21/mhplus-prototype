@@ -252,9 +252,12 @@ header {
 /* navigations */
 @import "navigations";
 
-
+#utilitynav li#phone24 a { // overwrite !!
+	font-family: $header-font !important;
+}
+	
 #phone24 a {
-	font-size: rem-calc(19) !important;
+	font-size: rem-calc(19) !important;	
 	line-height: 1rem !important;
 	padding-left: 36px !important;
 	@extend .icon-mhplus-hotline24h;
@@ -408,7 +411,7 @@ header {
 		border: none;
 		background-color: $deep-light-grey;
 		@include box-shadow(none);
-		font-family: $nav-font;
+		font-family: $header-font-light;
 		font-size: rem-calc(22);
 		//color: $link-color;
 		font-weight: 400;

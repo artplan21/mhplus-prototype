@@ -306,7 +306,10 @@
 		bottom: rem-calc(22);
 		font-family: $header-font;
 		
-		@media #{$mobile-only} {
+		@media #{$small-only} {
+			display: none;
+		}
+		@media #{$medium-only} {
 			display: none;
 		}
 		
@@ -317,10 +320,16 @@
 			margin: 0;
 			width: auto;
 			font-size: rem-calc(38) !important;
+			@media #{$mobile-only} {
+				font-size: rem-calc(26) !important;
+			}
 			line-height: inherit !important;
 			a, span {
 				display: inline-block;
 				padding: rem-calc(10) rem-calc(10) rem-calc(13) rem-calc(10);
+				@media #{$mobile-only} {
+					padding: rem-calc(5) rem-calc(10) rem-calc(7) rem-calc(10);
+				}
 				color: $text-color;
 				background-color: $white;
 				span {
