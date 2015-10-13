@@ -9670,7 +9670,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 61, ../../Private/Sources/scss/theme/_icons.scss */
-.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, ul.bodytext li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation h4:before, .accordion .accordion-navigation .h4:before, .accordion dd > a:before, .accordion dd h4:before, .accordion dd .h4:before, .accordionSingle > a:before, .accordionSingle h4:before, .accordionSingle .h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
+.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation h4:before, .accordion .accordion-navigation .h4:before, .accordion dd > a:before, .accordion dd h4:before, .accordion dd .h4:before, .accordionSingle > a:before, .accordionSingle h4:before, .accordionSingle .h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -9702,7 +9702,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 92, ../../Private/Sources/scss/theme/_icons.scss */
-.icon-mhplus-quadrat:before, ul.bodytext li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before {
+.icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before {
   content: "\e612";
 }
 
@@ -11380,11 +11380,11 @@ ul, ol, dl {
 }
 
 /* line 27, ../../Private/Sources/scss/theme/_layout.scss */
-ul.bodytext, #teaser-text ul {
+.csc-textpic-text ul, #teaser-text ul {
   list-style: none;
 }
 /* line 31, ../../Private/Sources/scss/theme/_layout.scss */
-ul.bodytext li::before, #teaser-text ul li::before {
+.csc-textpic-text ul li::before, #teaser-text ul li::before {
   font-size: 0.375rem;
   margin-left: -15px;
   margin-top: 4px;
