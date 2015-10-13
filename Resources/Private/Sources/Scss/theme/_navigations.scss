@@ -39,6 +39,12 @@
 
 /* breadcrumb */
 .breadcrumbnav {
+
+	display: none;	
+	@media #{$large-up} {
+		display: block;
+	}
+	
 	margin-top: 2px;
 	font-weight: 400;
 	font-family: $secondary-font !important;
@@ -59,6 +65,7 @@
 		font-family: $secondary-font !important;
 	}
 }
+
 
 /* tabs */
 ul.tabs, ul.csc-menu-1 {
@@ -186,11 +193,14 @@ ul.tabs, ul.csc-menu-1 {
 	position: absolute; 
 	top: -195px;
 	margin-left: -17px;
-	li a {
+	li a, li.active a:hover {
 		color: #a7a7a7;
-		@include single-transition(background-color);
+		@include single-transition(color);
 	}
-	li a:hover, li.active a {
+	li a:hover {
+		color: $white;
+	}
+	li.active a {
 		background-color: $white;
 		//color: $link-color;
 	}
@@ -494,7 +504,7 @@ ul.tabs, ul.csc-menu-1 {
 			padding-bottom: 30px;
 			background-color: $white;
 			@include box-shadow($box-shadow-color-lighten 3px 5px 7px -3px);
-			
+						
 			@media #{$mobile-only} {
 				min-height: initial;
 				padding-top: 0px;
