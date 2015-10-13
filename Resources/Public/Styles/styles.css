@@ -7742,7 +7742,7 @@ meta.foundation-mq-topbar {
 }
 /* line 383, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
-  background: #FFFFFF;
+  background: transparent;
   color: #222222;
 }
 /* line 387, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
@@ -7952,7 +7952,7 @@ meta.foundation-mq-topbar {
   }
   /* line 569, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button):not(input[type="submit"]) {
-    background: #FFFFFF;
+    background: transparent;
     color: #222222;
     line-height: 2.8125rem;
     padding: 0 1.25rem;
@@ -8074,7 +8074,7 @@ meta.foundation-mq-topbar {
   }
   /* line 717, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
-    background: #FFFFFF;
+    background: transparent;
     color: #222222;
   }
   /* line 725, ../../Private/Sources/scss/foundation/components/_top-bar.scss */
