@@ -76,7 +76,7 @@ ul.tabs, ul.csc-menu-1 {
 	padding: 0px;
 	border-bottom: 1px solid $line-grey;
 	
-	.total-wrapper-landingpage & {
+	.layout-landingpage & {
 		margin-top: -109px;
 		margin-left: -20px;
 		@media #{$mobile-only} {
@@ -257,7 +257,7 @@ ul.tabs, ul.csc-menu-1 {
 		margin-top: 130px;
 		margin-right: 43px;
 		
-		.total-wrapper-landingpage & {
+		.layout-landingpage & {
 			margin-right: 0px;
 		}
 		
