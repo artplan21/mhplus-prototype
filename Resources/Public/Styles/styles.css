@@ -10207,7 +10207,6 @@ button.small::before, button.small:hover::before {
   margin-bottom: 0;
   padding: 0.25rem 0.625rem 0.25rem 0.625rem;
   background-color: #97cde8;
-  background-color: #97cde8;
 }
 @media only screen and (max-width: 61.875em) {
   /* line 349, ../../Private/Sources/scss/theme/_slider.scss */
@@ -10217,15 +10216,7 @@ button.small::before, button.small:hover::before {
     padding: 0.2vw 0.625rem 0.2vw 0.625rem;
   }
 }
-@media only screen and (max-width: 61.875em) {
-  /* line 349, ../../Private/Sources/scss/theme/_slider.scss */
-  #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
-    font-size: 1rem !important;
-    font-size: 2vw !important;
-    padding: 0.2vw 0.625rem 0.2vw 0.625rem;
-  }
-}
-/* line 376, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 368, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slider-stage {
   position: relative;
   z-index: 3;
@@ -10236,13 +10227,13 @@ button.small::before, button.small:hover::before {
   left: 8%;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 376, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 368, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     margin-top: 22.75rem;
   }
 }
 @media only screen and (min-width: 61.9375em) {
-  /* line 376, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 368, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     position: absolute;
     width: 18.75rem;

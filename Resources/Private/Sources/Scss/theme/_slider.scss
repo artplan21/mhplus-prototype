@@ -355,14 +355,6 @@
 			margin-bottom: 0;
 			padding: rem-calc(4) rem-calc(10) rem-calc(4) rem-calc(10);
 			background-color: $light-blue;
-			
-			@media #{$mobile-only} {
-				font-size: rem-calc(16) !important;
-				font-size: 2vw !important;
-				padding: 0.2vw rem-calc(10) 0.2vw rem-calc(10);
-			}
-			background-color: $light-blue;
-			
 			@media #{$mobile-only} {
 				font-size: rem-calc(16) !important;
 				font-size: 2vw !important;
