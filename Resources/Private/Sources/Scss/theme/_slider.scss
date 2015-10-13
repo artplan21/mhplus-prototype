@@ -332,6 +332,15 @@
 					padding: rem-calc(5) rem-calc(10) rem-calc(7) rem-calc(10);
 					padding: 0.8vw rem-calc(10) 0.85vw rem-calc(10);
 				}
+				@media #{$small-only} {
+					font-size: rem-calc(22) !important;
+					padding: rem-calc(1) rem-calc(10) rem-calc(2) rem-calc(10);
+				}
+				@media #{$medium-only} {
+					font-size: rem-calc(22) !important;
+					padding: rem-calc(1) rem-calc(10) rem-calc(2) rem-calc(10);
+				}
+				
 				color: $text-color;
 				background-color: $white;
 				span {
@@ -359,6 +368,12 @@
 				font-size: rem-calc(16) !important;
 				font-size: 2vw !important;
 				padding: 0.2vw rem-calc(10) 0.2vw rem-calc(10);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(16) !important;
+			}
+			@media #{$medium-only} {
+				font-size: rem-calc(16) !important;
 			}
 		}
 	}

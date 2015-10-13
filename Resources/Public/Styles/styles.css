@@ -10186,18 +10186,32 @@ button.small::before, button.small:hover::before {
     padding: 0.8vw 0.625rem 0.85vw 0.625rem;
   }
 }
-/* line 337, ../../Private/Sources/scss/theme/_slider.scss */
+@media only screen and (max-width: 22.5em) {
+  /* line 326, ../../Private/Sources/scss/theme/_slider.scss */
+  #mainslider .slide-caller .slide-header a, #mainslider .slide-caller .slide-header span, #mainslider .slide-caller h1 a, #mainslider .slide-caller .h1 a, #mainslider .slide-caller h1 span, #mainslider .slide-caller .h1 span, #mainslider .csc-header .slide-header a, #mainslider .csc-header .slide-header span, #mainslider .csc-header h1 a, #mainslider .csc-header .h1 a, #mainslider .csc-header h1 span, #mainslider .csc-header .h1 span, #mainslider .csc-textpicHeader .slide-header a, #mainslider .csc-textpicHeader .slide-header span, #mainslider .csc-textpicHeader h1 a, #mainslider .csc-textpicHeader .h1 a, #mainslider .csc-textpicHeader h1 span, #mainslider .csc-textpicHeader .h1 span {
+    font-size: 1.375rem !important;
+    padding: 0.0625rem 0.625rem 0.125rem 0.625rem;
+  }
+}
+@media only screen and (min-width: 22.5625em) and (max-width: 40em) {
+  /* line 326, ../../Private/Sources/scss/theme/_slider.scss */
+  #mainslider .slide-caller .slide-header a, #mainslider .slide-caller .slide-header span, #mainslider .slide-caller h1 a, #mainslider .slide-caller .h1 a, #mainslider .slide-caller h1 span, #mainslider .slide-caller .h1 span, #mainslider .csc-header .slide-header a, #mainslider .csc-header .slide-header span, #mainslider .csc-header h1 a, #mainslider .csc-header .h1 a, #mainslider .csc-header h1 span, #mainslider .csc-header .h1 span, #mainslider .csc-textpicHeader .slide-header a, #mainslider .csc-textpicHeader .slide-header span, #mainslider .csc-textpicHeader h1 a, #mainslider .csc-textpicHeader .h1 a, #mainslider .csc-textpicHeader h1 span, #mainslider .csc-textpicHeader .h1 span {
+    font-size: 1.375rem !important;
+    padding: 0.0625rem 0.625rem 0.125rem 0.625rem;
+  }
+}
+/* line 346, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header a span, #mainslider .slide-caller .slide-header span span, #mainslider .slide-caller h1 a span, #mainslider .slide-caller .h1 a span, #mainslider .slide-caller h1 span span, #mainslider .slide-caller .h1 span span, #mainslider .csc-header .slide-header a span, #mainslider .csc-header .slide-header span span, #mainslider .csc-header h1 a span, #mainslider .csc-header .h1 a span, #mainslider .csc-header h1 span span, #mainslider .csc-header .h1 span span, #mainslider .csc-textpicHeader .slide-header a span, #mainslider .csc-textpicHeader .slide-header span span, #mainslider .csc-textpicHeader h1 a span, #mainslider .csc-textpicHeader .h1 a span, #mainslider .csc-textpicHeader h1 span span, #mainslider .csc-textpicHeader .h1 span span {
   display: inline;
   padding: 0;
   color: #63b3db;
 }
-/* line 343, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 352, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller .slide-header::after, #mainslider .slide-caller h1::after, #mainslider .slide-caller .h1::after, #mainslider .csc-header .slide-header::after, #mainslider .csc-header h1::after, #mainslider .csc-header .h1::after, #mainslider .csc-textpicHeader .slide-header::after, #mainslider .csc-textpicHeader h1::after, #mainslider .csc-textpicHeader .h1::after {
   content: '';
   display: block;
 }
-/* line 349, ../../Private/Sources/scss/theme/_slider.scss */
+/* line 358, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
   font-weight: 500;
   font-size: 1.125rem !important;
@@ -10209,14 +10223,26 @@ button.small::before, button.small:hover::before {
   background-color: #97cde8;
 }
 @media only screen and (max-width: 61.875em) {
-  /* line 349, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 358, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
     font-size: 1rem !important;
     font-size: 2vw !important;
     padding: 0.2vw 0.625rem 0.2vw 0.625rem;
   }
 }
-/* line 368, ../../Private/Sources/scss/theme/_slider.scss */
+@media only screen and (max-width: 22.5em) {
+  /* line 358, ../../Private/Sources/scss/theme/_slider.scss */
+  #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
+    font-size: 1rem !important;
+  }
+}
+@media only screen and (min-width: 22.5625em) and (max-width: 40em) {
+  /* line 358, ../../Private/Sources/scss/theme/_slider.scss */
+  #mainslider .slide-caller > h2, #mainslider .slide-caller > .h2, #mainslider .slide-caller > p, #mainslider .slide-caller > span, #mainslider .csc-header > h2, #mainslider .csc-header > .h2, #mainslider .csc-header > p, #mainslider .csc-header > span, #mainslider .csc-textpicHeader > h2, #mainslider .csc-textpicHeader > .h2, #mainslider .csc-textpicHeader > p, #mainslider .csc-textpicHeader > span {
+    font-size: 1rem !important;
+  }
+}
+/* line 383, ../../Private/Sources/scss/theme/_slider.scss */
 #mainslider .slider-stage {
   position: relative;
   z-index: 3;
@@ -10227,13 +10253,13 @@ button.small::before, button.small:hover::before {
   left: 8%;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 368, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 383, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     margin-top: 22.75rem;
   }
 }
 @media only screen and (min-width: 61.9375em) {
-  /* line 368, ../../Private/Sources/scss/theme/_slider.scss */
+  /* line 383, ../../Private/Sources/scss/theme/_slider.scss */
   #mainslider .slider-stage {
     position: absolute;
     width: 18.75rem;
