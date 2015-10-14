@@ -245,7 +245,7 @@ jQuery.noConflict();
 		
 		
 		/* accordion */
-		$('.accordionSingle').find('h4:first-child').click(function() {
+		$('.accordionSingle').find('h4:nth(0)').click(function() {
 			var parent = $(this).parents('.accordionSingle').first();
 			$('.accordionSingle').not(parent).removeClass('active');
 			parent.toggleClass('active');

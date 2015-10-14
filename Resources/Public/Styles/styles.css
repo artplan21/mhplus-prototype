@@ -9670,7 +9670,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 61, ../../Private/Sources/scss/theme/_icons.scss */
-.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation .csc-header h4:before, .accordion .accordion-navigation .csc-header .h4:before, .accordion .accordion-navigation > .csc-default > .csc-header h4:before, .accordion dd > a:before, .accordion dd .csc-header h4:before, .accordion dd .csc-header .h4:before, .accordion dd > .csc-default > .csc-header h4:before, .accordionSingle > a:before, .accordionSingle .csc-header h4:before, .accordionSingle .csc-header .h4:before, .accordionSingle > .csc-default > .csc-header h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
+.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation > .csc-header:first-child h4:before, .accordion .accordion-navigation > .csc-header:first-child .h4:before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4:before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4:before, .accordion dd > a:before, .accordion dd > .csc-header:first-child h4:before, .accordion dd > .csc-header:first-child .h4:before, .accordion dd > .csc-default:first-child > .csc-header:first-child h4:before, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4:before, .accordionSingle > a:before, .accordionSingle > .csc-header:first-child h4:before, .accordionSingle > .csc-header:first-child .h4:before, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4:before, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -9722,7 +9722,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 108, ../../Private/Sources/scss/theme/_icons.scss */
-.icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation .csc-header h4:before, .accordion .accordion-navigation .csc-header .h4:before, .accordion .accordion-navigation > .csc-default > .csc-header h4:before, .accordion dd > a:before, .accordion dd .csc-header h4:before, .accordion dd .csc-header .h4:before, .accordion dd > .csc-default > .csc-header h4:before, .accordionSingle > a:before, .accordionSingle .csc-header h4:before, .accordionSingle .csc-header .h4:before, .accordionSingle > .csc-default > .csc-header h4:before {
+.icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation > .csc-header:first-child h4:before, .accordion .accordion-navigation > .csc-header:first-child .h4:before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4:before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4:before, .accordion dd > a:before, .accordion dd > .csc-header:first-child h4:before, .accordion dd > .csc-header:first-child .h4:before, .accordion dd > .csc-default:first-child > .csc-header:first-child h4:before, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4:before, .accordionSingle > a:before, .accordionSingle > .csc-header:first-child h4:before, .accordionSingle > .csc-header:first-child .h4:before, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4:before, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4:before {
   content: "\e601";
 }
 
@@ -12457,7 +12457,7 @@ ul.accordion {
   margin-bottom: 10px !important;
 }
 /* line 637, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a, .accordion .accordion-navigation .csc-header h4, .accordion .accordion-navigation .csc-header .h4, .accordion .accordion-navigation > .csc-default > .csc-header h4, .accordion .accordion-navigation > .csc-default > .csc-header .h4, .accordion dd > a, .accordion dd .csc-header h4, .accordion dd .csc-header .h4, .accordion dd > .csc-default > .csc-header h4, .accordion dd > .csc-default > .csc-header .h4, .accordionSingle > a, .accordionSingle .csc-header h4, .accordionSingle .csc-header .h4, .accordionSingle > .csc-default > .csc-header h4, .accordionSingle > .csc-default > .csc-header .h4 {
+.accordion .accordion-navigation > a, .accordion .accordion-navigation > .csc-header:first-child h4, .accordion .accordion-navigation > .csc-header:first-child .h4, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4, .accordion dd > a, .accordion dd > .csc-header:first-child h4, .accordion dd > .csc-header:first-child .h4, .accordion dd > .csc-default:first-child > .csc-header:first-child h4, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4, .accordionSingle > a, .accordionSingle > .csc-header:first-child h4, .accordionSingle > .csc-header:first-child .h4, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4 {
   position: relative;
   font-weight: 700;
   font-family: Arial, "ITCFranklinGothicW01-Dm 812668", "Utopia W01 It", sans-serif;
@@ -12469,7 +12469,7 @@ ul.accordion {
   transition: background-color 300ms ease-out;
 }
 /* line 649, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a::before, .accordion .accordion-navigation .csc-header h4::before, .accordion .accordion-navigation .csc-header .h4::before, .accordion .accordion-navigation > .csc-default > .csc-header h4::before, .accordion .accordion-navigation > .csc-default > .csc-header .h4::before, .accordion dd > a::before, .accordion dd .csc-header h4::before, .accordion dd .csc-header .h4::before, .accordion dd > .csc-default > .csc-header h4::before, .accordion dd > .csc-default > .csc-header .h4::before, .accordionSingle > a::before, .accordionSingle .csc-header h4::before, .accordionSingle .csc-header .h4::before, .accordionSingle > .csc-default > .csc-header h4::before, .accordionSingle > .csc-default > .csc-header .h4::before {
+.accordion .accordion-navigation > a::before, .accordion .accordion-navigation > .csc-header:first-child h4::before, .accordion .accordion-navigation > .csc-header:first-child .h4::before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4::before, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4::before, .accordion dd > a::before, .accordion dd > .csc-header:first-child h4::before, .accordion dd > .csc-header:first-child .h4::before, .accordion dd > .csc-default:first-child > .csc-header:first-child h4::before, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4::before, .accordionSingle > a::before, .accordionSingle > .csc-header:first-child h4::before, .accordionSingle > .csc-header:first-child .h4::before, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4::before, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4::before {
   top: 0px;
   right: 0px;
   width: 41px;
@@ -12485,7 +12485,7 @@ ul.accordion {
   transform: rotate(90deg);
 }
 /* line 661, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a::after, .accordion .accordion-navigation .csc-header h4::after, .accordion .accordion-navigation .csc-header .h4::after, .accordion .accordion-navigation > .csc-default > .csc-header h4::after, .accordion .accordion-navigation > .csc-default > .csc-header .h4::after, .accordion dd > a::after, .accordion dd .csc-header h4::after, .accordion dd .csc-header .h4::after, .accordion dd > .csc-default > .csc-header h4::after, .accordion dd > .csc-default > .csc-header .h4::after, .accordionSingle > a::after, .accordionSingle .csc-header h4::after, .accordionSingle .csc-header .h4::after, .accordionSingle > .csc-default > .csc-header h4::after, .accordionSingle > .csc-default > .csc-header .h4::after {
+.accordion .accordion-navigation > a::after, .accordion .accordion-navigation > .csc-header:first-child h4::after, .accordion .accordion-navigation > .csc-header:first-child .h4::after, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4::after, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4::after, .accordion dd > a::after, .accordion dd > .csc-header:first-child h4::after, .accordion dd > .csc-header:first-child .h4::after, .accordion dd > .csc-default:first-child > .csc-header:first-child h4::after, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4::after, .accordionSingle > a::after, .accordionSingle > .csc-header:first-child h4::after, .accordionSingle > .csc-header:first-child .h4::after, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4::after, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4::after {
   content: '';
   position: absolute;
   top: 0px;
@@ -12495,11 +12495,11 @@ ul.accordion {
   border-left: 1px solid #f0f0f0;
 }
 /* line 670, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a:hover, .accordion .accordion-navigation .csc-header h4:hover, .accordion .accordion-navigation .csc-header .h4:hover, .accordion .accordion-navigation > .csc-default > .csc-header h4:hover, .accordion .accordion-navigation > .csc-default > .csc-header .h4:hover, .accordion dd > a:hover, .accordion dd .csc-header h4:hover, .accordion dd .csc-header .h4:hover, .accordion dd > .csc-default > .csc-header h4:hover, .accordion dd > .csc-default > .csc-header .h4:hover, .accordionSingle > a:hover, .accordionSingle .csc-header h4:hover, .accordionSingle .csc-header .h4:hover, .accordionSingle > .csc-default > .csc-header h4:hover, .accordionSingle > .csc-default > .csc-header .h4:hover {
+.accordion .accordion-navigation > a:hover, .accordion .accordion-navigation > .csc-header:first-child h4:hover, .accordion .accordion-navigation > .csc-header:first-child .h4:hover, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child h4:hover, .accordion .accordion-navigation > .csc-default:first-child > .csc-header:first-child .h4:hover, .accordion dd > a:hover, .accordion dd > .csc-header:first-child h4:hover, .accordion dd > .csc-header:first-child .h4:hover, .accordion dd > .csc-default:first-child > .csc-header:first-child h4:hover, .accordion dd > .csc-default:first-child > .csc-header:first-child .h4:hover, .accordionSingle > a:hover, .accordionSingle > .csc-header:first-child h4:hover, .accordionSingle > .csc-header:first-child .h4:hover, .accordionSingle > .csc-default:first-child > .csc-header:first-child h4:hover, .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4:hover {
   background-color: #bdbfbf;
 }
 /* line 675, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation.active > a::before, .accordion .accordion-navigation.active .csc-header h4::before, .accordion .accordion-navigation.active .csc-header .h4::before, .accordion dd.active > a::before, .accordion dd.active .csc-header h4::before, .accordion dd.active .csc-header .h4::before, .accordionSingle.active > a::before, .accordionSingle.active .csc-header h4::before, .accordionSingle.active .csc-header .h4::before {
+.accordion .accordion-navigation.active > a::before, .accordion .accordion-navigation.active > .csc-header:first-child h4::before, .accordion .accordion-navigation.active > .csc-header:first-child .h4::before, .accordion .accordion-navigation.active > .csc-default:first-child > .csc-header:first-child h4::before, .accordion .accordion-navigation.active > .csc-default:first-child > .csc-header:first-child .h4::before, .accordion dd.active > a::before, .accordion dd.active > .csc-header:first-child h4::before, .accordion dd.active > .csc-header:first-child .h4::before, .accordion dd.active > .csc-default:first-child > .csc-header:first-child h4::before, .accordion dd.active > .csc-default:first-child > .csc-header:first-child .h4::before, .accordionSingle.active > a::before, .accordionSingle.active > .csc-header:first-child h4::before, .accordionSingle.active > .csc-header:first-child .h4::before, .accordionSingle.active > .csc-default:first-child > .csc-header:first-child h4::before, .accordionSingle.active > .csc-default:first-child > .csc-header:first-child .h4::before {
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -12507,38 +12507,68 @@ ul.accordion {
   color: #FFFFFF;
 }
 /* line 679, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation.active .csc-header h4, .accordion .accordion-navigation.active .csc-header .h4, .accordion dd.active .csc-header h4, .accordion dd.active .csc-header .h4, .accordionSingle.active .csc-header h4, .accordionSingle.active .csc-header .h4 {
+.accordion .accordion-navigation.active > .csc-header:first-child h4, .accordion .accordion-navigation.active > .csc-header:first-child .h4, .accordion .accordion-navigation.active > .csc-default:first-child > .csc-header:first-child h4, .accordion .accordion-navigation.active > .csc-default:first-child > .csc-header:first-child .h4, .accordion dd.active > .csc-header:first-child h4, .accordion dd.active > .csc-header:first-child .h4, .accordion dd.active > .csc-default:first-child > .csc-header:first-child h4, .accordion dd.active > .csc-default:first-child > .csc-header:first-child .h4, .accordionSingle.active > .csc-header:first-child h4, .accordionSingle.active > .csc-header:first-child .h4, .accordionSingle.active > .csc-default:first-child > .csc-header:first-child h4, .accordionSingle.active > .csc-default:first-child > .csc-header:first-child .h4 {
   background-color: #97cde8;
 }
 
 /* line 683, ../../Private/Sources/scss/theme/_navigations.scss */
 .no-js .accordionSingle, .js .accordionSingle.active {
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.625rem;
 }
-/* line 685, ../../Private/Sources/scss/theme/_navigations.scss */
-.no-js .accordionSingle .csc-header h4, .no-js .accordionSingle .csc-header .h4, .js .accordionSingle.active .csc-header h4, .js .accordionSingle.active .csc-header .h4 {
+/* line 687, ../../Private/Sources/scss/theme/_navigations.scss */
+.no-js .accordionSingle > .csc-header:first-child h4, .no-js .accordionSingle > .csc-header:first-child .h4,
+.no-js .accordionSingle > .csc-default:first-child > .csc-header:first-child h4,
+.no-js .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4, .js .accordionSingle.active > .csc-header:first-child h4, .js .accordionSingle.active > .csc-header:first-child .h4,
+.js .accordionSingle.active > .csc-default:first-child > .csc-header:first-child h4,
+.js .accordionSingle.active > .csc-default:first-child > .csc-header:first-child .h4 {
   margin-bottom: 1.25rem;
 }
 
-/* line 689, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 692, ../../Private/Sources/scss/theme/_navigations.scss */
 .js .accordionSingle {
   padding-bottom: 0;
+  /* do we animate ?
+  max-height: 80px;
+  overflow: hidden;
+  @include transition-property(max-height);
+  @include transition-duration(0s);
+  @include transition-timing-function(cubic-bezier(1,.23,.95,-0.24));
+  */
 }
-/* line 691, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle .csc-header h4, .js .accordionSingle .csc-header .h4 {
+/* line 704, ../../Private/Sources/scss/theme/_navigations.scss */
+.js .accordionSingle > .csc-header:first-child h4, .js .accordionSingle > .csc-header:first-child .h4,
+.js .accordionSingle > .csc-default:first-child > .csc-header:first-child h4,
+.js .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4 {
   margin-bottom: 0;
 }
-/* line 694, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle *:not(:first-child):not(.csc-header):not(h4):not(.h4) {
-  display: none;
+/* line 709, ../../Private/Sources/scss/theme/_navigations.scss */
+.js .accordionSingle * {
+  height: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
 }
-/* line 698, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle.active *:not(:first-child):not(.csc-header):not(h4):not(.h4) {
-  display: initial;
+/* line 716, ../../Private/Sources/scss/theme/_navigations.scss */
+.js .accordionSingle > .csc-header:first-child, .js .accordionSingle > .csc-default:first-child, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child, .js .accordionSingle > .csc-header:first-child h4, .js .accordionSingle > .csc-header:first-child .h4, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child h4, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4 {
+  height: auto !important;
+}
+/* line 723, ../../Private/Sources/scss/theme/_navigations.scss */
+.js .accordionSingle.active {
+  /*
+  max-height: 3000px;
+  @include transition-duration(0.5s);
+  */
+}
+/* line 728, ../../Private/Sources/scss/theme/_navigations.scss */
+.js .accordionSingle.active * {
+  height: auto;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  overflow: visible;
 }
 
 /* pagination */
-/* line 706, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 739, ../../Private/Sources/scss/theme/_navigations.scss */
 .showResultsWrap {
   font-size: 1rem;
   color: #585858;
@@ -12546,22 +12576,22 @@ ul.accordion {
   margin-bottom: 0.3125rem;
 }
 
-/* line 712, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 745, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination {
   text-align: center;
   padding-top: 0.9375rem;
 }
-/* line 715, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 748, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li {
   display: inline;
   float: none;
   border-left: 1px solid #FFFFFF;
 }
-/* line 719, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 752, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li:first-child {
   border: none;
 }
-/* line 722, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 755, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li a {
   position: relative;
   display: inline-block;
@@ -12569,37 +12599,37 @@ ul.pagination li a {
   font-size: 1rem;
   background-color: #97cde8;
 }
-/* line 728, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 761, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li a:hover {
   background-color: #63b3db;
 }
-/* line 732, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 765, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li .current a {
   font-weight: 400;
 }
-/* line 735, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 768, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.prev a {
   padding-left: 15px;
 }
-/* line 737, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 770, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.prev a::before {
   content: '\00ab';
   left: 0px;
 }
-/* line 742, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 775, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.next a {
   padding-right: 15px;
 }
-/* line 744, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 777, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.next a::after {
   content: '\00bb';
   right: 0px;
 }
-/* line 750, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 783, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.next a, ul.pagination li.prev a {
   text-indent: -5000rem;
 }
-/* line 752, ../../Private/Sources/scss/theme/_navigations.scss */
+/* line 785, ../../Private/Sources/scss/theme/_navigations.scss */
 ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination li.prev a::after, ul.pagination li.prev a::before {
   position: absolute;
   font-size: 1.25rem;
@@ -12607,7 +12637,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   top: 0px;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 750, ../../Private/Sources/scss/theme/_navigations.scss */
+  /* line 783, ../../Private/Sources/scss/theme/_navigations.scss */
   ul.pagination li.next a, ul.pagination li.prev a {
     text-indent: 0;
   }
