@@ -634,7 +634,7 @@ ul.accordion {
 .accordion .accordion-navigation, .accordion dd, .accordionSingle {
 	position: relative;
 	margin-bottom: 10px !important;
-	> a, h4 {
+	> a, .csc-header h4, > .csc-default > .csc-header h4 {
 		position: relative;
 		font-weight: 700;
 		font-family: $text-font;
@@ -672,30 +672,30 @@ ul.accordion {
 		}
 	}
 
-	&.active > a::before, &.active h4::before {
+	&.active > a::before, &.active .csc-header h4::before {
 		@include transform(rotate(270deg));
 		color: $white;
 	}
-	&.active h4 {
+	&.active .csc-header h4 {
 		background-color: $light-blue;
 	}
 }
 .no-js .accordionSingle, .js .accordionSingle.active {
 	padding-bottom: rem-calc(20);
-	h4 {
+	.csc-header h4 {
 		margin-bottom: rem-calc(20);
 	}
 }
 .js .accordionSingle {
 	padding-bottom: 0;
-	h4 {
+	.csc-header h4 {
 		margin-bottom: 0;
 	}
-	*:not(.csc-header):not(h4) {
+	*:not(:first-child):not(.csc-header):not(h4) {
 		display: none;
 	}
 	&.active {
-		*:not(.csc-header):not(h4) {
+		*:not(:first-child):not(.csc-header):not(h4) {
 			display: initial;
 		}
 	}

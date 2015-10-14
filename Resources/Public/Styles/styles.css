@@ -9670,7 +9670,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 61, ../../Private/Sources/scss/theme/_icons.scss */
-.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation h4:before, .accordion .accordion-navigation .h4:before, .accordion dd > a:before, .accordion dd h4:before, .accordion dd .h4:before, .accordionSingle > a:before, .accordionSingle h4:before, .accordionSingle .h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
+.icomoon, .icon-mhplus-download:before, .brochure a:before, .icon-mhplus-lupe-mobile:before, .icon-mhplus-app:before, .icon-mhplus-quadrat:before, .csc-textpic-text ul li:before, #teaser-text ul li:before, #mainnav .top-bar-section .dropdown li.columns ul li:not(.back) a:before, .icon-mhplus-mobil-close:after, .expanded #toggle-topbar a:after, .icon-mhplus-mobil-menue:after, #toggle-topbar a:after, .icon-mhplus-pfeil-big:before, button.small:before, button.small:hover:before, ul.linklist li a:before, .sm-buttons a.toplink:before, .icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation .csc-header h4:before, .accordion .accordion-navigation .csc-header .h4:before, .accordion .accordion-navigation > .csc-default > .csc-header h4:before, .accordion dd > a:before, .accordion dd .csc-header h4:before, .accordion dd .csc-header .h4:before, .accordion dd > .csc-default > .csc-header h4:before, .accordionSingle > a:before, .accordionSingle .csc-header h4:before, .accordionSingle .csc-header .h4:before, .accordionSingle > .csc-default > .csc-header h4:before, .icon-mhplus-mhplusdirekt-small:before, #login a:before, .icon-mhplus-search:before, #searchlink a:before, #searchinput button:before, .icon-mhplus-einstellungen:before, #settings > a:before, .icon-mhplus-facebook:before, .icon-mhplus-gesch-stelle:before, #contact a:before, .icon-mhplus-hotline:before, .icon-mhplus-hotline24h:before, #phone24 a:before, .icon-mhplus-mhplusdirekt:before, #loginlink a:before, .icon-mhplus-newsletter:before, .icon-mhplus-twitter:before, .icon-mhplus-videochat:before, .icon-mhplus-w-adresse:before, .icon-mhplus-w-email:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -9722,7 +9722,7 @@ button.small::before, button.small:hover::before {
 }
 
 /* line 108, ../../Private/Sources/scss/theme/_icons.scss */
-.icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation h4:before, .accordion .accordion-navigation .h4:before, .accordion dd > a:before, .accordion dd h4:before, .accordion dd .h4:before, .accordionSingle > a:before, .accordionSingle h4:before, .accordionSingle .h4:before {
+.icon-mhplus-pfeil-smart:before, .js #mainslider .slide-desc .slide-title:before, .js #mainslider .slide-desc h3:before, .js #mainslider .slide-desc .h3:before, .js #mainslider .csc-textpic-bodytext .slide-title:before, .js #mainslider .csc-textpic-bodytext h3:before, .js #mainslider .csc-textpic-bodytext .h3:before, #mainnav .top-bar-section .has-dropdown > a:before, #mainnav .top-bar-section .dropdown .back a:before, .accordion .accordion-navigation > a:before, .accordion .accordion-navigation .csc-header h4:before, .accordion .accordion-navigation .csc-header .h4:before, .accordion .accordion-navigation > .csc-default > .csc-header h4:before, .accordion dd > a:before, .accordion dd .csc-header h4:before, .accordion dd .csc-header .h4:before, .accordion dd > .csc-default > .csc-header h4:before, .accordionSingle > a:before, .accordionSingle .csc-header h4:before, .accordionSingle .csc-header .h4:before, .accordionSingle > .csc-default > .csc-header h4:before {
   content: "\e601";
 }
 
@@ -12457,7 +12457,7 @@ ul.accordion {
   margin-bottom: 10px !important;
 }
 /* line 637, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a, .accordion .accordion-navigation h4, .accordion .accordion-navigation .h4, .accordion dd > a, .accordion dd h4, .accordion dd .h4, .accordionSingle > a, .accordionSingle h4, .accordionSingle .h4 {
+.accordion .accordion-navigation > a, .accordion .accordion-navigation .csc-header h4, .accordion .accordion-navigation .csc-header .h4, .accordion .accordion-navigation > .csc-default > .csc-header h4, .accordion .accordion-navigation > .csc-default > .csc-header .h4, .accordion dd > a, .accordion dd .csc-header h4, .accordion dd .csc-header .h4, .accordion dd > .csc-default > .csc-header h4, .accordion dd > .csc-default > .csc-header .h4, .accordionSingle > a, .accordionSingle .csc-header h4, .accordionSingle .csc-header .h4, .accordionSingle > .csc-default > .csc-header h4, .accordionSingle > .csc-default > .csc-header .h4 {
   position: relative;
   font-weight: 700;
   font-family: Arial, "ITCFranklinGothicW01-Dm 812668", "Utopia W01 It", sans-serif;
@@ -12469,7 +12469,7 @@ ul.accordion {
   transition: background-color 300ms ease-out;
 }
 /* line 649, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a::before, .accordion .accordion-navigation h4::before, .accordion .accordion-navigation .h4::before, .accordion dd > a::before, .accordion dd h4::before, .accordion dd .h4::before, .accordionSingle > a::before, .accordionSingle h4::before, .accordionSingle .h4::before {
+.accordion .accordion-navigation > a::before, .accordion .accordion-navigation .csc-header h4::before, .accordion .accordion-navigation .csc-header .h4::before, .accordion .accordion-navigation > .csc-default > .csc-header h4::before, .accordion .accordion-navigation > .csc-default > .csc-header .h4::before, .accordion dd > a::before, .accordion dd .csc-header h4::before, .accordion dd .csc-header .h4::before, .accordion dd > .csc-default > .csc-header h4::before, .accordion dd > .csc-default > .csc-header .h4::before, .accordionSingle > a::before, .accordionSingle .csc-header h4::before, .accordionSingle .csc-header .h4::before, .accordionSingle > .csc-default > .csc-header h4::before, .accordionSingle > .csc-default > .csc-header .h4::before {
   top: 0px;
   right: 0px;
   width: 41px;
@@ -12485,7 +12485,7 @@ ul.accordion {
   transform: rotate(90deg);
 }
 /* line 661, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a::after, .accordion .accordion-navigation h4::after, .accordion .accordion-navigation .h4::after, .accordion dd > a::after, .accordion dd h4::after, .accordion dd .h4::after, .accordionSingle > a::after, .accordionSingle h4::after, .accordionSingle .h4::after {
+.accordion .accordion-navigation > a::after, .accordion .accordion-navigation .csc-header h4::after, .accordion .accordion-navigation .csc-header .h4::after, .accordion .accordion-navigation > .csc-default > .csc-header h4::after, .accordion .accordion-navigation > .csc-default > .csc-header .h4::after, .accordion dd > a::after, .accordion dd .csc-header h4::after, .accordion dd .csc-header .h4::after, .accordion dd > .csc-default > .csc-header h4::after, .accordion dd > .csc-default > .csc-header .h4::after, .accordionSingle > a::after, .accordionSingle .csc-header h4::after, .accordionSingle .csc-header .h4::after, .accordionSingle > .csc-default > .csc-header h4::after, .accordionSingle > .csc-default > .csc-header .h4::after {
   content: '';
   position: absolute;
   top: 0px;
@@ -12495,11 +12495,11 @@ ul.accordion {
   border-left: 1px solid #f0f0f0;
 }
 /* line 670, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation > a:hover, .accordion .accordion-navigation h4:hover, .accordion .accordion-navigation .h4:hover, .accordion dd > a:hover, .accordion dd h4:hover, .accordion dd .h4:hover, .accordionSingle > a:hover, .accordionSingle h4:hover, .accordionSingle .h4:hover {
+.accordion .accordion-navigation > a:hover, .accordion .accordion-navigation .csc-header h4:hover, .accordion .accordion-navigation .csc-header .h4:hover, .accordion .accordion-navigation > .csc-default > .csc-header h4:hover, .accordion .accordion-navigation > .csc-default > .csc-header .h4:hover, .accordion dd > a:hover, .accordion dd .csc-header h4:hover, .accordion dd .csc-header .h4:hover, .accordion dd > .csc-default > .csc-header h4:hover, .accordion dd > .csc-default > .csc-header .h4:hover, .accordionSingle > a:hover, .accordionSingle .csc-header h4:hover, .accordionSingle .csc-header .h4:hover, .accordionSingle > .csc-default > .csc-header h4:hover, .accordionSingle > .csc-default > .csc-header .h4:hover {
   background-color: #bdbfbf;
 }
 /* line 675, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation.active > a::before, .accordion .accordion-navigation.active h4::before, .accordion .accordion-navigation.active .h4::before, .accordion dd.active > a::before, .accordion dd.active h4::before, .accordion dd.active .h4::before, .accordionSingle.active > a::before, .accordionSingle.active h4::before, .accordionSingle.active .h4::before {
+.accordion .accordion-navigation.active > a::before, .accordion .accordion-navigation.active .csc-header h4::before, .accordion .accordion-navigation.active .csc-header .h4::before, .accordion dd.active > a::before, .accordion dd.active .csc-header h4::before, .accordion dd.active .csc-header .h4::before, .accordionSingle.active > a::before, .accordionSingle.active .csc-header h4::before, .accordionSingle.active .csc-header .h4::before {
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -12507,7 +12507,7 @@ ul.accordion {
   color: #FFFFFF;
 }
 /* line 679, ../../Private/Sources/scss/theme/_navigations.scss */
-.accordion .accordion-navigation.active h4, .accordion .accordion-navigation.active .h4, .accordion dd.active h4, .accordion dd.active .h4, .accordionSingle.active h4, .accordionSingle.active .h4 {
+.accordion .accordion-navigation.active .csc-header h4, .accordion .accordion-navigation.active .csc-header .h4, .accordion dd.active .csc-header h4, .accordion dd.active .csc-header .h4, .accordionSingle.active .csc-header h4, .accordionSingle.active .csc-header .h4 {
   background-color: #97cde8;
 }
 
@@ -12516,7 +12516,7 @@ ul.accordion {
   padding-bottom: 1.25rem;
 }
 /* line 685, ../../Private/Sources/scss/theme/_navigations.scss */
-.no-js .accordionSingle h4, .no-js .accordionSingle .h4, .js .accordionSingle.active h4, .js .accordionSingle.active .h4 {
+.no-js .accordionSingle .csc-header h4, .no-js .accordionSingle .csc-header .h4, .js .accordionSingle.active .csc-header h4, .js .accordionSingle.active .csc-header .h4 {
   margin-bottom: 1.25rem;
 }
 
@@ -12525,15 +12525,15 @@ ul.accordion {
   padding-bottom: 0;
 }
 /* line 691, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle h4, .js .accordionSingle .h4 {
+.js .accordionSingle .csc-header h4, .js .accordionSingle .csc-header .h4 {
   margin-bottom: 0;
 }
 /* line 694, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle *:not(.csc-header):not(h4):not(.h4) {
+.js .accordionSingle *:not(:first-child):not(.csc-header):not(h4):not(.h4) {
   display: none;
 }
 /* line 698, ../../Private/Sources/scss/theme/_navigations.scss */
-.js .accordionSingle.active *:not(.csc-header):not(h4):not(.h4) {
+.js .accordionSingle.active *:not(:first-child):not(.csc-header):not(h4):not(.h4) {
   display: initial;
 }
 

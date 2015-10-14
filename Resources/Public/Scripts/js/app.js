@@ -245,9 +245,10 @@ jQuery.noConflict();
 		
 		
 		/* accordion */
-		$('.accordionSingle').click(function() {
-			$('.accordionSingle').not($(this)).removeClass('active');
-			$(this).toggleClass('active');
+		$('.accordionSingle').find('h4:first-child').click(function() {
+			var parent = $(this).parents('.accordionSingle').first();
+			$('.accordionSingle').not(parent).removeClass('active');
+			parent.toggleClass('active');
 		});
 		
 		/* start function on resize window */
