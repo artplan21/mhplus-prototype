@@ -135,7 +135,8 @@ jQuery.noConflict();
 		}		
 		
 		/* create off-canvas menue toggle */
-		$('#toggle-topbar').click(function() {	
+		$('#toggle-topbar').click(function(e) {
+			e.preventDefault();
 			// toggle class
 			$('#mainnav').toggleClass('expanded');
 				
@@ -192,7 +193,7 @@ jQuery.noConflict();
 					});
 				}
 			}
-			
+			return false;
 		});
 		
 		/* function for replacing targetnav and tabmenues */
