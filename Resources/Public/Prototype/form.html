@@ -249,15 +249,21 @@
 										<input id="alt2" name="CALCULATOR[alt]" checked="checked" value="2" class="checkbox" type="radio">
 										<label for="alt2" class="checkbox">Nein</label>
 								</div>
+								<fieldset class="field switch round large" tabindex="0">
+									<p class="label">Sind Sie älter als 30 Jahre?&nbsp;<span class="mandatory">*</span></p>
+									<input type="hidden" name="CALCULATOR[alt]" value="2" />
+									<input id="alt3" name="CALCULATOR[alt]" value="1" class="checkbox" type="checkbox" />
+									<label for="alt3">
+										<span class="switch-on">Ja<span class="hidden">, ich bin älter als 30 Jahre</span></span>
+										<span class="switch-off">Nein<span class="hidden">, ich bin nicht älter als 30 Jahre</span></span>
+									</label>
+								</fieldset>
 								<div class="field switch small">
 									<label for="sem1">Studieren Sie bereits mehr als 14 Semester im derzeitigen Studienfach?&nbsp;<span class="mandatory">*</span></label>
-									
 									<input id="sem1" name="CALCULATOR[sem]" value="1" class="checkbox" type="radio">
 									<label for="sem1" class="checkbox">Ja</label>
-									
 									<input id="sem2" name="CALCULATOR[sem]" checked="checked" value="2" class="checkbox" type="radio">
 									<label for="sem2" class="checkbox">Nein</label>
-									
 								</div>
 								<div class="field switch small">
 									<label for="famili1">Sind Sie familienversichert?&nbsp;<span class="mandatory">*</span></label>
