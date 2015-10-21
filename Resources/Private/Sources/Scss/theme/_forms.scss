@@ -65,16 +65,16 @@ fieldset {
 				width: auto;
 			}
 		}
-		
 	}
+
 	p { 
 		margin: 20px;
 	}
 	p+div.field {
 		margin-top: -25px;
 	}
-	
-	.field .switch, .field.switch {
+
+	.field .custom-switch, .field.custom-switch {
 		label.checkbox {
 			position: relative;
 			margin-bottom: 10px;
@@ -142,7 +142,51 @@ fieldset {
 			}
 		}
 	
-	}	
+	}
+
+    fieldset.field {
+        //overflow:hidden;
+        &::before, &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        %text-top-position {top:4px;}
+
+        p {
+            position: relative;
+            @extend %text-top-position;
+            margin: 0px;
+            float:left;
+
+            &.label {
+                width: 50%;
+            }
+        }
+
+        label {
+            text-indent:0px;
+            color:#222222;
+            margin:0 0 0 50px;
+
+            .switch-off {
+                position:absolute;
+                left:-38px;
+                font-weight:700;
+                @extend %text-top-position;
+            }
+            .switch-on {
+                position:absolute; left:56px;
+                @extend %text-top-position;
+            }
+        }
+
+        input:checked+label {
+          .switch-off {font-weight:normal;}
+          .switch-on {font-weight:700;}
+        }
+    }
 }
   
   

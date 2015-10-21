@@ -4890,6 +4890,162 @@ ul.pagination li {
   float: none;
 }
 
+/* line 215, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch {
+  border: none;
+  margin-bottom: 1.5rem;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 58, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label {
+  background: #DDDDDD;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  text-indent: 100%;
+  width: 4rem;
+  height: 2rem;
+  transition: left 0.15s ease-out;
+}
+/* line 74, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input {
+  left: 10px;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 9px;
+}
+/* line 81, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input + label {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 88, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label:after {
+  background: #FFFFFF;
+  content: "";
+  display: block;
+  height: 1.5rem;
+  left: .25rem;
+  position: absolute;
+  top: .25rem;
+  width: 1.5rem;
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: translate3d(0, 0, 0);
+  transition: left 0.15s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 110, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input:checked + label {
+  background: #585858;
+}
+/* line 114, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input:checked + label:after {
+  left: 2.25rem;
+}
+/* line 126, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label {
+  height: 2rem;
+  width: 4rem;
+}
+/* line 131, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label:after {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+/* line 136, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input:checked + label:after {
+  left: 2.25rem;
+}
+/* line 157, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label {
+  color: transparent;
+  background: #DDDDDD;
+}
+/* line 162, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch label:after {
+  background: #FFFFFF;
+}
+/* line 166, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch input:checked + label {
+  background: #585858;
+}
+/* line 126, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.large label {
+  height: 2.5rem;
+  width: 5rem;
+}
+/* line 131, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.large label:after {
+  height: 2rem;
+  width: 2rem;
+}
+/* line 136, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.large input:checked + label:after {
+  left: 2.75rem;
+}
+/* line 126, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.small label {
+  height: 1.75rem;
+  width: 3.5rem;
+}
+/* line 131, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.small label:after {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+/* line 136, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.small input:checked + label:after {
+  left: 2rem;
+}
+/* line 126, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.tiny label {
+  height: 1.5rem;
+  width: 3rem;
+}
+/* line 131, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.tiny label:after {
+  height: 1rem;
+  width: 1rem;
+}
+/* line 136, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.tiny input:checked + label:after {
+  left: 1.75rem;
+}
+/* line 229, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.radius label {
+  border-radius: 4px;
+}
+/* line 230, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.radius label:after {
+  border-radius: 3px;
+}
+/* line 234, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.round {
+  border-radius: 1000px;
+}
+/* line 235, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.round label {
+  border-radius: 2rem;
+}
+/* line 236, ../../Private/Sources/Scss/foundation/components/_switches.scss */
+.switch.round label:after {
+  border-radius: 2rem;
+}
+
 /* line 131, ../../Private/Sources/Scss/foundation/components/_tables.scss */
 table {
   background: #FFFFFF;
@@ -9474,7 +9630,7 @@ fieldset p + div.field {
   margin-top: -25px;
 }
 /* line 78, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch label.checkbox, fieldset .field.switch label.checkbox {
+fieldset .field .custom-switch label.checkbox, fieldset .field.custom-switch label.checkbox {
   position: relative;
   margin-bottom: 10px;
   width: auto !important;
@@ -9505,7 +9661,7 @@ fieldset .field .switch label.checkbox, fieldset .field.switch label.checkbox {
   */
 }
 /* line 85, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch label.checkbox::before, fieldset .field.switch label.checkbox::before {
+fieldset .field .custom-switch label.checkbox::before, fieldset .field.custom-switch label.checkbox::before {
   content: '';
   position: absolute;
   width: 42px;
@@ -9515,7 +9671,7 @@ fieldset .field .switch label.checkbox::before, fieldset .field.switch label.che
   background: #dfe0e0;
 }
 /* line 94, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch label.checkbox::after, fieldset .field.switch label.checkbox::after {
+fieldset .field .custom-switch label.checkbox::after, fieldset .field.custom-switch label.checkbox::after {
   content: '';
   position: absolute;
   height: 18px;
@@ -9526,31 +9682,76 @@ fieldset .field .switch label.checkbox::after, fieldset .field.switch label.chec
   transition: left 0.15s ease-out 0s;
 }
 /* line 130, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch input, fieldset .field.switch input {
+fieldset .field .custom-switch input, fieldset .field.custom-switch input {
   position: absolute;
   opacity: 0;
 }
 /* line 134, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch input:checked + label, fieldset .field.switch input:checked + label {
+fieldset .field .custom-switch input:checked + label, fieldset .field.custom-switch input:checked + label {
   font-weight: 700;
 }
 /* line 137, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch input:checked + label::before, fieldset .field.switch input:checked + label::before {
+fieldset .field .custom-switch input:checked + label::before, fieldset .field.custom-switch input:checked + label::before {
   background: #585858;
 }
 /* line 140, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset .field .switch input:checked + label::after, fieldset .field.switch input:checked + label::after {
+fieldset .field .custom-switch input:checked + label::after, fieldset .field.custom-switch input:checked + label::after {
   left: 21px;
 }
-
 /* line 149, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field::before, fieldset fieldset.field::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/* line 155, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field p, fieldset fieldset.field label .switch-off, fieldset fieldset.field label .switch-on {
+  top: 4px;
+}
+/* line 157, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field p {
+  position: relative;
+  margin: 0px;
+  float: left;
+}
+/* line 163, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field p.label {
+  width: 50%;
+}
+/* line 168, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field label {
+  text-indent: 0px;
+  color: #222222;
+  margin: 0 0 0 50px;
+}
+/* line 173, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field label .switch-off {
+  position: absolute;
+  left: -38px;
+  font-weight: 700;
+}
+/* line 179, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field label .switch-on {
+  position: absolute;
+  left: 56px;
+}
+/* line 186, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field input:checked + label .switch-off {
+  font-weight: normal;
+}
+/* line 187, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field input:checked + label .switch-on {
+  font-weight: 700;
+}
+
+/* line 193, ../../Private/Sources/Scss/theme/_forms.scss */
 .button_set {
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid #97cde8;
 }
 
-/* line 155, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 199, ../../Private/Sources/Scss/theme/_forms.scss */
 select {
   min-height: 32px;
   transition: background-color 300ms ease-out;
@@ -9558,34 +9759,34 @@ select {
   background-position: right center;
 }
 
-/* line 161, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 205, ../../Private/Sources/Scss/theme/_forms.scss */
 .invers select {
   background-color: #FFFFFF;
 }
-/* line 163, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 207, ../../Private/Sources/Scss/theme/_forms.scss */
 .invers select:hover {
   background-color: #FFFFFF;
 }
 
-/* line 169, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 213, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group {
   background: none;
   padding: 0px;
   margin: 6px 0px 6px 0px;
   border: none;
 }
-/* line 175, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 219, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group input {
   float: left;
   width: auto;
   max-width: 83%;
 }
-/* line 180, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 224, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group button {
   float: left;
 }
 
-/* line 185, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 229, ../../Private/Sources/Scss/theme/_forms.scss */
 input {
   padding: 0px;
 }
@@ -9594,7 +9795,7 @@ input[type="text"]:-ms-input-placeholder {
   color: #606060;
 }
 
-/* line 198, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 242, ../../Private/Sources/Scss/theme/_forms.scss */
 button, .button, input[type="submit"] {
   color: #FFFFFF;
   background-color: #585858;
@@ -9609,27 +9810,27 @@ button, .button, input[type="submit"] {
   }
   */
 }
-/* line 213, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 257, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button, html[class*=layout-standard] .layout-slot-50 button, .layout-landingpage .layout-slot-0 button, .layout-landingpage .layout-slot-50 button, button.large, html[class*=layout-standard] .layout-slot-0 .button, html[class*=layout-standard] .layout-slot-0 input[type="submit"], html[class*=layout-standard] .layout-slot-50 .button, html[class*=layout-standard] .layout-slot-50 input[type="submit"], .layout-landingpage .layout-slot-0 .button, .layout-landingpage .layout-slot-0 input[type="submit"], .layout-landingpage .layout-slot-50 .button, .layout-landingpage .layout-slot-50 input[type="submit"], .button.large, input.large[type="submit"] {
   font-size: 1rem;
   padding: 13px 35px 13px 35px;
 }
-/* line 221, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 265, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button, html[class*=layout-standard] .layout-slot-50 button, .layout-landingpage .layout-slot-0 button, .layout-landingpage .layout-slot-50 button, button.blue, html[class*=layout-standard] .layout-slot-0 .button, html[class*=layout-standard] .layout-slot-0 input[type="submit"], html[class*=layout-standard] .layout-slot-50 .button, html[class*=layout-standard] .layout-slot-50 input[type="submit"], .layout-landingpage .layout-slot-0 .button, .layout-landingpage .layout-slot-0 input[type="submit"], .layout-landingpage .layout-slot-50 .button, .layout-landingpage .layout-slot-50 input[type="submit"], .button.blue, input.blue[type="submit"] {
   background-color: #97cde8;
   color: #FFFFFF;
 }
-/* line 228, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 272, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button:hover, html[class*=layout-standard] .layout-slot-50 button:hover, .layout-landingpage .layout-slot-0 button:hover, .layout-landingpage .layout-slot-50 button:hover, button.blue:hover, html[class*=layout-standard] .layout-slot-0 .button:hover, html[class*=layout-standard] .layout-slot-0 input[type="submit"]:hover, html[class*=layout-standard] .layout-slot-50 .button:hover, html[class*=layout-standard] .layout-slot-50 input[type="submit"]:hover, .layout-landingpage .layout-slot-0 .button:hover, .layout-landingpage .layout-slot-0 input[type="submit"]:hover, .layout-landingpage .layout-slot-50 .button:hover, .layout-landingpage .layout-slot-50 input[type="submit"]:hover, .button.blue:hover, input.blue[type="submit"]:hover {
   background-color: #63b3db;
 }
-/* line 232, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 276, ../../Private/Sources/Scss/theme/_forms.scss */
 button.fullwidth, .button.fullwidth, input.fullwidth[type="submit"] {
   text-align: left;
   width: 100%;
 }
 
-/* line 238, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 282, ../../Private/Sources/Scss/theme/_forms.scss */
 button.small, button.small:hover {
   width: 24px !important;
   height: 23px !important;
@@ -9639,7 +9840,7 @@ button.small, button.small:hover {
   text-indent: -1000em;
   overflow: hidden;
 }
-/* line 248, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 292, ../../Private/Sources/Scss/theme/_forms.scss */
 button.small::before, button.small:hover::before {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
