@@ -12549,7 +12549,7 @@ ul.accordion {
   height: auto !important;
 }
 /* line 724, ../../Private/Sources/Scss/theme/_navigations.scss */
-.js .accordionSingle .csc-textpic-text ul li {
+.js .accordionSingle ul li {
   position: relative;
 }
 /* line 728, ../../Private/Sources/Scss/theme/_navigations.scss */
