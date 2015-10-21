@@ -4,3 +4,7 @@
     background-image: url('Images/Sprites/Icons/badge-einfachmitglied_retina.png');
     margin: -1.25rem -0.3125rem 0 0;
 }
+
+.csc-textpic-text ul li {
+    position:relative;
+}
