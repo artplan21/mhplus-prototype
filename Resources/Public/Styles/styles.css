@@ -12548,14 +12548,18 @@ ul.accordion {
 .js .accordionSingle > .csc-header:first-child, .js .accordionSingle > .csc-default:first-child, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child, .js .accordionSingle > .csc-header:first-child h4, .js .accordionSingle > .csc-header:first-child .h4, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child h4, .js .accordionSingle > .csc-default:first-child > .csc-header:first-child .h4 {
   height: auto !important;
 }
-/* line 723, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 724, ../../Private/Sources/Scss/theme/_navigations.scss */
+.js .accordionSingle .csc-textpic-text ul li {
+  position: relative;
+}
+/* line 728, ../../Private/Sources/Scss/theme/_navigations.scss */
 .js .accordionSingle.active {
   /*
   max-height: 3000px;
   @include transition-duration(0.5s);
   */
 }
-/* line 728, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 733, ../../Private/Sources/Scss/theme/_navigations.scss */
 .js .accordionSingle.active * {
   height: auto;
   margin-top: inherit;
@@ -12564,7 +12568,7 @@ ul.accordion {
 }
 
 /* pagination */
-/* line 739, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 744, ../../Private/Sources/Scss/theme/_navigations.scss */
 .showResultsWrap {
   font-size: 1rem;
   color: #585858;
@@ -12572,22 +12576,22 @@ ul.accordion {
   margin-bottom: 0.3125rem;
 }
 
-/* line 745, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 750, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination {
   text-align: center;
   padding-top: 0.9375rem;
 }
-/* line 748, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 753, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li {
   display: inline;
   float: none;
   border-left: 1px solid #FFFFFF;
 }
-/* line 752, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 757, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li:first-child {
   border: none;
 }
-/* line 755, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 760, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li a {
   position: relative;
   display: inline-block;
@@ -12595,37 +12599,37 @@ ul.pagination li a {
   font-size: 1rem;
   background-color: #97cde8;
 }
-/* line 761, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 766, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li a:hover {
   background-color: #63b3db;
 }
-/* line 765, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 770, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li .current a {
   font-weight: 400;
 }
-/* line 768, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 773, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.prev a {
   padding-left: 15px;
 }
-/* line 770, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 775, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.prev a::before {
   content: '\00ab';
   left: 0px;
 }
-/* line 775, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 780, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.next a {
   padding-right: 15px;
 }
-/* line 777, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 782, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.next a::after {
   content: '\00bb';
   right: 0px;
 }
-/* line 783, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 788, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.next a, ul.pagination li.prev a {
   text-indent: -5000rem;
 }
-/* line 785, ../../Private/Sources/Scss/theme/_navigations.scss */
+/* line 790, ../../Private/Sources/Scss/theme/_navigations.scss */
 ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination li.prev a::after, ul.pagination li.prev a::before {
   position: absolute;
   font-size: 1.25rem;
@@ -12633,7 +12637,7 @@ ul.pagination li.next a::after, ul.pagination li.next a::before, ul.pagination l
   top: 0px;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 783, ../../Private/Sources/Scss/theme/_navigations.scss */
+  /* line 788, ../../Private/Sources/Scss/theme/_navigations.scss */
   ul.pagination li.next a, ul.pagination li.prev a {
     text-indent: 0;
   }

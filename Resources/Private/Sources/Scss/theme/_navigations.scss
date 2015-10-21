@@ -720,6 +720,11 @@ ul.accordion {
 	& > .csc-default:first-child > .csc-header:first-child h4 {
 		height: auto !important;
 	}
+
+    .csc-textpic-text ul li {
+      position:relative;
+    }
+
 	&.active {
 		/*
 		max-height: 3000px;
