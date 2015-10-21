@@ -1,0 +1,6 @@
+#badge-box.box > div.csc-default:first-child::before,
+#c16044::before{
+    content: '';
+    background-image: url('Images/Sprites/Icons/badge-einfachmitglied_retina.png');
+    margin: -1.25rem -0.3125rem 0 0;
+}

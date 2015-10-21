@@ -292,15 +292,22 @@ div[data-equalizer-watch]:not(.imagebox):not(.box) {
 }
 
 /* aside box with badge */
-#badge-box.box {
+#badge-box.box > div.csc-default:first-child {
 	&::before {
 		position: relative;
 		float: right;
 		margin: rem-calc(-20) rem-calc(-5) 0 0;
+
+        // (badge-fix 21_10_2015) ->
+        height: 84px; //
+        width: 99px;
+        background-size: 100%;
+        background-position: 0 0;
+        // <- (badge-fix 21_10_2015)
 	}
 	
 	@extend %add-before;
-	@include icon(badge-einfachmitglied_retina, 2);
+	//@include icon(badge-einfachmitglied_retina, 2); (badge-fix 21_10_2015)
 }
 
 /* aside and dropdown box with contactinfo */

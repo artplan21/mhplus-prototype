@@ -29,11 +29,11 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png", $position: 0%, $spacing: 
 
 
 @mixin icon-standards {
-	content: '';
+	//content: ''; <- moved to %add-after (badge-fix 21_10_2015)
 	display: block;
 	margin-top: -8px;
 	background-repeat: no-repeat;
-	@extend %all-sprites-standard;
+	//@extend %all-sprites-standard; <- moved to %add-after (badge-fix 21_10_2015)
 }
 
 
@@ -48,8 +48,10 @@ $standard-icon-map: sprite-map("Sprites/Icons/\*.png", $position: 0%, $spacing: 
 %add-after {
 	&::after {
 		@include icon-standards;
+        content: '';
 		float:right;
 		margin-left: 7px;
+        @extend %all-sprites-standard;
 	}
 }
 
