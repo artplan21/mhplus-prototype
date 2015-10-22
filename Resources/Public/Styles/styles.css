@@ -9698,60 +9698,72 @@ fieldset .field .custom-switch input:checked + label::before, fieldset .field.cu
 fieldset .field .custom-switch input:checked + label::after, fieldset .field.custom-switch input:checked + label::after {
   left: 21px;
 }
-/* line 149, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field::before, fieldset fieldset.field::after {
+/* line 147, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset.field.insurence-data fieldset.field.insurence-data p, fieldset.field.insurence-data fieldset.field.insurence-data label .switch-off, fieldset.field.insurence-data fieldset.field.insurence-data label .switch-on, fieldset.field.earnings-data fieldset.field.earnings-data p {
+  position: relative;
+  top: 4px;
+}
+/* line 153, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data::before, fieldset fieldset.field.earnings-data::before, fieldset fieldset.field.insurence-data::after, fieldset fieldset.field.earnings-data::after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 155, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field p, fieldset fieldset.field label .switch-off, fieldset fieldset.field label .switch-on {
-  top: 4px;
-}
-/* line 157, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field p {
-  position: relative;
+/* line 165, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data p {
   margin: 0px;
   float: left;
 }
-/* line 163, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field p.label {
+/* line 170, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data p.label {
   width: 50%;
 }
-/* line 168, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field label {
+/* line 175, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data label {
   text-indent: 0px;
   color: #222222;
   margin: 0 0 0 50px;
 }
-/* line 173, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field label .switch-off {
+/* line 180, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data label .switch-off {
   position: absolute;
   left: -38px;
   font-weight: 700;
 }
-/* line 179, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field label .switch-on {
+/* line 186, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data label .switch-on {
   position: absolute;
   left: 56px;
 }
-/* line 186, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field input:checked + label .switch-off {
+/* line 193, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data input:checked + label .switch-off {
   font-weight: normal;
 }
-/* line 187, ../../Private/Sources/Scss/theme/_forms.scss */
-fieldset fieldset.field input:checked + label .switch-on {
+/* line 194, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.insurence-data input:checked + label .switch-on {
   font-weight: 700;
 }
+/* line 201, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.earnings-data label {
+  text-indent: 0px;
+  color: #222222;
+  margin: 0 10px 0 0;
+  float: left;
+}
+/* line 208, ../../Private/Sources/Scss/theme/_forms.scss */
+fieldset fieldset.field.earnings-data p {
+  margin: 0px;
+  float: left;
+}
 
-/* line 193, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 217, ../../Private/Sources/Scss/theme/_forms.scss */
 .button_set {
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid #97cde8;
 }
 
-/* line 199, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 223, ../../Private/Sources/Scss/theme/_forms.scss */
 select {
   min-height: 32px;
   transition: background-color 300ms ease-out;
@@ -9759,34 +9771,34 @@ select {
   background-position: right center;
 }
 
-/* line 205, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 229, ../../Private/Sources/Scss/theme/_forms.scss */
 .invers select {
   background-color: #FFFFFF;
 }
-/* line 207, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 231, ../../Private/Sources/Scss/theme/_forms.scss */
 .invers select:hover {
   background-color: #FFFFFF;
 }
 
-/* line 213, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 237, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group {
   background: none;
   padding: 0px;
   margin: 6px 0px 6px 0px;
   border: none;
 }
-/* line 219, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 243, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group input {
   float: left;
   width: auto;
   max-width: 83%;
 }
-/* line 224, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 248, ../../Private/Sources/Scss/theme/_forms.scss */
 fieldset.input-button-group button {
   float: left;
 }
 
-/* line 229, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 253, ../../Private/Sources/Scss/theme/_forms.scss */
 input {
   padding: 0px;
 }
@@ -9795,7 +9807,7 @@ input[type="text"]:-ms-input-placeholder {
   color: #606060;
 }
 
-/* line 242, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 266, ../../Private/Sources/Scss/theme/_forms.scss */
 button, .button, input[type="submit"] {
   color: #FFFFFF;
   background-color: #585858;
@@ -9810,27 +9822,27 @@ button, .button, input[type="submit"] {
   }
   */
 }
-/* line 257, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 281, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button, html[class*=layout-standard] .layout-slot-50 button, .layout-landingpage .layout-slot-0 button, .layout-landingpage .layout-slot-50 button, button.large, html[class*=layout-standard] .layout-slot-0 .button, html[class*=layout-standard] .layout-slot-0 input[type="submit"], html[class*=layout-standard] .layout-slot-50 .button, html[class*=layout-standard] .layout-slot-50 input[type="submit"], .layout-landingpage .layout-slot-0 .button, .layout-landingpage .layout-slot-0 input[type="submit"], .layout-landingpage .layout-slot-50 .button, .layout-landingpage .layout-slot-50 input[type="submit"], .button.large, input.large[type="submit"] {
   font-size: 1rem;
   padding: 13px 35px 13px 35px;
 }
-/* line 265, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 289, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button, html[class*=layout-standard] .layout-slot-50 button, .layout-landingpage .layout-slot-0 button, .layout-landingpage .layout-slot-50 button, button.blue, html[class*=layout-standard] .layout-slot-0 .button, html[class*=layout-standard] .layout-slot-0 input[type="submit"], html[class*=layout-standard] .layout-slot-50 .button, html[class*=layout-standard] .layout-slot-50 input[type="submit"], .layout-landingpage .layout-slot-0 .button, .layout-landingpage .layout-slot-0 input[type="submit"], .layout-landingpage .layout-slot-50 .button, .layout-landingpage .layout-slot-50 input[type="submit"], .button.blue, input.blue[type="submit"] {
   background-color: #97cde8;
   color: #FFFFFF;
 }
-/* line 272, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 296, ../../Private/Sources/Scss/theme/_forms.scss */
 html[class*=layout-standard] .layout-slot-0 button:hover, html[class*=layout-standard] .layout-slot-50 button:hover, .layout-landingpage .layout-slot-0 button:hover, .layout-landingpage .layout-slot-50 button:hover, button.blue:hover, html[class*=layout-standard] .layout-slot-0 .button:hover, html[class*=layout-standard] .layout-slot-0 input[type="submit"]:hover, html[class*=layout-standard] .layout-slot-50 .button:hover, html[class*=layout-standard] .layout-slot-50 input[type="submit"]:hover, .layout-landingpage .layout-slot-0 .button:hover, .layout-landingpage .layout-slot-0 input[type="submit"]:hover, .layout-landingpage .layout-slot-50 .button:hover, .layout-landingpage .layout-slot-50 input[type="submit"]:hover, .button.blue:hover, input.blue[type="submit"]:hover {
   background-color: #63b3db;
 }
-/* line 276, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 300, ../../Private/Sources/Scss/theme/_forms.scss */
 button.fullwidth, .button.fullwidth, input.fullwidth[type="submit"] {
   text-align: left;
   width: 100%;
 }
 
-/* line 282, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 306, ../../Private/Sources/Scss/theme/_forms.scss */
 button.small, button.small:hover {
   width: 24px !important;
   height: 23px !important;
@@ -9840,7 +9852,7 @@ button.small, button.small:hover {
   text-indent: -1000em;
   overflow: hidden;
 }
-/* line 292, ../../Private/Sources/Scss/theme/_forms.scss */
+/* line 316, ../../Private/Sources/Scss/theme/_forms.scss */
 button.small::before, button.small:hover::before {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);

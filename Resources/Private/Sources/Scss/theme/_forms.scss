@@ -144,18 +144,25 @@ fieldset {
 	
 	}
 
-    fieldset.field {
-        //overflow:hidden;
+    %text-top-position {
+        position: relative;
+        top:4px;
+    }
+
+    %clear-floats {
         &::before, &::after {
             content: '';
             display: table;
             clear: both;
         }
+    }
 
-        %text-top-position {top:4px;}
+
+    fieldset.field.insurence-data {
+        //overflow:hidden;
+        @extend %clear-floats;
 
         p {
-            position: relative;
             @extend %text-top-position;
             margin: 0px;
             float:left;
@@ -185,6 +192,23 @@ fieldset {
         input:checked+label {
           .switch-off {font-weight:normal;}
           .switch-on {font-weight:700;}
+        }
+    }
+
+    fieldset.field.earnings-data {
+        @extend %clear-floats;
+
+        label {
+            text-indent:0px;
+            color:#222222;
+            margin:0 10px 0 0;
+            float:left;
+        }
+
+        p {
+            @extend %text-top-position;
+            margin: 0px;
+            float:left;
         }
     }
 }
