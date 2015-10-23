@@ -222,7 +222,7 @@ jQuery.noConflict();
 		$.replaceToSelectMenue({id: 'targetnav-select', insertBefore: $('#mainnav'), selector: $('#targetnav li a')});
 		
 		/* replace tabs menues */
-		$('.tabs, .csc-menu-1').each(function(){
+		$('.tabs').each(function(){
 			$.replaceToSelectMenue({addclass: 'tabs-select', insertBefore: $(this), selector: $(this).find('a')});
 		});
 		

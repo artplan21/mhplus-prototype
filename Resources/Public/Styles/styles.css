@@ -11833,28 +11833,28 @@ ul.tabs {
   border-bottom: 1px solid #cccccc;
 }
 /* line 79, ../../Private/Sources/Scss/theme/_navigations.scss */
-.layout-landingpage ul.tabs, .layout-landingpage ul.csc-menu-1 {
+.layout-landingpage ul.tabs {
   margin-top: -109px;
   margin-left: -20px;
 }
 @media only screen and (max-width: 61.875em) {
   /* line 79, ../../Private/Sources/Scss/theme/_navigations.scss */
-  .layout-landingpage ul.tabs, .layout-landingpage ul.csc-menu-1 {
+  .layout-landingpage ul.tabs {
     margin-top: 0px;
   }
 }
 /* line 87, ../../Private/Sources/Scss/theme/_navigations.scss */
-.js ul.tabs, .js ul.csc-menu-1 {
+.js ul.tabs {
   display: none;
 }
 @media only screen and (min-width: 61.9375em) {
   /* line 91, ../../Private/Sources/Scss/theme/_navigations.scss */
-  .js ul.tabs, .js ul.csc-menu-1 {
+  .js ul.tabs {
     display: block;
   }
 }
 /* line 96, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li, ul.csc-menu-1 li {
+ul.tabs li {
   float: none;
   padding: 0px;
   margin: 0px 0px -1px 0px;
@@ -11862,21 +11862,21 @@ ul.tabs li, ul.csc-menu-1 li {
 }
 @media only screen and (min-width: 61.9375em) {
   /* line 96, ../../Private/Sources/Scss/theme/_navigations.scss */
-  ul.tabs li, ul.csc-menu-1 li {
+  ul.tabs li {
     float: left;
     width: auto;
   }
 }
 /* line 107, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li::before, ul.csc-menu-1 li::before {
+ul.tabs li::before {
   content: none;
 }
 /* line 111, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li:last-child a, ul.csc-menu-1 li:last-child a {
+ul.tabs li:last-child a {
   margin-right: 0px;
 }
 /* line 115, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li a, ul.csc-menu-1 li a {
+ul.tabs li a {
   display: block;
   padding: 12px 20px 9px 20px;
   margin-right: 0px;
@@ -11887,29 +11887,29 @@ ul.tabs li a, ul.csc-menu-1 li a {
 }
 @media only screen and (min-width: 61.9375em) {
   /* line 115, ../../Private/Sources/Scss/theme/_navigations.scss */
-  ul.tabs li a, ul.csc-menu-1 li a {
+  ul.tabs li a {
     margin-right: 5px;
     border-bottom: none;
   }
 }
 /* line 128, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li a:hover, ul.csc-menu-1 li a:hover {
+ul.tabs li a:hover {
   background-color: #bdbfbf;
 }
 /* line 134, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs li.active a, ul.csc-menu-1 li.active a {
+ul.tabs li.active a {
   background-color: #FFFFFF;
 }
 @media only screen and (min-width: 61.9375em) {
   /* line 134, ../../Private/Sources/Scss/theme/_navigations.scss */
-  ul.tabs li.active a, ul.csc-menu-1 li.active a {
+  ul.tabs li.active a {
     padding-top: 11px;
     border: 1px solid #cccccc;
     border-bottom: 1px solid #FFFFFF;
   }
 }
 /* line 145, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs::after, ul.tabs::before, ul.csc-menu-1::after, ul.csc-menu-1::before {
+ul.tabs::after, ul.tabs::before {
   content: ' ';
   display: table;
   clear: both;
