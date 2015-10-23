@@ -11824,7 +11824,7 @@ header ul, header ul li {
 
 /* tabs */
 /* line 71, ../../Private/Sources/Scss/theme/_navigations.scss */
-ul.tabs, ul.csc-menu-1 {
+ul.tabs {
   position: relative;
   display: block;
   list-style: none;
