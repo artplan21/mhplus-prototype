@@ -243,7 +243,7 @@
 
 							<fieldset>
 								<legend>Versicherungsrechtliche Angaben</legend>
-                                <fieldset class="field insurence-data switch round tiny" tabindex="0">
+                                <fieldset class="field toggle switch round tiny" tabindex="0">
                                     <p class="label">Sind Sie älter als 30 Jahre?&nbsp;<span class="mandatory">*</span></p>
                                     <input type="hidden" name="CALCULATOR[alt]" value="2" />
                                     <input id="alt" name="CALCULATOR[alt]" value="1" class="checkbox" type="checkbox" />
@@ -252,7 +252,7 @@
                                         <span class="switch-on">Ja<span class="hidden">, ich bin älter als 30 Jahre</span></span>
                                     </label>
                                 </fieldset>
-                                <fieldset class="field insurence-data switch round tiny" tabindex="0">
+                                <fieldset class="field toggle switch round tiny" tabindex="0">
                                     <p class="label">Studieren Sie bereits mehr als 14 Semester im derzeitigen Studienfach?&nbsp;<span class="mandatory">*</span></p>
                                     <input type="hidden" name="CALCULATOR[sem]" value="2" />
                                     <input id="sem" name="CALCULATOR[sem]" value="1" class="checkbox" type="checkbox" />
@@ -261,7 +261,7 @@
                                         <span class="switch-on">Ja<span class="hidden">, ich bin älter als 30 Jahre</span></span>
                                     </label>
                                 </fieldset>
-                                <fieldset class="field insurence-data switch round tiny" tabindex="0">
+                                <fieldset class="field toggle switch round tiny" tabindex="0">
                                     <p class="label">Sind Sie familienversichert?&nbsp;<span class="mandatory">*</span></p>
                                     <input type="hidden" name="CALCULATOR[famili]" value="2" />
                                     <input id="famili" name="CALCULATOR[famili]" value="1" class="checkbox" type="checkbox" />
@@ -303,19 +303,54 @@
 									<!--<span class="error"></span>-->
 								</div>
 
-								
 								<p>Monatliches Bruttoeinkommen aus&nbsp;<span class="mandatory">*</span></p>
+                                <!--<br />-->
 
-                                <br />
-
-                                <fieldset class="field earnings-data switch round tiny" tabindex="0">
-                                    <input id="handel0" name="CALCULATOR[handel]" checked="checked" value="1" type="radio">
-                                    <label for="handel0"></label>
-                                    <p>sonstige Einkünfte (z.B. BAFöG, Mieteinnahmen, Unterstützung von Eltern)</p>
+                                <fieldset class="field left-radio switch round tiny" tabindex="0">
+                                    <input id="handel1" name="CALCULATOR[handel]" checked="checked" value="1" type="radio">
+                                    <label for="handel1">
+										<span class="label">sonstige Einkünfte (z.B. BAFöG, Mieteinnahmen, Unterstützung von Eltern)</span>
+									</label>
                                 </fieldset>
 
+								<fieldset class="field left-radio switch round tiny" tabindex="0">
+									<input id="handel2" name="CALCULATOR[handel]" value="2" type="radio">
+									<label for="handel2">
+										<span class="label">selbstständiger Tätigkeit</span>
+									</label>
+								</fieldset>
 
-								<div class="field custom-switch small">
+								<fieldset class="field left-radio switch round tiny" tabindex="0">
+									<input id="handel3" name="CALCULATOR[handel]" value="3" type="radio">
+									<label for="handel3">
+										<span class="label">Beschäftigung (Arbeitszeit bis 20 Stunden/Woche)</span>
+									</label>
+								</fieldset>
+
+								<fieldset class="field left-radio switch round tiny" tabindex="0">
+									<input id="handel4" name="CALCULATOR[handel]" value="4" type="radio">
+									<label for="handel4">
+										<span class="label">Beschäftigung (Arbeitszeit mehr als 20 Stunden/Woche)</span>
+									</label>
+								</fieldset>
+
+								<p>Beschäftigungsort (Pflegeversicherung)&nbsp;<span class="mandatory">*</span></p>
+
+								<fieldset class="field left-radio switch round tiny" tabindex="0">
+									<input id="ort1" name="CALCULATOR[ort]" checked="checked" value="1" type="radio">
+									<label for="ort1">
+										<span class="label">Bundesgebiet ohne Sachsen</span>
+									</label>
+								</fieldset>
+
+								<fieldset class="field left-radio switch round tiny" tabindex="0">
+									<input id="ort2" name="CALCULATOR[ort]" value="2" type="radio">
+									<label for="ort2">
+										<span class="label">Sachsen</span>
+									</label>
+								</fieldset>
+
+								<!--<div class="field custom-switch small">
 									<br />
 									
 									<input id="handel1" name="CALCULATOR[handel]" checked="checked" value="1" class="checkbox" type="radio">
@@ -347,7 +382,7 @@
 									<br />
 									<input id="ort2" name="CALCULATOR[ort]" value="2" class="checkbox" type="radio">
 									<label for="ort2" class="checkbox">Sachsen</label>
-								</div>
+								</div>-->
 								
 							</fieldset>
 							
